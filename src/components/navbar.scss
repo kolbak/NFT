@@ -1,0 +1,66 @@
+.navbar-wrap {
+  align-self   : center;
+  justify-self : right;
+  height       : 80%;
+  width        : 40vw;
+  border-radius: 5px;
+  background   : rgba(103, 48, 139, 0.281);
+
+  display              : grid;
+  grid-template-columns: repeat(4, 2fr) 1fr 1fr 1fr;
+  grid-template-rows   : 1fr;
+
+  button,
+  button:focus {
+    border    : none;
+    background: transparent;
+    box-shadow: none !important;
+  }
+
+  button {
+    align-self   : center;
+    // font-size: .7rem;
+    height       : 100% !important;
+    border-radius: 5px;
+    border       : none;
+    padding      : 0;
+    transition   : .5s;
+
+    a {
+      height : 100%;
+      display: inline-block;
+
+      span {
+        margin-top: .9rem;
+        display: inline-block;
+      }
+    }
+  }
+
+  button.icon {
+    a {
+      margin: 0;
+
+      img {
+        margin: 0;
+
+        animation: mad-mustache 3s infinite alternate;
+      }
+    }
+
+  }
+
+  @keyframes mad-mustache {
+    0% {
+      transform: rotate(-25deg);
+    }
+
+    100% {
+      transform: rotate(25deg);
+    }
+  }
+
+  button:hover {
+    background: rgba(103, 48, 139, 0.281);
+  }
+}

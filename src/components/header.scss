@@ -1,0 +1,16 @@
+.header {
+  background: rgba(103, 48, 139, 0.719);
+
+  .header-inner-wrap {
+    margin               : 0 auto;
+    max-width            : 70vw;
+    height: 8vh;
+    display              : grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 8vh;
+
+    h1{
+      align-self: center;
+    }
+  }
+}
