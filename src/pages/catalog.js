@@ -1,12 +1,7 @@
-import React, { useState, useContext } from "react"
+import React from "react"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-
-import { Accordion, Button, InputGroup, FormControl, AccordionContext } from 'react-bootstrap'
-import { useAccordionButton } from 'react-bootstrap/AccordionButton';
-
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 import './catalog.scss'
 
@@ -71,27 +66,6 @@ const Catalog = () => {
     )
   }
 
-  // function AccordionCustomHeader({ children, eventKey, callback }) {
-  //   const { activeEventKey } = useContext(AccordionContext);
-
-  //   const decoratedOnClick = useAccordionButton(
-  //     eventKey,
-  //     () => callback && callback(eventKey),
-  //   );
-
-  //   const isCurrentEventKey = activeEventKey === eventKey;
-
-  //   return (
-  //     <button
-  //       type="button"
-  //       style={{ backgroundColor: isCurrentEventKey ? 'pink' : 'lavender' }}
-  //       onClick={decoratedOnClick}
-  //     >
-  //       {children}
-  //     </button>
-  //   );
-  // }
-
   return (
     <Layout>
       <Seo title="Catalog" />
@@ -118,53 +92,6 @@ const Catalog = () => {
               <p>By making the open s</p>
             </li>
           </ul>
-          {/* <Accordion className="menu">
-            <Accordion.Item eventKey="0">
-              <Accordion.Header><AccordionCustomHeader>Список №1</AccordionCustomHeader></Accordion.Header>
-              <Accordion.Body>
-                <label>
-                  <input type="radio" name="radio-filter" className="radio" />
-                  <i></i>
-                  <span> Параметр №1</span>
-                </label>
-                <label>
-                  <input type="radio" name="radio-filter" className="radio" />
-                  <i></i>
-                  <span> Параметр №2</span>
-                </label>
-                <label>
-                  <input type="radio" name="radio-filter" className="radio" />
-                  <i></i>
-                  <span> Параметр №3</span>
-                </label>
-              </Accordion.Body>
-            </Accordion.Item>
-          </Accordion>
-          <Accordion>
-            <Accordion.Item eventKey="0">
-              <Accordion.Header>Список №2</Accordion.Header>
-              <Accordion.Body>
-                <label>
-                  <input type="radio" name="radio-filter" className="radio" />
-                  <i></i>
-                  <span> Параметр №1</span>
-                </label>
-                <label>
-                  <input type="radio" name="radio-filter" className="radio" />
-                  <i></i>
-                  <span> Параметр №2</span>
-                </label>
-                <label>
-                  <input type="radio" name="radio-filter" className="radio" />
-                  <i></i>
-                  <span> Параметр №3</span>
-                </label>
-              </Accordion.Body>
-            </Accordion.Item>
-          </Accordion> */}
-          <Button variant="primary">
-            Применить
-          </Button>
         </div>
         <div className="grid">
           {grid}

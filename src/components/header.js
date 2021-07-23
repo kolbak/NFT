@@ -7,7 +7,7 @@ import Navbar from './navbar'
 import './header.scss'
 
 const Header = ({ siteTitle }) => (
-  <header className="header"  >
+  <header className="header" >
     <div className="header-inner-wrap">
       <h1>
         <Link to="/" className="link">
