@@ -2,64 +2,57 @@
   align-self   : center;
   justify-self : right;
   height       : 80%;
-  width        : 40vw;
+  width        : 30vw;
   border-radius: 5px;
-  background   : rgba(103, 48, 139, 0.281);
 
   display              : grid;
-  grid-template-columns: repeat(4, 2fr) 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, 2fr) 1fr;
   grid-template-rows   : 1fr;
+  gap                  : 30px;
 
-  // button,
-  // button:focus {
-  //   border    : none;
-  //   background: transparent;
-  //   box-shadow: none !important;
-  // }
+  button {
+    align-self   : center;
+    border-radius: 30px;
+    height       : 30%;
+    transition   : .2s;
 
-  // button {
-  //   align-self   : center;
-  //   height       : 100% !important;
-  //   border-radius: 5px;
-  //   border       : none;
-  //   padding      : 0;
-  //   transition   : .5s;
+    position: relative;
 
-  //   a {
-  //     height : 100%;
-  //     display: inline-block;
+    img {
+      display: inline-block;
+      height : 3vh;
+    }
+  }
 
-  //     span {
-  //       margin-top: .9rem;
-  //       display: inline-block;
-  //     }
-  //   }
-  // }
+  button:not(.red) {
+    span:after {
+      content      : '';
+      position     : absolute;
+      display      : block;
+      top          : 90%;
+      left         : 50%;
+      width        : 5px;
+      height       : 5px;
+      border-radius: 10px;
+      // background   : #f84658;
+      background   : #131826;
+      transition   : .2s;
 
-  // button.icon {
-  //   a {
-  //     margin: 0;
+      opacity: 0;
+    }
+  }
 
-  //     img {
-  //       margin: 0;
+  button:hover:not(.red) {
+    color   : #131826;
+    // color: #f84658;
+  }
 
-  //       animation: mad-mustache 3s infinite alternate;
-  //     }
-  //   }
+  button:hover:not(.red) span:after {
+    opacity: 1;
+  }
 
-  // }
-
-  // @keyframes mad-mustache {
-  //   0% {
-  //     transform: rotate(-25deg);
-  //   }
-
-  //   100% {
-  //     transform: rotate(25deg);
-  //   }
-  // }
-
-  // button:hover {
-  //   background: rgba(103, 48, 139, 0.281);
-  // }
+  button.red {
+    // background: #f84658;
+    background   : #131826;
+  }
 }
