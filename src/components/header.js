@@ -31,10 +31,10 @@ const Header = ({ siteTitle }) => {
         </div>
         <div className="nav-btns">
           <ButtonCustom colorScheme="teal" variant="ghost">
-            Explore the roadmap
+            <span>Explore the roadmap</span>
           </ButtonCustom>
           <ButtonCustom colorScheme="teal" variant="ghost">
-            Join the club
+            <span>Join the club</span>
           </ButtonCustom>
         </div>
       </div>
