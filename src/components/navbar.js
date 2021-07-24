@@ -23,11 +23,11 @@ const Navbar = () => {
 
   return (
     <nav className="navbar-wrap">
-      <ButtonCustom><Link className="link" to="/"><span>Gallery</span></Link></ButtonCustom>
-      <ButtonCustom><Link className="link" to="/roadmap"><span>Roadmap</span></Link></ButtonCustom>
-      <ButtonCustom><Link className="link" to="/FAQ"><span>FAQs</span></Link></ButtonCustom>
-      <ButtonCustom className="red" ><Link className="link" to="/purchases"><span>Buy</span></Link></ButtonCustom>
-      <ButtonCustom className="red" ><Link className="link" to="/landing"><img src={summerHolidays} alt="" /></Link></ButtonCustom>
+      <ButtonCustom><Link to="/"><span>Gallery</span></Link></ButtonCustom>
+      <ButtonCustom><Link to="/roadmap"><span>Roadmap</span></Link></ButtonCustom>
+      <ButtonCustom><Link to="/FAQ"><span>FAQs</span></Link></ButtonCustom>
+      <ButtonCustom className="red"><Link to="/purchases"><span>Buy</span></Link></ButtonCustom>
+      <ButtonCustom className="red"><Link to="/landing"><img src={summerHolidays} alt="summer holidays" /></Link></ButtonCustom>
     </nav>
   )
 }
