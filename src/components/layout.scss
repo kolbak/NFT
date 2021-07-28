@@ -45,12 +45,15 @@ summary {
 }
 
 .layout-inner-wrap {
-  min-height: 92vh;
-  width  : calc(100vw - 17px);
-  background: rgba(245, 232, 255, 0.788);
-  
+  width     : calc(100vw - 17px);
+  background: rgba(19, 24, 38, 1) 100%;
+
+  * {
+    color: whitesmoke;
+  }
+
   .layout-second-inner-wrap {
-    padding: 0 1.0875rem 1.45rem;
+    padding  : 1.45rem 1.0875rem 1.45rem 1.0875rem;
     margin   : 0 auto;
     max-width: 70vw;
   }

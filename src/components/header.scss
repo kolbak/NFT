@@ -1,8 +1,8 @@
 .header {
   height: 90vh;
 
-  background: rgb(136, 136, 136);
-  background: radial-gradient(circle, rgba(136, 136, 136, 0.742734593837535) 0%, rgba(19, 24, 38, 1) 100%);
+  // background: rgb(136, 136, 136); #131826
+  background: radial-gradient(circle, #414650 0%, rgba(19, 24, 38, 1) 40%);
 
   .header-inner-wrap {
     height   : 90vh;
@@ -87,7 +87,8 @@
       top       : calc(50% - 2px);
       width     : 13vw;
       height    : 4px;
-      background: #131826;
+      border-radius: 4px;
+      background: #afb5c3;
     }
 
     .links:before {

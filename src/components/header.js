@@ -22,7 +22,7 @@ const Header = ({ siteTitle }) => {
       boxShadow="0 0 5px 2px #b3b3b3"
       borderRadius="30px"
       color="whitesmoke"
-      bgColor="#131826"
+      bgColor="#040508"
     >
       {children}
     </Box>
@@ -37,10 +37,10 @@ const Header = ({ siteTitle }) => {
           <p>A unique NFT experience, pushing the boundaries of community and club membership.</p>
         </div>
         <div className="nav-btns">
-          <ButtonCustom colorScheme="teal" variant="ghost">
+          <ButtonCustom>
             <span>Explore the roadmap</span>
           </ButtonCustom>
-          <ButtonCustom colorScheme="teal" variant="ghost">
+          <ButtonCustom>
             <span>Join the club</span>
           </ButtonCustom>
         </div>

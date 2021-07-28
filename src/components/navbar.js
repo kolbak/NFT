@@ -25,9 +25,10 @@ const Navbar = () => {
     <nav className="navbar-wrap">
       <ButtonCustom><Link to="/"><span>Gallery</span></Link></ButtonCustom>
       <ButtonCustom><Link to="/roadmap"><span>Roadmap</span></Link></ButtonCustom>
+      <ButtonCustom><Link to="#about"><span>About</span></Link></ButtonCustom>
       <ButtonCustom><Link to="/FAQ"><span>FAQs</span></Link></ButtonCustom>
-      <ButtonCustom className="red"><Link to="/purchases"><span>Buy</span></Link></ButtonCustom>
-      <ButtonCustom className="red"><Link to="/landing"><img src={summerHolidays} alt="summer holidays" /></Link></ButtonCustom>
+      <ButtonCustom className="withBg"><Link to="/purchases"><span>Mint</span></Link></ButtonCustom>
+      <ButtonCustom className="withBg"><Link to="/user_account"><img src={summerHolidays} alt="summer holidays" /></Link></ButtonCustom>
     </nav>
   )
 }

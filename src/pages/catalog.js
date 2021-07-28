@@ -6,7 +6,6 @@ import Seo from "../components/seo"
 import './catalog.scss'
 
 import anakin from '../images/anakin.jpg'
-import castle from '../images/castle.png'
 import wizard from '../images/wizard.jpg'
 
 const Catalog = () => {
@@ -58,7 +57,7 @@ const Catalog = () => {
           <figure className="front">
             <a className="char-link">
               <span id={'label-char-' + i}>{'Character №' + i}</span>
-              <img id={'char-' + i} onMouseMove={animate} src={[anakin, castle, wizard][Math.floor(Math.random() * 3)]} alt={'Character number' + i} />
+              <img id={'char-' + i} onMouseMove={animate} src={[anakin, wizard][Math.floor(Math.random() * 3)]} alt={'Character number' + i} />
             </a>
           </figure>
         </div>
