@@ -29,8 +29,8 @@ const Carousel = ({ data }) => {
   let grid = [];
   for (let i = 0, l = data.length; i < l; i++) {
     grid.push(
-      <div className="slide">
-        <img src={data[i].avatarSRC} height="100" width="250" alt="" />
+      <div className="slide" key={`${i}`}>
+        <img src={data[i].avatarSRC} alt="" />
       </div>
       // <div className="slide">
       //   <img src={data[i].avatarSRC} height="100" width="250" alt="" />
@@ -38,8 +38,13 @@ const Carousel = ({ data }) => {
       // </div>
     )
   }
-
-  console.log('grid :>> ', grid);
+  for (let i = 0, l = data.length; i < l; i++) {
+    grid.push(
+      <div className="slide" key={`${i}-d`}>
+        <img src={data[i].avatarSRC} alt="" />
+      </div>
+    )
+  }
 
   return (
     // <div className="slider">

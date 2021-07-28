@@ -13,7 +13,7 @@ import crocoRider from '../images/croco-rider.jpg'
 const IndexPage = () => {
   //? фальшивые данные
   let dummyDataArray = [];
-  for (let i = 0, l = 14; i < l; i++) {
+  for (let i = 0, l = 10; i < l; i++) {
     dummyDataArray.push({
       name: `Персонаж № ${i}`,
       avatarSRC: [anakin, brutal, crocoRider][Math.floor(Math.random() * 3)],
