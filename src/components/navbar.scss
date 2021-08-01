@@ -54,18 +54,12 @@
         width           : 10%;
         height          : 1px;
         border-radius   : 10px;
-        // background   : #131826;
         background      : whitesmoke;
         transition      : .3s;
 
         opacity: 0;
       }
     }
-
-    // button:hover:not(.withBg) {
-    //   // color   : #131826;
-    //   // color: #f84658;
-    // }
 
     button:hover:not(.withBg) span:after {
       opacity: 1;
@@ -74,7 +68,6 @@
     }
 
     button.withBg {
-      // background: #f84658;
       color     : #131826;
       background: whitesmoke;
     }

@@ -222,6 +222,7 @@ const IndexPage = () => {
           </div>
         </div>
         <div className="faq">
+          <h2>FAQ</h2>
           <Accordion allowMultiple allowToggle >
             <AccordionItemCustom title="WHO ARE YOU?">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
