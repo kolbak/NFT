@@ -1,6 +1,13 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
-import { Box } from "@chakra-ui/react"
+import {
+  Box,
+  Accordion,
+  AccordionItem,
+  AccordionButton,
+  AccordionPanel,
+  AccordionIcon,
+} from "@chakra-ui/react"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -33,12 +40,11 @@ const IndexPage = () => {
   }
   const [data, setData] = useState(dummyDataArray);
 
+  //? Кастомные элементы chakra
   function ButtonCustomGallery({ children, className }) {
     return <Box
       className={className}
       as="button"
-      // border="1px"
-      // px="8px"
       border="none"
       color="white"
       bgColor="#363636"
@@ -46,7 +52,6 @@ const IndexPage = () => {
       {children}
     </Box>
   }
-
   function ButtonCustomMint({ children, className }) {
     return <Box
       className={className}
@@ -57,6 +62,36 @@ const IndexPage = () => {
     >
       {children}
     </Box>
+  }
+  function AccordionItemCustom({ children, title }) {
+    return (
+      <AccordionItem
+        border="none"
+        bg="#555555"
+        outline="none"
+        mb={4}
+      >
+        <h2>
+          <AccordionButton _focus={{
+            border: 'none',
+            outline: 'none',
+            boxShadow: 'none',
+          }}>
+            <Box flex="1" textAlign="left">
+              {title}
+            </Box>
+            <AccordionIcon />
+          </AccordionButton>
+        </h2>
+        <AccordionPanel p={0} m={0}>
+          <Box padding="0 0 5px 0" m={0}>
+            <Box padding="10px 10px" m={2} bg="#464646">
+              {children}
+            </Box>
+          </Box>
+        </AccordionPanel>
+      </AccordionItem>
+    )
   }
 
   return (
@@ -143,6 +178,100 @@ const IndexPage = () => {
               </div>
             </div>
           </div>
+        </div>
+        <div className="roadmap">
+          <div className="points">
+            <h2>ROADMAP</h2>
+            <hr className="divider" />
+            <div className="point p5">
+              <i></i>
+              <h3><span>5%</span> PHALLUSES NEED FRIENDS!</h3>
+              <p>Giveaway! 100 free Phalluses to people who reposted our first post on twitter!</p>
+            </div>
+            <div className="point p15 right">
+              <i></i>
+              <h3><span>15%</span> FAPP IS EVERYWHERE!</h3>
+              <p>We will invest up to 80% of the funds to promote the project to make our Phalluses more expensive and desired!</p>
+              <p>We will need your help too! The most active Phalluses can join our team!</p>
+            </div>
+            <div className="point p30">
+              <i></i>
+              <h3><span>30%</span> LOOK AT THE SKY!</h3>
+              <p>5 Phalluses will be minted and air dropped to 5 random collectors!</p>
+            </div>
+            <div className="point p50 right">
+              <i></i>
+              <h3><span>50%</span> SHOPPING SPREE!</h3>
+              <p>Our official FAPP nft merch store will be unlocked for Phalluses.</p>
+            </div>
+            <div className="point p70">
+              <i></i>
+              <h3><span>70%</span> ICED OUT WHO? ICED OUT  WATCH!</h3>
+              <p>We will give 1 Rolex date just 41 iced out watch piece to 1 random collector with rare Phalluses</p>
+            </div>
+            <div className="point p80 right">
+              <i></i>
+              <h3><span>80%</span> WHO WANT THE SMOKE?</h3>
+              <p>FAPP gives 10 ETH to 10 random Phalluses.</p>
+            </div>
+            <div className="point p100">
+              <i></i>
+              <h3><span>100%</span> IT IS CHARITY TIME</h3>
+              <p>FAPP will make a  35 ETH donation to the AIDS Foundation!</p>
+            </div>
+          </div>
+        </div>
+        <div className="faq">
+          <Accordion allowMultiple allowToggle >
+            <AccordionItemCustom title="WHO ARE YOU?">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+              veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+              commodo consequat.
+            </AccordionItemCustom>
+            <AccordionItemCustom title="WHAT IS FAPP?">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+              veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+              commodo consequat.
+            </AccordionItemCustom>
+            <AccordionItemCustom title="TELL ME MORE ABOUT YOUR NFT COLLECTION!">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+              veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+              commodo consequat.
+            </AccordionItemCustom>
+            <AccordionItemCustom title="WHAT ERE YOU PLANNING TO DO?">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+              veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+              commodo consequat.
+            </AccordionItemCustom>
+            <AccordionItemCustom title="HOW CAN I GET A PHALLUS?">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+              veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+              commodo consequat.
+            </AccordionItemCustom>
+            <AccordionItemCustom title="WILL YOU MAKE MORE PHALLUSES?">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+              veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+              commodo consequat.
+            </AccordionItemCustom>
+            <AccordionItemCustom title="DO YOU HAVE YOUR OWN SMART CONTRACT?">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+              veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+              commodo consequat.
+            </AccordionItemCustom>
+            <AccordionItemCustom title="CAN I RESELL MY PHALLUS NFT?">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+              veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+              commodo consequat.
+            </AccordionItemCustom>
+          </Accordion>
         </div>
       </div>
     </Layout>

@@ -1,6 +1,7 @@
 .index-wrap-content {
-  display: grid;
+  display           : grid;
   grid-template-rows: repeat(5, 100vh);
+  gap: 150px;
 
   h2 {
     width      : 100%;
@@ -27,14 +28,13 @@
     display              : grid;
     grid-template-columns: 1fr 1fr;
     padding              : 0 20px 0 0;
-    // height               : 100vh;
 
     .text-wrap {
       display           : grid;
-      grid-template-rows: 7fr 1fr;
+      grid-template-rows: min-content 1fr;
+      gap               : 50px;
 
       .text {
-
         h2:after {
           content   : '';
           position  : absolute;
@@ -49,9 +49,10 @@
 
       .toMint {
         justify-self: left;
+        align-self  : start;
 
         width : 35%;
-        height: 70%;
+        height: 50px;
       }
     }
 
@@ -63,9 +64,9 @@
   }
 
   .nft {
-    display           : grid;
-    gap               : 15px;
-    grid-template-rows: 1fr 3fr;
+    display              : grid;
+    gap                  : 15px;
+    grid-template-rows   : 1fr 3fr;
     // height            : 100vh;
 
     .info {
@@ -198,6 +199,160 @@
         h3 {
           width: 100%;
         }
+      }
+    }
+  }
+
+  .roadmap {
+    display    : grid;
+
+    .points {
+      justify-self: center;
+      display     : grid;
+
+      grid-template-columns: 8fr 1fr 8fr;
+      grid-template-rows   : repeat(40, 4vh);
+      width                : 90%;
+
+      h2 {
+        justify-self: end;
+
+        width : min-content;
+        height: min-content;
+      }
+
+      .divider {
+        justify-self     : center;
+        grid-column-start: 2;
+        grid-column-end  : 3;
+        grid-row-start   : 1;
+        grid-row-end     : 27;
+
+        border       : none;
+        border-radius: 10px;
+        width        : 10px;
+        height       : 100%;
+        background   : #363636;
+      }
+
+      .point {
+        justify-self: center;
+
+        background   : #050a15;
+        border-radius: 15px;
+        padding      : 25px 30px;
+        width        : 100%;
+        height       : max-content;
+        position     : relative;
+
+        i {
+          // outline      : 1px solid red;
+          position     : absolute;
+          display      : block;
+          width        : 25px;
+          height       : 25px;
+          border-radius: 100%;
+          background   : #00050f;
+        }
+
+        h3 {
+          font-size  : 1vw;
+          font-weight: bold;
+          margin     : 0 0 20px 0;
+
+          span {
+            display: block;
+          }
+        }
+      }
+
+      .point:not(.right):after {
+        background   : transparent;
+        border-left  : 20px solid #050a15;
+        border-right : 10px solid transparent;
+        border-top   : 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        border-right : 10px solid transparent;
+
+        content : '';
+        display : block;
+        position: absolute;
+        top     : 10%;
+        left    : 100%;
+        width   : 30px;
+        height  : 10px;
+      }
+
+      .point.right:before {
+        background   : transparent;
+        border-left  : 10px solid transparent;
+        border-right : 10px solid transparent;
+        border-top   : 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        border-right : 20px solid #050a15;
+
+        content : '';
+        display : block;
+        position: absolute;
+        top     : 10%;
+        right   : 100%;
+        width   : 30px;
+        height  : 10px;
+      }
+
+      .point:not(.right) {
+        i {
+          top  : 17px;
+          right: calc(-10% + 11px);
+        }
+      }
+
+      .point.right {
+        i {
+          top : 17px;
+          left: calc(-10% + 11px);
+        }
+      }
+
+      .point.right {
+        grid-column-start: 3;
+        grid-column-end  : 4;
+      }
+
+
+      .point.p5 {
+        grid-row-start: 1;
+        grid-row-end  : 5;
+      }
+
+      .point.p15.right {
+        grid-row-start: 4;
+        grid-row-end  : 9;
+      }
+
+      .point.p30 {
+        grid-row-start: 9;
+        grid-row-end  : 13;
+      }
+
+      .point.p50.right {
+        grid-row-start: 12;
+        grid-row-end  : 16;
+      }
+
+      .point.p70 {
+        grid-row-start: 16;
+        grid-row-end  : 20;
+      }
+
+      .point.p80.right {
+        grid-row-start: 20;
+        grid-row-end  : 24;
+      }
+
+      .point.p100 {
+        grid-row-start: 23;
+        grid-row-end  : 27;
       }
     }
   }
