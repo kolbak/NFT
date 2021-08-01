@@ -1,65 +1,82 @@
 .navbar-wrap {
-  align-self   : center;
-  justify-self : right;
-  height       : 80%;
-  width        : 50vw;
-  border-radius: 5px;
+  align-self: center;
 
   display              : grid;
-  grid-template-columns: repeat(7, 2fr) 1fr;
-  grid-template-rows   : 1fr;
-  gap                  : 30px;
+  grid-template-columns: 1fr 1fr;
 
-  button {
-    align-self   : center;
+  height: 100%;
+
+  .logo {
+    align-self: center;
+    width : 30%;
+    height: 30%;
+  }
+
+  .navbar-btns {
+    height       : 100%;
+    width        : 50vw;
     border-radius: 5px;
-    height       : 30%;
-    transition   : .2s;
 
-    position: relative;
+    display              : grid;
+    grid-template-columns: 4fr repeat(7, 2fr) 1fr;
+    grid-template-rows   : 1fr;
+    gap                  : 30px;
 
-    span {
-      font-size: .95vw;
+    button {
+      align-self: center;
+      height    : 30%;
+      transition: .2s;
+      border-radius: 5px;
+
+      position: relative;
+
+      span {
+        font-size: .95vw;
+      }
+
+      img {
+        display: inline-block;
+        height : 2.5vh;
+      }
     }
 
-    img {
-      display: inline-block;
-      height : 2.5vh;
+    button.withBg {
+      height: 25%;
     }
-  }
 
-  button:not(.withBg) {
-    span:after {
-      content         : '';
-      position        : absolute;
-      display         : block;
-      top             : 90%;
-      left            : 50%;
-      width           : 10%;
-      height          : 1px;
-      border-radius   : 10px;
-      // background   : #131826;
-      background      : whitesmoke;
-      transition      : .3s;
+    button:not(.withBg) {
+      span:after {
+        content         : '';
+        position        : absolute;
+        display         : block;
+        top             : 90%;
+        left            : 50%;
+        width           : 10%;
+        height          : 1px;
+        border-radius   : 10px;
+        // background   : #131826;
+        background      : whitesmoke;
+        transition      : .3s;
 
-      opacity: 0;
+        opacity: 0;
+      }
     }
-  }
 
-  // button:hover:not(.withBg) {
-  //   // color   : #131826;
-  //   // color: #f84658;
-  // }
+    // button:hover:not(.withBg) {
+    //   // color   : #131826;
+    //   // color: #f84658;
+    // }
 
-  button:hover:not(.withBg) span:after {
-    opacity: 1;
-    left   : 0%;
-    width  : 100%;
-  }
+    button:hover:not(.withBg) span:after {
+      opacity: 1;
+      left   : 0%;
+      width  : 100%;
+    }
 
-  button.withBg {
-    // background: #f84658;
-    color     : #131826;
-    background: whitesmoke;
+    button.withBg {
+      // background: #f84658;
+      color     : #131826;
+      background: whitesmoke;
+    }
   }
 }

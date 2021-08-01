@@ -19,10 +19,11 @@ const Header = ({ siteTitle }) => {
     return <Box
       className={className}
       as="button"
-      boxShadow="0 0 5px 2px #b3b3b3"
-      borderRadius="30px"
+      // boxShadow="0 0 5px 2px #b3b3b3"
+      border="3px solid whitesmoke"
+      // borderRadius="30px"
       color="whitesmoke"
-      bgColor="#040508"
+      bgColor="#292929"
     >
       {children}
     </Box>
@@ -33,15 +34,12 @@ const Header = ({ siteTitle }) => {
       <div className="header-inner-wrap">
         <Navbar />
         <div className="welcome">
-          <h1>WELCOME TO THE TOP DOG BEACH CLUB!</h1>
-          <p>A unique NFT experience, pushing the boundaries of community and club membership.</p>
+          <h1>FAMILY PHALLUS PLANET #FAPP</h1>
+          <p>The NFT planet where every Phallus is unique and free!</p>
         </div>
         <div className="nav-btns">
           <ButtonCustom>
-            <span>Explore the roadmap</span>
-          </ButtonCustom>
-          <ButtonCustom>
-            <span>Join the club</span>
+            <span>MORE</span>
           </ButtonCustom>
         </div>
         <div className="links">

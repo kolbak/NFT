@@ -37,23 +37,17 @@
       grid-row-end  : 5;
       justify-self  : center;
 
-      width: 40%;
-
-      display              : grid;
-      grid-template-columns: 1fr 1fr;
-      gap                  : 100px;
+      width: 15%;
 
       button {
-        justify-self: center;
-        align-self  : center;
-
+        position: relative;
         height: 30%;
         width : 100%;
-
-        transition: .2s;
+        // left: 25%;
 
         span {
           font-size: .95vw;
+          font-weight: bold;
         }
       }
     }
