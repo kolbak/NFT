@@ -3,8 +3,8 @@ import * as React from "react"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
-import './user_account.scss'
-import animate from './catalog.js'
+// import './user_account.scss'
+// import animate from './catalog.js'
 
 import anakin from '../images/anakin.jpg'
 import wizard from '../images/wizard.jpg'

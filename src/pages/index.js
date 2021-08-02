@@ -100,7 +100,7 @@ const IndexPage = () => {
       <div className="index-wrap-content">
         <div className="carousel">
           <Carousel data={data} />
-          <ButtonCustomGallery className="toGallery"><Link to="/"><span>Gallery</span></Link></ButtonCustomGallery>
+          <ButtonCustomGallery className="toGallery"><Link to="/gallery"><span>Gallery</span></Link></ButtonCustomGallery>
         </div>
         <div className="storyline">
           <div className="text-wrap">

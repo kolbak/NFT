@@ -38,12 +38,14 @@ const Navbar = () => {
   return (
     <nav className="navbar-wrap">
       <ButtonLogo className="logo">
-        <span>LOGO</span>
+        <Link to="/">
+          <span>LOGO</span>
+        </Link>
       </ButtonLogo>
       <div className="navbar-btns">
         <ButtonCustom><Link to="/"><span>Storyline</span></Link></ButtonCustom>
         <ButtonCustom><Link to="/"><span>NFT</span></Link></ButtonCustom>
-        <ButtonCustom><Link to="/"><span>Gallery</span></Link></ButtonCustom>
+        <ButtonCustom><Link to="/gallery"><span>Gallery</span></Link></ButtonCustom>
         <ButtonCustom><Link to="/roadmap"><span>Roadmap</span></Link></ButtonCustom>
         <ButtonCustom><Link to="/FAQ"><span>FAQs</span></Link></ButtonCustom>
         <ButtonCustom><Link to="#about"><span>Contacts</span></Link></ButtonCustom>
