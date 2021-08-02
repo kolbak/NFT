@@ -1,7 +1,7 @@
 .index-wrap-content {
   display           : grid;
   grid-template-rows: repeat(5, 100vh);
-  gap: 150px;
+  gap               : 150px;
 
   h2 {
     width      : 100%;
@@ -204,7 +204,7 @@
   }
 
   .roadmap {
-    display    : grid;
+    display: grid;
 
     .points {
       justify-self: center;
@@ -221,18 +221,81 @@
         height: min-content;
       }
 
-      .divider {
-        justify-self     : center;
+      .divider-wrap {
+        justify-self: center;
+
         grid-column-start: 2;
         grid-column-end  : 3;
         grid-row-start   : 1;
         grid-row-end     : 27;
 
-        border       : none;
-        border-radius: 10px;
-        width        : 10px;
-        height       : 100%;
-        background   : #363636;
+        width : 100%;
+        height: 100%;
+
+        display              : grid;
+        grid-template-columns: 1fr;
+        grid-template-rows   : repeat(40, 4vh);
+
+        .divider {
+          grid-column-start: 1;
+          grid-column-end  : 2;
+          grid-row-start   : 1;
+          grid-row-end     : 27;
+          justify-self     : center;
+          border           : none;
+          border-radius    : 10px;
+          width            : 10px;
+          height           : 100%;
+          background       : #363636;
+        }
+
+        i {
+          grid-column-start: 1;
+          grid-column-end  : 2;
+          justify-self: center;
+          align-self  : end;
+          
+          display      : inline-block;
+          width        : 25px;
+          height       : 25px;
+          border-radius: 100%;
+          background   : #00050f;
+        }
+        
+        .for5 {
+          grid-row-start: 1;
+          grid-row-end  : 2;
+        }
+        
+        .for15 {
+          grid-row-start: 4;
+          grid-row-end  : 5;
+        }
+
+        .for30 {
+          grid-row-start: 9;
+          grid-row-end  : 10;
+        }
+
+        .for50 {
+          grid-row-start: 12;
+          grid-row-end  : 13;
+        }
+
+        .for70 {
+          grid-row-start: 16;
+          grid-row-end  : 17;
+        }
+
+        .for80 {
+          grid-row-start: 20;
+          grid-row-end  : 21;
+        }
+
+        .for100 {
+          grid-row-start: 23;
+          grid-row-end  : 24;
+        }
       }
 
       .point {
@@ -244,16 +307,6 @@
         width        : 100%;
         height       : max-content;
         position     : relative;
-
-        i {
-          // outline      : 1px solid red;
-          position     : absolute;
-          display      : block;
-          width        : 25px;
-          height       : 25px;
-          border-radius: 100%;
-          background   : #00050f;
-        }
 
         h3 {
           font-size  : 1vw;
@@ -298,20 +351,6 @@
         right   : 100%;
         width   : 30px;
         height  : 10px;
-      }
-
-      .point:not(.right) {
-        i {
-          top  : 17px;
-          right: calc(-10% + 11px);
-        }
-      }
-
-      .point.right {
-        i {
-          top : 17px;
-          left: calc(-10% + 11px);
-        }
       }
 
       .point.right {
