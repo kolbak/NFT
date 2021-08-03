@@ -1,48 +1,104 @@
 import * as React from "react"
+import {
+  Box,
+  Accordion,
+  AccordionItem,
+  AccordionButton,
+  AccordionPanel,
+  AccordionIcon,
+} from "@chakra-ui/react"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
-// import 'bootstrap/dist/css/bootstrap.min.css';
-
 import './FAQ.scss'
 
-const FAQ_text = [
-  {
-    question: "Lorem ipsum dolor?",
-    answer: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes"
-  },
-  {
-    question: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa?",
-    answer: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis"
-  },
-  {
-    question: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit?",
-    answer: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes"
-  },
-  {
-    question: "Lorem ipsum dolor sit amet?",
-    answer: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis"
-  },
-  {
-    question: "Lorem ipsum dolor sit amet?",
-    answer: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes"
-  }
-]
-
 const FAQ = () => {
+  function AccordionItemCustom({ children, title }) {
+    return (
+      <AccordionItem
+        border="none"
+        bg="#555555"
+        outline="none"
+        mb={4}
+      >
+        <h2>
+          <AccordionButton _focus={{
+            border: 'none',
+            outline: 'none',
+            boxShadow: 'none',
+          }}>
+            <Box flex="1" textAlign="left">
+              {title}
+            </Box>
+            <AccordionIcon />
+          </AccordionButton>
+        </h2>
+        <AccordionPanel p={0} m={0}>
+          <Box padding="0 0 5px 0" m={0}>
+            <Box padding="10px 10px" m={2} bg="#464646">
+              {children}
+            </Box>
+          </Box>
+        </AccordionPanel>
+      </AccordionItem>
+    )
+  }
+
   return (
     <Layout>
       <Seo title="FAQ" />
       <h2>FAQ</h2>
-      <div className="FAQ-container">
-        {FAQ_text.map((x, i) =>
-            <div className="FAQ-element" key={i}>
-              <p className="FAQ-question">{x.question}</p>
-              <p className="FAQ-answer">{x.answer}</p>
-            </div>
-        )}
-      </div>
+      <Accordion allowMultiple allowToggle >
+        <AccordionItemCustom title="WHO ARE YOU?">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+          veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+          commodo consequat.
+        </AccordionItemCustom>
+        <AccordionItemCustom title="WHAT IS FAPP?">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+          veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+          commodo consequat.
+        </AccordionItemCustom>
+        <AccordionItemCustom title="TELL ME MORE ABOUT YOUR NFT COLLECTION!">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+          veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+          commodo consequat.
+        </AccordionItemCustom>
+        <AccordionItemCustom title="WHAT ERE YOU PLANNING TO DO?">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+          veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+          commodo consequat.
+        </AccordionItemCustom>
+        <AccordionItemCustom title="HOW CAN I GET A PHALLUS?">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+          veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+          commodo consequat.
+        </AccordionItemCustom>
+        <AccordionItemCustom title="WILL YOU MAKE MORE PHALLUSES?">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+          veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+          commodo consequat.
+        </AccordionItemCustom>
+        <AccordionItemCustom title="DO YOU HAVE YOUR OWN SMART CONTRACT?">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+          veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+          commodo consequat.
+        </AccordionItemCustom>
+        <AccordionItemCustom title="CAN I RESELL MY PHALLUS NFT?">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+          veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+          commodo consequat.
+        </AccordionItemCustom>
+      </Accordion>
     </Layout>
   )
 }

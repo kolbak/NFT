@@ -45,7 +45,8 @@ summary {
 }
 
 .layout-inner-wrap {
-  width     : calc(100%);
+  min-height: 90vh;
+  width     : 100%;
   background: rgba(19, 24, 38, 1) 100%;
 
   * {

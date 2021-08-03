@@ -1,31 +1,8 @@
-.FAQ-element {
-    margin: 3vh 0 7vh 0;
+h2{
+    width      : 100%;
+    font-weight: bold;
+    font-size  : 2vw;
+    margin     : 0 0 20px 0;
+    padding    : 0 0 10px 0;
+    position   : relative;
 }
-
-.FAQ-question {
-    // color         : black;
-    padding       : .75em;
-    text-transform: uppercase;
-}
-
-.FAQ-answer {
-    color        : gray;
-    padding      : .75em;
-    border-bottom: #B5B8B1 2px solid;
-}
-
-// .FAQ-element {
-//     margin: 4vh 0 4vh 0;
-//     background-color: gray;
-//     border-radius: 10px;
-// }
-
-// .FAQ-question {
-//     color: rgba(255,255,255);
-//     padding: .75em;
-// }
-
-// .FAQ-answer {
-//     color: rgba(209,213,219);
-//     padding: .75em;
-// }

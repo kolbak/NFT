@@ -1,96 +1,10 @@
 .header {
-  height: 90vh;
+  height: 10vh;
 
-  // background: rgb(136, 136, 136); #131826
-  background: radial-gradient(circle, #414650 0%, rgba(19, 24, 38, 1) 40%);
+  background: rgba(19, 24, 38, 1) 40%;
 
   .header-inner-wrap {
-    height   : 90vh;
-    margin   : 0 auto;
-    max-width: 80vw;
-
-    display           : grid;
-    grid-template-rows: repeat(4, 18vh) repeat(2, 9vh);
-
-    .welcome {
-      grid-row-start: 3;
-      grid-row-end  : 4;
-
-      h1,
-      p {
-        text-align: center;
-        color     : whitesmoke;
-      }
-
-      h1 {
-        font-weight: bold;
-        font-size  : 2.5vw;
-      }
-
-      p {
-        font-size: .9vw;
-      }
-    }
-
-    .nav-btns {
-      grid-row-start: 4;
-      grid-row-end  : 5;
-      justify-self  : center;
-
-      width: 15%;
-
-      button {
-        position: relative;
-        height: 30%;
-        width : 100%;
-        // left: 25%;
-
-        span {
-          font-size: .95vw;
-          font-weight: bold;
-        }
-      }
-    }
-
-    .links {
-      grid-row-start: 6;
-      grid-row-end  : 7;
-      align-self    : center;
-      margin-left   : 5vw;
-
-      display              : grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap                  : 20px;
-
-      width   : 10vw;
-      position: relative;
-
-      img {
-        width  : 20px;
-        display: inline-block;
-        opacity: .7;
-      }
-
-    }
-
-    .links:before,
-    .links:after {
-      content   : '';
-      display   : block;
-      position  : absolute;
-      top       : calc(50% - 2px);
-      width     : 13vw;
-      height    : 4px;
-      border-radius: 4px;
-      background: #afb5c3;
-    }
-
-    .links:before {
-      left      : -145%;
-    }
-
-    .links:after {
-      left      : 113%;
-    }
+    height: 100%;
+    display: grid;
   }
 }
