@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import {
   Box,
   Breadcrumb,
@@ -18,6 +18,7 @@ import { ChevronRightIcon } from '@chakra-ui/icons'
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import GalleryGrid from "../components/gallery_grid"
 
 import './gallery.scss'
 
@@ -45,7 +46,7 @@ const Gallery = () => {
     let tX = mousePX * 20;
     let tY = mousePY * 20;
 
-    label = document.querySelector(`#label-char-${_e.target.getAttribute('id').match(/\d+/g)}`);
+    label = document.querySelector(`#label-${_e.target.getAttribute('id')}`);
     label.style.transform = `translate(${tX}px, ${tY}px) rotateY(${rX}deg) rotateX(${rY}deg)`;
     target.style.transform = `translate(${tX}px, ${tY}px) rotateY(${rX}deg) rotateX(${rY}deg)`;
 
@@ -65,21 +66,44 @@ const Gallery = () => {
     }
   }
 
+  //? dummy data
+  let arrData = [];
+  // function addData() {
+    for (let i = 0; i < 6; i++) {
+      arrData.push({
+        name: 'Character №' + i,
+        id: `${i}-${Math.floor(Math.random())}_${Math.floor(Math.random())}`,
+        src: [anakin, wizard][Math.floor(Math.random() * 2)],
+      })
+    }
+  //   console.log('arrData :>> ', arrData.length);
+  // }
+  // addData();
+  const [data, setData] = useState(arrData);
+
   let grid = [];
-  for (let i = 0, l = 6; i < l; i++) {
-    grid.push(
-      <div className="char-card" key={i}>
-        <div className="char-body">
-          <figure className="front">
-            <a className="char-link">
-              <span id={'label-char-' + i}>{'Character №' + i}</span>
-              <img id={'char-' + i} onMouseMove={animate} src={[anakin, wizard][Math.floor(Math.random() * 2)]} alt={'Character number' + i} />
-            </a>
-          </figure>
+  // function createGrid(_data) {
+    for (let i = 0, l = data.length; i < l; i++) {
+      grid.push(
+        <div className="char-card" key={i}>
+          <div className="char-body">
+            <figure className="front">
+              <a className="char-link">
+                <span id={'label-char-' + data[i].id}>{data[i].name}</span>
+                <img id={'char-' + data[i].id} onMouseMove={animate} src={data[i].src} alt={'Character number' + data[i]} />
+              </a>
+            </figure>
+          </div>
         </div>
-      </div>
-    )
-  }
+      )
+    }
+  // }
+  // createGrid(data);
+
+  // function showMoreData() {
+  //   addData();
+  //   setData(arrData);
+  // }
 
   //? аккордион
   const accordionItemStyle = {
@@ -98,10 +122,12 @@ const Gallery = () => {
     color: '#ababab',
     fontWeight: 'bold',
   }
+
   //? кнопка ShowMore
   function ButtonCustomShowMore({ children, className }) {
     return <Box
       className={className}
+      // onClick={showMoreData}
       as="button"
       border="none"
       color="#0a0e16"
@@ -353,7 +379,8 @@ const Gallery = () => {
           </div>
         </div>
         <div className="grid">
-          {grid}
+          <GalleryGrid data={data}/>
+          {/* {grid} */}
           <ButtonCustomShowMore className="btn-showmore">SHOW MORE</ButtonCustomShowMore>
         </div>
       </div>
