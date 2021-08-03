@@ -15,9 +15,9 @@ import Carousel from "../components/carousel"
 
 import './index.scss'
 
-import anakin from '../images/anakin.jpg'
+// import anakin from '../images/anakin.jpg'
 import brutal from '../images/brutal.jpg'
-import crocoRider from '../images/croco-rider.jpg'
+// import crocoRider from '../images/croco-rider.jpg'
 
 //? icons
 import rasta from '../images/icons/rasta.png'
@@ -41,7 +41,7 @@ const IndexPage = () => {
   for (let i = 0, l = 10; i < l; i++) {
     dummyDataArray.push({
       name: `Персонаж № ${i}`,
-      avatarSRC: [anakin, brutal, crocoRider][Math.floor(Math.random() * 3)],
+      // avatarSRC: [anakin, brutal, crocoRider][Math.floor(Math.random() * 3)],
     })
   }
   const [data, setData] = useState(dummyDataArray);

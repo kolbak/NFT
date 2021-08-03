@@ -7,14 +7,16 @@ const Carousel = ({ data }) => {
   for (let i = 0, l = data.length; i < l; i++) {
     grid.push(
       <div className="slide" key={i}>
-        <img src={data[i].avatarSRC} alt="" />
+        {/* <img src={data[i].avatarSRC} alt="" /> */}
+        <div></div>
       </div>
     )
   }
   for (let i = 0, l = data.length; i < l; i++) {
     grid.push(
       <div className="slide" key={`${i}-d`}>
-        <img src={data[i].avatarSRC} alt="" />
+        {/* <img src={data[i].avatarSRC} alt="" /> */}
+        <div></div>
       </div>
     )
   }

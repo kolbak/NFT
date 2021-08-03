@@ -35,11 +35,11 @@ const Navbar = () => {
 
   return (
     <nav className="navbar-wrap">
-      <ButtonLogo className="logo">
-        <Link to="/">
+      <Link className="logo" to="/">
+        <ButtonLogo>
           <span>LOGO</span>
-        </Link>
-      </ButtonLogo>
+        </ButtonLogo>
+      </Link>
       <div className="navbar-btns">
         <ButtonCustom><Link to="/"><span>Storyline</span></Link></ButtonCustom>
         <ButtonCustom><Link to="/"><span>NFT</span></Link></ButtonCustom>

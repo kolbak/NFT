@@ -48,7 +48,7 @@ const FAQ = () => {
   return (
     <Layout>
       <Seo title="FAQ" />
-      <h2>FAQ</h2>
+      <h2 className="faq-h2">FAQ</h2>
       <Accordion allowMultiple allowToggle >
         <AccordionItemCustom title="WHO ARE YOU?">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
