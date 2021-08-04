@@ -34,7 +34,7 @@ import f from '../images/icons8-facebook.svg'
 import ig from '../images/icons8-instagram-old.svg'
 import twitter from '../images/icons8-twitter.svg'
 import twitch from '../images/icons8-twitch.svg'
-
+import planet from '../animations/planet.mp4'
 const IndexPage = () => {
   //? фальшивые данные
   let dummyDataArray = [];
@@ -110,12 +110,19 @@ const IndexPage = () => {
       {children}
     </Box>
   }
-
   return (
     <>
+      <div className="vertical-lines"></div>
+      <div className="vertical-lines" style={{left: '33%'}}></div>
+      <div className="vertical-lines" style={{left: '50%'}}></div>
+      <div className="vertical-lines" style={{left: '66.6%'}}></div>
+      <div className="vertical-lines" style={{left: '83.3%'}}></div>
       <Layout>
         <Seo title="Home" />
         <div className="welcome-wrap">
+          <video width="500" height="400" autoplay muted loop>
+            <source src={planet} type='video/mp4' />
+          </video>
           <div className="welcome">
             <h1>FAMILY PHALLUS PLANET #FAPP</h1>
             <p>The NFT planet where every Phallus is unique and free!</p>
