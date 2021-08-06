@@ -35,6 +35,8 @@ import ig from "../images/icons8-instagram-old.svg"
 import twitter from "../images/icons8-twitter.svg"
 import twitch from "../images/icons8-twitch.svg"
 import planet from "../animations/planet.mp4"
+import planet_webm from "../animations/planet.webm"
+
 const IndexPage = () => {
   //? фальшивые данные
   let dummyDataArray = []
@@ -132,6 +134,7 @@ const IndexPage = () => {
             muted={true}
           >
             <source src={planet} type="video/mp4" />
+            <source src={planet_webm} type='video/webm' />
           </video>
           <div className="welcome">
             <h1>FAMILY PHALLUS PLANET #FAPP</h1>

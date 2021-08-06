@@ -9,10 +9,11 @@
 
   .welcome-planet {
     position: absolute;
-    width   : 100vw;
+    width   : 80vh;
     z-index : 1;
-    left    : 0;
+    left: calc(100vw / 2 - 40vh);
     height  : 80vh;
+    border-radius: 40vh;
   }
 
   .welcome {
