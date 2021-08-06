@@ -11,7 +11,6 @@ $animationSpeed: 20s;
 	}
 }
 
-
 // Styling
 .slider {
 	background: transparent;
@@ -20,7 +19,7 @@ $animationSpeed: 20s;
 	margin    : auto;
 	overflow  : hidden;
 	position  : relative;
-	width     : 960px;
+	width     : 60vw;
 
 	.slide-track {
 		animation: scroll $animationSpeed linear infinite;

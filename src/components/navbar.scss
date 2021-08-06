@@ -5,27 +5,28 @@
   height      : 100%;
 
   display              : grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1.5fr;
 
 
   .logo {
     align-self: center;
-    display: inline-block;
+    display   : inline-block;
     width     : 30%;
     height    : 40%;
-    button{
-      width: 100%;
+
+    button {
+      width : 100%;
       height: 100%;
     }
   }
 
   .navbar-btns {
     height       : 100%;
-    width        : 50vw;
+    width        : 100%;
     border-radius: 5px;
 
     display              : grid;
-    grid-template-columns: 4fr repeat(7, 2fr) 1fr;
+    grid-template-columns: repeat(7, 2fr) 60px;
     grid-template-rows   : 1fr;
     gap                  : 30px;
 
@@ -49,6 +50,7 @@
         img {
           display: inline-block;
           height : 2.5vh;
+          width: 2vh;
         }
       }
     }
@@ -77,9 +79,9 @@
     }
 
     button.withBg {
-      color     : #131826;
+      color      : #131826;
       font-weight: bold;
-      background: whitesmoke;
+      background : whitesmoke;
     }
   }
 }

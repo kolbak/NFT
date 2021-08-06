@@ -126,6 +126,7 @@
     display              : grid;
     grid-template-columns: 1fr 1fr;
     padding              : 0 20px 0 0;
+    gap: 30px;
 
     .text-wrap {
       display           : grid;
@@ -156,7 +157,8 @@
 
     img {
       display     : inline-block;
-      height      : 50vh;
+      // height      : 50vh;
+      width: 100%;
       justify-self: right;
     }
   }
