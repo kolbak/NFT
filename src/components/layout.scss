@@ -48,15 +48,21 @@ summary {
   min-height: 90vh;
   width     : 100%;
   background: rgba(19, 24, 38, 1) 100%;
+  // overflow-x: hidden;
 
   * {
     color: white;
   }
 
   .layout-second-inner-wrap {
-    padding  : 1.45rem 1.0875rem 1.45rem 1.0875rem;
-    margin   : 0 auto;
-    max-width: 70vw;
+    padding  : 0;
+    margin   : 0;
+    
+    .gen-wrap{
+      padding  : 1.45rem 1.0875rem 1.45rem 1.0875rem;
+      margin   : 0 auto;
+      max-width: 70vw;
+    }
   }
 }
 

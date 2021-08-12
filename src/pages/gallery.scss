@@ -1,4 +1,5 @@
 h2.breadcrumb {
+  color        : #ababab;
   margin-bottom: 20px;
 }
 
@@ -19,6 +20,14 @@ h2.breadcrumb {
     }
 
     .filters {
+      * {
+        color: #ababab;
+      }
+
+      span.__filter-title {
+        font-size: 14px;
+      }
+
       margin-top: 25px;
       width     : 80%;
     }
@@ -71,9 +80,9 @@ h2.breadcrumb {
       justify-self     : center;
       align-self       : center;
 
-      font-weight: bold;
-      height     : 50px;
-      width      : 80%;
+      // font-weight: bold;
+      height: 50px;
+      width : 80%;
     }
   }
 }
