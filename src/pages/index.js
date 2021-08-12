@@ -117,11 +117,11 @@ const IndexPage = () => {
   }
   return (
     <>
-      <div className="vertical-lines" style={{ top: "50vh", }}></div>
+      {/* <div className="vertical-lines" style={{ top: "50vh", }}></div>
       <div className="vertical-lines" style={{ top: "50vh", left: "33%" }}></div>
       <div className="vertical-lines" style={{ top: "50vh", left: "50%" }}></div>
       <div className="vertical-lines" style={{ top: "50vh", left: "66.6%" }}></div>
-      <div className="vertical-lines" style={{ top: "50vh", left: "83.3%" }}></div>
+      <div className="vertical-lines" style={{ top: "50vh", left: "83.3%" }}></div> */}
       <Layout>
         <Seo title="Home" />
         <div className="gen-wrap">
