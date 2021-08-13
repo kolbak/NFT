@@ -69,13 +69,13 @@ const Gallery = () => {
   //? dummy data
   let arrData = [];
   // function addData() {
-    for (let i = 0; i < 6; i++) {
-      arrData.push({
-        name: 'Character №' + i,
-        id: `${i}-${Math.floor(Math.random())}_${Math.floor(Math.random())}`,
-        src: [anakin, wizard][Math.floor(Math.random() * 2)],
-      })
-    }
+  for (let i = 0; i < 6; i++) {
+    arrData.push({
+      name: 'Character №' + i,
+      id: `${i}-${Math.floor(Math.random())}_${Math.floor(Math.random())}`,
+      src: [anakin, wizard][Math.floor(Math.random() * 2)],
+    })
+  }
   //   console.log('arrData :>> ', arrData.length);
   // }
   // addData();
@@ -83,20 +83,20 @@ const Gallery = () => {
 
   let grid = [];
   // function createGrid(_data) {
-    for (let i = 0, l = data.length; i < l; i++) {
-      grid.push(
-        <div className="char-card" key={i}>
-          <div className="char-body">
-            <figure className="front">
-              <a className="char-link">
-                <span id={'label-char-' + data[i].id}>{data[i].name}</span>
-                <img id={'char-' + data[i].id} onMouseMove={animate} src={data[i].src} alt={'Character number' + data[i]} />
-              </a>
-            </figure>
-          </div>
+  for (let i = 0, l = data.length; i < l; i++) {
+    grid.push(
+      <div className="char-card" key={i}>
+        <div className="char-body">
+          <figure className="front">
+            <a className="char-link">
+              <span id={'label-char-' + data[i].id}>{data[i].name}</span>
+              <img id={'char-' + data[i].id} onMouseMove={animate} src={data[i].src} alt={'Character number' + data[i]} />
+            </a>
+          </figure>
         </div>
-      )
-    }
+      </div>
+    )
+  }
   // }
   // createGrid(data);
 
@@ -111,17 +111,21 @@ const Gallery = () => {
     outline: 'none',
     bg: '#555555',
     mb: 2,
+
     borderRadius: `${25}px`,
+  }
+  const accordionButtonStyle = {
+    p: "5px",
   }
   const accordionButtonStyle_focus = {
     border: 'none',
     outline: 'none',
     boxShadow: 'none',
   }
-  const BoxStyle = {
-    color: '#ababab',
-    fontWeight: 'bold',
-  }
+  // const BoxStyle = {
+  //   color: '#ababab',
+  //   // fontWeight: 'bold',
+  // }
 
   //? кнопка ShowMore
   function ButtonCustomShowMore({ children, className }) {
@@ -143,10 +147,10 @@ const Gallery = () => {
       <h2 className="breadcrumb">
         <Breadcrumb separator={<ChevronRightIcon color="green.500" />}>
           <BreadcrumbItem>
-            <BreadcrumbLink href="/" color={BoxStyle.color}>Home</BreadcrumbLink>
+            <BreadcrumbLink href="/">Home</BreadcrumbLink>
           </BreadcrumbItem>
           <BreadcrumbItem>
-            <BreadcrumbLink href="/gallery" color={BoxStyle.color}>Gallery</BreadcrumbLink>
+            <BreadcrumbLink href="/gallery">Gallery</BreadcrumbLink>
           </BreadcrumbItem>
         </Breadcrumb>
       </h2>
@@ -163,11 +167,10 @@ const Gallery = () => {
                 borderRadius={accordionItemStyle.borderRadius}
               >
                 <h2>
-                  <AccordionButton _focus={accordionButtonStyle_focus}>
-                    <Box flex="1" textAlign="left"
-                      color={BoxStyle.color}
-                      fontWeight={BoxStyle.fontWeight}>
-                      BACKGROUND COLOR
+                  <AccordionButton
+                    paddingY={accordionButtonStyle.p} _focus={accordionButtonStyle_focus}>
+                    <Box flex="1" textAlign="left">
+                      <span className="__filter-title">BACKGROUND COLOR</span>
                     </Box>
                     <AccordionIcon />
                   </AccordionButton>
@@ -198,11 +201,10 @@ const Gallery = () => {
                 mb={accordionItemStyle.mb}
                 borderRadius={accordionItemStyle.borderRadius}>
                 <h2>
-                  <AccordionButton _focus={accordionButtonStyle_focus}>
-                    <Box flex="1" textAlign="left"
-                      color={BoxStyle.color}
-                      fontWeight={BoxStyle.fontWeight}>
-                      SKIN COLOR
+                  <AccordionButton
+                    paddingY={accordionButtonStyle.p} _focus={accordionButtonStyle_focus}>
+                    <Box flex="1" textAlign="left">
+                      <span className="__filter-title">SKIN COLOR</span>
                     </Box>
                     <AccordionIcon />
                   </AccordionButton>
@@ -221,11 +223,10 @@ const Gallery = () => {
                 mb={accordionItemStyle.mb}
                 borderRadius={accordionItemStyle.borderRadius}>
                 <h2>
-                  <AccordionButton _focus={accordionButtonStyle_focus}>
-                    <Box flex="1" textAlign="left"
-                      color={BoxStyle.color}
-                      fontWeight={BoxStyle.fontWeight}>
-                      SKIN TYPE
+                  <AccordionButton
+                    paddingY={accordionButtonStyle.p} _focus={accordionButtonStyle_focus}>
+                    <Box flex="1" textAlign="left">
+                      <span className="__filter-title">SKIN TYPE</span>
                     </Box>
                     <AccordionIcon />
                   </AccordionButton>
@@ -244,11 +245,10 @@ const Gallery = () => {
                 mb={accordionItemStyle.mb}
                 borderRadius={accordionItemStyle.borderRadius}>
                 <h2>
-                  <AccordionButton _focus={accordionButtonStyle_focus}>
-                    <Box flex="1" textAlign="left"
-                      color={BoxStyle.color}
-                      fontWeight={BoxStyle.fontWeight}>
-                      HEAD
+                  <AccordionButton
+                    paddingY={accordionButtonStyle.p} _focus={accordionButtonStyle_focus}>
+                    <Box flex="1" textAlign="left">
+                      <span className="__filter-title">HEAD</span>
                     </Box>
                     <AccordionIcon />
                   </AccordionButton>
@@ -267,11 +267,10 @@ const Gallery = () => {
                 mb={accordionItemStyle.mb}
                 borderRadius={accordionItemStyle.borderRadius}>
                 <h2>
-                  <AccordionButton _focus={accordionButtonStyle_focus}>
-                    <Box flex="1" textAlign="left"
-                      color={BoxStyle.color}
-                      fontWeight={BoxStyle.fontWeight}>
-                      EYES
+                  <AccordionButton
+                    paddingY={accordionButtonStyle.p} _focus={accordionButtonStyle_focus}>
+                    <Box flex="1" textAlign="left">
+                      <span className="__filter-title">EYES</span>
                     </Box>
                     <AccordionIcon />
                   </AccordionButton>
@@ -290,11 +289,10 @@ const Gallery = () => {
                 mb={accordionItemStyle.mb}
                 borderRadius={accordionItemStyle.borderRadius}>
                 <h2>
-                  <AccordionButton _focus={accordionButtonStyle_focus}>
-                    <Box flex="1" textAlign="left"
-                      color={BoxStyle.color}
-                      fontWeight={BoxStyle.fontWeight}>
-                      MOUTH
+                  <AccordionButton
+                    paddingY={accordionButtonStyle.p} _focus={accordionButtonStyle_focus}>
+                    <Box flex="1" textAlign="left">
+                      <span className="__filter-title">MOUTH</span>
                     </Box>
                     <AccordionIcon />
                   </AccordionButton>
@@ -313,11 +311,10 @@ const Gallery = () => {
                 mb={accordionItemStyle.mb}
                 borderRadius={accordionItemStyle.borderRadius}>
                 <h2>
-                  <AccordionButton _focus={accordionButtonStyle_focus}>
-                    <Box flex="1" textAlign="left"
-                      color={BoxStyle.color}
-                      fontWeight={BoxStyle.fontWeight}>
-                      EYEWEAR
+                  <AccordionButton
+                    paddingY={accordionButtonStyle.p} _focus={accordionButtonStyle_focus}>
+                    <Box flex="1" textAlign="left">
+                      <span className="__filter-title">EYEWEAR</span>
                     </Box>
                     <AccordionIcon />
                   </AccordionButton>
@@ -336,11 +333,10 @@ const Gallery = () => {
                 mb={accordionItemStyle.mb}
                 borderRadius={accordionItemStyle.borderRadius}>
                 <h2>
-                  <AccordionButton _focus={accordionButtonStyle_focus}>
-                    <Box flex="1" textAlign="left"
-                      color={BoxStyle.color}
-                      fontWeight={BoxStyle.fontWeight}>
-                      NECKLACE
+                  <AccordionButton
+                    paddingY={accordionButtonStyle.p} _focus={accordionButtonStyle_focus}>
+                    <Box flex="1" textAlign="left">
+                      <span className="__filter-title">NECKLACE</span>
                     </Box>
                     <AccordionIcon />
                   </AccordionButton>
@@ -359,11 +355,10 @@ const Gallery = () => {
                 mb={accordionItemStyle.mb}
                 borderRadius={accordionItemStyle.borderRadius}>
                 <h2>
-                  <AccordionButton _focus={accordionButtonStyle_focus}>
-                    <Box flex="1" textAlign="left"
-                      color={BoxStyle.color}
-                      fontWeight={BoxStyle.fontWeight}>
-                      BACK ITEM
+                  <AccordionButton
+                    paddingY={accordionButtonStyle.p} _focus={accordionButtonStyle_focus}>
+                    <Box flex="1" textAlign="left">
+                      <span className="__filter-title">BACK ITEM</span>
                     </Box>
                     <AccordionIcon />
                   </AccordionButton>
@@ -379,7 +374,7 @@ const Gallery = () => {
           </div>
         </div>
         <div className="grid">
-          <GalleryGrid data={data}/>
+          <GalleryGrid data={data} />
           {/* {grid} */}
           <ButtonCustomShowMore className="btn-showmore">SHOW MORE</ButtonCustomShowMore>
         </div>

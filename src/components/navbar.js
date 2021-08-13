@@ -25,7 +25,7 @@ const Navbar = () => {
     return <Box
       className={className}
       as="button"
-      border="3px solid whitesmoke"
+      border="2px solid whitesmoke"
       color="whitesmoke"
       bgColor="#292929"
     >
