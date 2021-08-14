@@ -14,10 +14,6 @@ const UserAccount = () => {
       <Box
         className={className}
         as="button"
-        // border="none"
-        // color="white"
-        // bgColor="blue"
-        // borderRadius="25px"
       >
         {children}
       </Box>
@@ -33,7 +29,7 @@ const UserAccount = () => {
           <div className="item"></div>
           <div className="item"></div>
         </div>
-        <ButtonCustomConnect className="cnct-wallet">
+        <ButtonCustomConnect className="user-account cnct-wallet">
           Connect your wallet
         </ButtonCustomConnect>
       </div>
