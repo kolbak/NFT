@@ -1,0 +1,28 @@
+.gen-wrap {
+  display: grid;
+  gap    : 50px;
+
+  h1 {
+    font-weight: bold;
+    font-size  : 2.5vw;
+  }
+
+  .bought {
+    min-height           : 400px;
+    display              : grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap                  : 30px;
+
+    .item {
+      box-shadow: 6px 6px 6px 5px rgba(105, 131, 153, 0.52);
+    }
+  }
+
+  .cnct-wallet {
+    justify-self: center;
+
+    padding      : 15px;
+    border-radius: 30px;
+    background   : rgb(66, 112, 128);
+  }
+}
