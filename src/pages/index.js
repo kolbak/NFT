@@ -124,7 +124,7 @@ const IndexPage = () => {
       <div className="vertical-lines" style={{ top: "50vh", left: "83.3%" }}></div> */}
       <Layout>
         <Seo title="Home" />
-        <div className="gen-wrap">
+        {/* <div className="gen-wrap"> */}
           <div className="welcome-wrap">
             <div className="video-wrap">
               <video className="welcome-planet"
@@ -154,7 +154,7 @@ const IndexPage = () => {
               <img src={twitch} alt="twitch" />
             </div>
           </div>
-        </div>
+        {/* </div> */}
         <div className="index-wrap-content">
           <div className="carousel">
             <Carousel data={data} />
@@ -189,7 +189,7 @@ const IndexPage = () => {
                   </p>
                 </div>
                 <ButtonCustomMint className="toMint">
-                  <Link to="/">
+                  <Link to="/mint">
                     <span>Mint</span>
                   </Link>
                 </ButtonCustomMint>
