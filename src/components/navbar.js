@@ -47,7 +47,7 @@ const Navbar = () => {
         <ButtonCustom><Link to="/"><span>Roadmap</span></Link></ButtonCustom>
         <ButtonCustom><Link to="/FAQ"><span>FAQs</span></Link></ButtonCustom>
         <ButtonCustom><Link to="/"><span>Contacts</span></Link></ButtonCustom>
-        <ButtonCustom className="withBg"><Link to="/"><span>Mint</span></Link></ButtonCustom>
+        <ButtonCustom className="withBg"><Link to="/mint"><span>Mint</span></Link></ButtonCustom>
         <ButtonCustom className="withBg"><Link to="/user_account"><img src={summerHolidays} alt="summer holidays" /></Link></ButtonCustom>
       </div>
     </nav>

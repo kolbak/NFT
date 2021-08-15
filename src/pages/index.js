@@ -75,9 +75,9 @@ const IndexPage = () => {
       </Box>
     )
   }
-  function AccordionItemCustom({ children, title }) {
+  function AccordionItemCustom({ className, children, title }) {
     return (
-      <AccordionItem border="none" bg="#555555" outline="none" mb={4}>
+      <AccordionItem border="none" bg="#555555" outline="none" mb={4} className={className}>
         <h2>
           <AccordionButton
             _focus={{
@@ -124,7 +124,7 @@ const IndexPage = () => {
       <div className="vertical-lines" style={{ top: "50vh", left: "83.3%" }}></div> */}
       <Layout>
         <Seo title="Home" />
-        <div className="gen-wrap">
+        {/* <div className="gen-wrap"> */}
           <div className="welcome-wrap">
             <div className="video-wrap">
               <video className="welcome-planet"
@@ -154,7 +154,7 @@ const IndexPage = () => {
               <img src={twitch} alt="twitch" />
             </div>
           </div>
-        </div>
+        {/* </div> */}
         <div className="index-wrap-content">
           <div className="carousel">
             <Carousel data={data} />
@@ -165,7 +165,7 @@ const IndexPage = () => {
             </Link>
           </div>
           <div className="gen-wrap">
-            <div className="storyline">
+            <div className="content-block storyline">
               <div className="text-wrap">
                 <div className="text">
                   <h2>STORYLINE</h2>
@@ -189,14 +189,14 @@ const IndexPage = () => {
                   </p>
                 </div>
                 <ButtonCustomMint className="toMint">
-                  <Link to="/">
+                  <Link to="/mint">
                     <span>Mint</span>
                   </Link>
                 </ButtonCustomMint>
               </div>
               <img src={brutal} alt="" />
             </div>
-            <div className="nft">
+            <div className="content-block nft">
               <div className="info">
                 <h2>
                   <span>NFT</span>
@@ -269,7 +269,7 @@ const IndexPage = () => {
                 </div>
               </div>
             </div>
-            <div className="roadmap">
+            <div className="content-block roadmap">
               <div className="points">
                 <h2>ROADMAP</h2>
                 <div className="divider-wrap">
@@ -345,56 +345,100 @@ const IndexPage = () => {
                 </div>
               </div>
             </div>
-            <div className="faq">
+            <div className="content-block faq">
               <h2>FAQ</h2>
               <Accordion allowMultiple allowToggle>
                 <AccordionItemCustom title="WHO ARE YOU?">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                  enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                  nisi ut aliquip ex ea commodo consequat.
+                  We are a team of artists, developers and financial analysts that discovered Family Phallus Planet - FAPP.
                 </AccordionItemCustom>
                 <AccordionItemCustom title="WHAT IS FAPP?">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                  enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                  nisi ut aliquip ex ea commodo consequat.
+                  Family Phallus Planet - FAPP is an Ethereum Blockchain planet with 10,000 unique 2.5 inch NFT Phalluses.
                 </AccordionItemCustom>
                 <AccordionItemCustom title="TELL ME MORE ABOUT YOUR NFT COLLECTION!">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                  enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                  nisi ut aliquip ex ea commodo consequat.
+                  Every Phallus has different combination of
+                  <ul>
+                    <li>Background color</li>
+                    <li>Skin Color</li>
+                    <li>Skin Type</li>
+                    <li>Head</li>
+                    <li>Eyes</li>
+                    <li>Mouth</li>
+                    <li>Glasses</li>
+                    <li>Necklace</li>
+                  </ul>
+                  Every item has different styles:
+                  <ul>
+                    <li>Common items</li>
+                    <li>Animal items</li>
+                    <li>Cyber items</li>
+                    <li>Precious items</li>
+                    <li>Afterlife items</li>
+                    <li>Rasta items</li>
+                    <li>Protection items</li>
+                    <li>Superhero items</li>
+                  </ul>
+                  Every style belongs to its own level of rarity
+                  <ul>
+                    <li>Basic level
+                      <ul>
+                        <li>Common items</li>
+                        <li>Rasta items</li>
+                        <li>Protection items</li>
+                        <li>Superhero items</li>
+                      </ul>
+                    </li>
+                    <li>Wild
+                      <ul>
+                        <li>Animal items</li>
+                        <li>Cyber items</li>
+                        <li>Afterlife items</li>
+                      </ul>
+                    </li>
+                    <li>Dope
+                      <ul>
+                        <li>precious items</li>
+                      </ul>
+                    </li>
+                  </ul>
                 </AccordionItemCustom>
-                <AccordionItemCustom title="WHAT ERE YOU PLANNING TO DO?">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                  enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                  nisi ut aliquip ex ea commodo consequat.
+                <AccordionItemCustom title="WHAT ARE YOU PLANNING TO DO?">
+                  <ul>
+                    <li>We are planning to show that art must be provocative because our planet became boring and too much structured.
+                      <p>
+                        <em>FAPP is not boring, every Phallus here knows how to deal with boredom! </em>
+                      </p>
+                    </li>
+                    <br />
+                    <li>We want to stop body shaming.
+                      <p>
+                        <em>Look at Phalluses! They know that they're small, but they DGAF about it. They support each other and think about their strengths while humans fixated on their "problems". Let's create a community where everyone can find friends and forget about stupid stereotypes!  </em>
+                      </p>
+                    </li>
+                    <br />
+                    <li>We want to help fight AIDS.
+                      <p>
+                        <em>We will donate money to charities that will be chosen by Phalluses in our #FAPP community.</em>
+                      </p>
+                    </li>
+                    <br />
+                    <li>Our team will provide giveaways and prizes.
+                      <p>
+                        <em>ETH coins, free NFTs, Rolex watch and more cool stuff! </em>
+                      </p>
+                    </li>
+                  </ul>
                 </AccordionItemCustom>
                 <AccordionItemCustom title="HOW CAN I GET A PHALLUS?">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                  enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                  nisi ut aliquip ex ea commodo consequat.
+                  Click here <a href="/">https://nft-cockiz.com/mint</a>, connect your MetaMask wallet and mint (buy) your NFT Phallus.
                 </AccordionItemCustom>
                 <AccordionItemCustom title="WILL YOU MAKE MORE PHALLUSES?">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                  enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                  nisi ut aliquip ex ea commodo consequat.
+                  No we won't. We have limited emission because we want to preserve the value of our NFTs.
                 </AccordionItemCustom>
                 <AccordionItemCustom title="DO YOU HAVE YOUR OWN SMART CONTRACT?">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                  enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                  nisi ut aliquip ex ea commodo consequat.
+                  Yes, we developed our own Smart Contract smartcontract.
                 </AccordionItemCustom>
                 <AccordionItemCustom title="CAN I RESELL MY PHALLUS NFT?">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                  enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                  nisi ut aliquip ex ea commodo consequat.
+                  You can resell it on <a href="https://opensea.io/">https://opensea.io/</a>
                 </AccordionItemCustom>
               </Accordion>
             </div>

@@ -1,17 +1,39 @@
 import * as React from "react"
+import {
+  Box,
+} from "@chakra-ui/react"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
-const UserAccount = () => {
+import './user_account.scss'
 
+const UserAccount = () => {
+  function ButtonCustomConnect({ children, className }) {
+    return (
+      <Box
+        className={className}
+        as="button"
+      >
+        {children}
+      </Box>
+    )
+  }
   return (
-  <Layout>
-    <Seo title="Account" />
-    <h2>Your Account</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem voluptatibus culpa eum amet quae reprehenderit ullam, aut expedita animi totam accusamus a pariatur perferendis rerum adipisci nam molestias velit? Minus.</p>
-    
-  </Layout>
+    <Layout>
+      <Seo title="Account" />
+      <div className="gen-wrap">
+        <h1>#FAPP</h1>
+        <div className="bought">
+          <div className="item"></div>
+          <div className="item"></div>
+          <div className="item"></div>
+        </div>
+        <ButtonCustomConnect className="user-account cnct-wallet">
+          Connect your wallet
+        </ButtonCustomConnect>
+      </div>
+    </Layout>
   )
 }
 export default UserAccount

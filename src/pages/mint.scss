@@ -1,0 +1,40 @@
+.gen-wrap {
+  ol {
+
+    .connect,
+    .mint {
+
+      .wrap {
+        display              : grid;
+        grid-template-columns: 1fr 1fr;
+
+        .mint-cnct-wallet {
+          justify-self: start;
+
+          max-height   : 50px;
+          padding      : 0 15px;
+          border-radius: 30px;
+          background   : rgb(66, 112, 128);
+        }
+      }
+    }
+
+    .mint {
+      .wrap {
+        .form {
+          width: 30%;
+
+          form {
+            display           : grid;
+            grid-template-rows: 2fr 1fr;
+            gap               : 10px;
+
+            .mint-cnct-wallet {
+              height      : 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

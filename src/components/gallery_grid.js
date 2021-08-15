@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react"
+import { Link } from "gatsby"
 import {
   Box,
   Breadcrumb,
@@ -71,10 +72,10 @@ const GalleryGrid = ({ data }) => {
       <div className="char-card" key={i}>
         <div className="char-body">
           <figure className="front">
-            <a className="char-link">
-              <span id={'label-char-' + data[i].id}>{data[i].name}</span>
-              <img id={'char-' + data[i].id} onMouseMove={animate} src={data[i].src} alt={'Character number' + data[i]} />
-            </a>
+            <Link to={`/character?id=${data[i].id}, ${data[i].src}`} className="char-link">
+              <span className="char-id" id={'label-char-' + data[i].id}>{data[i].name}</span>
+              <img className="char-img" id={'char-' + data[i].id} onMouseMove={animate} src={data[i].src} alt={'Character number' + data[i]} />
+            </Link>
           </figure>
         </div>
       </div>
@@ -87,5 +88,4 @@ const GalleryGrid = ({ data }) => {
     </>
   )
 }
-
 export default GalleryGrid
