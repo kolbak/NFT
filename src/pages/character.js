@@ -6,7 +6,13 @@ import Seo from "../components/seo"
 import './character.scss'
 
 const Character = () => {
-    const url = window.location.href;
+    // Check if window is defined (so if in the browser or in node.js).
+    const isBrowser = typeof window !== "undefined"
+    let url = '';
+    if (isBrowser) {
+        url = window.location.href;
+    }
+
     const index = url.slice(url.indexOf('id=') + 3, url.indexOf('id=') + 4);
     const imgSrc = url.slice(url.indexOf('static') - 1, url.length + 4);
     function changeName() {
