@@ -6,7 +6,6 @@ import Seo from "../components/seo"
 import './character.scss'
 
 const Character = () => {
-    // Check if window is defined (so if in the browser or in node.js).
     const isBrowser = typeof window !== "undefined"
     let url = '';
     if (isBrowser) {
