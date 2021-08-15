@@ -1,4 +1,4 @@
-.character-container{
+.character-container {
     display: flex;
 }
 
@@ -7,9 +7,9 @@
 }
 
 .character-image {
-    margin: 100px 50px 0 50px;
-    width: 40%;
-    height: 40%;
+    margin    : 100px 50px 0 50px;
+    width     : 40%;
+    height    : 40%;
     object-fit: contain;
 }
 
@@ -17,42 +17,43 @@
     padding-left: 5%;
 }
 
-.character-header{
-    font-size: 45px;
-    font-weight: bold;
+.character-header {
+    font-size    : 45px;
+    font-weight  : bold;
     margin-bottom: 10px;
 }
 
-.OpenSea-link{
-    border-radius: 29px;
+.OpenSea-link {
+    border-radius   : 29px;
     background-color: #00bfff;
-    width: 20%;
-    text-align: center;
-    display: block;
-    margin-bottom: 10px;
+    white-space     : nowrap;
+    width           : 200px;
+    display         : block;
+    text-align      : center;
+    margin-bottom   : 10px;
 }
 
 .character-details {
-    font-size: 35px;
+    font-size  : 35px;
     font-weight: 600;
 }
 
 .character-details-header {
-    display: grid;
+    display              : grid;
     grid-template-columns: min-content 1fr;
-    margin-bottom: 20px;
+    margin-bottom        : 20px;
 }
 
 .character-detail {
-    white-space: nowrap;
-    display: grid;
+    white-space          : nowrap;
+    display              : grid;
     grid-template-columns: min-content 1fr minmax(20%, 40%);
-    font-size: 12px;
-    margin-bottom: 15px;
+    font-size            : 12px;
+    margin-bottom        : 15px;
 }
 
 .character-detail-points {
-    border-bottom : solid 1px white;
+    border-bottom: solid 1px white;
 }
 
 
@@ -60,7 +61,7 @@
 
 
 .character-detail-occurs {
-    margin-top: 3px;
+    margin-top       : 3px;
     grid-column-start: 1;
-    grid-column-end: 3;
+    grid-column-end  : 3;
 }
