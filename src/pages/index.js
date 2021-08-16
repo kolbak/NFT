@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { Link } from "gatsby"
 import {
   Box,
@@ -38,6 +38,24 @@ import planet from "../animations/planet.mp4"
 import planet_webm from "../animations/planet.webm"
 
 const IndexPage = () => {
+  const isBrowser = typeof window !== "undefined"
+
+  useEffect(() => {
+    if (isBrowser) {
+      let searchStr = window.location.search;
+      let id = new URLSearchParams(searchStr).get('id');
+
+      if (id) {
+        let shift = document.getElementById(id).getBoundingClientRect().top;
+
+        window.scrollTo({
+          top: shift - 50,
+          behavior: 'smooth',
+        });
+      };
+    }
+  }, []);
+
   //? фальшивые данные
   let dummyDataArray = []
   for (let i = 0, l = 10; i < l; i++) {
@@ -115,28 +133,24 @@ const IndexPage = () => {
       </Box>
     )
   }
+
   return (
     <>
-      {/* <div className="vertical-lines" style={{ top: "50vh", }}></div>
-      <div className="vertical-lines" style={{ top: "50vh", left: "33%" }}></div>
-      <div className="vertical-lines" style={{ top: "50vh", left: "50%" }}></div>
-      <div className="vertical-lines" style={{ top: "50vh", left: "66.6%" }}></div>
-      <div className="vertical-lines" style={{ top: "50vh", left: "83.3%" }}></div> */}
       <Layout>
         <Seo title="Home" />
-        {/* <div className="gen-wrap"> */}
-          <div className="welcome-wrap">
-            <div className="video-wrap">
-              <video className="welcome-planet"
-                preload="true"
-                autoPlay={true}
-                loop={true}
-                muted={true}
-              >
-                <source src={planet} type="video/mp4" />
-                <source src={planet_webm} type='video/webm' />
-              </video>
-            </div>
+        <div className="welcome-wrap">
+          <div className="video-wrap">
+            <video className="welcome-planet"
+              preload="true"
+              autoPlay={true}
+              loop={true}
+              muted={true}
+            >
+              <source src={planet} type="video/mp4" />
+              <source src={planet_webm} type='video/webm' />
+            </video>
+          </div>
+          <div className="content">
             <div className="welcome">
               <h1>FAMILY PHALLUS PLANET #FAPP</h1>
               <p>The NFT planet where every Phallus is unique and free!</p>
@@ -154,7 +168,7 @@ const IndexPage = () => {
               <img src={twitch} alt="twitch" />
             </div>
           </div>
-        {/* </div> */}
+        </div>
         <div className="index-wrap-content">
           <div className="carousel">
             <Carousel data={data} />
@@ -165,7 +179,7 @@ const IndexPage = () => {
             </Link>
           </div>
           <div className="gen-wrap">
-            <div className="content-block storyline">
+            <div id="content-block-storyline" className="content-block storyline">
               <div className="text-wrap">
                 <div className="text">
                   <h2>STORYLINE</h2>
@@ -196,7 +210,7 @@ const IndexPage = () => {
               </div>
               <img src={brutal} alt="" />
             </div>
-            <div className="content-block nft">
+            <div id="content-block-nft" className="content-block nft">
               <div className="info">
                 <h2>
                   <span>NFT</span>
@@ -269,7 +283,7 @@ const IndexPage = () => {
                 </div>
               </div>
             </div>
-            <div className="content-block roadmap">
+            <div id="content-block-roadmap" className="content-block roadmap">
               <div className="points">
                 <h2>ROADMAP</h2>
                 <div className="divider-wrap">
@@ -345,7 +359,7 @@ const IndexPage = () => {
                 </div>
               </div>
             </div>
-            <div className="content-block faq">
+            <div id="content-block-faq" className="content-block faq">
               <h2>FAQ</h2>
               <Accordion allowMultiple allowToggle>
                 <AccordionItemCustom title="WHO ARE YOU?">

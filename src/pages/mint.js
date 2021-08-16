@@ -29,33 +29,34 @@ const Mint = () => {
     <Layout>
       <Seo title="Mint" />
       <div className="gen-wrap">
-        <h1>Заголовок</h1>
-        <h2>Подзаголовок</h2>
-        <ol>
-          <li className="connect">
+        <h1>Create your Phallus Avatar</h1>
+        <h2>
+          To mint your Phallus simply connect your MetaMask wallet and choose the number you wish to mint.
+          <p><em>You should add enough funds for NFTs + GAS fee.</em></p>
+        </h2>
+        <div className="connect">
+          <div className="text">
             <h2>Connect</h2>
-            <div className="wrap">
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique saepe magnam totam eius ipsam, fuga sed consequuntur quis, ea facere, eum temporibus exercitationem blanditiis velit. Ea placeat delectus asperiores dolores.</p>
-              <ButtonCustom className="mint-cnct-wallet">Connect your wallet</ButtonCustom>
-            </div>
-          </li>
-          <br />
-          <li className="mint">
+            <p>Join the our Discord server if you need help. lorem</p>
+          </div>
+          <ButtonCustom className="mint-cnct-wallet">Connect your wallet</ButtonCustom>
+        </div>
+        <div className="mint">
+          <div className="text">
             <h2>Mint</h2>
-            <div className="wrap">
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique saepe magnam totam eius ipsam, fuga sed consequuntur quis, ea facere, eum temporibus exercitationem blanditiis velit. Ea placeat delectus asperiores dolores.</p>
-              <div className="form">
-                <form action="">
-                  <FormControl id="amount">
-                    <FormLabel>Amount</FormLabel>
-                    <Input type="number" />
-                  </FormControl>
-                  <ButtonCustom className="mint-cnct-wallet">Mint</ButtonCustom>
-                </form>
-              </div>
-            </div>
-          </li>
-        </ol>
+            <p>You can mint up to a maximum of 15 Phalluses in a single transaction</p>
+          </div>
+          <div className="form">
+            <form action="">
+              <FormControl id="amount">
+                <FormLabel>Amount</FormLabel>
+                <Input type="number" />
+              </FormControl>
+              <ButtonCustom className="mint-cnct-wallet">Mint</ButtonCustom>
+            </form>
+          </div>
+        </div>
+        <p className="agreement">By minting a Phallus you agree to our Terms of Service.</p>
       </div>
     </Layout>)
 }

@@ -39,41 +39,6 @@ h2.breadcrumb {
     grid-auto-rows       : max-content;
     gap                  : 20px;
 
-    .char-card {
-      height: 300px;
-
-      .char-body {
-        height  : 100%;
-        position: relative;
-
-        .front {
-          height    : 100%;
-          transition: .5s;
-
-          a.char-link {
-            span {
-              pointer-events: none;
-              position      : absolute;
-              z-index       : 1;
-              top           : 15px;
-              left          : 15px;
-            }
-
-            img {
-              height    : 100%;
-              margin    : 0;
-              transition: .2s box-shadow;
-            }
-
-            img:hover {
-              box-shadow: 6px 6px 6px 5px rgba(105, 131, 153, 0.52);
-            }
-          }
-        }
-      }
-
-    }
-
     .btn-showmore {
       grid-column-start: 2;
       grid-column-end  : 3;

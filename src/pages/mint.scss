@@ -1,40 +1,42 @@
 .gen-wrap {
-  ol {
+  h2 {
+    display: inline-block;
+  }
 
-    .connect,
-    .mint {
+  .connect,
+  .mint {
+    display              : grid;
+    grid-template-columns: 1fr 1fr;
 
-      .wrap {
-        display              : grid;
-        grid-template-columns: 1fr 1fr;
+    padding: 0 0 0 20px;
+
+    .mint-cnct-wallet {
+      justify-self: start;
+
+      height       : 50px;
+      padding      : 0 15px;
+      border-radius: 30px;
+      background   : rgb(66, 112, 128);
+    }
+  }
+
+  .mint {
+    .form {
+      width: 30%;
+
+      form {
+        display           : grid;
+        grid-template-rows: 2fr 1fr;
+        gap               : 10px;
 
         .mint-cnct-wallet {
-          justify-self: start;
-
-          max-height   : 50px;
-          padding      : 0 15px;
-          border-radius: 30px;
-          background   : rgb(66, 112, 128);
+          height: 30px;
         }
       }
     }
+  }
 
-    .mint {
-      .wrap {
-        .form {
-          width: 30%;
-
-          form {
-            display           : grid;
-            grid-template-rows: 2fr 1fr;
-            gap               : 10px;
-
-            .mint-cnct-wallet {
-              height      : 30px;
-            }
-          }
-        }
-      }
-    }
+  .agreement {
+    opacity: .7;
   }
 }
