@@ -23,18 +23,18 @@ const Character = () => {
         <Layout>
             <Seo title="Connect" />
             <div className="character-container">
+                <img className="character-image" src=""></img>
                 <div className="character-text">
                     <h2 ref={changeName} className="character-header">.</h2>
                     <a href="#" className="OpenSea-link">View on OpenSea</a>
+                    <p className="character-details-header">Details</p>
                     <ul className="character-details">
-                        <p className="character-details-header">Details</p>
                         <li className="character-detail">Birthday
                             <span className="character-detail-points"></span>
                             <span className="character-detail-value">
                                 10.10.1010
                             </span>
                         </li>
-
                         <li className="character-detail">
                             Traits
                             <span className="character-detail-points"></span>
@@ -42,7 +42,6 @@ const Character = () => {
                                 12
                             </span>
                         </li>
-
                         <li className="character-detail">
                             Background
                             <span className="character-detail-points"></span>
@@ -54,7 +53,6 @@ const Character = () => {
                                 <span className="character-detail-occurs-value"> 10%</span>
                             </p>
                         </li>
-
                         <li className="character-detail">
                             Size
                             <span className="character-detail-points"></span>
@@ -66,7 +64,6 @@ const Character = () => {
                                 <span className="character-detail-occurs-value"> 10%</span>
                             </p>
                         </li>
-
                         <li className="character-detail">
                             Skin color
                             <span className="character-detail-points"></span>
@@ -78,7 +75,6 @@ const Character = () => {
                                 <span className="character-detail-occurs-value"> 10%</span>
                             </p>
                         </li>
-
                         <li className="character-detail">
                             Skin type
                             <span className="character-detail-points"></span>
@@ -90,7 +86,6 @@ const Character = () => {
                                 <span className="character-detail-occurs-value"> 10%</span>
                             </p>
                         </li>
-
                         <li className="character-detail">
                             Head
                             <span className="character-detail-points"></span>
@@ -102,7 +97,6 @@ const Character = () => {
                                 <span className="character-detail-occurs-value"> 10%</span>
                             </p>
                         </li>
-
                         <li className="character-detail">
                             Eyes
                             <span className="character-detail-points"></span>
@@ -114,7 +108,6 @@ const Character = () => {
                                 <span className="character-detail-occurs-value"> 10%</span>
                             </p>
                         </li>
-
                         <li className="character-detail">
                             Mounth
                             <span className="character-detail-points"></span>
@@ -126,7 +119,6 @@ const Character = () => {
                                 <span className="character-detail-occurs-value"> 10%</span>
                             </p>
                         </li>
-
                         <li className="character-detail">
                             Eyewear
                             <span className="character-detail-points"></span>
@@ -138,7 +130,6 @@ const Character = () => {
                                 <span className="character-detail-occurs-value"> 10%</span>
                             </p>
                         </li>
-
                         <li className="character-detail">
                             Necklace
                             <span className="character-detail-points"></span>
@@ -163,7 +154,6 @@ const Character = () => {
                         </li>
                     </ul>
                 </div>
-                <img className="character-image" src=""></img>
             </div>
         </Layout>
     )
