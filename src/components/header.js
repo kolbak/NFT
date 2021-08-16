@@ -5,11 +5,11 @@ import Navbar from './navbar'
 
 import './header.scss'
 
-const Header = ({ siteTitle }) => {
+const Header = () => {
   return (
     <header className="header" >
       <div className="header-inner-wrap">
-        <Navbar />
+        <Navbar/>
       </div>
     </header>
   )

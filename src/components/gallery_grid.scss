@@ -7,7 +7,6 @@
 
     .front {
       height    : 100%;
-      transition: .5s;
 
       a.char-link {
         span {
@@ -21,11 +20,6 @@
         img {
           height    : 100%;
           margin    : 0;
-          transition: .2s box-shadow;
-        }
-
-        img:hover {
-          box-shadow: 6px 6px 6px 5px rgba(105, 131, 153, 0.52);
         }
       }
     }

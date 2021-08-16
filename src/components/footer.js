@@ -4,7 +4,7 @@ import { Box } from "@chakra-ui/react"
 import './footer.scss'
 
 const Footer = () => (
-  <footer className="footer"  >
+  <footer id="contacts" className="footer"  >
     <div className="footer-inner-wrap">
       <div className="info">
         <Box
