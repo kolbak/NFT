@@ -3,14 +3,15 @@
 }
 
 .character-text {
-    width: 60%;
+    width: 50%;
 }
 
 .character-image {
-    margin    : 100px 50px 0 50px;
-    width     : 40%;
-    height    : 40%;
-    object-fit: contain;
+    margin: 184px 25px 0 30px;
+    width     : 50%;
+    height: 574px;
+    object-fit: fill;
+    overflow: hidden;
 }
 
 .character-container {
@@ -47,7 +48,7 @@
 .character-detail {
     white-space          : nowrap;
     display              : grid;
-    grid-template-columns: min-content 1fr minmax(20%, 40%);
+    grid-template-columns: min-content 1fr min-content;
     font-size            : 12px;
     margin-bottom        : 15px;
 }
