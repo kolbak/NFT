@@ -44,10 +44,10 @@ const IndexPage = () => {
     if (isBrowser) {
       let searchStr = window.location.search;
       let id = new URLSearchParams(searchStr).get('id');
-
+      
       if (id) {
-        let shift = document.getElementById(id).getBoundingClientRect().top;
-
+        let shift = document.getElementById(id).getBoundingClientRect().y;
+        
         window.scrollTo({
           top: shift - 50,
           behavior: 'smooth',
