@@ -50,7 +50,7 @@ const FAQ = () => {
       <Seo title="FAQ" />
       <div className="gen-wrap">
         <h2 className="faq-h2">FAQ</h2>
-        <Accordion allowMultiple allowToggle >
+        <Accordion className="accordion" allowMultiple allowToggle >
           <AccordionItemCustom title="WHO ARE YOU?">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
             tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim

@@ -29,6 +29,7 @@ body {
   font-feature-settings        : "kern", "liga", "clig", "calt";
   
   background: rgba(19, 24, 38, 1) 100% !important;
+  overflow-x: hidden;
 }
 
 article,
@@ -66,8 +67,8 @@ summary {
   }
 }
 
-@media only screen and (max-width: 480px) {
-  html {
-    font-size: 100%;
-  }
-}
+// @media only screen and (max-width: 480px) {
+//   html {
+//     font-size: 100%;
+//   }
+// }
