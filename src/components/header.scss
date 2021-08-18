@@ -1,7 +1,8 @@
 .header {
   height: 10vh;
-
-  background: rgba(19, 24, 38, 1) 40%;
+  position: relative;
+  z-index: 2;
+  background: rgba(19, 24, 38, 0.685) 80%;
 
   .header-inner-wrap {
     height: 100%;

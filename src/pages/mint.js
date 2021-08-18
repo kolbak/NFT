@@ -37,7 +37,7 @@ const Mint = () => {
         <div className="connect">
           <div className="text">
             <h2>Connect</h2>
-            <p>Join the our Discord server if you need help. lorem</p>
+            <p>Join the our Discord server if you need help.</p>
           </div>
           <ButtonCustom className="mint-cnct-wallet">Connect your wallet</ButtonCustom>
         </div>
