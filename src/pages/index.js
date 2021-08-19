@@ -44,10 +44,10 @@ const IndexPage = () => {
     if (isBrowser) {
       let searchStr = window.location.search;
       let id = new URLSearchParams(searchStr).get('id');
-
+      
       if (id) {
-        let shift = document.getElementById(id).getBoundingClientRect().top;
-
+        let shift = document.getElementById(id).getBoundingClientRect().y;
+        
         window.scrollTo({
           top: shift - 50,
           behavior: 'smooth',
@@ -361,7 +361,7 @@ const IndexPage = () => {
             </div>
             <div id="content-block-faq" className="content-block faq">
               <h2>FAQ</h2>
-              <Accordion allowMultiple allowToggle>
+              <Accordion className="accordion" allowMultiple allowToggle>
                 <AccordionItemCustom title="WHO ARE YOU?">
                   We are a team of artists, developers and financial analysts that discovered Family Phallus Planet - FAPP.
                 </AccordionItemCustom>

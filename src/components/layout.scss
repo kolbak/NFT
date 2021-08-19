@@ -27,6 +27,9 @@ body {
   -ms-font-feature-settings    : "kern", "liga", "clig", "calt";
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
   font-feature-settings        : "kern", "liga", "clig", "calt";
+  
+  background: rgba(19, 24, 38, 1) 100% !important;
+  overflow-x: hidden;
 }
 
 article,
@@ -47,8 +50,6 @@ summary {
 .layout-inner-wrap {
   min-height: 90vh;
   width     : 100%;
-  background: rgba(19, 24, 38, 1) 100%;
-  // overflow-x: hidden;
 
   * {
     color: white;
@@ -66,8 +67,8 @@ summary {
   }
 }
 
-@media only screen and (max-width: 480px) {
-  html {
-    font-size: 100%;
-  }
-}
+// @media only screen and (max-width: 480px) {
+//   html {
+//     font-size: 100%;
+//   }
+// }

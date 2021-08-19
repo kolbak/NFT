@@ -10,8 +10,8 @@ import {
   AccordionButton,
   AccordionPanel,
   AccordionIcon,
-  Radio,
-  RadioGroup,
+  Checkbox,
+  CheckboxGroup,
   Stack,
 } from "@chakra-ui/react"
 import { ChevronRightIcon } from '@chakra-ui/icons'
@@ -87,7 +87,7 @@ const Gallery = () => {
             <h2 className="filterH2">FILTER</h2>
             <div className="filters">
               <Accordion allowMultiple allowToggle>
-                <AccordionItem
+                <AccordionItem className="filter-container" className="filter-container"
                   border={accordionItemStyle.border}
                   bg={accordionItemStyle.bg}
                   outline={accordionItemStyle.outline}
@@ -103,26 +103,26 @@ const Gallery = () => {
                       <AccordionIcon />
                     </AccordionButton>
                   </h2>
-                  <AccordionPanel pb={4}>
-                    <RadioGroup defaultValue="2">
-                      <Stack spacing={1} marginLeft={5} direction="column">
-                        <Radio colorScheme="green" value="1">
+                  <AccordionPanel className="filters-list" pb={4}>
+                    <CheckboxGroup defaultValue="2">
+                      <Stack className="filter-buttons-container" spacing={1} marginLeft={5} direction="column">
+                        <Checkbox colorScheme="green" value="1">
                           Filter #1
-                        </Radio>
-                        <Radio colorScheme="green" value="2">
+                        </Checkbox>
+                        <Checkbox colorScheme="green" value="2">
                           Filter #2
-                        </Radio>
-                        <Radio colorScheme="green" value="3">
+                        </Checkbox>
+                        <Checkbox colorScheme="green" value="3">
                           Filter #3
-                        </Radio>
-                        <Radio colorScheme="green" value="4">
+                        </Checkbox>
+                        <Checkbox colorScheme="green" value="4">
                           Filter #4
-                        </Radio>
+                        </Checkbox>
                       </Stack>
-                    </RadioGroup>
+                    </CheckboxGroup>
                   </AccordionPanel>
                 </AccordionItem>
-                <AccordionItem
+                <AccordionItem className="filter-container"
                   border={accordionItemStyle.border}
                   bg={accordionItemStyle.bg}
                   outline={accordionItemStyle.outline}
@@ -137,14 +137,14 @@ const Gallery = () => {
                       <AccordionIcon />
                     </AccordionButton>
                   </h2>
-                  <AccordionPanel pb={4}>
+                  <AccordionPanel className="filters-list" pb={4}>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
                     veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
                     commodo consequat.
                   </AccordionPanel>
                 </AccordionItem>
-                <AccordionItem
+                <AccordionItem className="filter-container"
                   border={accordionItemStyle.border}
                   bg={accordionItemStyle.bg}
                   outline={accordionItemStyle.outline}
@@ -159,14 +159,14 @@ const Gallery = () => {
                       <AccordionIcon />
                     </AccordionButton>
                   </h2>
-                  <AccordionPanel pb={4}>
+                  <AccordionPanel className="filters-list" pb={4}>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
                     veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
                     commodo consequat.
                   </AccordionPanel>
                 </AccordionItem>
-                <AccordionItem
+                <AccordionItem className="filter-container"
                   border={accordionItemStyle.border}
                   bg={accordionItemStyle.bg}
                   outline={accordionItemStyle.outline}
@@ -181,14 +181,14 @@ const Gallery = () => {
                       <AccordionIcon />
                     </AccordionButton>
                   </h2>
-                  <AccordionPanel pb={4}>
+                  <AccordionPanel className="filters-list" pb={4}>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
                     veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
                     commodo consequat.
                   </AccordionPanel>
                 </AccordionItem>
-                <AccordionItem
+                <AccordionItem className="filter-container"
                   border={accordionItemStyle.border}
                   bg={accordionItemStyle.bg}
                   outline={accordionItemStyle.outline}
@@ -203,14 +203,14 @@ const Gallery = () => {
                       <AccordionIcon />
                     </AccordionButton>
                   </h2>
-                  <AccordionPanel pb={4}>
+                  <AccordionPanel className="filters-list" pb={4}>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
                     veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
                     commodo consequat.
                   </AccordionPanel>
                 </AccordionItem>
-                <AccordionItem
+                <AccordionItem className="filter-container"
                   border={accordionItemStyle.border}
                   bg={accordionItemStyle.bg}
                   outline={accordionItemStyle.outline}
@@ -225,14 +225,14 @@ const Gallery = () => {
                       <AccordionIcon />
                     </AccordionButton>
                   </h2>
-                  <AccordionPanel pb={4}>
+                  <AccordionPanel className="filters-list" pb={4}>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
                     veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
                     commodo consequat.
                   </AccordionPanel>
                 </AccordionItem>
-                <AccordionItem
+                <AccordionItem className="filter-container"
                   border={accordionItemStyle.border}
                   bg={accordionItemStyle.bg}
                   outline={accordionItemStyle.outline}
@@ -247,14 +247,14 @@ const Gallery = () => {
                       <AccordionIcon />
                     </AccordionButton>
                   </h2>
-                  <AccordionPanel pb={4}>
+                  <AccordionPanel className="filters-list" pb={4}>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
                     veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
                     commodo consequat.
                   </AccordionPanel>
                 </AccordionItem>
-                <AccordionItem
+                <AccordionItem className="filter-container"
                   border={accordionItemStyle.border}
                   bg={accordionItemStyle.bg}
                   outline={accordionItemStyle.outline}
@@ -269,14 +269,14 @@ const Gallery = () => {
                       <AccordionIcon />
                     </AccordionButton>
                   </h2>
-                  <AccordionPanel pb={4}>
+                  <AccordionPanel className="filters-list" pb={4}>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
                     veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
                     commodo consequat.
                   </AccordionPanel>
                 </AccordionItem>
-                <AccordionItem
+                <AccordionItem className="filter-container"
                   border={accordionItemStyle.border}
                   bg={accordionItemStyle.bg}
                   outline={accordionItemStyle.outline}
@@ -291,7 +291,7 @@ const Gallery = () => {
                       <AccordionIcon />
                     </AccordionButton>
                   </h2>
-                  <AccordionPanel pb={4}>
+                  <AccordionPanel className="filters-list" pb={4}>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
                     veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
