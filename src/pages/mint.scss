@@ -2,41 +2,63 @@
   h2 {
     display: inline-block;
   }
-
+  .mint-cnct-wallet {
+    justify-self: center;
+    
+    height       : 50px;
+    padding      : 0 15px;
+    border-radius: 30px;
+    background   : rgb(66, 112, 128);
+  }
   .connect,
   .mint {
-    display              : grid;
-    grid-template-columns: 1fr 1fr;
+    display              : flex;
+    justify-content: space-between;
 
-    padding: 0 0 0 20px;
+      padding: 0;
 
-    .mint-cnct-wallet {
-      justify-self: start;
-
-      height       : 50px;
-      padding      : 0 15px;
-      border-radius: 30px;
-      background   : rgb(66, 112, 128);
-    }
+    
   }
 
   .mint {
     .form {
-      width: 30%;
+      width: 210px;
 
       form {
         display           : grid;
         grid-template-rows: 2fr 1fr;
-        gap               : 10px;
+        gap               : 5px;
 
         .mint-cnct-wallet {
           height: 30px;
         }
       }
+
+      input{
+        width: 210px;
+      }
+
+      label{
+        margin-bottom: 5px;
+      }
+    }
+  }
+  .terms-container {
+    display: flex;
+    flex-direction: column;
+    button{
+      margin: 0 auto 20px auto;
+      width: 210px;
     }
   }
 
   .agreement {
     opacity: .7;
+    text-align: center;
+    font-size: 12px;
+    a{
+      color: rgb(59,130,246,);
+      text-decoration: underline;
+    }
   }
 }

@@ -14,7 +14,7 @@ h2.breadcrumb {
     h2.filterH2 {
       background : #0a0e16;
       font-weight: bold;
-      font-size  : 1.5vw;
+      font-size  : 30px;
       padding    : 5px 20px;
       width      : 100%;
     }
@@ -26,6 +26,39 @@ h2.breadcrumb {
 
       h2 {
         width: 100%;
+      }
+
+      .testclass {
+        background-color: red;
+      }
+
+      .filter-container {
+        padding-bottom: 20px;
+      }
+
+      .filter-buttons-container {
+        margin-left: 0;
+      }
+
+      .filters-list {
+        max-height    : 500px;
+        overflow-y    : scroll;
+        padding-bottom: 20px;
+        margin-right  : 10px;
+
+        span {
+          font-size: 14px;
+        }
+      }
+
+      .filters-list::-webkit-scrollbar {
+        background-color: transparent;
+        width           : 4px;
+      }
+
+      .filters-list::-webkit-scrollbar-thumb {
+        background-color: #706f6f;
+        border-radius: 50px;
       }
 
       span.__filter-title {

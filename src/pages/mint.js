@@ -37,7 +37,7 @@ const Mint = () => {
         <div className="connect">
           <div className="text">
             <h2>Connect</h2>
-            <p>Join the our Discord server if you need help.</p>
+            <p>Join the our Discord server if you need help. lorem</p>
           </div>
           <ButtonCustom className="mint-cnct-wallet">Connect your wallet</ButtonCustom>
         </div>
@@ -52,11 +52,14 @@ const Mint = () => {
                 <FormLabel>Amount</FormLabel>
                 <Input type="number" />
               </FormControl>
-              <ButtonCustom className="mint-cnct-wallet">Mint</ButtonCustom>
+              
             </form>
           </div>
         </div>
-        <p className="agreement">By minting a Phallus you agree to our Terms of Service.</p>
+        <div className="terms-container">
+          <ButtonCustom className="mint-cnct-wallet">Mint</ButtonCustom>
+          <p className="agreement">By minting a Phallus you agree to our <a href='#'>Terms of Service.</a></p>
+        </div>
       </div>
     </Layout>)
 }
