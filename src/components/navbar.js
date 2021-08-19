@@ -44,8 +44,7 @@ const Navbar = () => {
       
       if (window.location.pathname === "/") {
         e.preventDefault();
-
-        let shift = document.getElementById(id).getBoundingClientRect().top;
+        let shift = document.getElementById(id).getBoundingClientRect().y;
 
         window.scrollTo({
           top: shift - 50,
@@ -66,9 +65,9 @@ const Navbar = () => {
         <ButtonCustom><Link onClick={scroll} to="/?id=content-block-storyline">Storyline</Link></ButtonCustom>
         <ButtonCustom><Link onClick={scroll} to="/?id=content-block-nft">NFT</Link></ButtonCustom>
         <ButtonCustom><Link to="/gallery">Gallery</Link></ButtonCustom>
-        <ButtonCustom><Link to="/?id=content-block-roadmap">Roadmap</Link></ButtonCustom>
+        <ButtonCustom><Link onClick={scroll} to="/?id=content-block-roadmap">Roadmap</Link></ButtonCustom>
         <ButtonCustom><Link to="/FAQ">FAQs</Link></ButtonCustom>
-        <ButtonCustom><Link to="/?id=contacts">Contacts</Link></ButtonCustom>
+        <ButtonCustom><Link onClick={scroll} to="/?id=contacts">Contacts</Link></ButtonCustom>
         <ButtonCustom className="withBg"><Link to="/mint">Mint</Link></ButtonCustom>
         <ButtonCustom className="withBg"><Link to="/user_account"><img src={summerHolidays} alt="summer holidays" /></Link></ButtonCustom>
       </div>
