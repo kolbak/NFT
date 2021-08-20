@@ -1,60 +1,67 @@
 .footer {
   background: #0c1019;
-  padding: 2vh 0 2vh 0;
+  padding   : 1vh 0 2vh 0;
 
   .footer-inner-wrap {
-    display              : grid;
-    grid-template-columns: 1fr 1fr;
+    display        : flex;
+    justify-content: space-between;
 
     margin   : 0 auto;
-    max-width: 40vw;
-    height   : 12vh;
+    max-width: 50vw;
+    height   : 184px;
 
     * {
       color: white;
     }
 
-    .info {
-      display           : grid;
-      grid-template-rows: 2fr 1fr 1fr;
+    .footer-column {
+      display       : flex;
+      flex-direction: column;
+      width         : 330px;
 
       .logo {
-        align-self  : center;
-        justify-self: center;
-        width       : 50%;
-        height      : 80%;
+        align-self   : center;
+        justify-self : center;
+        width        : 50%;
+        height       : 110px;
+        margin-bottom: 17px;
       }
 
       hr {
-        align-self  : center;
-        justify-self: center;
-
-        width     : 70%;
-        border    : none;
-        height    : 4px;
-        background: #1f232b;
+        align-self   : center;
+        justify-self : center;
+        width        : 70%;
+        border       : none;
+        height       : 4px;
+        background   : #1f232b;
+        margin-bottom: 10px;
       }
-
-      span {
-        justify-self: center;
-      }
-    }
-
-    .contacts {
-      display           : grid;
-      grid-template-rows: 2fr 1fr 1fr;
 
       h3,
       .icons,
       span {
         justify-self: center;
+        font-size   : 14px;
+        text-align  : center;
+      }
+
+      span {
+        margin-top: 10px;
       }
 
       h3 {
-        font-size   : 2.3rem;
-        font-weight : bold;
-        color       : #181c25;
+        margin-top   : 10px;
+        margin-bottom: 30px;
+        font-size    : 55px;
+        font-weight  : bold;
+        color        : #181c25;
       }
+    }
+    
+  }
+  @media screen and (max-width: 1400px) {
+    .footer-inner-wrap {
+      max-width: 60vw;
     }
   }
 }

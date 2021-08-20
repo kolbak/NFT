@@ -1,25 +1,23 @@
 import * as React from "react"
 import { Box } from "@chakra-ui/react"
+import logo from '../images/logo.svg'
 
 import './footer.scss'
 
 const Footer = () => (
   <footer id="contacts" className="footer"  >
     <div className="footer-inner-wrap">
-      <div className="info">
+      <div className="info footer-column">
         <Box
           className="logo"
-          as="button"
-          border="3px solid whitesmoke"
-          color="whitesmoke"
-          bgColor="#292929"
+          as="img"
+          src={logo}
         >
-          <span>LOGO</span>
         </Box>
         <hr />
         <span>SUBJECT OF COPYRIGHT © 2021</span>
       </div>
-      <div className="contacts">
+      <div className="contacts footer-column">
         <h3>CONTACTS</h3>
         <div className="icons">Иконки</div>
         <span className="mail">SUPPORT@DOMIN.COM</span>

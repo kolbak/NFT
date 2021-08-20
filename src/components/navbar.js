@@ -4,6 +4,7 @@ import { Box } from "@chakra-ui/react"
 
 import './navbar.scss'
 
+import logo from '../images/logo.svg'
 import summerHolidays from '../images/summer-holidays.svg'
 
 const Navbar = () => {
@@ -57,9 +58,7 @@ const Navbar = () => {
   return (
     <nav className="navbar-wrap">
       <Link className="logo" to="/">
-        <ButtonLogo>
-          <span>LOGO</span>
-        </ButtonLogo>
+        <img className="navbar-logo" src={logo}/>
       </Link>
       <div className="navbar-btns">
         <ButtonCustom><Link onClick={scroll} to="/?id=content-block-storyline">Storyline</Link></ButtonCustom>
