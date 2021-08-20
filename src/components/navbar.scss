@@ -34,6 +34,14 @@
       transition   : .2s;
       border-radius: 0;
 
+      display         : inline-block;
+      // padding-top     : 12px;
+      // padding-bottom  : 12px;
+      // padding-left    : 25px;
+      // padding-right   : 25px;
+      background-color: #fff;
+      color           : #000;
+
       position: relative;
 
       a {
@@ -60,7 +68,7 @@
         width        : 10%;
         height       : 1px;
         border-radius: 10px;
-        background   : whitesmoke;
+        background   : #000;
         transition   : .3s;
 
         opacity: 0;
