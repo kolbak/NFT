@@ -17,7 +17,7 @@ import "./index.scss"
 
 // import anakin from '../images/anakin.jpg'
 import brutal from "../images/brutal.jpg"
-import storyline from "../images/storyline.png"
+import storyline from "../images/storyline.jpeg"
 // import crocoRider from '../images/croco-rider.jpg'
 
 //? icons
