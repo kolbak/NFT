@@ -12,13 +12,10 @@
   .logo {
     align-self: center;
     display   : inline-block;
-    width     : 30%;
-    height    : 40%;
-
-    button {
-      width : 100%;
-      height: 100%;
-    }
+    width     : 25%;
+    height    : 35%;
+    position: relative;
+    top: -20px;
   }
 
   .navbar-btns {
@@ -36,6 +33,14 @@
       height       : 50%;
       transition   : .2s;
       border-radius: 0;
+
+      display         : inline-block;
+      // padding-top     : 12px;
+      // padding-bottom  : 12px;
+      // padding-left    : 25px;
+      // padding-right   : 25px;
+      background-color: #fff;
+      color           : #000;
 
       position: relative;
 
@@ -63,7 +68,7 @@
         width        : 10%;
         height       : 1px;
         border-radius: 10px;
-        background   : whitesmoke;
+        background   : #000;
         transition   : .3s;
 
         opacity: 0;

@@ -17,6 +17,7 @@ import "./index.scss"
 
 // import anakin from '../images/anakin.jpg'
 import brutal from "../images/brutal.jpg"
+import storyline from "../images/storyline.jpeg"
 // import crocoRider from '../images/croco-rider.jpg'
 
 //? icons
@@ -170,8 +171,8 @@ const IndexPage = () => {
           </div>
         </div>
         <div className="index-wrap-content">
-          <div className="carousel">
-            <Carousel data={data} />
+          <div className="carousel-wrap">
+            <Carousel data={data} className="carousel" />
             <Link className="toGallery" to="/gallery">
               <ButtonCustomGallery className="_btn">
                 <span>Gallery</span>
@@ -208,7 +209,7 @@ const IndexPage = () => {
                   </Link>
                 </ButtonCustomMint>
               </div>
-              <img src={brutal} alt="" />
+              <img src={storyline} alt="" />
             </div>
             <div id="content-block-nft" className="content-block nft">
               <div className="info">
