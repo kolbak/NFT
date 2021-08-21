@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react"
+import { StaticImage } from "gatsby-plugin-image"
 import { Link } from "gatsby"
 import {
   Box,
@@ -16,7 +17,7 @@ import Carousel from "../components/carousel"
 import "./index.scss"
 
 // import anakin from '../images/anakin.jpg'
-import brutal from "../images/brutal.jpg"
+// import brutal from "../images/brutal.jpg"
 import storyline from "../images/storyline.jpeg"
 // import crocoRider from '../images/croco-rider.jpg'
 
@@ -45,10 +46,10 @@ const IndexPage = () => {
     if (isBrowser) {
       let searchStr = window.location.search;
       let id = new URLSearchParams(searchStr).get('id');
-      
+
       if (id) {
         let shift = document.getElementById(id).getBoundingClientRect().y;
-        
+
         window.scrollTo({
           top: shift - 50,
           behavior: 'smooth',
@@ -209,6 +210,14 @@ const IndexPage = () => {
                   </Link>
                 </ButtonCustomMint>
               </div>
+              {/* <StaticImage src="../images/storyline.jpeg"
+                className="storyline-img"
+                width={400}
+                quality={95}
+                alt="storyline image"
+                formats={["JPEG", "AUTO", "AVIF"]}
+                placeholder="blurred"
+              /> */}
               <img src={storyline} alt="" />
             </div>
             <div id="content-block-nft" className="content-block nft">

@@ -1,29 +1,6 @@
-import React, { useState, useEffect } from "react"
+import React from "react"
 import { Link } from "gatsby"
-import {
-  Box,
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbSeparator,
-  Accordion,
-  AccordionItem,
-  AccordionButton,
-  AccordionPanel,
-  AccordionIcon,
-  Radio,
-  RadioGroup,
-  Stack,
-} from "@chakra-ui/react"
-import { ChevronRightIcon } from '@chakra-ui/icons'
-
-import Layout from "../components/layout"
-import Seo from "../components/seo"
-
 import './gallery_grid.scss'
-
-import anakin from '../images/anakin.jpg'
-import wizard from '../images/wizard.jpg'
 
 const GalleryGrid = ({ data }) => {
 
