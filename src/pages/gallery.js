@@ -22,8 +22,8 @@ import GalleryGrid from "../components/gallery_grid"
 
 import './gallery.scss'
 
-import anakin from '../images/anakin.jpg'
-import wizard from '../images/wizard.jpg'
+// import anakin from '../images/anakin.jpg'
+// import wizard from '../images/wizard.jpg'
 
 const Gallery = () => {
   //? dummy data
@@ -32,7 +32,7 @@ const Gallery = () => {
     arrData.push({
       name: 'Character №' + i,
       id: `${i}-${Math.floor(Math.random())}_${Math.floor(Math.random())}`,
-      src: [anakin, wizard][Math.floor(Math.random() * 2)],
+      src: "",
     })
   }
   const [data, setData] = useState(arrData);
