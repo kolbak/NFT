@@ -10,24 +10,30 @@
   position: relative;
 
   .video-wrap {
-    position   : relative;
+    // position   : relative;
     width      : 100%;
     height     : calc(100%);
     left       : 0%;
     // overflow: hidden;
-    top        : 0;
+    // top        : 0;
 
-    .welcome-planet {
-      object-fit: cover;
-      width     : 100%;
-      height    : 100%;
-      position  : absolute;
-      top       : 0;
-      left      : 0;
-      opacity   : .6;
+    background-image: url(../animations/planet.gif);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 
-      // transform: scale(2.2);
-    }
+
+    // .welcome-planet {
+    //   object-fit: cover;
+    //   width     : 100%;
+    //   height    : 100%;
+    //   position  : absolute;
+    //   top       : 0;
+    //   left      : 0;
+      opacity   : .55;
+
+    //   // transform: scale(2.2);
+    // }
   }
 
   .content {
