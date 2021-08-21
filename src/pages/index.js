@@ -142,7 +142,7 @@ const IndexPage = () => {
         <Seo title="Home" />
         <div className="welcome-wrap">
           <div className="video-wrap">
-            <video className="welcome-planet"
+            {/* <video className="welcome-planet"
               preload="true"
               autoPlay={true}
               loop={true}
@@ -150,7 +150,7 @@ const IndexPage = () => {
             >
               <source src={planet} type="video/mp4" />
               <source src={planet_webm} type='video/webm' />
-            </video>
+            </video> */}
           </div>
           <div className="content">
             <div className="welcome">
