@@ -200,9 +200,7 @@ const IndexPage = () => {
             </div>
             <div id="content-block-nft" className="content-block nft">
               <div className="info">
-                <h2>
-                  <span>NFT</span>
-                </h2>
+                <h2>NFT</h2>
                 <div className="about">
                   <h3>10,000 UNIQUE NFT</h3>
                   <h3>98 UNIQUE PROPERTIES</h3>

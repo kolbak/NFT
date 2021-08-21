@@ -7,7 +7,7 @@ $animationSpeed: 20s;
 	}
 
 	100% {
-		transform: translateX(calc(-250px * 10))
+		transform: translateX(calc(-300px * 10))
 	}
 }
 
@@ -22,21 +22,21 @@ $animationSpeed: 20s;
 	.slide-track {
 		animation   : scroll $animationSpeed linear infinite;
 		display     : flex;
-		// width    : calc(250px * 20);
+		// width    : calc(300px * 20);
 		width       : calc(100vw);
 		height      : 100%;
 
 		.slide {
 			// height      : 100%;
-			width: 250px;
-			height: 250px;
+			width: 300px;
+			height: 300px;
 
 			img {
 				display   : inline-block;
 				// height : 100%;
-				width     : 250px;
+				width     : 300px;
 				max-width: none;
-				height: 250px;
+				height: 300px;
 			}
 		}
 	}
