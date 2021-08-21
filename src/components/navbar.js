@@ -24,18 +24,6 @@ const Navbar = () => {
     </Box>
   }
 
-  function ButtonLogo({ children, className }) {
-    return <Box
-      className={className}
-      as="button"
-      border="2px solid whitesmoke"
-      color="whitesmoke"
-      bgColor="#292929"
-    >
-      {children}
-    </Box>
-  }
-
   function scroll(e) {
     if (isBrowser) {
       let str = e.target.getAttribute('href');
