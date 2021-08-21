@@ -22,7 +22,7 @@
     border-radius: 5px;
 
     display              : grid;
-    grid-template-columns: repeat(7, 2fr) 60px;
+    grid-template-columns: repeat(8, 2fr);
     grid-template-rows   : 1fr;
     gap                  : 30px;
 
@@ -62,7 +62,7 @@
         width        : 10%;
         height       : 1px;
         border-radius: 10px;
-        background   : whitesmoke;
+        background   : rgb(5, 153, 153);
         transition   : .3s;
 
         opacity: 0;
@@ -77,7 +77,7 @@
 
     button.withBg {
       font-weight: 300;
-      background-color: rgb(0, 196, 196);
+      background-color: rgb(255, 0, 157);
       color: #fff;
       border-radius: 15px;
       padding: 0 40px;
@@ -85,6 +85,9 @@
       a{
         width: 40px;
       }
+    }
+    button.withBg:nth-child(odd){
+      background-color: rgb(0, 196, 196);
     }
   }
 }
