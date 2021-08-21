@@ -30,10 +30,10 @@ import protection from "../images/icons/protection.png"
 import precious from "../images/icons/precious.png"
 
 import yt from "../images/icons8-youtube-play-button.svg"
-import f from "../images/icons8-facebook.svg"
+import discord from "../images/icons8-discord.svg"
 import ig from "../images/icons8-instagram-old.svg"
 import twitter from "../images/icons8-twitter.svg"
-import twitch from "../images/icons8-twitch.svg"
+import opensea from "../images/opensea.svg"
 
 const IndexPage = () => {
   const isBrowser = typeof window !== "undefined"
@@ -150,10 +150,10 @@ const IndexPage = () => {
             </div>
             <div className="links">
               <img src={yt} alt="youtube" />
-              <img src={f} alt="facebook" />
+              <img src={opensea} alt="opensea" />
               <img src={ig} alt="instagram" />
               <img src={twitter} alt="twitter" />
-              <img src={twitch} alt="twitch" />
+              <img src={discord} alt="discord" />
             </div>
           </div>
         </div>
