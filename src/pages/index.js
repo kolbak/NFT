@@ -123,9 +123,6 @@ const IndexPage = () => {
       <Box
         className={className}
         as="button"
-        border="3px solid whitesmoke"
-        color="whitesmoke"
-        bgColor="#292929"
       >
         {children}
       </Box>
