@@ -30,7 +30,7 @@ const Navbar = () => {
       let param = '?id=';
       let indexID = str.indexOf(param);
       let id = str.slice(indexID + param.length)
-      
+
       if (window.location.pathname === "/") {
         e.preventDefault();
         let shift = document.getElementById(id).getBoundingClientRect().y;
@@ -46,17 +46,17 @@ const Navbar = () => {
   return (
     <nav className="navbar-wrap">
       <Link className="logo" to="/">
-        <img className="navbar-logo" src={logo}/>
+        <img className="navbar-logo" src={logo} />
       </Link>
       <div className="navbar-btns">
-        <ButtonCustom><Link onClick={scroll} to="/?id=content-block-storyline">Storyline</Link></ButtonCustom>
-        <ButtonCustom><Link onClick={scroll} to="/?id=content-block-nft">NFT</Link></ButtonCustom>
-        <ButtonCustom><Link to="/gallery">Gallery</Link></ButtonCustom>
-        <ButtonCustom><Link onClick={scroll} to="/?id=content-block-roadmap">Roadmap</Link></ButtonCustom>
-        <ButtonCustom><Link to="/FAQ">FAQs</Link></ButtonCustom>
-        <ButtonCustom><Link onClick={scroll} to="/?id=contacts">Contacts</Link></ButtonCustom>
-        <ButtonCustom className="withBg"><Link to="/mint">Mint</Link></ButtonCustom>
-        <ButtonCustom className="withBg"><Link to="/user_account"><img src={summerHolidays} alt="summer holidays" /></Link></ButtonCustom>
+        <ButtonCustom><Link onClick={scroll} to="/?id=content-block-storyline"><span>Storyline</span></Link></ButtonCustom>
+        <ButtonCustom><Link onClick={scroll} to="/?id=content-block-nft"><span>NFT</span></Link></ButtonCustom>
+        <ButtonCustom><Link to="/gallery"><span>Gallery</span></Link></ButtonCustom>
+        <ButtonCustom><Link onClick={scroll} to="/?id=content-block-roadmap"><span>Roadmap</span></Link></ButtonCustom>
+        <ButtonCustom><Link to="/FAQ"><span>FAQs</span></Link></ButtonCustom>
+        <ButtonCustom><Link onClick={scroll} to="/?id=contacts"><span>Contacts</span></Link></ButtonCustom>
+        <ButtonCustom className="withBg"><Link to="/mint"><span>Mint</span></Link></ButtonCustom>
+        <ButtonCustom className="withBg user"><Link to="/user_account"><img src={summerHolidays} alt="summer holidays" /></Link></ButtonCustom>
       </div>
     </nav>
   )
