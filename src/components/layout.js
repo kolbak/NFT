@@ -13,6 +13,7 @@ import Header from "./header"
 // import Navbar from "./navbar"
 import Footer from "./footer"
 
+import "../fonts/fonts.css"
 import "./layout.scss"
 
 const Layout = ({ children }) => {
