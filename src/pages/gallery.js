@@ -19,11 +19,11 @@ import { ChevronRightIcon } from '@chakra-ui/icons'
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import GalleryGrid from "../components/gallery_grid"
-
+import characterEx from "../images/character-ex.png"
 import './gallery.scss'
 
-import anakin from '../images/anakin.jpg'
-import wizard from '../images/wizard.jpg'
+// import anakin from '../images/anakin.jpg'
+// import wizard from '../images/wizard.jpg'
 
 const Gallery = () => {
   //? dummy data
@@ -32,7 +32,7 @@ const Gallery = () => {
     arrData.push({
       name: 'Character №' + i,
       id: `${i}-${Math.floor(Math.random())}_${Math.floor(Math.random())}`,
-      src: [anakin, wizard][Math.floor(Math.random() * 2)],
+      src: characterEx,
     })
   }
   const [data, setData] = useState(arrData);
@@ -72,19 +72,9 @@ const Gallery = () => {
     <Layout>
       <Seo title="Gallery" />
       <div className="gen-wrap">
-        <h2 className="breadcrumb">
-          <Breadcrumb separator={<ChevronRightIcon color="green.500" />}>
-            <BreadcrumbItem>
-              <BreadcrumbLink href="/">Home</BreadcrumbLink>
-            </BreadcrumbItem>
-            <BreadcrumbItem>
-              <BreadcrumbLink href="/gallery">Gallery</BreadcrumbLink>
-            </BreadcrumbItem>
-          </Breadcrumb>
-        </h2>
-        <div className="gallery-content">
+        <h2 className="filterH2">FILTER</h2>
+        <div className="gallery-content">  
           <div className="filters-wrap">
-            <h2 className="filterH2">FILTER</h2>
             <div className="filters">
               <Accordion allowMultiple allowToggle>
                 <AccordionItem className="filter-container" className="filter-container"

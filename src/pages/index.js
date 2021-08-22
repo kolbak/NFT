@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react"
+import { StaticImage } from "gatsby-plugin-image"
 import { Link } from "gatsby"
 import {
   Box,
@@ -15,10 +16,8 @@ import Carousel from "../components/carousel"
 
 import "./index.scss"
 
-// import anakin from '../images/anakin.jpg'
-import brutal from "../images/brutal.jpg"
+import characterEx from "../images/character-ex.png"
 import storyline from "../images/storyline.jpeg"
-// import crocoRider from '../images/croco-rider.jpg'
 
 //? icons
 import rasta from "../images/icons/rasta.png"
@@ -31,12 +30,10 @@ import protection from "../images/icons/protection.png"
 import precious from "../images/icons/precious.png"
 
 import yt from "../images/icons8-youtube-play-button.svg"
-import f from "../images/icons8-facebook.svg"
+import discord from "../images/icons8-discord.svg"
 import ig from "../images/icons8-instagram-old.svg"
 import twitter from "../images/icons8-twitter.svg"
-import twitch from "../images/icons8-twitch.svg"
-import planet from "../animations/planet.mp4"
-import planet_webm from "../animations/planet.webm"
+import opensea from "../images/opensea.svg"
 
 const IndexPage = () => {
   const isBrowser = typeof window !== "undefined"
@@ -45,10 +42,10 @@ const IndexPage = () => {
     if (isBrowser) {
       let searchStr = window.location.search;
       let id = new URLSearchParams(searchStr).get('id');
-      
+
       if (id) {
         let shift = document.getElementById(id).getBoundingClientRect().y;
-        
+
         window.scrollTo({
           top: shift - 50,
           behavior: 'smooth',
@@ -62,7 +59,7 @@ const IndexPage = () => {
   for (let i = 0, l = 10; i < l; i++) {
     dummyDataArray.push({
       name: `Персонаж № ${i}`,
-      // avatarSRC: [anakin, brutal, crocoRider][Math.floor(Math.random() * 3)],
+      avatarSRC: characterEx,
     })
   }
   const [data, setData] = useState(dummyDataArray)
@@ -140,17 +137,7 @@ const IndexPage = () => {
       <Layout>
         <Seo title="Home" />
         <div className="welcome-wrap">
-          <div className="video-wrap">
-            <video className="welcome-planet"
-              preload="true"
-              autoPlay={true}
-              loop={true}
-              muted={true}
-            >
-              <source src={planet} type="video/mp4" />
-              <source src={planet_webm} type='video/webm' />
-            </video>
-          </div>
+          <div className="video-wrap"></div>
           <div className="content">
             <div className="welcome">
               <h1>FAMILY PHALLUS PLANET #FAPP</h1>
@@ -163,10 +150,10 @@ const IndexPage = () => {
             </div>
             <div className="links">
               <img src={yt} alt="youtube" />
-              <img src={f} alt="facebook" />
+              <img src={opensea} alt="opensea" />
               <img src={ig} alt="instagram" />
               <img src={twitter} alt="twitter" />
-              <img src={twitch} alt="twitch" />
+              <img src={discord} alt="discord" />
             </div>
           </div>
         </div>
@@ -213,9 +200,7 @@ const IndexPage = () => {
             </div>
             <div id="content-block-nft" className="content-block nft">
               <div className="info">
-                <h2>
-                  <span>NFT</span>
-                </h2>
+                <h2>NFT</h2>
                 <div className="about">
                   <h3>10,000 UNIQUE NFT</h3>
                   <h3>98 UNIQUE PROPERTIES</h3>

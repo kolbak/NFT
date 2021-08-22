@@ -10,24 +10,30 @@
   position: relative;
 
   .video-wrap {
-    position   : relative;
-    width      : 100%;
-    height     : calc(100%);
-    left       : 0%;
+    // position   : relative;
+    width         : 100%;
+    height        : calc(100%);
+    left          : 0%;
     // overflow: hidden;
-    top        : 0;
+    // top        : 0;
 
-    .welcome-planet {
-      object-fit: cover;
-      width     : 100%;
-      height    : 100%;
-      position  : absolute;
-      top       : 0;
-      left      : 0;
-      opacity   : .6;
+    background-image   : url(../animations/planet.gif);
+    background-size    : cover;
+    background-position: center;
+    background-repeat  : no-repeat;
 
-      // transform: scale(2.2);
-    }
+
+    // .welcome-planet {
+    //   object-fit: cover;
+    //   width     : 100%;
+    //   height    : 100%;
+    //   position  : absolute;
+    //   top       : 0;
+    //   left      : 0;
+    opacity: .55;
+
+    //   // transform: scale(2.2);
+    // }
   }
 
   .content {
@@ -68,9 +74,13 @@
       width         : 12%;
 
       button {
-        position: relative;
-        height  : 50px;
-        width   : 100%;
+        position        : relative;
+        height          : 50px;
+        width           : 100%;
+        background-color: rgb(255, 0, 157);
+        color           : #fff;
+        border-radius   : 15px;
+        font-size       : 30px;
 
         span {
           font-size  : 1.2rem;
@@ -125,7 +135,7 @@
 // CONTENT
 .index-wrap-content {
   display           : grid;
-  grid-template-rows: 50vh 1fr;
+  grid-template-rows: 500px 1fr;
   gap               : 150px;
 
   h2 {
@@ -138,29 +148,33 @@
   }
 
   .carousel-wrap {
-    display           : grid;
-    grid-template-rows: 1fr 1fr;
+    display           : flex;
+    // grid-template-rows: 300px 1fr;
+    flex-direction: column;
+    // height            : 500px;
 
     .carousel {
       justify-self: start;
     }
 
     .toGallery {
-      justify-self: center;
+      align-self: center;
+
       width       : 13%;
       height      : 50px;
-      margin-top: 30px;
+      margin-top  : 30px;
 
       ._btn {
-        width : 100%;
-        height: 100%;
+        width           : 100%;
+        height          : 100%;
+        background-color: rgb(0, 196, 196);
       }
     }
   }
 
   .gen-wrap {
-    display           : flex;
-    flex-direction: column;
+    display              : flex;
+    flex-direction       : column;
     // grid-template-rows: 1fr repeat(2, minmax(1fr, 100vh)) 1fr;
     // grid-template-rows: 1fr 2fr 2fr 1fr;
 
@@ -180,26 +194,12 @@
 
         align-self: center;
 
-        .text {
-
-          h2:after {
-            content   : '';
-            position  : absolute;
-            display   : block;
-            top       : 100%;
-            left      : 25%;
-            width     : 20%;
-            height    : 2px;
-            background: white;
-          }
-        }
-
         .toMint {
-          justify-self: left;
-          align-self  : start;
-
-          width : 35%;
-          height: 50px;
+          justify-self    : left;
+          align-self      : start;
+          background-color: rgb(255, 0, 157);
+          width           : 35%;
+          height          : 50px;
         }
       }
 
@@ -213,36 +213,19 @@
     }
 
     .nft {
-      display              : grid;
-      gap                  : 15px;
-      grid-template-rows   : 1fr 3fr;
-      // height            : 100vh;
+      display           : grid;
+      gap               : 15px;
+      grid-template-rows: 1fr 3fr;
 
       .info {
         display           : grid;
         grid-template-rows: repeat(3, 1fr);
 
         h2 {
-          text-align   : right;
-          position     : relative;
-          display      : inline-block;
-          // margin    : 0 0 50px 0;
-          padding      : 0;
-
-          span {
-            display : inline-block;
-            position: relative;
-          }
-
-          span:before {
-            content   : '';
-            position  : absolute;
-            bottom    : calc(20% + 2px);
-            right     : 90%;
-            width     : 300%;
-            height    : 3px;
-            background: white;
-          }
+          text-align: right;
+          position  : relative;
+          display   : inline-block;
+          padding   : 0;
         }
 
 
@@ -261,8 +244,10 @@
             background : #555555;
             text-align : center;
             font-weight: bold;
-            font-size  : 1.3rem;
-            padding    : 15px 0 0 0;
+            font-size  : 14px;
+            white-space: nowrap;
+            overflow   : hidden;
+            padding    : calc(6vh / 2 - 10px) 0 0 0;
           }
 
         }

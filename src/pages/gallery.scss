@@ -3,6 +3,17 @@ h2.breadcrumb {
   margin-bottom: 20px;
 }
 
+.gen-wrap{
+  gap: 10px;
+}
+.filterH2 {
+  background : #0a0e16;
+  font-weight: bold;
+  font-size  : 2.3rem;
+  padding    : 5px 20px;
+  width      : 100%;
+}
+
 .gallery-content {
   display              : grid;
   grid-template-columns: 2fr 5fr;
@@ -32,14 +43,10 @@ h2.breadcrumb {
         background-color: red;
       }
 
-      .filter-container {
-        padding-bottom: 20px;
-      }
-
       .filter-buttons-container {
         margin-left: 0;
       }
-
+      
       .filters-list {
         max-height    : 500px;
         overflow-y    : scroll;
@@ -64,8 +71,12 @@ h2.breadcrumb {
       span.__filter-title {
         font-size: 14px;
       }
+      @media screen and (max-width: 1450px) {
+        span.__filter-title{
+          font-size: 10px;
+        }
+      }
 
-      margin-top: 25px;
       width     : 80%;
     }
   }
@@ -86,5 +97,11 @@ h2.breadcrumb {
       height: 50px;
       width : 80%;
     }
+  }
+}
+
+@media screen and(max-width: 1450px) {
+  .gallery-content{
+    grid-template-columns: 3fr 5fr;
   }
 }
