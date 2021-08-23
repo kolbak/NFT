@@ -72,6 +72,10 @@ body{
 nav,h1,h2,h3,h4,h5,h6, button, button *{
   font-family: 'Amatic SC', cursive;
 }
+
+button, button *{
+  font-size: 30px;
+}
 // @media only screen and (max-width: 480px) {
 //   html {
 //     font-size: 100%;
