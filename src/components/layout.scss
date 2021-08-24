@@ -16,18 +16,18 @@ html {
 }
 
 body {
-  margin                       : 0;
-  -webkit-font-smoothing       : antialiased;
-  -moz-osx-font-smoothing      : grayscale;
+  margin                          : 0;
+  -webkit-font-smoothing          : antialiased;
+  -moz-osx-font-smoothing         : grayscale;
   // color                        : hsla(0, 0%, 0%, 0.8);
-  font-weight                  : normal;
-  word-wrap                    : break-word;
-  font-kerning                 : normal;
-  -moz-font-feature-settings   : "kern", "liga", "clig", "calt";
-  -ms-font-feature-settings    : "kern", "liga", "clig", "calt";
-  -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
-  font-feature-settings        : "kern", "liga", "clig", "calt";
-  
+  font-weight                     : normal;
+  word-wrap                       : break-word;
+  font-kerning                    : normal;
+  -moz-font-feature-settings      : "kern", "liga", "clig", "calt";
+  -ms-font-feature-settings       : "kern", "liga", "clig", "calt";
+  -webkit-font-feature-settings   : "kern", "liga", "clig", "calt";
+  font-feature-settings           : "kern", "liga", "clig", "calt";
+
   background: rgba(19, 24, 38, 1) 100% !important;
   overflow-x: hidden;
 }
@@ -56,22 +56,44 @@ summary {
   }
 
   .layout-second-inner-wrap {
-    padding  : 0;
-    margin   : 0;
-    
-    .gen-wrap{
+    padding: 0;
+    margin : 0;
+
+    .gen-wrap {
       padding  : 1.45rem 1.0875rem 1.45rem 1.0875rem;
       margin   : 0 auto;
       max-width: 70vw;
     }
+
+    @media screen and (max-width: 900px) {
+      .gen-wrap {
+        max-width: 90vw !important;
+      }
+    }
   }
 }
-body{
+
+body {
   font-family: "Montserrat", Sans-serif;
 }
-nav,h1,h2,h3,h4,h5,h6, button, button *{
+
+nav,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button,
+button * {
   font-family: 'Amatic SC', cursive;
 }
+
+button,
+button * {
+  font-size: 30px;
+}
+
 // @media only screen and (max-width: 480px) {
 //   html {
 //     font-size: 100%;
