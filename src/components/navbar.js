@@ -24,7 +24,7 @@ import summerHolidays from '../images/summer-holidays.svg'
 const Navbar = () => {
   const isBrowser = typeof window !== "undefined"
 
-  let [screenWidth, setScreenWidth] = useState(window.screen.width);
+  let [screenWidth, setScreenWidth] = useState(isBrowser && window.screen.width);
   if (isBrowser) {
     window.addEventListener('resize', () => {
       setScreenWidth(window.screen.width)
