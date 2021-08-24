@@ -183,8 +183,54 @@
         height      : 60vh;
         justify-self: center;
       }
+      @media screen and (max-width: 1200px){
+          .text{
+            font-size: 14px;
+            .display-none{
+              display: none;
+            }
+          }
+          img{
+            height: 40vh;
+          }
+        }
+        
     }
-
+    @media screen and (max-width: 900px){
+      .storyline{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        .text-wrap{
+          gap: 27px;
+        }
+        img{
+          order: -1;
+          width: 100%;
+          object-fit: cover;
+          height: 60vw;
+        }        
+      }
+    }
+    @media screen and (max-width: 500px) {
+      .storyline {
+        img{
+          height: 100vw;;
+        }
+        .text{
+          font-size: 12px;
+          h2{
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+    @media screen and (max-width: 400px) {
+      .storyline {
+        .text{
+          font-size: 10px;
+        }
+      }
+    }
     .nft {
       display           : grid;
       gap               : 15px;
@@ -524,6 +570,11 @@
           }
         }
       }
+    }
+  }
+  @media screen and (max-width: 900px) {
+    .gen-wrap{
+      max-width:90vw !important;
     }
   }
 }

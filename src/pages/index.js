@@ -174,7 +174,7 @@ const IndexPage = () => {
                     Planet - FAPP is an Ethereum Blockchain planet with 10,000
                     unique 2.5 inch NFT Phalluses.
                   </p>
-                  <br />
+                  <br className="display-none" />
                   <br />
                   <p>
                     FAPP is not boring, every Phallus here knows how to deal with
