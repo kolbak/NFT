@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e53edce3-3466-4e29-a957-34d23a950293" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/carousel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/carousel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/carousel.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/carousel.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/navbar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/navbar.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/landing.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/landing.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
