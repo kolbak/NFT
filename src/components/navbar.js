@@ -34,7 +34,7 @@ const Navbar = () => {
   function ButtonCustom({ children, className }) {
     return <Box
       className={className}
-      // as="button"
+      as={`${screenWidth > 1140 ? "button" : "div"}`}
       border="1px"
       px="8px"
       border="none"
@@ -70,18 +70,16 @@ const Navbar = () => {
         <img className="navbar-logo" src={logo} />
       </Link>
       {screenWidth > 1140 &&
-        <>
-          <div className="navbar-btns">
-            <ButtonCustom><Link onClick={scroll} to="/?id=content-block-storyline">Storyline</Link></ButtonCustom>
-            <ButtonCustom><Link onClick={scroll} to="/?id=content-block-nft">NFT</Link></ButtonCustom>
-            <ButtonCustom><Link to="/gallery">Gallery</Link></ButtonCustom>
-            <ButtonCustom><Link onClick={scroll} to="/?id=content-block-roadmap">Roadmap</Link></ButtonCustom>
-            <ButtonCustom><Link to="/FAQ">FAQs</Link></ButtonCustom>
-            <ButtonCustom><Link onClick={scroll} to="/?id=contacts">Contacts</Link></ButtonCustom>
-            <ButtonCustom className="withBg"><Link to="/mint">Mint</Link></ButtonCustom>
-            <ButtonCustom className="withBg user"><Link to="/user_account"><img src={summerHolidays} alt="summer holidays" /></Link></ButtonCustom>
-          </div>
-        </>
+        <div className="navbar-btns">
+          <ButtonCustom><Link onClick={scroll} to="/?id=content-block-storyline">Storyline</Link></ButtonCustom>
+          <ButtonCustom><Link onClick={scroll} to="/?id=content-block-nft">NFT</Link></ButtonCustom>
+          <ButtonCustom><Link to="/gallery">Gallery</Link></ButtonCustom>
+          <ButtonCustom><Link onClick={scroll} to="/?id=content-block-roadmap">Roadmap</Link></ButtonCustom>
+          <ButtonCustom><Link to="/FAQ">FAQs</Link></ButtonCustom>
+          <ButtonCustom><Link onClick={scroll} to="/?id=contacts">Contacts</Link></ButtonCustom>
+          <ButtonCustom className="withBg"><Link to="/mint">Mint</Link></ButtonCustom>
+          <ButtonCustom className="withBg user"><Link to="/user_account"><img src={summerHolidays} alt="summer holidays" /></Link></ButtonCustom>
+        </div>
       }
       {screenWidth <= 1140 &&
         <>
