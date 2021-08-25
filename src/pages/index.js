@@ -273,8 +273,8 @@ const IndexPage = () => {
             </div>
             <div id="content-block-roadmap" className="content-block roadmap">
               <h2>ROADMAP</h2>
-              <div className="points">
-                {screenWidth > 750 && <>
+              {screenWidth > 750 &&
+                <div className="points">
                   <div className="side left">
                     <div className="point p5">
                       <h3><span>5%</span> PHALLUSES NEED FRIENDS!</h3>
@@ -333,8 +333,9 @@ const IndexPage = () => {
                       <p>FAPP gives 10 ETH to 10 random Phalluses.</p>
                     </div>
                   </div>
-                </>}
-                {screenWidth <= 750 && <>
+                </div>}
+              {screenWidth <= 750 &&
+                <div className="points">
                   <div className="point p5">
                     <h3><span>5%</span> PHALLUSES NEED FRIENDS!</h3>
                     <p>
@@ -388,8 +389,7 @@ const IndexPage = () => {
                     </h3>
                     <p>FAPP will make a 35 ETH donation to the AIDS Foundation!</p>
                   </div>
-                </>}
-              </div>
+                </div>}
             </div>
             <div id="content-block-faq" className="content-block faq">
               <h2>FAQ</h2>
