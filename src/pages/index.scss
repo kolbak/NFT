@@ -45,25 +45,22 @@
       }
     }
 
-    .nav-btns {
+    .nav-btn {
       grid-row-start: 7;
       grid-row-end  : 8;
       justify-self  : center;
-      width         : 12%;
 
-      button {
-        position        : relative;
-        height          : 50px;
-        width           : 100%;
-        background-color: rgb(255, 0, 157);
-        color           : #fff;
-        border-radius   : 15px;
-        font-size       : 30px;
+      height          : 50px;
+      width           : max-content;
+      padding         : 0 30px;
+      background-color: rgb(255, 0, 157);
+      color           : #fff;
+      border-radius   : 15px;
+      font-size       : 30px;
 
-        span {
-          font-size  : 30px;
-          font-weight: bold;
-        }
+      span {
+        font-size  : 30px;
+        font-weight: bold;
       }
     }
 
@@ -76,13 +73,14 @@
       grid-template-columns: repeat(5, 1fr);
       gap                  : 20px;
 
-      width   : 10vw;
+      width   : min-content;
       position: relative;
 
       img {
-        width  : 20px;
-        display: inline-block;
-        opacity: .7;
+        width    : 20px;
+        display  : inline-block;
+        max-width: none;
+        opacity  : .7;
       }
 
     }
@@ -100,7 +98,7 @@
     }
 
     .links:before {
-      left : -205%;
+      right: 113%;
       width: 19vw;
     }
 
@@ -114,7 +112,9 @@
 .index-wrap-content {
   display           : grid;
   grid-template-rows: 500px 1fr;
-  gap               : 150px;
+  @media (min-width: 500px){
+    gap               : 150px;
+  }
 
   h2 {
     width      : 100%;
@@ -136,11 +136,13 @@
     .toGallery {
       align-self: center;
 
-      width     : 13%;
+      width     : max-content;
       height    : 50px;
       margin-top: 30px;
 
       ._btn {
+        padding         : 0 30px;
+        border-radius   : 15px;
         width           : 100%;
         height          : 100%;
         background-color: rgb(0, 196, 196);
@@ -164,7 +166,6 @@
         display           : grid;
         grid-template-rows: min-content 1fr;
         gap               : 50px;
-        // width: 80%;
 
         align-self: center;
 
@@ -173,7 +174,8 @@
           align-self      : start;
           background-color: rgb(255, 0, 157);
           border-radius   : 15px;
-          width           : 35%;
+          width           : max-content;
+          padding         : 0 30px;
           height          : 50px;
         }
       }
@@ -182,6 +184,7 @@
         display     : inline-block;
         height      : 60vh;
         justify-self: center;
+        align-self: center;
       }
 
       @media screen and (max-width: 1200px) {
@@ -244,13 +247,11 @@
     }
 
     .nft {
-      display           : grid;
-      gap               : 15px;
-      grid-template-rows: 1fr 3fr;
-      height: 1100px;
+      display: grid;
+      gap    : 15px;
+
       .info {
         display           : grid;
-        grid-template-rows: repeat(3, 1fr);
 
         h2 {
           text-align: right;
@@ -259,7 +260,6 @@
           padding   : 0;
         }
 
-
         .about {
           align-self: center;
 
@@ -267,25 +267,27 @@
           grid-template-columns: repeat(4, 1fr);
           gap                  : 15px;
 
-          height: 6vh;
-
           h3 {
-            height     : 100%;
-            border-left: 6px solid white;
-            background : #555555;
-            text-align : center;
-            font-weight: bold;
-            font-size  : 30px;
+            display        : flex;
+            align-items    : center;
+            justify-content: center;
+            word-wrap: normal;
             white-space: nowrap;
-            overflow   : hidden;
-            padding    : calc(6vh / 2 - 25px) 0 0 0;
-          }
+            padding: 20px 10px;
 
-          @media screen and (max-width: 1200px) {
-            h3 {
-              font-size: 21px;
-              padding  : calc(6vh / 2 - 17px) 0 0 0;
+            border-left   : 6px solid white;
+            background    : #555555;
+            font-weight   : bold;
+            font-size     : 30px;
+          }
+          @media (max-width: 750px){
+            grid-template-columns: repeat(2, 1fr);
+            h3{
+              padding: 15px;
             }
+          }
+          @media (max-width: 500px){
+            grid-template-columns: repeat(1, 1fr);
           }
         }
 
@@ -294,62 +296,23 @@
           align-self  : center;
           text-align  : center;
           width       : 60%;
-          margin: 15px 0;
-        }  
-          
-      }
-      @media screen and (max-width: 1200px) {
-          p{
-            font-size: 15px;
-          }
-        
-      }  
-      @media screen and (max-width: 900px) {
-          .info{
-            grid-template-rows: 70px 150px 200px;
-            .about {
-              grid-template-columns: repeat(2, 1fr);
-              h3 {
-                height   : 60px;
-                font-size: 25px;
-                padding  : 10px 0 0 0;
-              }
-            }
-            p {
-              margin-top   : 25px;
-              margin-bottom: 25px;
-              width        : 80%;
-            }
+          margin      : 15px 0;
         }
-       }
-       @media screen and (max-width: 500px) {
-         .info{
-           .about{
-            h3 {
-              height   : 60px;
-              font-size: 17px;
-              padding  : 15px 0 0 0;
-            }
-          }
-          p {
-            font-size: 13px
-          }
-         }
-         
-       }
-      
+
+      }
+
       .levels {
-        display           : grid;
-        gap               : 30px;
-        grid-template-rows: repeat(3, 250px);
-        height: 900px;
+        display                 : grid;
+        gap                     : 50px;
 
         .level {
           display: grid;
+          gap: 30px;
 
           h3 {
             font-weight: bold;
             font-size  : 1.3rem;
+            // margin-bottom: 50px;
 
             border-top: 4px solid white;
 
@@ -364,9 +327,11 @@
           }
 
           .icons {
-            width  : 100%;
-            height : 100%;
-            display: grid;
+            width          : 100%;
+            height         : 100%;
+            display        : flex;
+            flex-direction : row;
+            justify-content: space-around;
 
             figure {
               display     : grid;
@@ -374,74 +339,56 @@
 
               img {
                 justify-self: center;
-                width       : 75px;
+                align-self  : center;
+                width       : 80px;
                 display     : block;
               }
 
               figcaption {
                 justify-self: end;
-                text-align  : center;
+                align-self  : center;
               }
             }
           }
 
-          @media screen and (max-width: 1200px) {
-            img {
-              width: 45px !important;
-            }
-          }
+          @media (max-width: 700px) {
+            .icons {
+              flex-direction: column;
+              gap           : 50px;
 
-          @media screen and (max-width: 600px){
-            img {
-              width: 30px !important;
-            }
-            figure {
-              figcaption {
-                font-size: 10px;
+              figure {
+                gap: 10px;
+
+                figcaption {
+                  justify-self: center;
+                }
               }
             }
           }
         }
 
         .dope {
-          .icons {
-            grid-template-columns: repeat(1, 1fr);
-          }
-
           h3 {
             width: 50%;
           }
         }
 
         .wild {
-          .icons {
-            grid-template-columns: repeat(3, 1fr);
-          }
-
           h3 {
             width: 75%;
           }
         }
 
         .basic {
-          .icons {
-            grid-template-columns: repeat(4, 1fr);
-          }
-
           h3 {
             width: 100%;
           }
         }
       }
-      @media screen and (max-width: 600px){
-        .levels{
-          grid-template-rows: repeat(3, 200px);
-        }
-      }
     }
 
     .roadmap {
-      width: 90%;
+      width     : 90%;
       align-self: center;
 
       .points {
@@ -453,24 +400,24 @@
           flex-direction: column;
           gap           : 100px;
           width         : 50%;
+        }
 
-          .point {
-            background   : #050a15;
-            border-radius: 15px;
-            padding      : 25px 30px;
-            width        : 100%;
-            height       : max-content;
-            position     : relative;
+        .point {
+          background   : #050a15;
+          border-radius: 15px;
+          padding      : 25px 30px;
+          width        : 100%;
+          height       : max-content;
+          position     : relative;
 
-            h3 {
-              font-size  : 1.3rem;
-              font-weight: bold;
-              margin     : 0 0 20px 0;
+          h3 {
+            font-size  : 1.3rem;
+            font-weight: bold;
+            margin     : 0 0 20px 0;
 
-              span {
-                display    : block;
-                font-family: 'Amatic SC', cursive;
-              }
+            span {
+              display    : block;
+              font-family: 'Amatic SC', cursive;
             }
           }
         }
@@ -549,6 +496,13 @@
           border-radius: 10px;
           width        : 10px;
           background   : #363636;
+        }
+      }
+
+      @media (max-width: 750px) {
+        .points {
+          flex-direction: column;
+          gap           : 30px;
         }
       }
     }
