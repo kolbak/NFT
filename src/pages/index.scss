@@ -189,8 +189,6 @@
 
       @media screen and (max-width: 1200px) {
         .text {
-          // font-size: 14px;
-
           .display-none {
             display: none;
           }
@@ -225,23 +223,12 @@
       .storyline {
         img {
           height: 100vw;
-          ;
         }
 
         .text {
-          // font-size: 12px;
-
           h2 {
             margin-bottom: 0;
           }
-        }
-      }
-    }
-
-    @media screen and (max-width: 400px) {
-      .storyline {
-        .text {
-          // font-size: 10px;
         }
       }
     }
