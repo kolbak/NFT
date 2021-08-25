@@ -398,7 +398,7 @@
     }
 
     .roadmap {
-      width     : 90%;
+      width     : 100%;
       height    : min-content;
       align-self: center;
 
@@ -409,18 +409,25 @@
         position      : relative;
 
         .point {
-          background      : #050a15;
-          border-radius   : 15px;
-          padding         : 25px 30px;
-          width           : calc(50% - 50px);
-          @media (max-width: 750px){width: 100%;}
-          height          : max-content;
-          position     : relative;
+          display       : flex;
+          flex-direction: column;
+          gap           : 20px;
+          background    : #050a15;
+          padding       : 20px;
+
+          border-radius: 15px;
+          width        : calc(50% - 50px);
+
+          @media (max-width: 750px) {
+            width: 100%;
+          }
+
+          height   : max-content;
+          position : relative;
 
           h3 {
             font-size  : 30px;
             font-weight: bold;
-            margin     : 0 0 20px 0;
 
             span {
               display    : block;
@@ -433,14 +440,14 @@
           align-self: flex-end;
         }
 
-        @media (min-width: 750px){
+        @media (min-width: 750px) {
           .point:after {
             background   : transparent;
             border-left  : 20px solid #050a15;
             border-right : 10px solid transparent;
             border-top   : 10px solid transparent;
             border-bottom: 10px solid transparent;
-  
+
             content : '';
             display : block;
             position: absolute;
@@ -448,42 +455,44 @@
             left    : 100%;
             width   : 30px;
           }
+
           .point.right:after {
-            border-right  : 20px solid #050a15;
+            border-right: 20px solid #050a15;
             border-left : 10px solid transparent;
-            
-            left    : initial;
+
+            left : initial;
             right: 100%;
           }
 
           .point:before {
             background   : #050a15;
             border-radius: 100%;
-  
+
             content : '';
             display : block;
             position: absolute;
-            z-index: 2;
+            z-index : 2;
             top     : calc(10% - 2px);
             left    : calc(100% + 50px - 12px);
             width   : 24px;
             height  : 24px;
           }
+
           .point.right:before {
-            left: initial;
-            right    : calc(100% + 50px - 12px);
+            left : initial;
+            right: calc(100% + 50px - 12px);
           }
         }
       }
 
-      @media (min-width: 750px){
+      @media (min-width: 750px) {
         .points:after {
           content : ' ';
           display : block;
           position: absolute;
           top     : 0;
           left    : calc(50% - 5px);
-  
+
           border       : none;
           border-radius: 10px;
           width        : 10px;
@@ -491,7 +500,7 @@
           background   : #363636;
         }
       }
-      
+
       @media (max-width: 750px) {
         .points {
           flex-direction: column;
