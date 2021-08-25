@@ -12,7 +12,7 @@
     background-size    : cover;
     background-position: center;
     background-repeat  : no-repeat;
-    opacity            : .55;
+    opacity            : .5;
   }
 
   .content {
@@ -105,6 +105,15 @@
     .links:after {
       left: 113%;
     }
+    @media screen and (max-width: 1200px) {
+      .links{
+        margin: 0 auto;
+      }
+      .links:after {
+        left: 113%;
+        width: 19vw;
+      }
+    }
   }
 }
 
@@ -182,9 +191,9 @@
 
       img {
         display     : inline-block;
-        height      : 60vh;
         justify-self: center;
         align-self: center;
+        max-height: 521px;
       }
 
       @media screen and (max-width: 1200px) {
@@ -194,18 +203,16 @@
           }
         }
 
-        img {
-          height: 40vh;
-        }
+
       }
 
     }
 
-    @media screen and (max-width: 900px) {
+    @media screen and (max-width: 1100px) {
       .storyline {
         grid-template-columns: 1fr;
         grid-template-rows   : 1fr;
-
+        padding: 0;
         .text-wrap {
           gap: 27px;
         }
@@ -327,7 +334,7 @@
             figure {
               display     : grid;
               justify-self: center;
-
+              width: 140px;
               img {
                 justify-self: center;
                 align-self  : center;
@@ -338,10 +345,11 @@
               figcaption {
                 justify-self: end;
                 align-self  : center;
+                width: 100%;
+                text-align: center;
               }
             }
           }
-
           @media (max-width: 700px) {
             .icons {
               flex-direction: column;
@@ -349,7 +357,7 @@
 
               figure {
                 gap: 10px;
-
+                width: auto;
                 figcaption {
                   justify-self: center;
                 }

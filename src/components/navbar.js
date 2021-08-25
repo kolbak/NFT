@@ -104,11 +104,11 @@ const Navbar = () => {
         <>
           <div className="menu-wrap">
             <Button className="menu-btn" onClick={onToggle}
-              bg="rgb(0, 196, 196)"
-              _focus={{ bg: "rgb(0, 196, 196)", }}
-              _active={{ bg: "rgb(0, 196, 196)", }}
-              _hover={{ bg: "rgb(0, 196, 196)", }}
-            ><HamburgerIcon /></Button>
+              bg="transparent"
+              _focus={{ bg: "transparent", }}
+              _active={{ bg: "transparent", }}
+              _hover={{ bg: "transparent", }}
+            ><HamburgerIcon color="white" /></Button>
             <Box ref={menuList} className="menu-list">
               <ButtonCustom><Link onClick={scroll} to="/?id=content-block-storyline">Storyline</Link></ButtonCustom>
               <ButtonCustom><Link onClick={scroll} to="/?id=content-block-nft">NFT</Link></ButtonCustom>
