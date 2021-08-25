@@ -38,14 +38,16 @@ import opensea from "../images/opensea.svg"
 const IndexPage = () => {
   const isBrowser = typeof window !== "undefined"
 
-  let [screenWidth, setScreenWidth] = useState(isBrowser && window.screen.width);
-  if (isBrowser) {
-    window.addEventListener('resize', () => {
-      setScreenWidth(window.screen.width)
-    })
-  }
-
+  let [screenWidth, setScreenWidth] = useState(null);
   useEffect(() => {
+    setScreenWidth(isBrowser && window.screen.width);
+    if (isBrowser) {
+      window.addEventListener('resize', () => {
+        setScreenWidth(window.screen.width)
+      })
+    }
+
+
     if (isBrowser) {
       let searchStr = window.location.search;
       let id = new URLSearchParams(searchStr).get('id');

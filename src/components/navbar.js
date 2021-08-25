@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react"
+import React, { useState, useRef, useEffect } from "react"
 import { Link } from "gatsby"
 import {
   Box,
@@ -32,12 +32,15 @@ import summerHolidays from '../images/summer-holidays.svg'
 const Navbar = () => {
   const isBrowser = typeof window !== "undefined"
 
-  let [screenWidth, setScreenWidth] = useState(isBrowser && window.screen.width);
-  if (isBrowser) {
-    window.addEventListener('resize', () => {
-      setScreenWidth(window.screen.width)
-    })
-  }
+  let [screenWidth, setScreenWidth] = useState(null);
+  useEffect(() => {
+    setScreenWidth(isBrowser && window.screen.width);
+    if (isBrowser) {
+      window.addEventListener('resize', () => {
+        setScreenWidth(window.screen.width)
+      })
+    }
+  }, []);
 
   function ButtonCustom({ children, className }) {
     return <Box
