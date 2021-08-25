@@ -298,14 +298,15 @@
 
           h3 {
             font-weight: bold;
-            font-size  : 1.3rem;
+            font-size  : 30px;
             // margin-bottom: 50px;
-
+            display: flex;
             border-top: 4px solid white;
-
+            white-space: nowrap;
             span {
               display   : inline-block;
-              width     : 60px;
+              width     : 80px;
+              margin-right: 7px;
               background: white;
               color     : #131826;
               text-align: center;
@@ -398,7 +399,7 @@
           position     : relative;
 
           h3 {
-            font-size  : 1.3rem;
+            font-size  : 30px;
             font-weight: bold;
             margin     : 0 0 20px 0;
 
@@ -509,7 +510,7 @@
         button {
           div {
             font-family: 'Amatic SC', cursive;
-            font-size  : 25px;
+            font-size  : 30px;
           }
         }
       }
