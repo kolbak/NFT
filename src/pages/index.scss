@@ -105,12 +105,14 @@
     .links:after {
       left: 113%;
     }
+
     @media screen and (max-width: 1200px) {
-      .links{
+      .links {
         margin: 0 auto;
       }
+
       .links:after {
-        left: 113%;
+        left : 113%;
         width: 19vw;
       }
     }
@@ -119,10 +121,11 @@
 
 // CONTENT
 .index-wrap-content {
-  display           : grid;
-  grid-template-rows: 500px 1fr;
-  @media (min-width: 500px){
-    gap               : 150px;
+  display: grid;
+
+  // grid-template-rows: 500px 1fr;
+  @media (min-width: 500px) {
+    gap: 150px;
   }
 
   h2 {
@@ -192,8 +195,8 @@
       img {
         display     : inline-block;
         justify-self: center;
-        align-self: center;
-        max-height: 521px;
+        align-self  : center;
+        max-height  : 521px;
       }
 
       @media screen and (max-width: 1200px) {
@@ -212,7 +215,8 @@
       .storyline {
         grid-template-columns: 1fr;
         grid-template-rows   : 1fr;
-        padding: 0;
+        padding              : 0;
+
         .text-wrap {
           gap: 27px;
         }
@@ -245,14 +249,14 @@
       gap    : 15px;
 
       .info {
-        display           : grid;
+        display: grid;
 
         h2 {
-          position  : relative;
-          display   : inline-block;
-          padding   : 0;
+          position: relative;
+          display : inline-block;
+          padding : 0;
 
-          @media(min-width: 1025px){
+          @media(min-width: 1025px) {
             text-align: right;
           }
         }
@@ -268,22 +272,25 @@
             display        : flex;
             align-items    : center;
             justify-content: center;
-            word-wrap: normal;
-            white-space: nowrap;
-            padding: 20px 10px;
+            word-wrap      : normal;
+            white-space    : nowrap;
+            padding        : 20px 10px;
 
-            border-left   : 6px solid white;
-            background    : #555555;
-            font-weight   : bold;
-            font-size     : 30px;
+            border-left: 6px solid white;
+            background : #555555;
+            font-weight: bold;
+            font-size  : 30px;
           }
-          @media (max-width: 750px){
+
+          @media (max-width: 750px) {
             grid-template-columns: repeat(2, 1fr);
-            h3{
+
+            h3 {
               padding: 15px;
             }
           }
-          @media (max-width: 500px){
+
+          @media (max-width: 500px) {
             grid-template-columns: repeat(1, 1fr);
           }
         }
@@ -299,28 +306,29 @@
       }
 
       .levels {
-        display                 : grid;
-        gap                     : 50px;
+        display: grid;
+        gap    : 50px;
 
         .level {
           display: grid;
-          gap: 30px;
+          gap    : 30px;
 
           h3 {
-            font-weight: bold;
-            font-size  : 30px;
+            font-weight     : bold;
+            font-size       : 30px;
             // margin-bottom: 50px;
-            display: flex;
-            border-top: 4px solid white;
-            white-space: nowrap;
+            display         : flex;
+            border-top      : 4px solid white;
+            white-space     : nowrap;
+
             span {
-              display   : inline-block;
-              width     : 80px;
+              display     : inline-block;
+              width       : 80px;
               margin-right: 7px;
-              background: white;
-              color     : #131826;
-              text-align: center;
-              box-shadow: 0 -2px 1px 0px white;
+              background  : white;
+              color       : #131826;
+              text-align  : center;
+              box-shadow  : 0 -2px 1px 0px white;
             }
           }
 
@@ -334,7 +342,8 @@
             figure {
               display     : grid;
               justify-self: center;
-              width: 140px;
+              width       : 140px;
+
               img {
                 justify-self: center;
                 align-self  : center;
@@ -345,19 +354,21 @@
               figcaption {
                 justify-self: end;
                 align-self  : center;
-                width: 100%;
-                text-align: center;
+                width       : 100%;
+                text-align  : center;
               }
             }
           }
+
           @media (max-width: 700px) {
             .icons {
               flex-direction: column;
               gap           : 50px;
 
               figure {
-                gap: 10px;
+                gap  : 10px;
                 width: auto;
+
                 figcaption {
                   justify-self: center;
                 }
@@ -388,25 +399,22 @@
 
     .roadmap {
       width     : 90%;
+      height    : min-content;
       align-self: center;
 
       .points {
         display       : flex;
-        flex-direction: row;
-
-        .side {
-          display       : flex;
-          flex-direction: column;
-          gap           : 100px;
-          width         : 50%;
-        }
+        flex-direction: column;
+        gap           : 20px;
+        position      : relative;
 
         .point {
-          background   : #050a15;
-          border-radius: 15px;
-          padding      : 25px 30px;
-          width        : 100%;
-          height       : max-content;
+          background      : #050a15;
+          border-radius   : 15px;
+          padding         : 25px 30px;
+          width           : calc(50% - 50px);
+          @media (max-width: 750px){width: 100%;}
+          height          : max-content;
           position     : relative;
 
           h3 {
@@ -421,83 +429,69 @@
           }
         }
 
-        .left {
-          justify-content: space-between;
+        .right {
+          align-self: flex-end;
+        }
 
+        @media (min-width: 750px){
           .point:after {
             background   : transparent;
             border-left  : 20px solid #050a15;
             border-right : 10px solid transparent;
             border-top   : 10px solid transparent;
             border-bottom: 10px solid transparent;
-            border-right : 10px solid transparent;
-
+  
             content : '';
             display : block;
             position: absolute;
             top     : 10%;
             left    : 100%;
             width   : 30px;
-            height  : 10px;
+          }
+          .point.right:after {
+            border-right  : 20px solid #050a15;
+            border-left : 10px solid transparent;
+            
+            left    : initial;
+            right: 100%;
           }
 
           .point:before {
             background   : #050a15;
             border-radius: 100%;
-
+  
             content : '';
             display : block;
             position: absolute;
-            top     : calc(10% - 6px);
-            left    : calc(100% + 37px);
-            width   : 25px;
-            height  : 25px;
+            z-index: 2;
+            top     : calc(10% - 2px);
+            left    : calc(100% + 50px - 12px);
+            width   : 24px;
+            height  : 24px;
           }
-        }
-
-        .right {
-          justify-content: space-around;
-
-          .point:after {
-            background   : transparent;
-            border-left  : 10px solid transparent;
-            border-right : 10px solid transparent;
-            border-top   : 10px solid transparent;
-            border-bottom: 10px solid transparent;
-            border-right : 20px solid #050a15;
-
-            content : '';
-            display : block;
-            position: absolute;
-            top     : 10%;
-            left    : -30px;
-            width   : 30px;
-            height  : 10px;
+          .point.right:before {
+            left: initial;
+            right    : calc(100% + 50px - 12px);
           }
-
-          .point:before {
-            background   : #050a15;
-            border-radius: 100%;
-
-            content : '';
-            display : block;
-            position: absolute;
-            top     : calc(10% - 6px);
-            left    : -62px;
-            width   : 25px;
-            height  : 25px;
-          }
-        }
-
-        .divider {
-          margin       : 0 45px;
-          border       : none;
-          border-radius: 10px;
-          width        : 10px;
-          background   : #363636;
         }
       }
 
+      @media (min-width: 750px){
+        .points:after {
+          content : ' ';
+          display : block;
+          position: absolute;
+          top     : 0;
+          left    : calc(50% - 5px);
+  
+          border       : none;
+          border-radius: 10px;
+          width        : 10px;
+          height       : 100%;
+          background   : #363636;
+        }
+      }
+      
       @media (max-width: 750px) {
         .points {
           flex-direction: column;

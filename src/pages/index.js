@@ -47,7 +47,6 @@ const IndexPage = () => {
       })
     }
 
-
     if (isBrowser) {
       let searchStr = window.location.search;
       let id = new URLSearchParams(searchStr).get('id');
@@ -277,65 +276,61 @@ const IndexPage = () => {
               <h2>ROADMAP</h2>
               {screenWidth > 750 &&
                 <div className="points">
-                  <div className="side left">
-                    <div className="point p5">
-                      <h3><span>5%</span> PHALLUSES NEED FRIENDS!</h3>
-                      <p>
-                        Giveaway! 100 free Phalluses to people who reposted our first
-                        post on twitter!
-                      </p>
-                    </div>
-                    <div className="point p30">
-                      <h3>
-                        <span>30%</span> LOOK AT THE SKY!
-                      </h3>
-                      <p>
-                        5 Phalluses will be minted and air dropped to 5 random
-                        collectors!
-                      </p>
-                    </div>
-                    <div className="point p70">
-                      <h3><span>70%</span> ICED OUT WHO? ICED OUT WATCH!</h3>
-                      <p>
-                        We will give 1 Rolex date just 41 iced out watch piece to 1
-                        random collector with rare Phalluses
-                      </p>
-                    </div>
-                    <div className="point p100">
-                      <h3>
-                        <span>100%</span> IT IS CHARITY TIME
-                      </h3>
-                      <p>FAPP will make a 35 ETH donation to the AIDS Foundation!</p>
-                    </div>
+                  <div className="point p5">
+                    <h3><span>5%</span> PHALLUSES NEED FRIENDS!</h3>
+                    <p>
+                      Giveaway! 100 free Phalluses to people who reposted our first
+                      post on twitter!
+                    </p>
                   </div>
-                  <div className="divider"></div>
-                  <div className="side right">
-                    <div className="point p15">
-                      <h3><span>15%</span> FAPP IS EVERYWHERE!</h3>
-                      <p>
-                        We will invest up to 80% of the funds to promote the project
-                        to make our Phalluses more expensive and desired!
-                      </p>
-                      <p>
-                        We will need your help too! The most active Phalluses can join
-                        our team!
-                      </p>
-                    </div>
-                    <div className="point p50">
-                      <h3><span>50%</span> SHOPPING SPREE!</h3>
-                      <p>
-                        Our official FAPP nft merch store will be unlocked for
-                        Phalluses.
-                      </p>
-                    </div>
-                    <div className="point p80">
-                      <h3>
-                        <span>80%</span> WHO WANT THE SMOKE?
-                      </h3>
-                      <p>FAPP gives 10 ETH to 10 random Phalluses.</p>
-                    </div>
+                  <div className="point p15 right">
+                    <h3><span>15%</span> FAPP IS EVERYWHERE!</h3>
+                    <p>
+                      We will invest up to 80% of the funds to promote the project
+                      to make our Phalluses more expensive and desired!
+                    </p>
+                    <p>
+                      We will need your help too! The most active Phalluses can join
+                      our team!
+                    </p>
                   </div>
-                </div>}
+                  <div className="point p30">
+                    <h3>
+                      <span>30%</span> LOOK AT THE SKY!
+                    </h3>
+                    <p>
+                      5 Phalluses will be minted and air dropped to 5 random
+                      collectors!
+                    </p>
+                  </div>
+                  <div className="point p50 right">
+                    <h3><span>50%</span> SHOPPING SPREE!</h3>
+                    <p>
+                      Our official FAPP nft merch store will be unlocked for
+                      Phalluses.
+                    </p>
+                  </div>
+                  <div className="point p70">
+                    <h3><span>70%</span> ICED OUT WHO? ICED OUT WATCH!</h3>
+                    <p>
+                      We will give 1 Rolex date just 41 iced out watch piece to 1
+                      random collector with rare Phalluses
+                    </p>
+                  </div>
+                  <div className="point p80 right">
+                    <h3>
+                      <span>80%</span> WHO WANT THE SMOKE?
+                    </h3>
+                    <p>FAPP gives 10 ETH to 10 random Phalluses.</p>
+                  </div>
+                  <div className="point p100">
+                    <h3>
+                      <span>100%</span> IT IS CHARITY TIME
+                    </h3>
+                    <p>FAPP will make a 35 ETH donation to the AIDS Foundation!</p>
+                  </div>
+                </div>
+              }
               {screenWidth <= 750 &&
                 <div className="points">
                   <div className="point p5">
