@@ -337,6 +337,7 @@ const IndexPage = () => {
                 <div className="points">
                   <div className="point p5">
                     <h3><span>5%</span> PHALLUSES NEED FRIENDS!</h3>
+                    <img src={whiteIMG} alt="" />
                     <p>
                       Giveaway! 100 free Phalluses to people who reposted our first
                       post on twitter!
@@ -344,6 +345,7 @@ const IndexPage = () => {
                   </div>
                   <div className="point p15">
                     <h3><span>15%</span> FAPP IS EVERYWHERE!</h3>
+                    <img src={whiteIMG} alt="" />
                     <p>
                       We will invest up to 80% of the funds to promote the project
                       to make our Phalluses more expensive and desired!
@@ -354,9 +356,8 @@ const IndexPage = () => {
                     </p>
                   </div>
                   <div className="point p30">
-                    <h3>
-                      <span>30%</span> LOOK AT THE SKY!
-                    </h3>
+                    <h3><span>30%</span> LOOK AT THE SKY!</h3>
+                    <img src={whiteIMG} alt="" />
                     <p>
                       5 Phalluses will be minted and air dropped to 5 random
                       collectors!
@@ -364,6 +365,7 @@ const IndexPage = () => {
                   </div>
                   <div className="point p50">
                     <h3><span>50%</span> SHOPPING SPREE!</h3>
+                    <img src={whiteIMG} alt="" />
                     <p>
                       Our official FAPP nft merch store will be unlocked for
                       Phalluses.
@@ -371,21 +373,20 @@ const IndexPage = () => {
                   </div>
                   <div className="point p70">
                     <h3><span>70%</span> ICED OUT WHO? ICED OUT WATCH!</h3>
+                    <img src={whiteIMG} alt="" />
                     <p>
                       We will give 1 Rolex date just 41 iced out watch piece to 1
                       random collector with rare Phalluses
                     </p>
                   </div>
                   <div className="point p80">
-                    <h3>
-                      <span>80%</span> WHO WANT THE SMOKE?
-                    </h3>
+                    <h3><span>80%</span> WHO WANT THE SMOKE?</h3>
+                    <img src={whiteIMG} alt="" />
                     <p>FAPP gives 10 ETH to 10 random Phalluses.</p>
                   </div>
                   <div className="point p100">
-                    <h3>
-                      <span>100%</span> IT IS CHARITY TIME
-                    </h3>
+                    <h3><span>100%</span> IT IS CHARITY TIME</h3>
+                    <img src={whiteIMG} alt="" />
                     <p>FAPP will make a 35 ETH donation to the AIDS Foundation!</p>
                   </div>
                 </div>}
