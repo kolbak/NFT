@@ -454,101 +454,103 @@ const IndexPage = () => {
                 </div>}
             </div>
             <div id="content-block-faq" className="content-block faq">
-              <h2>FAQ</h2>
-              <Accordion className="accordion" allowMultiple allowToggle>
-                <AccordionItemCustom title="WHO ARE YOU?">
-                  We are a team of artists, developers and financial analysts that discovered Family Phallus Planet - FAPP.
-                </AccordionItemCustom>
-                <AccordionItemCustom title="WHAT IS FAPP?">
-                  Family Phallus Planet - FAPP is an Ethereum Blockchain planet with 10,000 unique 2.5 inch NFT Phalluses.
-                </AccordionItemCustom>
-                <AccordionItemCustom title="TELL ME MORE ABOUT YOUR NFT COLLECTION!">
-                  Every Phallus has different combination of
-                  <ul>
-                    <li>Background color</li>
-                    <li>Skin Color</li>
-                    <li>Skin Type</li>
-                    <li>Head</li>
-                    <li>Eyes</li>
-                    <li>Mouth</li>
-                    <li>Glasses</li>
-                    <li>Necklace</li>
-                  </ul>
-                  Every item has different styles:
-                  <ul>
-                    <li>Common items</li>
-                    <li>Animal items</li>
-                    <li>Cyber items</li>
-                    <li>Precious items</li>
-                    <li>Afterlife items</li>
-                    <li>Rasta items</li>
-                    <li>Protection items</li>
-                    <li>Superhero items</li>
-                  </ul>
-                  Every style belongs to its own level of rarity
-                  <ul>
-                    <li>Basic level
-                      <ul>
-                        <li>Common items</li>
-                        <li>Rasta items</li>
-                        <li>Protection items</li>
-                        <li>Superhero items</li>
-                      </ul>
-                    </li>
-                    <li>Wild
-                      <ul>
-                        <li>Animal items</li>
-                        <li>Cyber items</li>
-                        <li>Afterlife items</li>
-                      </ul>
-                    </li>
-                    <li>Dope
-                      <ul>
-                        <li>precious items</li>
-                      </ul>
-                    </li>
-                  </ul>
-                </AccordionItemCustom>
-                <AccordionItemCustom title="WHAT ARE YOU PLANNING TO DO?">
-                  <ul>
-                    <li>We are planning to show that art must be provocative because our planet became boring and too much structured.
-                      <p>
-                        <em>FAPP is not boring, every Phallus here knows how to deal with boredom! </em>
-                      </p>
-                    </li>
-                    <br />
-                    <li>We want to stop body shaming.
-                      <p>
-                        <em>Look at Phalluses! They know that they're small, but they DGAF about it. They support each other and think about their strengths while humans fixated on their "problems". Let's create a community where everyone can find friends and forget about stupid stereotypes!  </em>
-                      </p>
-                    </li>
-                    <br />
-                    <li>We want to help fight AIDS.
-                      <p>
-                        <em>We will donate money to charities that will be chosen by Phalluses in our #FAPP community.</em>
-                      </p>
-                    </li>
-                    <br />
-                    <li>Our team will provide giveaways and prizes.
-                      <p>
-                        <em>ETH coins, free NFTs, Rolex watch and more cool stuff! </em>
-                      </p>
-                    </li>
-                  </ul>
-                </AccordionItemCustom>
-                <AccordionItemCustom title="HOW CAN I GET A PHALLUS?">
-                  Click here <a href="/">https://nft-cockiz.com/mint</a>, connect your MetaMask wallet and mint (buy) your NFT Phallus.
-                </AccordionItemCustom>
-                <AccordionItemCustom title="WILL YOU MAKE MORE PHALLUSES?">
-                  No we won't. We have limited emission because we want to preserve the value of our NFTs.
-                </AccordionItemCustom>
-                <AccordionItemCustom title="DO YOU HAVE YOUR OWN SMART CONTRACT?">
-                  Yes, we developed our own Smart Contract smartcontract.
-                </AccordionItemCustom>
-                <AccordionItemCustom title="CAN I RESELL MY PHALLUS NFT?">
-                  You can resell it on <a href="https://opensea.io/">https://opensea.io/</a>
-                </AccordionItemCustom>
-              </Accordion>
+              <Fade bottom>
+                <h2>FAQ</h2>
+                <Accordion className="accordion" allowMultiple allowToggle>
+                  <AccordionItemCustom title="WHO ARE YOU?">
+                    We are a team of artists, developers and financial analysts that discovered Family Phallus Planet - FAPP.
+                  </AccordionItemCustom>
+                  <AccordionItemCustom title="WHAT IS FAPP?">
+                    Family Phallus Planet - FAPP is an Ethereum Blockchain planet with 10,000 unique 2.5 inch NFT Phalluses.
+                  </AccordionItemCustom>
+                  <AccordionItemCustom title="TELL ME MORE ABOUT YOUR NFT COLLECTION!">
+                    Every Phallus has different combination of
+                    <ul>
+                      <li>Background color</li>
+                      <li>Skin Color</li>
+                      <li>Skin Type</li>
+                      <li>Head</li>
+                      <li>Eyes</li>
+                      <li>Mouth</li>
+                      <li>Glasses</li>
+                      <li>Necklace</li>
+                    </ul>
+                    Every item has different styles:
+                    <ul>
+                      <li>Common items</li>
+                      <li>Animal items</li>
+                      <li>Cyber items</li>
+                      <li>Precious items</li>
+                      <li>Afterlife items</li>
+                      <li>Rasta items</li>
+                      <li>Protection items</li>
+                      <li>Superhero items</li>
+                    </ul>
+                    Every style belongs to its own level of rarity
+                    <ul>
+                      <li>Basic level
+                        <ul>
+                          <li>Common items</li>
+                          <li>Rasta items</li>
+                          <li>Protection items</li>
+                          <li>Superhero items</li>
+                        </ul>
+                      </li>
+                      <li>Wild
+                        <ul>
+                          <li>Animal items</li>
+                          <li>Cyber items</li>
+                          <li>Afterlife items</li>
+                        </ul>
+                      </li>
+                      <li>Dope
+                        <ul>
+                          <li>precious items</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </AccordionItemCustom>
+                  <AccordionItemCustom title="WHAT ARE YOU PLANNING TO DO?">
+                    <ul>
+                      <li>We are planning to show that art must be provocative because our planet became boring and too much structured.
+                        <p>
+                          <em>FAPP is not boring, every Phallus here knows how to deal with boredom! </em>
+                        </p>
+                      </li>
+                      <br />
+                      <li>We want to stop body shaming.
+                        <p>
+                          <em>Look at Phalluses! They know that they're small, but they DGAF about it. They support each other and think about their strengths while humans fixated on their "problems". Let's create a community where everyone can find friends and forget about stupid stereotypes!  </em>
+                        </p>
+                      </li>
+                      <br />
+                      <li>We want to help fight AIDS.
+                        <p>
+                          <em>We will donate money to charities that will be chosen by Phalluses in our #FAPP community.</em>
+                        </p>
+                      </li>
+                      <br />
+                      <li>Our team will provide giveaways and prizes.
+                        <p>
+                          <em>ETH coins, free NFTs, Rolex watch and more cool stuff! </em>
+                        </p>
+                      </li>
+                    </ul>
+                  </AccordionItemCustom>
+                  <AccordionItemCustom title="HOW CAN I GET A PHALLUS?">
+                    Click here <a href="/">https://nft-cockiz.com/mint</a>, connect your MetaMask wallet and mint (buy) your NFT Phallus.
+                  </AccordionItemCustom>
+                  <AccordionItemCustom title="WILL YOU MAKE MORE PHALLUSES?">
+                    No we won't. We have limited emission because we want to preserve the value of our NFTs.
+                  </AccordionItemCustom>
+                  <AccordionItemCustom title="DO YOU HAVE YOUR OWN SMART CONTRACT?">
+                    Yes, we developed our own Smart Contract smartcontract.
+                  </AccordionItemCustom>
+                  <AccordionItemCustom title="CAN I RESELL MY PHALLUS NFT?">
+                    You can resell it on <a href="https://opensea.io/">https://opensea.io/</a>
+                  </AccordionItemCustom>
+                </Accordion>
+              </Fade>
             </div>
           </div>
         </div>
