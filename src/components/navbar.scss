@@ -12,6 +12,10 @@
     display   : inline-block;
     width     : 150px;
     height    : 70px;
+
+    img{
+      max-width: initial;
+    }
   }
 
   .navbar-btns {
