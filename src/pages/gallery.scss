@@ -128,9 +128,9 @@ h2.filterH2 {
 
     .filters-wrap {
       max-height: 0;
-      overflow  : hidden;
+      overflow  : scroll;
       background: #0a0e16;
-      transition: max-height 0.7s linear;
+      transition: .5s linear;
 
       .filters {
         width           : 94%;
@@ -145,11 +145,10 @@ h2.filterH2 {
           font-size: 30px;
         }
       }
-
     }
 
     .opened {
-      max-height: 20000px;
+      max-height: 1000px;
     }
   }
 }
