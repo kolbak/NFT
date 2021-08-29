@@ -46,10 +46,6 @@ h2.filterH2 {
         overflow-y    : scroll;
         padding-bottom: 20px;
         margin-right  : 10px;
-
-        span {
-          font-size: 14px;
-        }
       }
 
       .filters-list::-webkit-scrollbar {
@@ -63,13 +59,8 @@ h2.filterH2 {
       }
 
       span.__filter-title {
-        font-size: 14px;
-      }
-
-      @media screen and (max-width: 1450px) {
-        span.__filter-title {
-          font-size: 10px;
-        }
+        display        : flex;
+        align-items    : center;
       }
 
       width : 80%;
@@ -154,11 +145,11 @@ h2.filterH2 {
           font-size: 30px;
         }
 
-        .filters-list {
-          span {
-            font-size: 18px;
-          }
-        }
+        // .filters-list {
+          // span {
+          //   font-size: 18px;
+          // }
+        // }
       }
 
     }
