@@ -310,7 +310,7 @@ const IndexPage = () => {
                         post on twitter!
                       </p>
                       <div className="arrow-wrap">
-                        <p>15%</p>
+                        <p>15</p>
                         <img className="arrow" src={arrow} alt="" />
                       </div>
                     </div>
@@ -328,7 +328,7 @@ const IndexPage = () => {
                         our team!
                       </p>
                       <div className="arrow-wrap left">
-                        <p>30%</p>
+                        <p>30</p>
                         <img className="arrow" src={arrow} alt="" />
                       </div>
                     </div>
@@ -342,7 +342,7 @@ const IndexPage = () => {
                         collectors!
                       </p>
                       <div className="arrow-wrap">
-                        <p>50%</p>
+                        <p>50</p>
                         <img className="arrow" src={arrow} alt="" />
                       </div>
                     </div>
@@ -356,7 +356,7 @@ const IndexPage = () => {
                         Phalluses.
                       </p>
                       <div className="arrow-wrap left">
-                        <p>70%</p>
+                        <p>70</p>
                         <img className="arrow" src={arrow} alt="" />
                       </div>
                     </div>
@@ -370,7 +370,7 @@ const IndexPage = () => {
                         random collector with rare Phalluses
                       </p>
                       <div className="arrow-wrap">
-                        <p>80%</p>
+                        <p>80</p>
                         <img className="arrow" src={arrow} alt="" />
                       </div>
                     </div>
@@ -381,7 +381,7 @@ const IndexPage = () => {
                       <img src={whiteIMG} alt="" />
                       <p>FAPP gives 10 ETH to 10 random Phalluses.</p>
                       <div className="arrow-wrap left">
-                        <p>100%</p>
+                        <p>100</p>
                         <img className="arrow" src={arrow} alt="" />
                       </div>
                     </div>
