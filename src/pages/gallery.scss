@@ -130,7 +130,7 @@ h2.filterH2 {
       max-height: 0;
       overflow  : hidden;
       background: #0a0e16;
-      transition: max-height 0.7s linear, opacity 0s, visibility 0s;
+      transition: max-height 0.7s linear;
 
       .filters {
         width           : 94%;
@@ -144,19 +144,12 @@ h2.filterH2 {
         span.__filter-title {
           font-size: 30px;
         }
-
-        // .filters-list {
-          // span {
-          //   font-size: 18px;
-          // }
-        // }
       }
 
     }
 
     .opened {
-      max-height: 1000px;
-
+      max-height: 20000px;
     }
   }
 }
