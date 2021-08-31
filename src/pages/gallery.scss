@@ -17,13 +17,10 @@ h2.filterH2 {
 
 .gallery-content {
   display              : grid;
-  grid-template-columns: 2fr 5fr;
+  grid-template-columns: 300px 1fr;
   gap                  : 20px;
 
   .filters-wrap {
-    width: 100%;
-
-
     .filters {
       * {
         color: #ababab;
