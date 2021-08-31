@@ -6,10 +6,9 @@
       a.char-link {
         span {
           pointer-events: none;
-          position      : absolute;
-          z-index       : 1;
-          top           : 15px;
-          left          : 15px;
+
+          font-family: 'Amatic SC', cursive;
+          font-size  : 30px;
         }
 
         img {

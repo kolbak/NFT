@@ -70,7 +70,6 @@ const IndexPage = () => {
   let dummyDataArray = []
   for (let i = 0, l = 10; i < l; i++) {
     dummyDataArray.push({
-      name: `Персонаж № ${i}`,
       avatarSRC: characterEx,
     })
   }
@@ -140,17 +139,6 @@ const IndexPage = () => {
       </Box>
     )
   }
-
-  //? анимация
-  // function animation() {
-
-  //   function offset(el) {
-  //     const rect = el.getBoundingClientRect(),
-  //       scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
-  //       scrollTop = window.pageyOffset || document.documentElement.scrollTop;
-  //     return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
-  //   }
-  // };
 
   return (
     <>

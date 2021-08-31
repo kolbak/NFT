@@ -23,16 +23,13 @@ import GalleryGrid from "../components/gallery_grid"
 import characterEx from "../images/character-ex.png"
 import './gallery.scss'
 
-// import anakin from '../images/anakin.jpg'
-// import wizard from '../images/wizard.jpg'
-
 const Gallery = () => {
   const [width, setWidth] = useState();
   //? dummy data
   let arrData = [];
   for (let i = 0; i < 6; i++) {
     arrData.push({
-      name: 'Character №' + i,
+      name: `Character ${i + 1}`,
       id: `${i}-${Math.floor(Math.random())}_${Math.floor(Math.random())}`,
       src: characterEx,
     })
@@ -83,9 +80,9 @@ const Gallery = () => {
       <Seo title="Gallery" />
       <div className="gen-wrap gallery-wrap">
         {width > 850 ? <>
-          <h2 className="filterH2">FILTER</h2>
+          <h2 className="filterH2">GALLERY</h2>
         </>:<>
-        <button className="toggle-button" onClick={toggle}><h2 className="filterH2">FILTER<Icon as={ChevronDownIcon}></Icon></h2></button>
+        <button className="toggle-button" onClick={toggle}><h2 className="filterH2">GALLERY<Icon as={ChevronDownIcon}></Icon></h2></button>
         </>}
         <div className="gallery-content">          
             <div className="filters-wrap">

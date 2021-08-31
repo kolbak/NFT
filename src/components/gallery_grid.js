@@ -11,8 +11,8 @@ const GalleryGrid = ({ data }) => {
         <div className="char-body">
           <figure className="front">
             <Link to={`/character?id=${data[i].id}, ${data[i].src}`} className="char-link">
-              <span className="char-id" id={'label-char-' + data[i].id}>{data[i].name}</span>
               <img className="char-img" id={'char-' + data[i].id} src={data[i].src} alt={'Character number' + data[i]} />
+              <span className="char-id" id={'label-char-' + data[i].id}>{data[i].name}</span>
             </Link>
           </figure>
         </div>
