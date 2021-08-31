@@ -19,9 +19,9 @@ import "./index.scss"
 import characterEx from "../images/character-ex.png"
 import storyline from "../images/storyline.jpeg"
 import roadmap1 from '../images/roadmap1.jpeg';
-import roadmap2 from '../images/roadmap2.jpeg';
+import roadmap2 from '../images/roadmap2.jpg';
 import roadmap3 from '../images/roadmap3.jpeg';
-import roadmap6 from '../images/roadmap6.jpeg';
+import roadmap6 from '../images/roadmap6.jpg';
 
 //? icons
 import rasta from "../images/icons/rasta.png"
