@@ -20,7 +20,7 @@ import { ChevronRightIcon, ChevronDownIcon } from '@chakra-ui/icons'
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import GalleryGrid from "../components/gallery_grid"
-import characterEx from "../images/character-ex.png"
+// import characterEx from "../images/character-ex.png"
 import './gallery.scss'
 
 const Gallery = () => {
@@ -31,7 +31,7 @@ const Gallery = () => {
     arrData.push({
       name: `Character ${i + 1}`,
       id: `${i}-${Math.floor(Math.random())}_${Math.floor(Math.random())}`,
-      src: characterEx,
+      src: " ",
     })
   }
   const [data, setData] = useState(arrData);
@@ -302,8 +302,6 @@ const Gallery = () => {
                 </Accordion>
               </div>
             </div>
-            
-          
             
           <div className="grid-wrap">
             <div className="grid">

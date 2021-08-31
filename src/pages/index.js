@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react"
-import { StaticImage } from "gatsby-plugin-image"
 import { Link } from "gatsby"
 import Fade from 'react-reveal/Fade';
 import {
@@ -19,7 +18,8 @@ import "./index.scss"
 
 import characterEx from "../images/character-ex.png"
 import storyline from "../images/storyline.jpeg"
-import whiteIMG from "../images/photo_2021-08-25_21-41-59.jpg"
+import nftFaq from '../images/nft-faq1.jpeg';
+import nftFaq2 from '../images/nft-faq2.jpeg';
 
 //? icons
 import rasta from "../images/icons/rasta.png"
@@ -292,7 +292,7 @@ const IndexPage = () => {
                   <Fade left>
                     <div className="point p5">
                       <h3><span>5%</span> PHALLUSES NEED FRIENDS!</h3>
-                      <img src={whiteIMG} alt="" />
+                      <img src={nftFaq} alt="" />
                       <p>
                         Giveaway! 100 free Phalluses to people who reposted our first
                         post on twitter!
@@ -306,7 +306,7 @@ const IndexPage = () => {
                   <Fade right>
                     <div className="point p15 right">
                       <h3><span>15%</span> FAPP IS EVERYWHERE!</h3>
-                      <img src={whiteIMG} alt="" />
+                      <img src={nftFaq2} alt="" />
                       <p>
                         We will invest up to 80% of the funds to promote the project
                         to make our Phalluses more expensive and desired!
@@ -324,7 +324,7 @@ const IndexPage = () => {
                   <Fade left>
                     <div className="point p30">
                       <h3><span>30%</span> LOOK AT THE SKY!</h3>
-                      <img src={whiteIMG} alt="" />
+                      <img src={nftFaq} alt="" />
                       <p>
                         5 Phalluses will be minted and air dropped to 5 random
                         collectors!
@@ -338,7 +338,7 @@ const IndexPage = () => {
                   <Fade right>
                     <div className="point p50 right">
                       <h3><span>50%</span> SHOPPING SPREE!</h3>
-                      <img src={whiteIMG} alt="" />
+                      <img src={nftFaq2} alt="" />
                       <p>
                         Our official FAPP nft merch store will be unlocked for
                         Phalluses.
@@ -352,7 +352,7 @@ const IndexPage = () => {
                   <Fade left>
                     <div className="point p70">
                       <h3><span>70%</span> ICED OUT WHO? ICED OUT WATCH!</h3>
-                      <img src={whiteIMG} alt="" />
+                      <img src={nftFaq} alt="" />
                       <p>
                         We will give 1 Rolex date just 41 iced out watch piece to 1
                         random collector with rare Phalluses
@@ -366,7 +366,7 @@ const IndexPage = () => {
                   <Fade right>
                     <div className="point p80 right">
                       <h3><span>80%</span> WHO WANT THE SMOKE?</h3>
-                      <img src={whiteIMG} alt="" />
+                      <img src={nftFaq2} alt="" />
                       <p>FAPP gives 10 ETH to 10 random Phalluses.</p>
                       <div className="arrow-wrap left">
                         <p>100</p>
@@ -377,7 +377,7 @@ const IndexPage = () => {
                   <Fade left>
                     <div className="point p100">
                       <h3><span>100%</span> IT IS CHARITY TIME</h3>
-                      <img src={whiteIMG} alt="" />
+                      <img src={nftFaq} alt="" />
                       <p>FAPP will make a 35 ETH donation to the AIDS Foundation!</p>
                     </div>
                   </Fade>
@@ -387,7 +387,7 @@ const IndexPage = () => {
                 <div className="points">
                   <div className="point p5">
                     <h3><span>5%</span> PHALLUSES NEED FRIENDS!</h3>
-                    <img src={whiteIMG} alt="" />
+                    <img src={nftFaq} alt="" />
                     <p>
                       Giveaway! 100 free Phalluses to people who reposted our first
                       post on twitter!
@@ -395,7 +395,7 @@ const IndexPage = () => {
                   </div>
                   <div className="point p15">
                     <h3><span>15%</span> FAPP IS EVERYWHERE!</h3>
-                    <img src={whiteIMG} alt="" />
+                    <img src={nftFaq2} alt="" />
                     <p>
                       We will invest up to 80% of the funds to promote the project
                       to make our Phalluses more expensive and desired!
@@ -407,7 +407,7 @@ const IndexPage = () => {
                   </div>
                   <div className="point p30">
                     <h3><span>30%</span> LOOK AT THE SKY!</h3>
-                    <img src={whiteIMG} alt="" />
+                    <img src={nftFaq} alt="" />
                     <p>
                       5 Phalluses will be minted and air dropped to 5 random
                       collectors!
@@ -415,7 +415,7 @@ const IndexPage = () => {
                   </div>
                   <div className="point p50">
                     <h3><span>50%</span> SHOPPING SPREE!</h3>
-                    <img src={whiteIMG} alt="" />
+                    <img src={nftFaq2} alt="" />
                     <p>
                       Our official FAPP nft merch store will be unlocked for
                       Phalluses.
@@ -423,7 +423,7 @@ const IndexPage = () => {
                   </div>
                   <div className="point p70">
                     <h3><span>70%</span> ICED OUT WHO? ICED OUT WATCH!</h3>
-                    <img src={whiteIMG} alt="" />
+                    <img src={nftFaq} alt="" />
                     <p>
                       We will give 1 Rolex date just 41 iced out watch piece to 1
                       random collector with rare Phalluses
@@ -431,12 +431,12 @@ const IndexPage = () => {
                   </div>
                   <div className="point p80">
                     <h3><span>80%</span> WHO WANT THE SMOKE?</h3>
-                    <img src={whiteIMG} alt="" />
+                    <img src={nftFaq2} alt="" />
                     <p>FAPP gives 10 ETH to 10 random Phalluses.</p>
                   </div>
                   <div className="point p100">
                     <h3><span>100%</span> IT IS CHARITY TIME</h3>
-                    <img src={whiteIMG} alt="" />
+                    <img src={nftFaq} alt="" />
                     <p>FAPP will make a 35 ETH donation to the AIDS Foundation!</p>
                   </div>
                 </div>}
