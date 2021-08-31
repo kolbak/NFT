@@ -78,7 +78,7 @@ const Gallery = () => {
   return (
     <Layout>
       <Seo title="Gallery" />
-      <div className="gen-wrap">
+      <div className="gen-wrap gallery-wrap">
         {width > 850 ? <>
           <h2 className="filterH2">GALLERY</h2>
         </>:<>
