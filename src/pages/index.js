@@ -228,7 +228,7 @@ const IndexPage = () => {
                     </h3>
                     <div className="icons">
                       <figure>
-                        <img src={rasta} alt="" />
+                        <img src={precious} alt="" />
                         <figcaption>Precious attributes</figcaption>
                       </figure>
                     </div>
@@ -239,7 +239,7 @@ const IndexPage = () => {
                     </h3>
                     <div className="icons">
                       <figure>
-                        <img src={superhero} alt="" />
+                        <img src={afterlife} alt="" />
                         <figcaption>Halloween attributes</figcaption>
                       </figure>
                       <figure>
@@ -247,7 +247,7 @@ const IndexPage = () => {
                         <figcaption>Cyber attributes</figcaption>
                       </figure>
                       <figure>
-                        <img src={afterlife} alt="" />
+                        <img src={wild} alt="" />
                         <figcaption>Animal attributes</figcaption>
                       </figure>
                     </div>
@@ -262,7 +262,7 @@ const IndexPage = () => {
                         <figcaption>Common attributes</figcaption>
                       </figure>
                       <figure>
-                        <img src={wild} alt="" />
+                        <img src={superhero} alt="" />
                         <figcaption>Superhero attributes</figcaption>
                       </figure>
                       <figure>
@@ -270,7 +270,7 @@ const IndexPage = () => {
                         <figcaption>Protection attributes</figcaption>
                       </figure>
                       <figure>
-                        <img src={precious} alt="" />
+                        <img src={rasta} alt="" />
                         <figcaption>Stoned attributes</figcaption>
                       </figure>
                     </div>
@@ -401,7 +401,7 @@ const IndexPage = () => {
                   </div>
                 </div>}
                 <div>
-                  <h4>Long term</h4>
+                  <h4>Long-term</h4>
                   <p>We don’t think that anybody can predict the future of FAPP.
                   Family Phallus Planet is a democratic planet where every Phallus can vote and decide what FAPP should do to become the most interesting NFT project.<br/>
                   We want to create a community where everyone can be useful. Together we are strong!
@@ -521,7 +521,7 @@ const IndexPage = () => {
                     </ul>
                   </AccordionItemCustom>
                   <AccordionItemCustom title="HOW CAN I GET A PHALLUS?">
-                    Click here <a href="/">https://nft-cockiz.com/mint</a>, connect your MetaMask wallet and mint (buy) your NFT Phallus.<br/>
+                    Click here <a href="https://nft-cockiz.com/mint">here</a>, connect your MetaMask wallet and mint (buy) your NFT Phallus.<br/>
                     1 Phallus costs 0.08 ETH + GAS.
                   </AccordionItemCustom>
                   <AccordionItemCustom title="CAN I SEE WHAT PHALLUS I WILL GET?">
@@ -531,7 +531,7 @@ const IndexPage = () => {
                     We will take 7% from every resold Phallus. FAPP will send up to 10% to Family Phallus Planet’s liquidity pool. Our collectors will vote how this liquidity pool should be used.
                   </AccordionItemCustom>
                   <AccordionItemCustom title="WHERE DO YOU STORE YOUR NFTs?">
-                    We use ifps.io <a href="http://ifps.io/">ifps.io</a>! It’s the best way to store our NFT collectible. IPFS is a decentralised file hosting system. It means that your NFTs won’t disappear and you will be able to see them anytime you want!
+                    We use <a href="http://ifps.io/">ifps.io</a>! It’s the best way to store our NFT collectible. IPFS is a decentralised file hosting system. It means that your NFTs won’t disappear and you will be able to see them anytime you want!
                   </AccordionItemCustom>
                   <AccordionItemCustom title="WILL YOU MAKE MORE PHALLUSES?">
                   No we won't. We have only 8888 Phalluses.
