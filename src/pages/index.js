@@ -160,7 +160,7 @@ const IndexPage = () => {
           <div className="video-wrap"></div>
           <div className="content">
             <div className="welcome">
-              <h1>FAMILY PHALLUS PLANET #FAPP</h1>
+              <h1>FAMILY PHALLUS PLANET<br/>FAPP</h1>
               <p>The NFT planet where every Phallus is unique and free!</p>
             </div>
             <ButtonCustom className="nav-btn">
@@ -189,29 +189,26 @@ const IndexPage = () => {
               <Fade left>
                 <div className="text-wrap">
                   <div className="text">
-                    <h2>STORYLINE</h2>
+                    <h2>Storyline</h2>
                     <p>
-                      We are a team of artists, developers and financial analysts
-                      that discovered Family Phallus Planet - FAPP. Family Phallus
-                      Planet - FAPP is an Ethereum Blockchain planet with 10,000
-                      unique 2.5 inch NFT Phalluses.
+                      We are a team of artists, developers and financial analysts that discovered Family Phallus Planet - FAPP.
                     </p>
-                    <br className="display-none" />
                     <br />
                     <p>
-                      FAPP is not boring, every Phallus here knows how to deal with
-                      boredom! Look at Phalluses! They know that they're small, but
-                      they DGAF about it. They support each other and think about
-                      their strengths while humans fixated on their "problems".
+                      Whether you are a male or a female, gay or lesbian, feminist or masculist, transsexual or pansexual - we don't care who you are! We want to show the whole world that Phalluses are not "disgusting", it’s also something that can be cute and beautiful!
+                      Our mission is to help fight AIDS, stop body shaming and prove that art should be provocative.
                     </p>
+                    <br />
                     <p>
-                      Mint your phallus and join the community where everyone can
-                      find friends and forget about stupid stereotypes!
+                      Family Phallus Planet - FAPP is an Ethereum Blockchain planet with 8888 generative 2.5 inch NFT Phalluses. 
+                      FAPP is not boring, every Phallus here knows how to deal with boredom! 
+                      Look at Phalluses! They know that they're small, but they DGAF about it. They support each other and think about their strengths while humans pay too much attention to their "problems". 
+                      Mint your Phallus and join the community where everyone can find friends and forget about stupid stereotypes! 
                     </p>
                   </div>
                   <ButtonCustomMint className="toMint">
                     <Link to="/mint">
-                      <span>Mint</span>
+                      <span>MINT</span>
                     </Link>
                   </ButtonCustomMint>
                 </div>
@@ -225,15 +222,13 @@ const IndexPage = () => {
                 <div className="info">
                   <h2>NFT</h2>
                   <div className="about">
-                    <h3>10,000 UNIQUE NFT</h3>
-                    <h3>98 UNIQUE PROPERTIES</h3>
-                    <h3>7 STYLES</h3>
-                    <h3>3 RARITY LEVELS</h3>
+                    <h3>8888 generative NFTs.</h3>
+                    <h3>160 Traits</h3>
+                    <h3>7 kinds of attributes</h3>
+                    <h3>3 groups</h3>
                   </div>
                   <p>
-                    Every Phallus has unique combination of background color, skin
-                    color, skin type, eyes, mouth, head, eyewear, necklace and back
-                    item
+                    Every Phallus has unique combination of background color, skin type, eyes, mouth, head and accessory 
                   </p>
                 </div>
               </Fade>
@@ -241,54 +236,54 @@ const IndexPage = () => {
                 <div className="levels">
                   <div className="dope level">
                     <h3>
-                      <span>15%</span> DOPE LEVEL
+                      <span>15%</span> Dope group
                     </h3>
                     <div className="icons">
                       <figure>
                         <img src={rasta} alt="" />
-                        <figcaption>Rasta style</figcaption>
+                        <figcaption>Precious attributes</figcaption>
                       </figure>
                     </div>
                   </div>
                   <div className="wild level">
                     <h3>
-                      <span>35%</span> WILD LEVEL
+                      <span>35%</span> Wild group
                     </h3>
                     <div className="icons">
                       <figure>
                         <img src={superhero} alt="" />
-                        <figcaption>Superhero style</figcaption>
+                        <figcaption>Halloween attributes</figcaption>
                       </figure>
                       <figure>
                         <img src={cyber} alt="" />
-                        <figcaption>Cyber style</figcaption>
+                        <figcaption>Cyber attributes</figcaption>
                       </figure>
                       <figure>
                         <img src={afterlife} alt="" />
-                        <figcaption>Afterlife style</figcaption>
+                        <figcaption>Animal attributes</figcaption>
                       </figure>
                     </div>
                   </div>
                   <div className="basic level">
                     <h3>
-                      <span>50%</span> BASIC LEVEL
+                      <span>50%</span> Basic group
                     </h3>
                     <div className="icons">
                       <figure>
                         <img src={basic} alt="" />
-                        <figcaption>Basic style</figcaption>
+                        <figcaption>Common attributes</figcaption>
                       </figure>
                       <figure>
                         <img src={wild} alt="" />
-                        <figcaption>Wild style</figcaption>
+                        <figcaption>Superhero attributes</figcaption>
                       </figure>
                       <figure>
                         <img src={protection} alt="" />
-                        <figcaption>Protection style</figcaption>
+                        <figcaption>Protection attributes</figcaption>
                       </figure>
                       <figure>
                         <img src={precious} alt="" />
-                        <figcaption>Precious style</figcaption>
+                        <figcaption>Stoned attributes</figcaption>
                       </figure>
                     </div>
                   </div>
@@ -298,76 +293,42 @@ const IndexPage = () => {
             <div id="content-block-roadmap" className="content-block roadmap">
               <Fade left>
                 <h2>ROADMAP</h2>
+                <h4>Short-term</h4>
               </Fade>
               {screenWidth > 750 &&
                 <div className="points">
                   <Fade left>
                     <div className="point p5">
-                      <h3><span>5%</span> PHALLUSES NEED FRIENDS!</h3>
+                      <h3><span>20%</span> FAPP is everywhere!</h3>
                       <img src={whiteIMG} alt="" />
                       <p>
-                        Giveaway! 100 free Phalluses to people who reposted our first
-                        post on twitter!
-                      </p>
+                      We will invest our funds in marketing. Everybody should know that we are great!
+                      </p> 
                       <div className="arrow-wrap">
-                        <p>15</p>
+                        <p>40</p>
                         <img className="arrow" src={arrow} alt="" />
                       </div>
                     </div>
                   </Fade>
                   <Fade right>
                     <div className="point p15 right">
-                      <h3><span>15%</span> FAPP IS EVERYWHERE!</h3>
+                      <h3><span>40%</span> Charity time!</h3>
                       <img src={whiteIMG} alt="" />
                       <p>
-                        We will invest up to 80% of the funds to promote the project
-                        to make our Phalluses more expensive and desired!
-                      </p>
-                      <p>
-                        We will need your help too! The most active Phalluses can join
-                        our team!
+                        FAPP will make a donation to the AIDS Foundation.
                       </p>
                       <div className="arrow-wrap left">
-                        <p>30</p>
+                        <p>60</p>
                         <img className="arrow" src={arrow} alt="" />
                       </div>
                     </div>
                   </Fade>
                   <Fade left>
                     <div className="point p30">
-                      <h3><span>30%</span> LOOK AT THE SKY!</h3>
+                      <h3><span>60%</span> How rare is your Phallus?</h3>
                       <img src={whiteIMG} alt="" />
                       <p>
-                        5 Phalluses will be minted and air dropped to 5 random
-                        collectors!
-                      </p>
-                      <div className="arrow-wrap">
-                        <p>50</p>
-                        <img className="arrow" src={arrow} alt="" />
-                      </div>
-                    </div>
-                  </Fade>
-                  <Fade right>
-                    <div className="point p50 right">
-                      <h3><span>50%</span> SHOPPING SPREE!</h3>
-                      <img src={whiteIMG} alt="" />
-                      <p>
-                        Our official FAPP nft merch store will be unlocked for
-                        Phalluses.
-                      </p>
-                      <div className="arrow-wrap left">
-                        <p>70</p>
-                        <img className="arrow" src={arrow} alt="" />
-                      </div>
-                    </div>
-                  </Fade>
-                  <Fade left>
-                    <div className="point p70">
-                      <h3><span>70%</span> ICED OUT WHO? ICED OUT WATCH!</h3>
-                      <img src={whiteIMG} alt="" />
-                      <p>
-                        We will give 1 Rolex date just 41 iced out watch piece to 1
-                        random collector with rare Phalluses
+                      FAPP will be added to «<a href="https://rarity.tools/">rarity.tools</a>».
                       </p>
                       <div className="arrow-wrap">
                         <p>80</p>
@@ -376,178 +337,230 @@ const IndexPage = () => {
                     </div>
                   </Fade>
                   <Fade right>
-                    <div className="point p80 right">
-                      <h3><span>80%</span> WHO WANT THE SMOKE?</h3>
+                    <div className="point p50 right">
+                      <h3><span>80%</span> #FAPP merch store!</h3>
                       <img src={whiteIMG} alt="" />
-                      <p>FAPP gives 10 ETH to 10 random Phalluses.</p>
+                      <p>
+                        Our official FAPP nft merch store will be unlocked for collectors.
+                      </p>
                       <div className="arrow-wrap left">
-                        <p>100</p>
+                        <p>90</p>
                         <img className="arrow" src={arrow} alt="" />
                       </div>
                     </div>
                   </Fade>
                   <Fade left>
-                    <div className="point p100">
-                      <h3><span>100%</span> IT IS CHARITY TIME</h3>
+                    <div className="point p70">
+                      <h3><span>90%</span> Phalluses need friends!</h3>
                       <img src={whiteIMG} alt="" />
-                      <p>FAPP will make a 35 ETH donation to the AIDS Foundation!</p>
+                      <p>We will drop new NFT collectible.</p>
+                      <p>Every collector will be able to mint one free companion for a Phallus. Just pay GAS fee.</p>
+                      <div className="arrow-wrap">
+                        <p>100</p>
+                        <img className="arrow" src={arrow} alt="" />
+                      </div>
                     </div>
                   </Fade>
+                  <Fade right>
+                    <div className="point p80 right">
+                      <h3><span>100%</span> Elections on FAPP</h3>
+                      <img src={whiteIMG} alt="" />
+                      <p>Video game? Web series? Or maybe something new and crazy? All phalluses will vote for the future of FAPP!</p>                     
+                    </div>
+                  </Fade>                 
                 </div>
               }
               {screenWidth <= 750 &&
-                <div className="points">
-                  <div className="point p5">
-                    <h3><span>5%</span> PHALLUSES NEED FRIENDS!</h3>
-                    <img src={whiteIMG} alt="" />
-                    <p>
-                      Giveaway! 100 free Phalluses to people who reposted our first
-                      post on twitter!
-                    </p>
-                  </div>
+                <div className="points">                
                   <div className="point p15">
-                    <h3><span>15%</span> FAPP IS EVERYWHERE!</h3>
+                    <h3><span>20%</span> FAPP is everywhere!</h3>
                     <img src={whiteIMG} alt="" />
                     <p>
-                      We will invest up to 80% of the funds to promote the project
-                      to make our Phalluses more expensive and desired!
-                    </p>
-                    <p>
-                      We will need your help too! The most active Phalluses can join
-                      our team!
-                    </p>
+                    We will invest our funds in marketing. Everybody should know that we are great!
+                    </p>                    
                   </div>
                   <div className="point p30">
-                    <h3><span>30%</span> LOOK AT THE SKY!</h3>
+                    <h3><span>40%</span> Charity time!</h3>
                     <img src={whiteIMG} alt="" />
                     <p>
-                      5 Phalluses will be minted and air dropped to 5 random
-                      collectors!
+                      FAPP will make a donation to the AIDS Foundation.
                     </p>
                   </div>
                   <div className="point p50">
-                    <h3><span>50%</span> SHOPPING SPREE!</h3>
+                    <h3><span>60%</span> How rare is your Phallus?</h3>
                     <img src={whiteIMG} alt="" />
                     <p>
-                      Our official FAPP nft merch store will be unlocked for
-                      Phalluses.
+                    FAPP will be added to «<a href="https://rarity.tools/">rarity.tools</a>».
                     </p>
                   </div>
                   <div className="point p70">
-                    <h3><span>70%</span> ICED OUT WHO? ICED OUT WATCH!</h3>
+                    <h3><span>80%</span> #FAPP merch store!</h3>
                     <img src={whiteIMG} alt="" />
                     <p>
-                      We will give 1 Rolex date just 41 iced out watch piece to 1
-                      random collector with rare Phalluses
+                      Our official FAPP nft merch store will be unlocked for collectors.
                     </p>
                   </div>
                   <div className="point p80">
-                    <h3><span>80%</span> WHO WANT THE SMOKE?</h3>
+                    <h3><span>90%</span> Phalluses need friends!</h3>
                     <img src={whiteIMG} alt="" />
-                    <p>FAPP gives 10 ETH to 10 random Phalluses.</p>
+                    <p>We will drop new NFT collectible.</p>
+                    <p>Every collector will be able to mint one free companion for a Phallus. Just pay GAS fee.</p>
                   </div>
                   <div className="point p100">
-                    <h3><span>100%</span> IT IS CHARITY TIME</h3>
+                    <h3><span>100%</span> Elections on FAPP</h3>
                     <img src={whiteIMG} alt="" />
-                    <p>FAPP will make a 35 ETH donation to the AIDS Foundation!</p>
+                    <p>Video game? Web series? Or maybe something new and crazy? All phalluses will vote for the future of FAPP!</p>
                   </div>
                 </div>}
+                <div>
+                  <h4>Long term</h4>
+                  <p>We don’t think that anybody can predict the future of FAPP.
+                  Family Phallus Planet is a democratic planet where every Phallus can vote and decide what FAPP should do to become the most interesting NFT project.<br/>
+                  We want to create a community where everyone can be useful. Together we are strong!
+                  </p>
+                </div>
             </div>
             <div id="content-block-faq" className="content-block faq">
               <Fade bottom>
                 <h2>FAQ</h2>
                 <Accordion className="accordion" allowMultiple allowToggle>
                   <AccordionItemCustom title="WHO ARE YOU?">
-                    We are a team of artists, developers and financial analysts that discovered Family Phallus Planet - FAPP.
+                    We are a team of artists, developers and financial analysts that discovered Family Phallus Planet - FAPP. 
                   </AccordionItemCustom>
                   <AccordionItemCustom title="WHAT IS FAPP?">
-                    Family Phallus Planet - FAPP is an Ethereum Blockchain planet with 10,000 unique 2.5 inch NFT Phalluses.
+                    Family Phallus Planet - FAPP is an Ethereum Blockchain planet with 8888 generative 2.5 inch NFT Phalluses. 
                   </AccordionItemCustom>
                   <AccordionItemCustom title="TELL ME MORE ABOUT YOUR NFT COLLECTION!">
+                    #FAPP nft collection has 160 hand-drawn traits.
+                    <br/>
+                    <br/>
                     Every Phallus has different combination of
                     <ul>
                       <li>Background color</li>
-                      <li>Skin Color</li>
                       <li>Skin Type</li>
                       <li>Head</li>
                       <li>Eyes</li>
                       <li>Mouth</li>
-                      <li>Glasses</li>
-                      <li>Necklace</li>
+                      <li>Head</li>
+                      <li>Accessories</li>
                     </ul>
-                    Every item has different styles:
+                    <br/>
+                    Every traits have different attributes:
                     <ul>
-                      <li>Common items</li>
-                      <li>Animal items</li>
-                      <li>Cyber items</li>
-                      <li>Precious items</li>
-                      <li>Afterlife items</li>
-                      <li>Rasta items</li>
-                      <li>Protection items</li>
-                      <li>Superhero items</li>
+                      <li>Common attributes</li>
+                      <li>Protection attributes</li>
+                      <li>Superhero attributes</li>
+                      <li>Stoned attributes</li>
+                      <li>Animal attributes</li>
+                      <li>Cyber attributes</li>
+                      <li>Halloween attributes</li>
+                      <li>Precious attributes</li>
                     </ul>
-                    Every style belongs to its own level of rarity
+                    <br/>
+                    Every attribute belongs to its own group:
                     <ul>
-                      <li>Basic level
-                        <ul>
-                          <li>Common items</li>
-                          <li>Rasta items</li>
-                          <li>Protection items</li>
-                          <li>Superhero items</li>
+                      <li>Basic group
+                        <ul className="faq-list-with-padding">
+                          <li>Common attributes</li>
+                          <li>Protection attributes</li>
+                          <li>Superhero attributes</li>
+                          <li>Stoned attributes</li>
                         </ul>
                       </li>
-                      <li>Wild
-                        <ul>
-                          <li>Animal items</li>
-                          <li>Cyber items</li>
-                          <li>Afterlife items</li>
+                      <br/>
+                      <li>Wild group  
+                        <ul className="faq-list-with-padding">                 
+                          <li>Animal attributes</li>
+                          <li>Cyber attributes</li>
+                          <li>Halloween attributes</li>
                         </ul>
                       </li>
-                      <li>Dope
-                        <ul>
-                          <li>precious items</li>
+                      <br/>
+                      <li>Dope group
+                        <ul className="faq-list-with-padding">
+                          <li>Precious attributes</li>
                         </ul>
                       </li>
                     </ul>
                   </AccordionItemCustom>
                   <AccordionItemCustom title="WHAT ARE YOU PLANNING TO DO?">
                     <ul>
-                      <li>We are planning to show that art must be provocative because our planet became boring and too much structured.
-                        <p>
-                          <em>FAPP is not boring, every Phallus here knows how to deal with boredom! </em>
-                        </p>
-                      </li>
-                      <br />
-                      <li>We want to stop body shaming.
-                        <p>
-                          <em>Look at Phalluses! They know that they're small, but they DGAF about it. They support each other and think about their strengths while humans fixated on their "problems". Let's create a community where everyone can find friends and forget about stupid stereotypes!  </em>
-                        </p>
-                      </li>
-                      <br />
                       <li>We want to help fight AIDS.
                         <p>
                           <em>We will donate money to charities that will be chosen by Phalluses in our #FAPP community.</em>
                         </p>
                       </li>
                       <br />
+                      <li>We want to stop body shaming.
+                        <p>
+                          <em>Look at Phalluses! They know that they're small, but they DGAF about it. They support each other and think about their strengths while humans pay too much attention to their "problems". Let's create a community where everyone can find friends and forget about stupid stereotypes! </em>
+                        </p>
+                      </li>
+                      <br />
                       <li>Our team will provide giveaways and prizes.
                         <p>
-                          <em>ETH coins, free NFTs, Rolex watch and more cool stuff! </em>
+                          <em>ETH coins, free NFTs and more cool stuff!</em>
+                        </p>
+                      </li>
+                      <br />
+                      <li>We want to create a big universe with different characters.
+                        <p>
+                          <em>We will create new NFT collectibles. Our collectors will be able to mint new NFTs for free!</em>
                         </p>
                       </li>
                     </ul>
                   </AccordionItemCustom>
+                  <AccordionItemCustom title="WHAT ADVANTAGES DO YOU HAVE?">
+                    <ul>
+                      <li>Fair distribution
+                      </li>
+                      <li>Good arts
+                      </li>
+                      <li>Fresh and provocative idea
+                      </li>
+                      <li>Great roadmap
+                      </li>
+                      <li>Long-term ambitions
+                      </li>
+                      <li>160 traits
+                      </li>
+                      <li>Voting rights 
+                      </li>
+                      <li>We are unique
+                      </li>
+                      <li>We give ownership and commercial usage rights to the collectors over their NFTs
+                      </li>
+                    </ul>
+                  </AccordionItemCustom>
                   <AccordionItemCustom title="HOW CAN I GET A PHALLUS?">
-                    Click here <a href="/">https://nft-cockiz.com/mint</a>, connect your MetaMask wallet and mint (buy) your NFT Phallus.
+                    Click here <a href="/">https://nft-cockiz.com/mint</a>, connect your MetaMask wallet and mint (buy) your NFT Phallus.<br/>
+                    1 Phallus costs 0.08 ETH + GAS.
+                  </AccordionItemCustom>
+                  <AccordionItemCustom title="CAN I SEE WHAT PHALLUS I WILL GET?">
+                    No, you can buy tradable loot boxes. They will be replaced by Phalluses after the sold-out.
+                  </AccordionItemCustom>
+                  <AccordionItemCustom title="TELL ME ABOUT ROYALTY FEES AND LIQUIDITY POOL!">
+                    We will take 7% from every resold Phallus. FAPP will send up to 10% to Family Phallus Planet’s liquidity pool. Our collectors will vote how this liquidity pool should be used.
+                  </AccordionItemCustom>
+                  <AccordionItemCustom title="WHERE DO YOU STORE YOUR NFTs?">
+                    We use ifps.io <a href="http://ifps.io/">ifps.io</a>! It’s the best way to store our NFT collectible. IPFS is a decentralised file hosting system. It means that your NFTs won’t disappear and you will be able to see them anytime you want!
                   </AccordionItemCustom>
                   <AccordionItemCustom title="WILL YOU MAKE MORE PHALLUSES?">
-                    No we won't. We have limited emission because we want to preserve the value of our NFTs.
+                  No we won't. We have only 8888 Phalluses.
                   </AccordionItemCustom>
                   <AccordionItemCustom title="DO YOU HAVE YOUR OWN SMART CONTRACT?">
-                    Yes, we developed our own Smart Contract smartcontract.
+                  Yes, we developed our own Smart Contract smartcontract-.
                   </AccordionItemCustom>
                   <AccordionItemCustom title="CAN I RESELL MY PHALLUS NFT?">
                     You can resell it on <a href="https://opensea.io/">https://opensea.io/</a>
+                  </AccordionItemCustom>
+                  <AccordionItemCustom title="WHERE CAN I FIND YOU?">
+                    <a href="https://twitter.com/FAP_Planet">Twitter</a><br/>
+                    <a href="https://instagram.com/familyphallusplanet">Instagram</a><br/>
+                    <a href="https://opensea.io/collection/fapp">OpenSea</a><br/>
+                    <a href="https://familyphallusplanet.com/">Website</a><br/>
+                    <a href="https://bubbleron.com/familyphallusplanet">Bubbleron</a><br/>
+                    <a href="https://www.youtube.com/channel/UCch3zZDZ9ubRlhSFbknDUog">Youtube</a>
                   </AccordionItemCustom>
                 </Accordion>
               </Fade>

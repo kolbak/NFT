@@ -36,6 +36,7 @@
       }
 
       h1 {
+        line-height: 51px;
         font-weight: bold;
         font-size  : 2.7rem;
       }
@@ -401,13 +402,20 @@
       width     : 100%;
       height    : min-content;
       align-self: center;
-
+      h2{
+        margin: 0;
+        padding: 0 0 20px 0;
+      }
+      h4{
+        margin-bottom: 15px;
+        font-size: 35px;
+      }
       .points {
         display       : flex;
         flex-direction: column;
         gap           : 20px;
         position      : relative;
-
+        margin-bottom: 20px;
         .point {
           display       : flex;
           flex-direction: column;
@@ -435,7 +443,10 @@
               font-family: 'Amatic SC', cursive;
             }
           }
-
+          a {
+            text-decoration: underline;
+            color: #00bfff;
+          }
           .arrow-wrap {
             position: absolute;
             top     : 50%;
@@ -472,6 +483,10 @@
 
     .faq {
       .accordion {
+        a {
+          text-decoration: underline;
+          color: #00bfff;
+        }
         h2 {
           margin-bottom : 0;
           padding-bottom: 0;
@@ -486,6 +501,13 @@
           div {
             font-family: 'Amatic SC', cursive;
             font-size  : 30px;
+          }
+        }
+        .faq-list-with-padding{
+          margin: 0;       
+          li{
+            list-style-type: none;
+            margin: 0;
           }
         }
       }
