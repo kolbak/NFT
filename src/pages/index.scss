@@ -197,21 +197,20 @@
         display     : inline-block;
         justify-self: center;
         align-self  : center;
-        max-height  : 521px;
+        max-height  : 575px;
       }
-
-      @media screen and (max-width: 1200px) {
-        .text {
-          .display-none {
-            display: none;
+      @media screen and (max-width: 1900px) {
+        img{
+          max-height: 700px;
           }
         }
-
-
+      
+      @media screen and (max-width: 1600px) {
+        img{
+          max-height: inherit;
+          }
+        }
       }
-
-    }
-
     @media screen and (max-width: 1100px) {
       .storyline {
         grid-template-columns: 1fr;
