@@ -18,8 +18,10 @@ import "./index.scss"
 
 import characterEx from "../images/character-ex.png"
 import storyline from "../images/storyline.jpeg"
-import nftFaq from '../images/nft-faq1.jpeg';
-import nftFaq2 from '../images/nft-faq2.jpeg';
+import roadmap1 from '../images/roadmap1.jpeg';
+import roadmap2 from '../images/roadmap2.jpeg';
+import roadmap3 from '../images/roadmap3.jpeg';
+import roadmap6 from '../images/roadmap6.jpeg';
 
 //? icons
 import rasta from "../images/icons/rasta.png"
@@ -288,7 +290,7 @@ const IndexPage = () => {
                   <Fade left>
                     <div className="point p5">
                       <h3><span>20%</span> FAPP is everywhere!</h3>
-                      <img src={nftFaq} alt="" />
+                      <img src={roadmap1} alt="" />
                       <p>
                       We will invest our funds in marketing. Everybody should know that we are great!
                       </p> 
@@ -301,7 +303,7 @@ const IndexPage = () => {
                   <Fade right>
                     <div className="point p15 right">
                       <h3><span>40%</span> Charity time!</h3>
-                      <img src={nftFaq2} alt="" />
+                      <img src={roadmap2} alt="" />
                       <p>
                         FAPP will make a donation to the AIDS Foundation.
                       </p>
@@ -314,7 +316,7 @@ const IndexPage = () => {
                   <Fade left>
                     <div className="point p30">
                       <h3><span>60%</span> How rare is your Phallus?</h3>
-                      <img src={nftFaq} alt="" />
+                      <img src={roadmap3} alt="" />
                       <p>
                       FAPP will be added to «<a href="https://rarity.tools/">rarity.tools</a>».
                       </p>
@@ -327,7 +329,7 @@ const IndexPage = () => {
                   <Fade right>
                     <div className="point p50 right">
                       <h3><span>80%</span> #FAPP merch store!</h3>
-                      <img src={nftFaq2} alt="" />
+                      <img src={roadmap3} alt="" />
                       <p>
                         Our official FAPP nft merch store will be unlocked for collectors.
                       </p>
@@ -340,7 +342,7 @@ const IndexPage = () => {
                   <Fade left>
                     <div className="point p70">
                       <h3><span>90%</span> Phalluses need friends!</h3>
-                      <img src={nftFaq} alt="" />
+                      <img src={roadmap3} alt="" />
                       <p>We will drop new NFT collectible.</p>
                       <p>Every collector will be able to mint one free companion for a Phallus. Just pay GAS fee.</p>
                       <div className="arrow-wrap">
@@ -352,7 +354,7 @@ const IndexPage = () => {
                   <Fade right>
                     <div className="point p80 right">
                       <h3><span>100%</span> Elections on FAPP</h3>
-                      <img src={nftFaq2} alt="" />
+                      <img src={roadmap6} alt="" />
                       <p>Video game? Web series? Or maybe something new and crazy? All phalluses will vote for the future of FAPP!</p>                     
                     </div>
                   </Fade>                 
@@ -362,41 +364,41 @@ const IndexPage = () => {
                 <div className="points">                
                   <div className="point p15">
                     <h3><span>20%</span> FAPP is everywhere!</h3>
-                    <img src={nftFaq} alt="" />
+                    <img src={roadmap1} alt="" />
                     <p>
                     We will invest our funds in marketing. Everybody should know that we are great!
                     </p>                    
                   </div>
                   <div className="point p30">
                     <h3><span>40%</span> Charity time!</h3>
-                    <img src={nftFaq2} alt="" />
+                    <img src={roadmap2} alt="" />
                     <p>
                       FAPP will make a donation to the AIDS Foundation.
                     </p>
                   </div>
                   <div className="point p50">
                     <h3><span>60%</span> How rare is your Phallus?</h3>
-                    <img src={nftFaq} alt="" />
+                    <img src={roadmap3} alt="" />
                     <p>
                     FAPP will be added to «<a href="https://rarity.tools/">rarity.tools</a>».
                     </p>
                   </div>
                   <div className="point p70">
                     <h3><span>80%</span> #FAPP merch store!</h3>
-                    <img src={nftFaq2} alt="" />
+                    <img src={roadmap3} alt="" />
                     <p>
                       Our official FAPP nft merch store will be unlocked for collectors.
                     </p>
                   </div>
                   <div className="point p80">
                     <h3><span>90%</span> Phalluses need friends!</h3>
-                    <img src={nftFaq} alt="" />
+                    <img src={roadmap3} alt="" />
                     <p>We will drop new NFT collectible.</p>
                     <p>Every collector will be able to mint one free companion for a Phallus. Just pay GAS fee.</p>
                   </div>
                   <div className="point p100">
                     <h3><span>100%</span> Elections on FAPP</h3>
-                    <img src={nftFaq2} alt="" />
+                    <img src={roadmap6} alt="" />
                     <p>Video game? Web series? Or maybe something new and crazy? All phalluses will vote for the future of FAPP!</p>
                   </div>
                 </div>}
