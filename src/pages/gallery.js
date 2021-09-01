@@ -107,17 +107,13 @@ const Gallery = () => {
                     <AccordionPanel className="filters-list" pb={4}>
                       <CheckboxGroup defaultValue="2">
                         <Stack className="filter-buttons-container" spacing={1} marginLeft={5} direction="column">
-                          <Checkbox colorScheme="green" value="1">
-                            Filter #1
+                          <Checkbox colorScheme="red" className="type-red" value="1">                           
                           </Checkbox>
-                          <Checkbox colorScheme="green" value="2">
-                            Filter #2
+                          <Checkbox colorScheme="yellow" className="type-yellow" value="2">                            
                           </Checkbox>
-                          <Checkbox colorScheme="green" value="3">
-                            Filter #3
+                          <Checkbox colorScheme="blue" className="type-blue" value="3">                            
                           </Checkbox>
-                          <Checkbox colorScheme="green" value="4">
-                            Filter #4
+                          <Checkbox colorScheme="green" className="type-green" value="4">                            
                           </Checkbox>
                         </Stack>
                       </CheckboxGroup>
