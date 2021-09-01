@@ -3,31 +3,12 @@ import { Link } from "gatsby"
 import {
   Box,
   Button,
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  MenuItemOption,
-  MenuGroup,
-  MenuOptionGroup,
-  MenuIcon,
-  MenuCommand,
-  MenuDivider,
-
-  Fade,
-  ScaleFade,
-  Slide,
-  SlideFade,
-  Collapse,
-
-  useDisclosure,
 } from "@chakra-ui/react"
 import { HamburgerIcon } from '@chakra-ui/icons'
 
 import './navbar.scss'
 
 import logo from '../images/logo.svg'
-import summerHolidays from '../images/summer-holidays.svg'
 
 const Navbar = () => {
   const isBrowser = typeof window !== "undefined"
