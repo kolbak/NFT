@@ -21,6 +21,7 @@ import storyline from "../images/storyline.jpeg"
 import roadmap1 from '../images/roadmap1.jpeg';
 import roadmap2 from '../images/roadmap2.jpg';
 import roadmap3 from '../images/roadmap3.jpeg';
+import roadmap5 from '../images/roadmap5.jpg';
 import roadmap6 from '../images/roadmap6.jpg';
 
 //? icons
@@ -342,7 +343,7 @@ const IndexPage = () => {
                   <Fade left>
                     <div className="point p70">
                       <h3><span>90%</span> Phalluses need friends!</h3>
-                      <img src={roadmap3} alt="" />
+                      <img src={roadmap5} alt="" />
                       <p>We will drop new NFT collectible.</p>
                       <p>Every collector will be able to mint one free companion for a Phallus. Just pay GAS fee.</p>
                       <div className="arrow-wrap">
@@ -392,7 +393,7 @@ const IndexPage = () => {
                   </div>
                   <div className="point p80">
                     <h3><span>90%</span> Phalluses need friends!</h3>
-                    <img src={roadmap3} alt="" />
+                    <img src={roadmap5} alt="" />
                     <p>We will drop new NFT collectible.</p>
                     <p>Every collector will be able to mint one free companion for a Phallus. Just pay GAS fee.</p>
                   </div>
