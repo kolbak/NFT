@@ -26,6 +26,11 @@ h2.filterH2 {
         color: #ababab;
       }
 
+      svg{
+        display: none;
+      }
+
+      
       h2 {
         width: 100%;
       }
@@ -36,6 +41,13 @@ h2.filterH2 {
 
       .filter-buttons-container {
         margin-left: 0;
+        display: grid;
+        grid-template-columns: repeat(2, 35px);
+        gap: 15px;
+        span{
+          width: 35px;
+          height: 35px;
+        }
       }
 
       .filters-list {
@@ -61,6 +73,36 @@ h2.filterH2 {
       }
 
       width : 80%;
+
+      .chakra-checkbox{
+        span{
+          outline: transparent;
+          border: transparent
+        }
+        .chakra-checkbox__input:checked + span{
+          outline: 3px #00bfff solid;  
+        }
+      }
+      .type-red{
+        span{
+          background: red;
+        }
+      }
+      .type-yellow{
+        span{
+          background: yellow;
+        }
+      }
+      .type-blue{
+        span{
+          background: blue;
+        }
+      }
+      .type-green{
+        span{
+          background: green;
+        }
+      }
     }
   }
 
@@ -105,8 +147,6 @@ h2.filterH2 {
       }
     }
   }
-
-
 }
 
 @media screen and (max-width: 850px) {
