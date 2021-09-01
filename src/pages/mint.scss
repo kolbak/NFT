@@ -73,7 +73,9 @@
   }
 
   @media screen and (max-width: 850px) {
-
+    h1{
+      text-align: center;
+    }
     .mint,
     .connect {
       flex-direction: column;
@@ -81,6 +83,10 @@
       h2{
         text-align: center;
         margin-bottom: 7px;
+      }
+
+      p{
+        text-align: center;
       }
       button {
         margin-top: 20px;
