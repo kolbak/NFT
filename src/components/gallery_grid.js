@@ -1,5 +1,4 @@
 import React from "react"
-import { Redirect, Route, BrowserRouter as Router, Switch } from "react-router-dom";
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 

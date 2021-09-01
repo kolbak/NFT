@@ -48,7 +48,7 @@ const Mint = () => {
             <form action="">
               <FormControl id="amount">
                 <FormLabel>Amount</FormLabel>
-                <Input type="number" />
+                <Input className="amount-input" type="number" min="1" max="15" maxlength ="3"/>
               </FormControl>
               
             </form>
