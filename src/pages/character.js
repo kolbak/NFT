@@ -5,34 +5,22 @@ import Seo from "../components/seo"
 
 import './character.scss'
 
-const Character = () => {
-  const isBrowser = typeof window !== "undefined"
-  let url = '';
-  if (isBrowser) {
-    url = window.location.href;
-  }
-
-  const index = url.slice(url.indexOf('id=') + 3, url.indexOf('id=') + 4);
-  const imgSrc = url.slice(url.indexOf('static') - 1, url.length + 4);
-  function changeName() {
-    document.querySelector('.character-header').textContent = "Phallus #" + index;
-    document.querySelector('.character-image').src = "." + imgSrc;
-  }
-
+const Character = ({ location }) => {
+  const { name, id, src, filters } = location.state;
   return (
     <Layout>
       <Seo title="Connect" />
       <div className="gen-wrap">
         <div className="character-container">
-          <img className="character-image" src=""></img>
+          <img className="character-image" src={src} />
           <div className="character-text">
-            <h2 ref={changeName} className="character-header">.</h2>
+            <h2 className="character-header">{name}</h2>
             <a href="#" className="OpenSea-link">View on OpenSea</a>
             <p className="character-details-header">Details</p>
             <ul className="character-details">
               <li className="character-detail">Birthday
                 <span className="character-detail-points"></span>
-                <span className="character-detail-value">10.10.1010</span>
+                <span className="character-detail-value">{filters.bday}</span>
               </li>
               <li className="character-detail">Traits
                 <span className="character-detail-points"></span>
