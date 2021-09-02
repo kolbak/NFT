@@ -21,6 +21,7 @@ import storyline from "../images/storyline.jpeg"
 import roadmap1 from '../images/roadmap1.jpeg';
 import roadmap2 from '../images/roadmap2.jpg';
 import roadmap3 from '../images/roadmap3.jpeg';
+import roadmap4 from '../images/roadmap4.jpg';
 import roadmap5 from '../images/roadmap5.jpg';
 import roadmap6 from '../images/roadmap6.jpg';
 
@@ -330,7 +331,7 @@ const IndexPage = () => {
                   <Fade right>
                     <div className="point p50 right">
                       <h3><span>80%</span> #FAPP merch store!</h3>
-                      <img src={roadmap3} alt="" />
+                      <img src={roadmap4} alt="" />
                       <p>
                         Our official FAPP nft merch store will be unlocked for collectors.
                       </p>
@@ -386,7 +387,7 @@ const IndexPage = () => {
                   </div>
                   <div className="point p70">
                     <h3><span>80%</span> #FAPP merch store!</h3>
-                    <img src={roadmap3} alt="" />
+                    <img src={roadmap4} alt="" />
                     <p>
                       Our official FAPP nft merch store will be unlocked for collectors.
                     </p>
