@@ -311,7 +311,7 @@ const IndexPage = () => {
                 <h2>ROADMAP</h2>
                 <h4>Short-term</h4>
               </Fade>
-              {screenWidth > 750 &&
+              {screenWidth > 1300 &&
                 <div className="points" ref={pointsMap}>
                   <div className="line-wrap">
                     <div className="line" ref={line}></div>
@@ -369,7 +369,7 @@ const IndexPage = () => {
                   </Fade>
                 </div>
               }
-              {screenWidth <= 750 &&
+              {screenWidth <= 1300 &&
                 <div className="points">
                   <div className="point p15">
                     <h3><span>20%</span> FAPP is everywhere!</h3>

@@ -132,7 +132,7 @@
   h2 {
     width      : 100%;
     font-weight: bold;
-    font-size  : 2.5rem;
+    font-size  : 2.7rem;
     margin     : 0 0 20px 0;
     padding    : 0 0 10px 0;
     position   : relative;
@@ -284,7 +284,7 @@
             font-size  : 30px;
           }
 
-          @media (max-width: 750px) {
+          @media (max-width: 1300px) {
             grid-template-columns: repeat(2, 1fr);
 
             h3 {
@@ -461,7 +461,7 @@
           border-radius: 15px;
           width        : calc(50% - 50px);
 
-          @media (max-width: 750px) {
+          @media (max-width: 1300px) {
             width: 100%;
           }
 

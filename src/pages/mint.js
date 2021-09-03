@@ -42,7 +42,7 @@ const Mint = () => {
   return (
     <Layout>
       <Seo title="Mint" />
-      <div className="gen-wrap">
+      <div className="gen-wrap mint-wrap">
         <h1>Create your Phallus Avatar</h1>
         <h2>
           To mint your Phallus simply connect your MetaMask wallet and choose the number you wish to mint.
