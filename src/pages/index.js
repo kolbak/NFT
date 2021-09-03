@@ -56,26 +56,31 @@ const IndexPage = () => {
       window.addEventListener('resize', () => {
         setScreenWidth(window.screen.width);
       })
-      
+
       //? scrolling roadmap
       window.addEventListener('scroll', lineScroll)
       function lineScroll() {
         if (pointsMap.current && line.current) {
           let pointsPosTop = pointsMap.current?.getBoundingClientRect().top - window.screen.height / 2;
           let pointsPosBottom = pointsMap.current?.getBoundingClientRect().bottom - window.screen.height / 2;
-          if (pointsPosTop < 0) {
-            line.current.classList.remove("out-top");
-            line.current.classList.remove("out-bot");
+
+          let scrolled = false;
+          if (pointsPosBottom < 0) {
+            line.current.style.bottom = "20px";
+            scrolled = true;
+          }
+          if (pointsPosTop < 0 && !scrolled) {
             line.current.classList.add("visible");
+            line.current.style.top = "20px";
+
+            line.current.style.height =
+              Math.floor((window.scrollY + window.screen.height / 2) - (window.scrollY + line.current.getBoundingClientRect().top)) + "px";
           }
           if (pointsPosTop > -150) {
-            line.current.classList.add("out-top");
+            line.current.style.height = "50px";
             line.current.classList.remove("visible");
           }
-          if (pointsPosBottom < 0) {
-            line.current.classList.add("out-bot");
-            line.current.classList.remove("visible");
-          }
+
         }
       }
 
