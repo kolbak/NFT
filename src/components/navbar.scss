@@ -4,23 +4,20 @@
   height      : 100%;
   width       : 100%;
 
-  display              : grid;
-  grid-template-columns: 1fr 1.5fr;
+  display              : flex;
+  justify-content: space-between;
 
   .logo {
     align-self: center;
-    display   : inline-block;
     width     : 150px;
-    height    : 70px;
-
+    flex-shrink: 0;
     img{
-      max-width: initial;
+      width     : 150px;
     }
   }
 
   .navbar-btns {
     height       : 100%;
-    width        : 100%;
     border-radius: 5px;
 
     display: flex;
@@ -58,7 +55,7 @@
   }
 }
 
-@media (max-width: 1140px) {
+@media (max-width: 1200px) {
   .navbar-wrap {
     display              : flex;
     grid-template-columns: none;
