@@ -79,7 +79,7 @@ const Navbar = () => {
         </div>
       }
       {screenWidth <= 1200 &&
-        <div>
+        <>
           <div className="menu-wrap">
             <Button className="menu-btn" onClick={onToggle}
               bg="transparent"
@@ -98,7 +98,7 @@ const Navbar = () => {
               <ButtonCustom className="withBg user"><Link to="/user_account">#FAPP</Link></ButtonCustom>
             </Box>
           </div>
-        </div>
+        </>
       }
     </nav>
   )

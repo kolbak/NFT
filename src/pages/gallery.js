@@ -81,221 +81,235 @@ const Gallery = () => {
     <Layout>
       <Seo title="Gallery" />
       <div className="gen-wrap gallery-wrap">
-        {/* {width > 850 ? <>
+        {width > 850 ? <>
           <h2 className="filterH2">GALLERY</h2>
         </> : <>
           <button className="toggle-button" onClick={toggle}><h2 className="filterH2">GALLERY<Icon as={ChevronDownIcon}></Icon></h2></button>
-        </>} */}
-        {width > 850 && <h2 className="filterH2">GALLERY</h2>}
-        {width <= 850 && <button className="toggle-button" onClick={toggle}><h2 className="filterH2">GALLERY<Icon as={ChevronDownIcon}></Icon></h2></button>}
+        </>}
         <div className="gallery-content">
           <div className="filters-wrap">
             <div className="filters">
-              <Accordion allowMultiple allowToggle>
-                <AccordionItem className="filter-container" className="filter-container"
-                  border={accordionItemStyle.border}
-                  bg={accordionItemStyle.bg}
-                  outline={accordionItemStyle.outline}
-                  mb={accordionItemStyle.mb}
-                  borderRadius={accordionItemStyle.borderRadius}
-                >
-                  <h2>
-                    <AccordionButton
-                      paddingY={accordionButtonStyle.p} _focus={accordionButtonStyle_focus}>
-                      <Box flex="1" textAlign="left">
-                        <span className="__filter-title">BACKGROUND COLOR</span>
-                      </Box>
-                      <AccordionIcon />
-                    </AccordionButton>
-                  </h2>
-                  <AccordionPanel className="filters-list" pb={4}>
-                    <CheckboxGroup defaultValue="2">
-                      <Stack className="filter-buttons-container" spacing={1} marginLeft={5} direction="column">
-                        <Checkbox colorScheme="red" className="type-red" value="1"></Checkbox>
-                        <Checkbox colorScheme="yellow" className="type-yellow" value="2"></Checkbox>
-                        <Checkbox colorScheme="blue" className="type-blue" value="3"></Checkbox>
-                        <Checkbox colorScheme="green" className="type-green" value="4"></Checkbox>
-                      </Stack>
-                    </CheckboxGroup>
-                  </AccordionPanel>
-                </AccordionItem>
-                <AccordionItem className="filter-container"
-                  border={accordionItemStyle.border}
-                  bg={accordionItemStyle.bg}
-                  outline={accordionItemStyle.outline}
-                  mb={accordionItemStyle.mb}
-                  borderRadius={accordionItemStyle.borderRadius}>
-                  <h2>
-                    <AccordionButton
-                      paddingY={accordionButtonStyle.p} _focus={accordionButtonStyle_focus}>
-                      <Box flex="1" textAlign="left">
-                        <span className="__filter-title">SKIN COLOR</span>
-                      </Box>
-                      <AccordionIcon />
-                    </AccordionButton>
-                  </h2>
-                  <AccordionPanel className="filters-list" pb={4}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                    commodo consequat.
-                  </AccordionPanel>
-                </AccordionItem>
-                <AccordionItem className="filter-container"
-                  border={accordionItemStyle.border}
-                  bg={accordionItemStyle.bg}
-                  outline={accordionItemStyle.outline}
-                  mb={accordionItemStyle.mb}
-                  borderRadius={accordionItemStyle.borderRadius}>
-                  <h2>
-                    <AccordionButton
-                      paddingY={accordionButtonStyle.p} _focus={accordionButtonStyle_focus}>
-                      <Box flex="1" textAlign="left">
-                        <span className="__filter-title">SKIN TYPE</span>
-                      </Box>
-                      <AccordionIcon />
-                    </AccordionButton>
-                  </h2>
-                  <AccordionPanel className="filters-list" pb={4}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                    commodo consequat.
-                  </AccordionPanel>
-                </AccordionItem>
-                <AccordionItem className="filter-container"
-                  border={accordionItemStyle.border}
-                  bg={accordionItemStyle.bg}
-                  outline={accordionItemStyle.outline}
-                  mb={accordionItemStyle.mb}
-                  borderRadius={accordionItemStyle.borderRadius}>
-                  <h2>
-                    <AccordionButton
-                      paddingY={accordionButtonStyle.p} _focus={accordionButtonStyle_focus}>
-                      <Box flex="1" textAlign="left">
-                        <span className="__filter-title">HEAD</span>
-                      </Box>
-                      <AccordionIcon />
-                    </AccordionButton>
-                  </h2>
-                  <AccordionPanel className="filters-list" pb={4}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                    commodo consequat.
-                  </AccordionPanel>
-                </AccordionItem>
-                <AccordionItem className="filter-container"
-                  border={accordionItemStyle.border}
-                  bg={accordionItemStyle.bg}
-                  outline={accordionItemStyle.outline}
-                  mb={accordionItemStyle.mb}
-                  borderRadius={accordionItemStyle.borderRadius}>
-                  <h2>
-                    <AccordionButton
-                      paddingY={accordionButtonStyle.p} _focus={accordionButtonStyle_focus}>
-                      <Box flex="1" textAlign="left">
-                        <span className="__filter-title">EYES</span>
-                      </Box>
-                      <AccordionIcon />
-                    </AccordionButton>
-                  </h2>
-                  <AccordionPanel className="filters-list" pb={4}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                    commodo consequat.
-                  </AccordionPanel>
-                </AccordionItem>
-                <AccordionItem className="filter-container"
-                  border={accordionItemStyle.border}
-                  bg={accordionItemStyle.bg}
-                  outline={accordionItemStyle.outline}
-                  mb={accordionItemStyle.mb}
-                  borderRadius={accordionItemStyle.borderRadius}>
-                  <h2>
-                    <AccordionButton
-                      paddingY={accordionButtonStyle.p} _focus={accordionButtonStyle_focus}>
-                      <Box flex="1" textAlign="left">
-                        <span className="__filter-title">MOUTH</span>
-                      </Box>
-                      <AccordionIcon />
-                    </AccordionButton>
-                  </h2>
-                  <AccordionPanel className="filters-list" pb={4}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                    commodo consequat.
-                  </AccordionPanel>
-                </AccordionItem>
-                <AccordionItem className="filter-container"
-                  border={accordionItemStyle.border}
-                  bg={accordionItemStyle.bg}
-                  outline={accordionItemStyle.outline}
-                  mb={accordionItemStyle.mb}
-                  borderRadius={accordionItemStyle.borderRadius}>
-                  <h2>
-                    <AccordionButton
-                      paddingY={accordionButtonStyle.p} _focus={accordionButtonStyle_focus}>
-                      <Box flex="1" textAlign="left">
-                        <span className="__filter-title">EYEWEAR</span>
-                      </Box>
-                      <AccordionIcon />
-                    </AccordionButton>
-                  </h2>
-                  <AccordionPanel className="filters-list" pb={4}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                    commodo consequat.
-                  </AccordionPanel>
-                </AccordionItem>
-                <AccordionItem className="filter-container"
-                  border={accordionItemStyle.border}
-                  bg={accordionItemStyle.bg}
-                  outline={accordionItemStyle.outline}
-                  mb={accordionItemStyle.mb}
-                  borderRadius={accordionItemStyle.borderRadius}>
-                  <h2>
-                    <AccordionButton
-                      paddingY={accordionButtonStyle.p} _focus={accordionButtonStyle_focus}>
-                      <Box flex="1" textAlign="left">
-                        <span className="__filter-title">NECKLACE</span>
-                      </Box>
-                      <AccordionIcon />
-                    </AccordionButton>
-                  </h2>
-                  <AccordionPanel className="filters-list" pb={4}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                    commodo consequat.
-                  </AccordionPanel>
-                </AccordionItem>
-                <AccordionItem className="filter-container"
-                  border={accordionItemStyle.border}
-                  bg={accordionItemStyle.bg}
-                  outline={accordionItemStyle.outline}
-                  mb={accordionItemStyle.mb}
-                  borderRadius={accordionItemStyle.borderRadius}>
-                  <h2>
-                    <AccordionButton
-                      paddingY={accordionButtonStyle.p} _focus={accordionButtonStyle_focus}>
-                      <Box flex="1" textAlign="left">
-                        <span className="__filter-title">BACK ITEM</span>
-                      </Box>
-                      <AccordionIcon />
-                    </AccordionButton>
-                  </h2>
-                  <AccordionPanel className="filters-list" pb={4}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                    commodo consequat.
-                  </AccordionPanel>
-                </AccordionItem>
-              </Accordion>
+              <form>
+                <Accordion allowMultiple allowToggle>
+                  <AccordionItem className="filter-container" className="filter-container"
+                    border={accordionItemStyle.border}
+                    bg={accordionItemStyle.bg}
+                    outline={accordionItemStyle.outline}
+                    mb={accordionItemStyle.mb}
+                    borderRadius={accordionItemStyle.borderRadius}
+                  >
+                    <h2>
+                      <AccordionButton
+                        paddingY={accordionButtonStyle.p} _focus={accordionButtonStyle_focus}>
+                        <Box flex="1" textAlign="left">
+                          <span className="__filter-title">BACKGROUND COLOR</span>
+                        </Box>
+                        <AccordionIcon />
+                      </AccordionButton>
+                    </h2>
+                    <AccordionPanel className="filters-list" pb={4}>
+                      <CheckboxGroup defaultValue="2">
+                        <Stack spacing={1} marginLeft={5} direction="column">
+                            <Checkbox value="1">blue</Checkbox>
+                            <Checkbox value="2">green</Checkbox>
+                            <Checkbox value="3">grey</Checkbox>
+                            <Checkbox value="4">lilac</Checkbox>
+                            <Checkbox value="5">pink</Checkbox>
+                            <Checkbox value="6">rattan</Checkbox>
+                        </Stack>
+                      </CheckboxGroup>
+                    </AccordionPanel>
+                  </AccordionItem>
+                  <AccordionItem className="filter-container"
+                    border={accordionItemStyle.border}
+                    bg={accordionItemStyle.bg}
+                    outline={accordionItemStyle.outline}
+                    mb={accordionItemStyle.mb}
+                    borderRadius={accordionItemStyle.borderRadius}>
+                    <h2>
+                      <AccordionButton
+                        paddingY={accordionButtonStyle.p} _focus={accordionButtonStyle_focus}>
+                        <Box flex="1" textAlign="left">
+                          <span className="__filter-title">SKIN COLOR</span>
+                        </Box>
+                        <AccordionIcon />
+                      </AccordionButton>
+                    </h2>
+                    <AccordionPanel className="filters-list" pb={4}>
+                      <CheckboxGroup defaultValue="2">
+                          <Stack spacing={1} marginLeft={5} direction="column">
+                              <Checkbox value="7">black</Checkbox>
+                              <span className="filter-info">(common-basic)</span>
+                              <Checkbox value="8">black-tattoed</Checkbox>
+                              <span className="filter-info">(common-basic)</span>
+                              <Checkbox value="9">blue-camouflage</Checkbox>
+                              <span className="filter-info">(protection-basic)</span>
+                              <Checkbox value="10">brown</Checkbox>
+                              <span className="filter-info">(superhero-basic)</span>
+                              <Checkbox value="11">brown-cheetah</Checkbox>
+                              <span className="filter-info">(common-basic)</span>
+                              <Checkbox value="12">brown-tattoed</Checkbox>
+                              <span className="filter-info">(animal-wild)</span>
+                          </Stack>
+                        </CheckboxGroup>
+                    </AccordionPanel>
+                  </AccordionItem>
+                  <AccordionItem className="filter-container"
+                    border={accordionItemStyle.border}
+                    bg={accordionItemStyle.bg}
+                    outline={accordionItemStyle.outline}
+                    mb={accordionItemStyle.mb}
+                    borderRadius={accordionItemStyle.borderRadius}>
+                    <h2>
+                      <AccordionButton
+                        paddingY={accordionButtonStyle.p} _focus={accordionButtonStyle_focus}>
+                        <Box flex="1" textAlign="left">
+                          <span className="__filter-title">SKIN TYPE</span>
+                        </Box>
+                        <AccordionIcon />
+                      </AccordionButton>
+                    </h2>
+                    <AccordionPanel className="filters-list" pb={4}>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                      commodo consequat.
+                    </AccordionPanel>
+                  </AccordionItem>
+                  <AccordionItem className="filter-container"
+                    border={accordionItemStyle.border}
+                    bg={accordionItemStyle.bg}
+                    outline={accordionItemStyle.outline}
+                    mb={accordionItemStyle.mb}
+                    borderRadius={accordionItemStyle.borderRadius}>
+                    <h2>
+                      <AccordionButton
+                        paddingY={accordionButtonStyle.p} _focus={accordionButtonStyle_focus}>
+                        <Box flex="1" textAlign="left">
+                          <span className="__filter-title">HEAD</span>
+                        </Box>
+                        <AccordionIcon />
+                      </AccordionButton>
+                    </h2>
+                    <AccordionPanel className="filters-list" pb={4}>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                      commodo consequat.
+                    </AccordionPanel>
+                  </AccordionItem>
+                  <AccordionItem className="filter-container"
+                    border={accordionItemStyle.border}
+                    bg={accordionItemStyle.bg}
+                    outline={accordionItemStyle.outline}
+                    mb={accordionItemStyle.mb}
+                    borderRadius={accordionItemStyle.borderRadius}>
+                    <h2>
+                      <AccordionButton
+                        paddingY={accordionButtonStyle.p} _focus={accordionButtonStyle_focus}>
+                        <Box flex="1" textAlign="left">
+                          <span className="__filter-title">EYES</span>
+                        </Box>
+                        <AccordionIcon />
+                      </AccordionButton>
+                    </h2>
+                    <AccordionPanel className="filters-list" pb={4}>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                      commodo consequat.
+                    </AccordionPanel>
+                  </AccordionItem>
+                  <AccordionItem className="filter-container"
+                    border={accordionItemStyle.border}
+                    bg={accordionItemStyle.bg}
+                    outline={accordionItemStyle.outline}
+                    mb={accordionItemStyle.mb}
+                    borderRadius={accordionItemStyle.borderRadius}>
+                    <h2>
+                      <AccordionButton
+                        paddingY={accordionButtonStyle.p} _focus={accordionButtonStyle_focus}>
+                        <Box flex="1" textAlign="left">
+                          <span className="__filter-title">MOUTH</span>
+                        </Box>
+                        <AccordionIcon />
+                      </AccordionButton>
+                    </h2>
+                    <AccordionPanel className="filters-list" pb={4}>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                      commodo consequat.
+                    </AccordionPanel>
+                  </AccordionItem>
+                  <AccordionItem className="filter-container"
+                    border={accordionItemStyle.border}
+                    bg={accordionItemStyle.bg}
+                    outline={accordionItemStyle.outline}
+                    mb={accordionItemStyle.mb}
+                    borderRadius={accordionItemStyle.borderRadius}>
+                    <h2>
+                      <AccordionButton
+                        paddingY={accordionButtonStyle.p} _focus={accordionButtonStyle_focus}>
+                        <Box flex="1" textAlign="left">
+                          <span className="__filter-title">EYEWEAR</span>
+                        </Box>
+                        <AccordionIcon />
+                      </AccordionButton>
+                    </h2>
+                    <AccordionPanel className="filters-list" pb={4}>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                      commodo consequat.
+                    </AccordionPanel>
+                  </AccordionItem>
+                  <AccordionItem className="filter-container"
+                    border={accordionItemStyle.border}
+                    bg={accordionItemStyle.bg}
+                    outline={accordionItemStyle.outline}
+                    mb={accordionItemStyle.mb}
+                    borderRadius={accordionItemStyle.borderRadius}>
+                    <h2>
+                      <AccordionButton
+                        paddingY={accordionButtonStyle.p} _focus={accordionButtonStyle_focus}>
+                        <Box flex="1" textAlign="left">
+                          <span className="__filter-title">NECKLACE</span>
+                        </Box>
+                        <AccordionIcon />
+                      </AccordionButton>
+                    </h2>
+                    <AccordionPanel className="filters-list" pb={4}>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                      commodo consequat.
+                    </AccordionPanel>
+                  </AccordionItem>
+                  <AccordionItem className="filter-container"
+                    border={accordionItemStyle.border}
+                    bg={accordionItemStyle.bg}
+                    outline={accordionItemStyle.outline}
+                    mb={accordionItemStyle.mb}
+                    borderRadius={accordionItemStyle.borderRadius}>
+                    <h2>
+                      <AccordionButton
+                        paddingY={accordionButtonStyle.p} _focus={accordionButtonStyle_focus}>
+                        <Box flex="1" textAlign="left">
+                          <span className="__filter-title">BACK ITEM</span>
+                        </Box>
+                        <AccordionIcon />
+                      </AccordionButton>
+                    </h2>
+                    <AccordionPanel className="filters-list" pb={4}>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                      commodo consequat.
+                    </AccordionPanel>
+                  </AccordionItem>
+                </Accordion>
+              </form>
             </div>
           </div>
 

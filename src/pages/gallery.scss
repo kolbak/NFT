@@ -38,17 +38,6 @@ h2.filterH2 {
         background-color: red;
       }
 
-      .filter-buttons-container {
-        margin-left: 0;
-        display: grid;
-        grid-template-columns: repeat(2, 35px);
-        gap: 15px;
-        span{
-          width: 35px;
-          height: 35px;
-        }
-      }
-
       .filters-list {
         max-height    : 500px;
         overflow-y    : scroll;
@@ -71,37 +60,22 @@ h2.filterH2 {
         align-items    : center;
       }
 
+      .chakra-accordion__panel{
+        padding: 5px 10px;
+      }
+      .chakra-stack{
+        margin-left: 10px;
+        .chakra-checkbox__control{
+          align-self: end;
+        }
+        .filter-info{
+          font-size: 10px;
+          margin-top: 0;
+          margin-left: 28px;
+        }
+      }
+      
       width : 80%;
-
-      .chakra-checkbox{
-        span{
-          outline: transparent;
-          border: transparent
-        }
-        .chakra-checkbox__input:checked + span{
-          outline: 3px #00bfff solid;  
-        }
-      }
-      .type-red{
-        span{
-          background: red;
-        }
-      }
-      .type-yellow{
-        span{
-          background: yellow;
-        }
-      }
-      .type-blue{
-        span{
-          background: blue;
-        }
-      }
-      .type-green{
-        span{
-          background: green;
-        }
-      }
     }
   }
 
