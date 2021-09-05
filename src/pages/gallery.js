@@ -20,7 +20,14 @@ import characterEx from "../images/character-ex.png"
 import './gallery.scss'
 
 const Gallery = () => {
-  const [width, setWidth] = useState();
+  const isBrowser = typeof window !== "undefined"
+
+  const [width, setWidth] = useState(isBrowser && window.innerWidth);
+  window.addEventListener("resize", resizeInGallery);
+  function resizeInGallery(){
+    setWidth(isBrowser && window.innerWidth);
+  }
+
   //? dummy data
   let arrData = [];
   for (let i = 0; i < 6; i++) {
@@ -28,7 +35,7 @@ const Gallery = () => {
       name: `Character ${i + 1}`,
       id: i + 1,
       src: characterEx,
-      filters: { 
+      filters: {
         bday: new Intl.DateTimeFormat('en-US').format(new Date()),
       }
     })
@@ -65,10 +72,6 @@ const Gallery = () => {
       {children}
     </Box>
   }
-  useEffect(() => {
-    window.addEventListener('resize', _ => setWidth(window.screen.width));
-    setWidth(window.screen.width);
-  }, [])
 
   function toggle() {
     let filtersList = document.querySelector('.filters-wrap');
@@ -78,11 +81,13 @@ const Gallery = () => {
     <Layout>
       <Seo title="Gallery" />
       <div className="gen-wrap gallery-wrap">
-        {width > 850 ? <>
+        {/* {width > 850 ? <>
           <h2 className="filterH2">GALLERY</h2>
         </> : <>
           <button className="toggle-button" onClick={toggle}><h2 className="filterH2">GALLERY<Icon as={ChevronDownIcon}></Icon></h2></button>
-        </>}
+        </>} */}
+        {width > 850 && <h2 className="filterH2">GALLERY</h2>}
+        {width <= 850 && <button className="toggle-button" onClick={toggle}><h2 className="filterH2">GALLERY<Icon as={ChevronDownIcon}></Icon></h2></button>}
         <div className="gallery-content">
           <div className="filters-wrap">
             <div className="filters">
@@ -106,10 +111,10 @@ const Gallery = () => {
                   <AccordionPanel className="filters-list" pb={4}>
                     <CheckboxGroup defaultValue="2">
                       <Stack className="filter-buttons-container" spacing={1} marginLeft={5} direction="column">
-                          <Checkbox colorScheme="red" className="type-red" value="1"></Checkbox>
-                          <Checkbox colorScheme="yellow" className="type-yellow" value="2"></Checkbox>
-                          <Checkbox colorScheme="blue" className="type-blue" value="3"></Checkbox>
-                          <Checkbox colorScheme="green" className="type-green" value="4"></Checkbox>
+                        <Checkbox colorScheme="red" className="type-red" value="1"></Checkbox>
+                        <Checkbox colorScheme="yellow" className="type-yellow" value="2"></Checkbox>
+                        <Checkbox colorScheme="blue" className="type-blue" value="3"></Checkbox>
+                        <Checkbox colorScheme="green" className="type-green" value="4"></Checkbox>
                       </Stack>
                     </CheckboxGroup>
                   </AccordionPanel>

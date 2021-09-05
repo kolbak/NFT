@@ -13,15 +13,12 @@ import logo from '../images/logo.svg'
 const Navbar = () => {
   const isBrowser = typeof window !== "undefined"
 
-  let [screenWidth, setScreenWidth] = useState(null);
-  useEffect(() => {
-    setScreenWidth(isBrowser && window.screen.width);
-    if (isBrowser) {
-      window.addEventListener('resize', () => {
-        setScreenWidth(window.screen.width)
-      })
-    }
-  }, []);
+  let [screenWidth, setScreenWidth] = useState(isBrowser && window.innerWidth);
+  window.addEventListener("resize", resizeInNavbar);
+  function resizeInNavbar(){
+    setScreenWidth(isBrowser && window.innerWidth);
+  }
+
 
   function ButtonCustom({ children, className }) {
     return <Box
@@ -82,7 +79,7 @@ const Navbar = () => {
         </div>
       }
       {screenWidth <= 1200 &&
-        <>
+        <div>
           <div className="menu-wrap">
             <Button className="menu-btn" onClick={onToggle}
               bg="transparent"
@@ -101,7 +98,7 @@ const Navbar = () => {
               <ButtonCustom className="withBg user"><Link to="/user_account">#FAPP</Link></ButtonCustom>
             </Box>
           </div>
-        </>
+        </div>
       }
     </nav>
   )

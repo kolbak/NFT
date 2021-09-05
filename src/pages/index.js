@@ -46,17 +46,16 @@ import arrow from "../images/icons8-down-arrow-50.png"
 const IndexPage = () => {
   const isBrowser = typeof window !== "undefined"
 
-  let [screenWidth, setScreenWidth] = useState(null);
+  let [screenWidth, setScreenWidth] = useState(isBrowser && window.innerWidth);
+  window.addEventListener("resize", resizeInIndex);
+  function resizeInIndex(){
+    setScreenWidth(isBrowser && window.innerWidth);
+  }
+
   const pointsMap = useRef(null);
   const line = useRef(null);
   useEffect(() => {
-    setScreenWidth(isBrowser && window.screen.width);
     if (isBrowser) {
-      //? resize
-      window.addEventListener('resize', () => {
-        setScreenWidth(window.screen.width);
-      })
-
       //? scrolling roadmap
       window.addEventListener('scroll', lineScroll)
       function lineScroll() {
