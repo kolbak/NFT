@@ -188,11 +188,11 @@ const IndexPage = () => {
               <span>MORE</span>
             </ButtonCustom>
             <div className="links">
-              <img src={yt} alt="youtube" />
-              <img src={opensea} alt="opensea" />
-              <img src={ig} alt="instagram" />
-              <img src={twitter} alt="twitter" />
-              <img src={discord} alt="discord" />
+              <a href="https://www.youtube.com/channel/UCch3zZDZ9ubRlhSFbknDUog"><img src={yt} alt="youtube" /></a>
+              <a href="https://opensea.io/collection/fapp"><img src={opensea} alt="opensea" /></a>
+              <a href="https://instagram.com/familyphallusplanet"><img src={ig} alt="instagram" /></a>
+              <a href="https://twitter.com/FAP_Planet"><img src={twitter} alt="twitter" /></a>
+              <a href="https://discord.gg/zFjWr4wUwH"><img src={discord} alt="discord" /></a>
             </div>
           </div>
         </div>
@@ -564,6 +564,7 @@ const IndexPage = () => {
                     <a href="https://familyphallusplanet.com/">Website</a><br />
                     <a href="https://bubbleron.com/familyphallusplanet">Bubbleron</a><br />
                     <a href="https://www.youtube.com/channel/UCch3zZDZ9ubRlhSFbknDUog">Youtube</a>
+                    <a href="https://discord.gg/zFjWr4wUwH">Discord</a>
                   </AccordionItemCustom>
                 </Accordion>
               </Fade>
