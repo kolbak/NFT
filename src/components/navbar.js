@@ -14,7 +14,7 @@ const Navbar = () => {
   const isBrowser = typeof window !== "undefined"
 
   let [screenWidth, setScreenWidth] = useState(isBrowser && window.innerWidth);
-  window.addEventListener("resize", resizeInNavbar);
+  isBrowser && window.addEventListener("resize", resizeInNavbar);
   function resizeInNavbar(){
     setScreenWidth(isBrowser && window.innerWidth);
   }

@@ -23,7 +23,7 @@ const Gallery = () => {
   const isBrowser = typeof window !== "undefined"
 
   const [width, setWidth] = useState(isBrowser && window.innerWidth);
-  window.addEventListener("resize", resizeInGallery);
+  isBrowser && window.addEventListener("resize", resizeInGallery);
   function resizeInGallery(){
     setWidth(isBrowser && window.innerWidth);
   }

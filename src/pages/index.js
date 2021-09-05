@@ -41,13 +41,11 @@ import ig from "../images/icons8-instagram-old.svg"
 import twitter from "../images/icons8-twitter.svg"
 import opensea from "../images/opensea.svg"
 
-import arrow from "../images/icons8-down-arrow-50.png"
-
 const IndexPage = () => {
   const isBrowser = typeof window !== "undefined"
 
   let [screenWidth, setScreenWidth] = useState(isBrowser && window.innerWidth);
-  window.addEventListener("resize", resizeInIndex);
+  isBrowser && window.addEventListener("resize", resizeInIndex);
   function resizeInIndex(){
     setScreenWidth(isBrowser && window.innerWidth);
   }
