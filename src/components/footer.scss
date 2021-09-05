@@ -61,6 +61,20 @@
 
   }
 
+  .contacts {
+    .icons {
+      display              : grid;
+      grid-template-columns: repeat(5, 20px);
+      align-self           : center;
+      gap                  : 10px;
+
+      img {
+        width : 20px;
+        height: 20px;
+      }
+    }
+  }
+
   @media screen and (max-width: 1400px) {
     .footer-inner-wrap {
       max-width: 60vw;
@@ -82,9 +96,11 @@
 
       .footer-column {
         width: 350px;
-        img{
+
+        img {
           width: 200px !important;
         }
+
         h3 {
           font-size: 75px;
         }
