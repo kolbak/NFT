@@ -22,7 +22,7 @@ const UserAccount = () => {
   return (
     <Layout>
       <Seo title="Account" />
-      <div className="gen-wrap">
+      <div className="gen-wrap user-acc">
         <h1>#FAPP</h1>
         <div className="bought">
           <div className="item"></div>
