@@ -1,6 +1,6 @@
 .gen-wrap.char {
   gap      : 30px;
-  max-width: 60vw !important;
+  max-width: 60vw;
 
   * {
     font-family: 'Amatic SC', cursive;
@@ -33,7 +33,7 @@
     gap            : 50px;
 
     .text {
-      width: 50%;
+      width    : 50%;
       min-width: min-content;
 
       .detail {
@@ -64,13 +64,19 @@
     }
   }
 
-  @media screen and (max-width: 650px) {
+}
+
+@media screen and (max-width: 1100px) {
+  .gen-wrap.char {
+    max-width: 98vw !important;
+
     .character-container {
       flex-direction: column;
 
       .avatar {
         margin: 0;
         width : 100%;
+        height: min-content;
       }
 
       .text {
@@ -82,40 +88,4 @@
       font-size: 10px;
     }
   }
-
-  // @media screen and (max-width: 1300px) {
-  //   .name {
-  //     font-size: 35px !important;
-  //   }
-
-  //   .detail {
-  //     font-size    : 7px;
-  //     margin-bottom: 13px;
-  //   }
-
-  //   .avatar {
-  //     margin-top: 170px;
-  //     max-height: 395px;
-  //   }
-  // }
-
 }
-
-// @media screen and (max-width: 650px) {
-//   .character-container {
-//     flex-direction: column !important;
-
-//     .avatar {
-//       margin    : 0;
-//       width        : 100% !important;
-//     }
-
-//     .text {
-//       width: 100%;
-//     }
-//   }
-
-//   .detail {
-//     font-size: 10px;
-//   }
-// }
