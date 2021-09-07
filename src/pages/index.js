@@ -202,7 +202,7 @@ const IndexPage = () => {
               </ButtonCustomGallery>
             </Link>
           </div>
-          <div className="gen-wrap">
+          <div className="gen-wrap index">
             <div id="content-block-storyline" className="content-block storyline">
               <Fade left>
                 <div className="text-wrap">

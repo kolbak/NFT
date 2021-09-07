@@ -1,14 +1,25 @@
 .gen-wrap.char {
-  gap      : 30px;
-  max-width: 60vw;
+  max-width: 40vw !important;
+
+  display       : flex;
+  flex-direction: column;
 
   * {
     font-family: 'Amatic SC', cursive;
   }
 
+  &>* {
+    margin: 15px 0;
+  }
+
   .name {
     font-size  : 45px;
     font-weight: bold;
+  }
+
+  .OpenSea-link,
+  .detail-header {
+    align-self: flex-start;
   }
 
   .OpenSea-link {
@@ -26,45 +37,33 @@
     font-size: 40px;
   }
 
-  .character-container {
-    display        : flex;
-    flex-direction : row;
-    justify-content: center;
-    gap            : 50px;
+  .avatar {
+    align-self: center;
+    max-width : 500px;
+    max-height: 500px;
+    overflow  : hidden;
+  }
 
-    .text {
-      width    : 50%;
-      min-width: min-content;
+  .text {
+    .detail {
+      white-space          : nowrap;
+      display              : grid;
+      grid-template-columns: min-content 1fr min-content;
+      font-size            : 25px;
+      margin-bottom        : 15px;
 
-      .detail {
-        white-space          : nowrap;
-        display              : grid;
-        grid-template-columns: min-content 1fr min-content;
-        font-size            : 25px;
-        margin-bottom        : 15px;
-
-        .occurs {
-          font-size        : 17px;
-          margin-top       : 3px;
-          grid-column-start: 1;
-          grid-column-end  : 3;
-        }
-
-        .points {
-          border-bottom: solid 1px white;
-        }
+      .level,
+      .occurs {
+        font-size        : 17px;
+        grid-column-start: 1;
+        grid-column-end  : 3;
       }
 
+      .points {
+        border-bottom: solid 1px white;
+      }
     }
 
-    .avatar {
-      align-self: center;
-      width   : 50%;
-      max-width: 500px;
-      max-height: 500px;
-      height  : min-content;
-      overflow: hidden;
-    }
   }
 
 }
@@ -73,18 +72,16 @@
   .gen-wrap.char {
     max-width: 98vw !important;
 
-    .character-container {
-      flex-direction: column-reverse;
+    .avatar {
+      margin    : 0;
+      width     : 100%;
+      height    : min-content;
+      max-width : initial;
+      max-height: initial;
+    }
 
-      .avatar {
-        margin: 0;
-        width : 100%;
-        height: min-content;
-      }
-
-      .text {
-        width: 100%;
-      }
+    .text {
+      width: 100%;
     }
 
     .detail {
