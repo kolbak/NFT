@@ -60,19 +60,28 @@ h2.filterH2 {
         display        : flex;
         align-items    : center;
       }
-
+      .chakra-collapse{
+        padding-bottom: 10px;
+      }
       .chakra-accordion__panel{
         padding: 5px 10px;
+      }
+      .filters-list:first-of-type{
+        .chakra-checkbox__label{
+          margin-bottom: 5px;
+        }
       }
       .chakra-stack{
         margin-left: 10px;
         .chakra-checkbox__control{
           align-self: end;
         }
+        .chakra-checkbox__label{
+          line-height: 20px;
+        }
         .filter-info{
           font-size: 10px;
-          margin-top: 0;
-          margin-left: 28px;
+          margin: 0 0 9px 28px;
         }
       }
       
@@ -148,7 +157,9 @@ h2.filterH2 {
         width           : 94%;
         margin          : 20px 3% 0 3%;
         background-color: transparent;
-
+        svg{
+          display: block;
+        }
         .chakra-accordion__item {
           background-color: transparent;
         }
