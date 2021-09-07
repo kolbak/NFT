@@ -14,11 +14,12 @@ const Navbar = () => {
   const isBrowser = typeof window !== "undefined"
 
   let [screenWidth, setScreenWidth] = useState(isBrowser && window.innerWidth);
+  console.log('screenWidth :>> ', isBrowser && window.innerWidth, screenWidth, screenWidth > 1200);
   isBrowser && window.addEventListener("resize", resizeInNavbar);
-  function resizeInNavbar(){
+  function resizeInNavbar() {
+    console.log('screenWidth resize :>> ', isBrowser && window.innerWidth);
     setScreenWidth(isBrowser && window.innerWidth);
   }
-
 
   function ButtonCustom({ children, className }) {
     return <Box
@@ -66,20 +67,20 @@ const Navbar = () => {
       <Link className="logo" to="/">
         <img src={logo} />
       </Link>
-      {screenWidth > 1200 &&
-        <div className="navbar-btns">
-          <ButtonCustom><Link onClick={scroll} to="/?id=content-block-storyline">Storyline</Link></ButtonCustom>
-          <ButtonCustom><Link onClick={scroll} to="/?id=content-block-nft">NFT</Link></ButtonCustom>
-          <ButtonCustom><Link to="/gallery">Gallery</Link></ButtonCustom>
-          <ButtonCustom><Link onClick={scroll} to="/?id=content-block-roadmap">Roadmap</Link></ButtonCustom>
-          <ButtonCustom><Link onClick={scroll} to="/?id=content-block-faq">FAQs</Link></ButtonCustom>
-          <ButtonCustom><Link onClick={scroll} to="/?id=contacts">Contacts</Link></ButtonCustom>
-          <ButtonCustom className="withBg"><Link to="/mint">Mint</Link></ButtonCustom>
-          <ButtonCustom className="withBg user"><Link to="/user_account">#FAPP</Link></ButtonCustom>
-        </div>
-      }
-      {screenWidth <= 1200 &&
-        <>
+      <div className="navbar-btns">
+        {screenWidth > 1200 &&
+          <>
+            <ButtonCustom><Link onClick={scroll} to="/?id=content-block-storyline">Storyline</Link></ButtonCustom>
+            <ButtonCustom><Link onClick={scroll} to="/?id=content-block-nft">NFT</Link></ButtonCustom>
+            <ButtonCustom><Link to="/gallery">Gallery</Link></ButtonCustom>
+            <ButtonCustom><Link onClick={scroll} to="/?id=content-block-roadmap">Roadmap</Link></ButtonCustom>
+            <ButtonCustom><Link onClick={scroll} to="/?id=content-block-faq">FAQs</Link></ButtonCustom>
+            <ButtonCustom><Link onClick={scroll} to="/?id=contacts">Contacts</Link></ButtonCustom>
+            <ButtonCustom className="withBg"><Link to="/mint">Mint</Link></ButtonCustom>
+            <ButtonCustom className="withBg"><Link to="/user_account">#FAPP</Link></ButtonCustom>
+          </>
+        }
+        {screenWidth <= 1200 &&
           <div className="menu-wrap">
             <Button className="menu-btn" onClick={onToggle}
               bg="transparent"
@@ -92,14 +93,14 @@ const Navbar = () => {
               <ButtonCustom><Link onClick={scroll} to="/?id=content-block-nft">NFT</Link></ButtonCustom>
               <ButtonCustom><Link to="/gallery">Gallery</Link></ButtonCustom>
               <ButtonCustom><Link onClick={scroll} to="/?id=content-block-roadmap">Roadmap</Link></ButtonCustom>
-              <ButtonCustom><Link to="/FAQ">FAQs</Link></ButtonCustom>
+              <ButtonCustom><Link onClick={scroll} to="/?id=content-block-faq">FAQs</Link></ButtonCustom>
               <ButtonCustom><Link onClick={scroll} to="/?id=contacts">Contacts</Link></ButtonCustom>
-              <ButtonCustom className="withBg"><Link to="/mint">Mint</Link></ButtonCustom>
-              <ButtonCustom className="withBg user"><Link to="/user_account">#FAPP</Link></ButtonCustom>
+              <ButtonCustom><Link to="/mint">Mint</Link></ButtonCustom>
+              <ButtonCustom><Link to="/user_account">#FAPP</Link></ButtonCustom>
             </Box>
           </div>
-        </>
-      }
+        }
+      </div>
     </nav>
   )
 }

@@ -241,7 +241,7 @@ const IndexPage = () => {
                   <h2>NFT</h2>
                   <div className="about">
                     <h3>8888 generative NFTs.</h3>
-                    <h3>160 Traits</h3>
+                    <h3>175 Traits</h3>
                     <h3>7 kinds of attributes</h3>
                     <h3>3 groups</h3>
                   </div>
@@ -432,7 +432,7 @@ const IndexPage = () => {
                     Family Phallus Planet - FAPP is an Ethereum Blockchain planet with 8888 generative 2.5 inch NFT Phalluses.
                   </AccordionItemCustom>
                   <AccordionItemCustom title="TELL ME MORE ABOUT YOUR NFT COLLECTION!">
-                    #FAPP nft collection has 160 hand-drawn traits.
+                    #FAPP nft collection has 175 hand-drawn traits.
                     <br />
                     <br />
                     Every Phallus has different combination of
@@ -512,24 +512,15 @@ const IndexPage = () => {
                   </AccordionItemCustom>
                   <AccordionItemCustom title="WHAT ADVANTAGES DO YOU HAVE?">
                     <ul>
-                      <li>Fair distribution
-                      </li>
-                      <li>Good arts
-                      </li>
-                      <li>Fresh and provocative idea
-                      </li>
-                      <li>Great roadmap
-                      </li>
-                      <li>Long-term ambitions
-                      </li>
-                      <li>160 traits
-                      </li>
-                      <li>Voting rights
-                      </li>
-                      <li>We are unique
-                      </li>
-                      <li>We give ownership and commercial usage rights to the collectors over their NFTs
-                      </li>
+                      <li>Fair distribution</li>
+                      <li>Good arts</li>
+                      <li>Fresh and provocative idea</li>
+                      <li>Great roadmap</li>
+                      <li>Long-term ambitions</li>
+                      <li>175 traits</li>
+                      <li>Voting rights</li>
+                      <li>We are unique</li>
+                      <li>We give ownership and commercial usage rights to the collectors over their NFTs</li>
                     </ul>
                   </AccordionItemCustom>
                   <AccordionItemCustom title="HOW CAN I GET A PHALLUS?">

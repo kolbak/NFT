@@ -4,15 +4,23 @@
   flex-direction : column;
   justify-content: center;
 
+  a {
+    color          : rgb(59, 130, 246, );
+    text-decoration: underline;
+  }
+
   .mint-cnct-wallet {
     justify-self: center;
 
     height          : 50px;
-    width: max-content;
-    word-wrap: normal;
+    width           : max-content;
+    word-wrap       : normal;
     padding         : 0 15px;
     border-radius   : 30px;
     background-color: #ff009d;
+
+    font-family: 'Amatic SC', cursive;
+    font-size: 30px;
   }
 
   h1 {
@@ -33,6 +41,7 @@
     justify-content: space-between;
 
     padding: 0;
+    margin-top: 80px;
 
     h2 {
       font-size: 30px;
@@ -79,11 +88,6 @@
     opacity   : .7;
     text-align: center;
     font-size : 12px;
-
-    a {
-      color          : rgb(59, 130, 246, );
-      text-decoration: underline;
-    }
   }
 
   @media screen and (max-width: 850px) {

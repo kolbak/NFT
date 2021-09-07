@@ -24,6 +24,7 @@ h2.filterH2 {
   .filters-wrap {
     .filters {
       * {
+        overflow-x: hidden;
         color: #ababab;
       }
 
@@ -149,7 +150,7 @@ h2.filterH2 {
 
     .filters-wrap {
       max-height: 0;
-      overflow  : scroll;
+      overflow-y  : scroll;
       background: #0a0e16;
       transition: .5s linear;
 

@@ -1,0 +1,21 @@
+.gen-wrap.terms{
+  h1{
+    margin: 40px 0 20px 0;
+    font-size: 2rem;
+    font-weight: bold;
+    width: 100%;
+    display        : flex;
+    justify-content: center;
+  }
+  h2{
+    margin: 40px 0 20px 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  p{
+    margin-bottom: 10px;
+  }
+  ul{
+    list-style-position: inside;
+  }
+}
