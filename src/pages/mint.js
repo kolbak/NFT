@@ -18,28 +18,29 @@ const Mint = () => {
   }
 
   function onConnect() {
-    alert('Hello');
+    let ethereum = window.ethereum;
+    ethereum
+        .request({ method: 'eth_requestAccounts' })
+        .then((handleAccountsChanged) =>
+            {
+              provider = new ethers.providers.Web3Provider(ethereum);
+              signer = provider.getSigner();
+              if (current_network === 1) {
+                //connect();
+              }
+            }
+        )
+        .catch((error) => {
+          if (error.code === 4001) {
+            // EIP-1193 userRejectedRequest error
+            console.log('Please connect to MetaMask.');
+          } else {
+            console.error(error);
+            alert("Please refresh the page");
+          }
+        });
+
   }
-  // const inputAmount = useRef(null);
-  // inputAmount.current.addEventListener("change", () => {
-
-  // });
-  // console.log('inputAmount :>> ', inputAmount);
-
-  // function checkValidity() {
-  //   const amountInput = document.querySelector(".amount-input");
-  //   amountInput.addEventListener('keypress', function (evt) {
-  //     if (Number.isInteger(+evt.key) || (evt.key === '.') || (evt.key === ',') || (evt.key === 'e')) {
-  //       evt.preventDefault();
-  //       if (Number.isInteger(+evt.key) && amountInput.value.length === 0 && (+evt.key !== 0)) {
-  //         amountInput.value = evt.key;
-  //       }
-  //       else if (Number.isInteger(+evt.key) && amountInput.value.length === 1 && ((+amountInput.value * 10 + +evt.key) <= 15)) {
-  //         amountInput.value += evt.key;
-  //       }
-  //     }
-  //   })
-  // }
 
   return (
     <Layout>
