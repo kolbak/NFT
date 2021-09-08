@@ -54,9 +54,13 @@
 
       .level,
       .occurs {
-        font-size        : 17px;
+        font-size        : 15px;
         grid-column-start: 1;
         grid-column-end  : 3;
+      }
+
+      .level {
+        font-size: 20px;
       }
 
       .points {

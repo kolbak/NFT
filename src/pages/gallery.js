@@ -205,7 +205,7 @@ const Gallery = () => {
                               <span className="filter-info">common basic</span>
                               <Checkbox value="28">braces</Checkbox>
                               <span className="filter-info">common basic</span>
-                              <Checkbox value="29">Hollywood smile</Checkbox>
+                              <Checkbox value="29">hollywood smile</Checkbox>
                               <span className="filter-info">common basic</span>
                               <Checkbox value="30">crooked teeth</Checkbox>
                               <span className="filter-info">common basic</span>
@@ -219,7 +219,7 @@ const Gallery = () => {
                               <span className="filter-info">stoned basic</span>
                               <Checkbox value="35">smoking pipe</Checkbox>
                               <span className="filter-info">stoned basic</span>
-                              <Checkbox value="36">masc</Checkbox>
+                              <Checkbox value="36">mask</Checkbox>
                               <span className="filter-info">protection basic</span>
                               <Checkbox value="37">reptile's mouth</Checkbox>
                               <span className="filter-info">animal wild</span>
@@ -479,7 +479,7 @@ const Gallery = () => {
                             <span className="filter-info">common basic</span>
                             <Checkbox value="122">maraca</Checkbox>
                             <span className="filter-info">common basic</span>
-                            <Checkbox value="123">Empty</Checkbox>
+                            <Checkbox value="123">empty</Checkbox>
                             <span className="filter-info">common basic</span>
                             <Checkbox value="124">lgbt flag</Checkbox>
                             <span className="filter-info">common basic</span>
