@@ -232,7 +232,7 @@ const IndexPage = () => {
                 </div>
               </Fade>
               <Fade right>
-                <img src={storyline} alt="" />
+                <img src={storyline} alt="storyline image" />
               </Fade>
             </div>
             <div id="content-block-nft" className="content-block nft">
@@ -254,53 +254,53 @@ const IndexPage = () => {
                 <div className="levels">
                   <div className="dope level">
                     <h3>
-                      <span>15%</span> Dope group
+                      <span>5%</span> Dope group
                     </h3>
                     <div className="icons">
                       <figure>
-                        <img src={precious} alt="" />
+                        <img src={precious} alt="Precious attribute image" />
                         <figcaption>Precious attributes</figcaption>
                       </figure>
                     </div>
                   </div>
                   <div className="wild level">
                     <h3>
-                      <span>35%</span> Wild group
+                      <span>40%</span> Wild group
                     </h3>
                     <div className="icons">
                       <figure>
-                        <img src={afterlife} alt="" />
+                        <img src={afterlife} alt="Halloween attribute image" />
                         <figcaption>Halloween attributes</figcaption>
                       </figure>
                       <figure>
-                        <img src={cyber} alt="" />
+                        <img src={cyber} alt="Cyber attribute image" />
                         <figcaption>Cyber attributes</figcaption>
                       </figure>
                       <figure>
-                        <img src={wild} alt="" />
+                        <img src={wild} alt="Animal attribute image" />
                         <figcaption>Animal attributes</figcaption>
                       </figure>
                     </div>
                   </div>
                   <div className="basic level">
                     <h3>
-                      <span>50%</span> Basic group
+                      <span>55%</span> Basic group
                     </h3>
                     <div className="icons">
                       <figure>
-                        <img src={basic} alt="" />
+                        <img src={basic} alt="Common attribute image" />
                         <figcaption>Common attributes</figcaption>
                       </figure>
                       <figure>
-                        <img src={superhero} alt="" />
+                        <img src={superhero} alt="Superhero attribute image" />
                         <figcaption>Superhero attributes</figcaption>
                       </figure>
                       <figure>
-                        <img src={protection} alt="" />
+                        <img src={protection} alt="Protection attribute image" />
                         <figcaption>Protection attributes</figcaption>
                       </figure>
                       <figure>
-                        <img src={rasta} alt="" />
+                        <img src={rasta} alt="Stoned attribute image" />
                         <figcaption>Stoned attributes</figcaption>
                       </figure>
                     </div>
@@ -321,7 +321,7 @@ const IndexPage = () => {
                   <Fade left>
                     <div className="point p5">
                       <h3><span>20%</span> FAPP is everywhere!</h3>
-                      <img src={roadmap1} alt="" />
+                      <img src={roadmap1} alt="roadmap first image" />
                       <p>
                         We will invest our funds in marketing. Everybody should know that we are great!
                       </p>
@@ -330,7 +330,7 @@ const IndexPage = () => {
                   <Fade right>
                     <div className="point p15 right">
                       <h3><span>40%</span> Charity time!</h3>
-                      <img src={roadmap2} alt="" />
+                      <img src={roadmap2} alt="roadmap second image" />
                       <p>
                         FAPP will make a donation to the AIDS Foundation.
                       </p>
@@ -339,7 +339,7 @@ const IndexPage = () => {
                   <Fade left>
                     <div className="point p30">
                       <h3><span>60%</span> How rare is your Phallus?</h3>
-                      <img src={roadmap3} alt="" />
+                      <img src={roadmap3} alt="roadmap third image" />
                       <p>
                         FAPP will be added to «<a href="https://rarity.tools/">rarity.tools</a>».
                       </p>
@@ -348,7 +348,7 @@ const IndexPage = () => {
                   <Fade right>
                     <div className="point p50 right">
                       <h3><span>80%</span> #FAPP merch store!</h3>
-                      <img src={roadmap4} alt="" />
+                      <img src={roadmap4} alt="roadmap fourth image" />
                       <p>
                         Our official FAPP nft merch store will be unlocked for collectors.
                       </p>
@@ -357,7 +357,7 @@ const IndexPage = () => {
                   <Fade left>
                     <div className="point p70">
                       <h3><span>90%</span> Phalluses need friends!</h3>
-                      <img src={roadmap5} alt="" />
+                      <img src={roadmap5} alt="roadmap fifth image" />
                       <p>We will drop new NFT collectible.</p>
                       <p>Every collector will be able to mint one free companion for a Phallus. Just pay GAS fee.</p>
                     </div>
@@ -365,7 +365,7 @@ const IndexPage = () => {
                   <Fade right>
                     <div className="point p80 right">
                       <h3><span>100%</span> Elections on FAPP</h3>
-                      <img src={roadmap6} alt="" />
+                      <img src={roadmap6} alt="roadmap sixth image" />
                       <p>Video game? Web series? Or maybe something new and crazy? All phalluses will vote for the future of FAPP!</p>
                     </div>
                   </Fade>
@@ -375,41 +375,41 @@ const IndexPage = () => {
                 <div className="points">
                   <div className="point p15">
                     <h3><span>20%</span> FAPP is everywhere!</h3>
-                    <img src={roadmap1} alt="" />
+                    <img src={roadmap1} alt="roadmap first image" />
                     <p>
                       We will invest our funds in marketing. Everybody should know that we are great!
                     </p>
                   </div>
                   <div className="point p30">
                     <h3><span>40%</span> Charity time!</h3>
-                    <img src={roadmap2} alt="" />
+                    <img src={roadmap2} alt="roadmap second image" />
                     <p>
                       FAPP will make a donation to the AIDS Foundation.
                     </p>
                   </div>
                   <div className="point p50">
                     <h3><span>60%</span> How rare is your Phallus?</h3>
-                    <img src={roadmap3} alt="" />
+                    <img src={roadmap3} alt="roadmap third image" />
                     <p>
                       FAPP will be added to «<a href="https://rarity.tools/">rarity.tools</a>».
                     </p>
                   </div>
                   <div className="point p70">
                     <h3><span>80%</span> #FAPP merch store!</h3>
-                    <img src={roadmap4} alt="" />
+                    <img src={roadmap4} alt="roadmap fourth image" />
                     <p>
                       Our official FAPP nft merch store will be unlocked for collectors.
                     </p>
                   </div>
                   <div className="point p80">
                     <h3><span>90%</span> Phalluses need friends!</h3>
-                    <img src={roadmap5} alt="" />
+                    <img src={roadmap5} alt="roadmap fifth image" />
                     <p>We will drop new NFT collectible.</p>
                     <p>Every collector will be able to mint one free companion for a Phallus. Just pay GAS fee.</p>
                   </div>
                   <div className="point p100">
                     <h3><span>100%</span> Elections on FAPP</h3>
-                    <img src={roadmap6} alt="" />
+                    <img src={roadmap6} alt="roadmap sixth image" />
                     <p>Video game? Web series? Or maybe something new and crazy? All phalluses will vote for the future of FAPP!</p>
                   </div>
                 </div>}
