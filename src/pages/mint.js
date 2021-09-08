@@ -1,4 +1,4 @@
-import * as React from "react"
+import React, { useRef } from "react"
 import { Link } from "gatsby"
 import {
   Box,
@@ -13,33 +13,34 @@ import Seo from "../components/seo"
 import './mint.scss'
 
 const Mint = () => {
-  function ButtonCustom({ children, className }) {
-    return (
-      <Box
-        className={className}
-        as="button"
-        type="submit"
-      >
-        {children}
-      </Box>
-    )
+  function onInput(e) {
+    e.target.value = e.target.value.replace(/[^0-9]/g, '');
   }
-  
-  function checkValidity(){
-    const amountInput = document.querySelector(".amount-input");
-    amountInput.addEventListener('keypress', function(evt){
-      if(Number.isInteger(+evt.key) || (evt.key === '.') || (evt.key === ',') || (evt.key === 'e')){
-        evt.preventDefault();
-          if(Number.isInteger(+evt.key) && amountInput.value.length === 0 && (+evt.key !== 0)){
-            amountInput.value = evt.key;
-          }
-          else if(Number.isInteger(+evt.key) && amountInput.value.length === 1 && ((+amountInput.value * 10 + +evt.key) <= 15)) {
-            amountInput.value += evt.key;
-          }
-      }
-    })
+
+  function onConnect() {
+    alert('Hello');
   }
-  
+  // const inputAmount = useRef(null);
+  // inputAmount.current.addEventListener("change", () => {
+
+  // });
+  // console.log('inputAmount :>> ', inputAmount);
+
+  // function checkValidity() {
+  //   const amountInput = document.querySelector(".amount-input");
+  //   amountInput.addEventListener('keypress', function (evt) {
+  //     if (Number.isInteger(+evt.key) || (evt.key === '.') || (evt.key === ',') || (evt.key === 'e')) {
+  //       evt.preventDefault();
+  //       if (Number.isInteger(+evt.key) && amountInput.value.length === 0 && (+evt.key !== 0)) {
+  //         amountInput.value = evt.key;
+  //       }
+  //       else if (Number.isInteger(+evt.key) && amountInput.value.length === 1 && ((+amountInput.value * 10 + +evt.key) <= 15)) {
+  //         amountInput.value += evt.key;
+  //       }
+  //     }
+  //   })
+  // }
+
   return (
     <Layout>
       <Seo title="Mint" />
@@ -54,7 +55,7 @@ const Mint = () => {
             <h2>Connect</h2>
             <p>Join our <a href="https://discord.gg/zFjWr4wUwH">Discord</a> server if you need help.</p>
           </div>
-          <ButtonCustom className="mint-cnct-wallet">Connect your wallet</ButtonCustom>
+          <button onClick={onConnect} className="mint-cnct-wallet">Connect your wallet</button>
         </div>
         <div className="mint">
           <div className="text">
@@ -65,14 +66,13 @@ const Mint = () => {
             <form action="">
               <FormControl id="amount">
                 <FormLabel>Amount</FormLabel>
-                <Input ref={checkValidity} className="amount-input" type="number" min="1" max="15" maxLength ="3"/>
+                <Input onInput={onInput} className="amount-input" type="number" min="1" max="15" maxLength="3" />
               </FormControl>
-              
             </form>
           </div>
         </div>
         <div className="terms-container">
-          <ButtonCustom className="mint-cnct-wallet">Mint</ButtonCustom>
+          <button onClick={onConnect} className="mint-cnct-wallet">Mint</button>
           <p className="agreement">By minting a Phallus you agree to our <Link to="/terms">Terms of Service.</Link></p>
         </div>
       </div>

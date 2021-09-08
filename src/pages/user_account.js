@@ -24,27 +24,21 @@ const UserAccount = () => {
   }
   const [data, setData] = useState(arrData);
 
-  function ButtonCustomConnect({ children, className }) {
-    return (
-      <Box
-        className={className}
-        as="button"
-      >
-        {children}
-      </Box>
-    )
+  function onConnect() {
+    alert('Hello');
   }
+  
   return (
     <Layout>
       <Seo title="Account" />
       <div className="gen-wrap user-acc">
         <h1>#FAPP</h1>
+        <button onClick={onConnect} className="user-account cnct-wallet">
+          Connect your wallet
+        </button>
         <div className="bought">
           <GalleryGrid data={data} />
         </div>
-        <ButtonCustomConnect className="user-account cnct-wallet">
-          Connect your wallet
-        </ButtonCustomConnect>
       </div>
     </Layout>
   )
