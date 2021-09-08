@@ -77,6 +77,169 @@ const Gallery = () => {
     let filtersList = document.querySelector('.filters-wrap');
     filtersList.classList.toggle('opened');
   }
+  const filtersList = [
+    [{name:"white", trait:"common-basic", filter:"skin"},
+    {name:"brown", trait:"common-basic", filter:"skin"},
+    {name:"black", trait:"common-basic", filter:"skin"},
+    {name:"tattooed ", trait:"common-basic", filter:"skin"},
+    {name:"camouflage", trait:"protection-basic", filter:"skin"},
+    {name:"superphallus", trait:"superhero-basic", filter:"skin"},
+    {name:"brown-cheetah", trait:"animal-wild", filter:"skin"},
+    {name:"white-cheeath", trait:"animal-wild", filter:"skin"},
+    {name:"reptile", trait:"animal-wild", filter:"skin"},
+    {name:"zebra", trait:"animal-wild", filter:"skin"},
+    {name:"dog", trait:"animal-wild", filter:"skin"},
+    {name:"titanium", trait:"cyber-wild", filter:"skin"},
+    {name:"devil", trait:"halloween-wild", filter:"skin"},
+    {name:"rainbow", trait:"halloween-wild", filter:"skin"},
+    {name:"wooden", trait:"halloween-wild", filter:"skin"},
+    {name:"zombie", trait:"halloween-wild", filter:"skin"},
+    {name:"clown", trait:"halloween-wild", filter:"skin"},
+    {name:"pirate-tattoo", trait:"halloween-wild", filter:"skin"},
+    {name:"solid-gold", trait:"precious-dope", filter:"skin"},],
+
+    [{name:"smile",trait:"common-basic", filter:"mouth"},
+    {name:"sad",trait:"common-basic", filter:"mouth"},
+    {name:"braces",trait:"common-basic", filter:"mouth"},
+    {name:"Hollywood-smile",trait:"common-basic", filter:"mouth"},
+    {name:"crooked-teeth",trait:"common-basic", filter:"mouth"},
+    {name:"bubble-gum",trait:"common-basic", filter:"mouth"},
+    {name:"beard-and-mustache",trait:"common-basic", filter:"mouth"},
+    {name:"mustache",trait:"common-basic", filter:"mouth"},
+    {name:"joint",trait:"stoned-basic", filter:"mouth"},
+    {name:"smoking-pipe",trait:"stoned-basic", filter:"mouth"},
+    {name:"mask",trait:"protection-basic", filter:"mouth"},
+    {name:"reptile’s-mouth",trait:"animal-wild", filter:"mouth"},
+    {name:"dark-cat’s-mouth",trait:"animal-wild", filter:"mouth"},
+    {name:"light-cat’s-mouth",trait:"animal-wild", filter:"mouth"},
+    {name:"zebra’s-mouth",trait:"animal-wild", filter:"mouth"},
+    {name:"dog’s-mouth",trait:"animal-wild", filter:"mouth"},
+    {name:"dog’s-mouth-and-bone",trait:"animal-wild", filter:"mouth"},
+    {name:"devil’s-mouth",trait:"halloween-wild", filter:"mouth"},
+    {name:"vampire's-mouth",trait:"halloween-wild", filter:"mouth"},
+    {name:"zombie’s-mouth",trait:"halloween-wild", filter:"mouth"},
+    {name:"clown’s-nose",trait:"halloween-wild", filter:"mouth"},
+    {name:"pink-pirate’s-beard",trait:"halloween-wild", filter:"mouth"},
+    {name:"pink-beard-and-mustache",trait:"halloween-wild", filter:"mouth"},
+    {name:"pirate’s-beard",trait:"halloween-wild", filter:"mouth"},
+    {name:"steampunk-mouth",trait:"cyber-wild", filter:"mouth"},
+    {name:"robot’s-mouth",trait:"cyber-wild", filter:"mouth"},
+    {name:"transmitter",trait:"cyber-wild", filter:"mouth"},
+    {name:"gold-smoking pipe",trait:"precious-dope", filter:"mouth"},
+    {name:"rainbow-grillz-and-black-lipstick",trait:"precious-dope", filter:"mouth"},
+    {name:"gold-grillz-and-red-lipstick",trait:"precious-dope", filter:"mouth"}],
+
+    [{name:"yellow-eyes",trait:"common-basic", filter:"eyes"},
+    {name:"cute-eyes",trait:"common-basic", filter:"eyes"},
+    {name:"glasses",trait:"common-basic", filter:"eyes"},
+    {name:"3d-glasses",trait:"common-basic", filter:"eyes"},
+    {name:"ski-mask",trait:"common-basic", filter:"eyes"},
+    {name:"anime-eyes",trait:"stoned-basic", filter:"eyes"},
+    {name:"enamored-eyes",trait:"stoned-basic", filter:"eyes"},
+    {name:"hypnotized-eyes",trait:"stoned-basic", filter:"eyes"},
+    {name:"rasta-glasses",trait:"stoned-basic", filter:"eyes"},
+    {name:"superphallus-mask",trait:"superhero-basic", filter:"eyes"},
+    {name:"dark-cat’s-eyes",trait:"animal-wild", filter:"eyes"},
+    {name:"light-cat’s-eyes",trait:"animal-wild", filter:"eyes"},
+    {name:"cloven-hoofed-eyes",trait:"animal-wild", filter:"eyes"},
+    {name:"reptile’s-eyes",trait:"animal-wild", filter:"eyes"},
+    {name:"clown’s-eyes",trait:"halloween-wild", filter:"eyes"},
+    {name:"pink-pirate's-eye-patch",trait:"halloween-wild", filter:"eyes"},
+    {name:"pirate’s-eye-patch",trait:"halloween-wild", filter:"eyes"},
+    {name:"zombie’s-eyes",trait:"halloween-wild", filter:"eyes"},
+    {name:"lazer-glasses",trait:"cyber-wild", filter:"eyes"},
+    {name:"cyber-glasses",trait:"cyber-wild", filter:"eyes"},
+    {name:"steel-steampunk-glasses",trait:"cyber-wild", filter:"eyes"},
+    {name:"robot’s-eye",trait:"cyber-wild", filter:"eyes"},
+    {name:"sight",trait:"cyber-wild", filter:"eyes"},
+    {name:"diamond-eyes",trait:"precious-dope", filter:"eyes"},
+    {name:"gold-steampunk-glasses",trait:"precious-dope", filter:"eyes"},
+    {name:"ruby-glasses",trait:"precious-dope", filter:"eyes"},
+    {name:"gold-monocle",trait:"precious-dope", filter:"eyes"}],
+
+    [{name:"open-cap",trait:"common-basic", filter:"head"},
+    {name:"phallus-cap",trait:"common-basic", filter:"head"},
+    {name:"bandana",trait:"common-basic", filter:"head"},
+    {name:"panama-hat",trait:"common-basic", filter:"head"},
+    {name:"winter-hat",trait:"common-basic", filter:"head"},
+    {name:"sombrero",trait:"common-basic", filter:"head"},
+    {name:"pink-head",trait:"common-basic", filter:"head"},
+    {name:"condom",trait:"protection-basic", filter:"head"},
+    {name:"camouflage-bandana",trait:"protection-basic", filter:"head"},
+    {name:"camouflage-cap",trait:"protection-basic", filter:"head"},
+    {name:"viking-helmet",trait:"protection-basic", filter:"head"},
+    {name:"sheriff’s-hat",trait:"protection-basic", filter:"head"},
+    {name:"rasta-hat-with-locks",trait:"stoned-basic", filter:"head"},
+    {name:"zebra’s-ears",trait:"animal-wild", filter:"head"},
+    {name:"brown-cheetah’s-ears",trait:"animal-wild", filter:"head"},
+    {name:"reptile’s-head",trait:"animal-wild", filter:"head"},
+    {name:"white-cheetah’s-ears",trait:"animal-wild", filter:"head"},
+    {name:"dog’s-ears",trait:"animal-wild", filter:"head"},
+    {name:"halo",trait:"halloween-wild", filter:"head"},
+    {name:"witch-hat",trait:"halloween-wild", filter:"head"},
+    {name:"brain",trait:"halloween-wild", filter:"head"},
+    {name:"devil’s-horns",trait:"halloween-wild", filter:"head"},
+    {name:"pirate’s-hat",trait:"halloween-wild", filter:"head"},
+    {name:"clown’s-head",trait:"halloween-wild", filter:"head"},
+    {name:"pink-sheriff’s-hat",trait:"halloween-wild", filter:"head"},
+    {name:"buffoon’s-hat",trait:"halloween-wild", filter:"head"},
+    {name:"pink-pirate’s-hat",trait:"halloween-wild", filter:"head"},
+    {name:"cyborg’s-head",trait:"cyber-wild", filter:"head"},
+    {name:"Spyglass",trait:"cyber-wild", filter:"head"},
+    {name:"gold-crown",trait:"precious-dope", filter:"head"},
+    {name:"diamond-head",trait:"precious-dope", filter:"head"},
+    {name:"solid-gold-head",trait:"precious-dope", filter:"head"},
+    {name:"gold-piercing",trait:"precious-dope", filter:"head"}],
+
+   [ {name:"marshmallow",trait:"common-basic", filter:"accessory"},
+    {name:"maraca",trait:"common-basic", filter:"accessory"},
+    {name:"Empty",trait:"common-Basic", filter:"accessory"},
+    {name:"lgbt-flag",trait:"common-basic", filter:"accessory"},
+    {name:"flower",trait:"common-basic", filter:"accessory"},
+    {name:"lgbt-flower",trait:"common-basic", filter:"accessory"},
+    {name:"bong",trait:"stoned-basic", filter:"accessory"},
+    {name:"superphallus-cape",trait:"superhero-basic", filter:"accessory"},
+    {name:"grenade",trait:"protection-basic", filter:"accessory"},
+    {name:"revolver",trait:"protection-basic", filter:"accessory"},
+    {name:"uzi",trait:"protection-basic", filter:"accessory"},
+    {name:"mace",trait:"protection-basic", filter:"accessory"},
+    {name:"sword",trait:"protection-basic", filter:"accessory"},
+    {name:"brown-cheetah’s-tail",trait:"animal-wild", filter:"accessory"},
+    {name:"reptile’s-tail",trait:"animal-wild", filter:"accessory"},
+    {name:"white-cheetah’s-tail",trait:"animal-wild", filter:"accessory"},
+    {name:"zebra’s-tail",trait:"animal-wild", filter:"accessory"},
+    {name:"bat’s-wings",trait:"animal-wild", filter:"accessory"},
+    {name:"dog’s-tail",trait:"animal-wild", filter:"accessory"},
+    {name:"angel’s-wings",trait:"halloween-wild", filter:"accessory"},
+    {name:"devil’s-tail",trait:"halloween-wild", filter:"accessory"},
+    {name:"devil’s-wings",trait:"halloween-wild", filter:"accessory"},
+    {name:"magic-wand",trait:"halloween-wild", filter:"accessory"},
+    {name:"pink-sword",trait:"halloween-wild", filter:"accessory"},
+    {name:"pink-revolver",trait:"halloween-wild", filter:"accessory"},
+    {name:"jetpack",trait:"cyber-wild", filter:"accessory"},
+    {name:"clamp",trait:"cyber-wild", filter:"accessory"},
+    {name:"diamond-stick",trait:"precious-dope", filter:"accessory"},
+    {name:"gold-cuban-chain-with-pendant",trait:"precious-dope", filter:"accessory"},
+    {name:"gold-cuban-chain",trait:"precious-dope", filter:"accessory"},
+    {name:"gold-revolver",trait:"precious-dope", filter:"accessory"},
+    {name:"gold-mace",trait:"precious-dope", filter:"accessory"},
+    {name:"gold-uzi",trait:"precious-dope", filter:"accessory"},
+    {name:"gold-grenade",trait:"precious-dope", filter:"accessory"}]
+  ]
+  function filterMaker(filtersList, number){
+    return filtersList[number].map((item, i) => {
+      return (<>
+      <Checkbox value={`${item.filter.replaceAll('-',' ')}-${i}`}>{item.name.replaceAll('-',' ')}</Checkbox>
+      <span className="filter-info">{item.trait.replaceAll('-',' ')}</span>
+      </>)
+    });
+  }
+  let skinArr = filterMaker(filtersList, 0);
+  let mouthArr = filterMaker(filtersList, 1);
+  let eyesArr = filterMaker(filtersList, 2);
+  let headArr = filterMaker(filtersList, 3);
+  let accessoryArr = filterMaker(filtersList, 4);
+
   return (
     <Layout>
       <Seo title="Gallery" />
@@ -139,44 +302,7 @@ const Gallery = () => {
                     <AccordionPanel className="filters-list" pb={4}>
                       <CheckboxGroup defaultValue="2">
                           <Stack spacing={1} marginLeft={5} direction="column">
-                              <Checkbox value="7">white</Checkbox>
-                              <span className="filter-info">common basic</span>
-                              <Checkbox value="8">brown</Checkbox>
-                              <span className="filter-info">common basic</span>
-                              <Checkbox value="9">black</Checkbox>
-                              <span className="filter-info">common basic</span>
-                              <Checkbox value="10">tattooed</Checkbox>
-                              <span className="filter-info">common basic</span>
-                              <Checkbox value="11">camouflage</Checkbox>
-                              <span className="filter-info">common basic</span>
-                              <Checkbox value="12">superphallus</Checkbox>
-                              <span className="filter-info">common basic</span>
-                              <Checkbox value="13">brown cheetah</Checkbox>
-                              <span className="filter-info">animal wild</span>
-                              <Checkbox value="14">white cheetah</Checkbox>
-                              <span className="filter-info">animal wild</span>
-                              <Checkbox value="15">reptile</Checkbox>
-                              <span className="filter-info">animal wild</span>
-                              <Checkbox value="16">zebra</Checkbox>
-                              <span className="filter-info">animal wild</span>
-                              <Checkbox value="17">dog</Checkbox>
-                              <span className="filter-info">animal wild</span>
-                              <Checkbox value="18">titanium</Checkbox>
-                              <span className="filter-info">cyber wild</span>
-                              <Checkbox value="19">devil</Checkbox>
-                              <span className="filter-info">halloween wild</span>
-                              <Checkbox value="20">rainbow</Checkbox>
-                              <span className="filter-info">halloween wild</span>
-                              <Checkbox value="21">wooden</Checkbox>
-                              <span className="filter-info">halloween wild</span>
-                              <Checkbox value="22">zombie</Checkbox>
-                              <span className="filter-info">halloween wild</span>
-                              <Checkbox value="23">clown</Checkbox>
-                              <span className="filter-info">halloween wild</span>
-                              <Checkbox value="24">pirate tattoo</Checkbox>
-                              <span className="filter-info">halloween wild</span>
-                              <Checkbox value="25">solid gold</Checkbox>
-                              <span className="filter-info">precious dope</span>
+                              {skinArr}
                           </Stack>
                         </CheckboxGroup>
                     </AccordionPanel>
@@ -199,66 +325,7 @@ const Gallery = () => {
                     <AccordionPanel className="filters-list" pb={4}>
                     <CheckboxGroup defaultValue="2">
                           <Stack spacing={1} marginLeft={5} direction="column">
-                              <Checkbox value="26">smile</Checkbox>
-                              <span className="filter-info">common basic</span>
-                              <Checkbox value="27">sad</Checkbox>
-                              <span className="filter-info">common basic</span>
-                              <Checkbox value="28">braces</Checkbox>
-                              <span className="filter-info">common basic</span>
-                              <Checkbox value="29">hollywood smile</Checkbox>
-                              <span className="filter-info">common basic</span>
-                              <Checkbox value="30">crooked teeth</Checkbox>
-                              <span className="filter-info">common basic</span>
-                              <Checkbox value="31">bubble gum</Checkbox>
-                              <span className="filter-info">common basic</span>
-                              <Checkbox value="32">beard and mustache</Checkbox>
-                              <span className="filter-info">common basic</span>
-                              <Checkbox value="33">mustache</Checkbox>
-                              <span className="filter-info">common basic</span>
-                              <Checkbox value="34">joint</Checkbox>
-                              <span className="filter-info">stoned basic</span>
-                              <Checkbox value="35">smoking pipe</Checkbox>
-                              <span className="filter-info">stoned basic</span>
-                              <Checkbox value="36">mask</Checkbox>
-                              <span className="filter-info">protection basic</span>
-                              <Checkbox value="37">reptile's mouth</Checkbox>
-                              <span className="filter-info">animal wild</span>
-                              <Checkbox value="38">dark cat's mouth</Checkbox>
-                              <span className="filter-info">animal wild</span>
-                              <Checkbox value="39">light cat's mouth</Checkbox>
-                              <span className="filter-info">animal wild</span>
-                              <Checkbox value="40">zebra’s mouth</Checkbox>
-                              <span className="filter-info">animal wild</span>
-                              <Checkbox value="41">dog’s mouth</Checkbox>
-                              <span className="filter-info">animal wild</span>
-                              <Checkbox value="42">dog’s mouth and bone</Checkbox>
-                              <span className="filter-info">animal wild</span>
-                              <Checkbox value="43">devil’s mouth</Checkbox>
-                              <span className="filter-info">halloween wild</span>
-                              <Checkbox value="44">vampire's mouth</Checkbox>
-                              <span className="filter-info">halloween wild</span>
-                              <Checkbox value="45">zombie’s mouth</Checkbox>
-                              <span className="filter-info">halloween wild</span>
-                              <Checkbox value="46">clown’s nose</Checkbox>
-                              <span className="filter-info">halloween wild</span>
-                              <Checkbox value="47">pink pirate’s beard</Checkbox>
-                              <span className="filter-info">halloween wild</span>
-                              <Checkbox value="48">pink beard and mustache</Checkbox>
-                              <span className="filter-info">halloween wild</span>
-                              <Checkbox value="49">pirate’s beard</Checkbox>
-                              <span className="filter-info">halloween wild</span>
-                              <Checkbox value="50">steampunk mouth</Checkbox>
-                              <span className="filter-info">cyber wild</span>
-                              <Checkbox value="51">robot’s mouth</Checkbox>
-                              <span className="filter-info">cyber wild</span>
-                              <Checkbox value="52">transmitter</Checkbox>
-                              <span className="filter-info">cyber wild</span>
-                              <Checkbox value="53">gold smoking pipe</Checkbox>
-                              <span className="filter-info">precious dope</span>
-                              <Checkbox value="54">rainbow grillz and black lipstick</Checkbox>
-                              <span className="filter-info">precious dope</span>
-                              <Checkbox value="55">gold grillz and red lipstick</Checkbox>
-                              <span className="filter-info">precious dope</span>
+                              {mouthArr}
                           </Stack>
                         </CheckboxGroup>
                     </AccordionPanel>
@@ -281,90 +348,7 @@ const Gallery = () => {
                     <AccordionPanel className="filters-list" pb={4}>
                     <CheckboxGroup defaultValue="2">
                           <Stack spacing={1} marginLeft={5} direction="column">
-                              <Checkbox value="56">yellow eyes</Checkbox>
-                              <span className="filter-info">common basic</span>
-                              <Checkbox value="57">cute eyes</Checkbox>
-                              <span className="filter-info">common basic</span>
-                              <Checkbox value="58">glasses</Checkbox>
-                              <span className="filter-info">common basic</span>
-                              <Checkbox value="59">3d glasses smile</Checkbox>
-                              <span className="filter-info">common basic</span>
-                              <Checkbox value="60">ski mask</Checkbox>
-                              <span className="filter-info">common basic</span>
-                              <Checkbox value="61">anime eyes</Checkbox>
-                              <span className="filter-info">stoned basic</span>
-                              <Checkbox value="62">enamored eyes</Checkbox>
-                              <span className="filter-info">stoned basic</span>
-                              <Checkbox value="63">hypnotized eyes</Checkbox>
-                              <span className="filter-info">stoned basic</span>
-                              <Checkbox value="64">rasta glasses</Checkbox>
-                              <span className="filter-info">stoned basic</span>
-                              <Checkbox value="65">superphallus mask</Checkbox>
-                              <span className="filter-info">superhero basic</span>
-                              <Checkbox value="66">dark cat’s eyes</Checkbox>
-                              <span className="filter-info">animal wild</span>
-                              <Checkbox value="67">light cat’s eyes</Checkbox>
-                              <span className="filter-info">animal wild</span>
-                              <Checkbox value="68">cloven hoofed eyes</Checkbox>
-                              <span className="filter-info">animal wild</span>
-                              <Checkbox value="69">reptile’s eyes</Checkbox>
-                              <span className="filter-info">animal wild</span>
-                              <Checkbox value="70">clown’s eyes</Checkbox>
-                              <span className="filter-info">halloween wild</span>                            
-                              <Checkbox value="71">dog’s mouth</Checkbox>
-                              <span className="filter-info">animal wild</span>
-                              <Checkbox value="72">dog’s mouth and bone</Checkbox>
-                              <span className="filter-info">animal wild</span>
-                              <Checkbox value="73">devil’s mouth</Checkbox>
-                              <span className="filter-info">halloween wild</span>
-                              <Checkbox value="74">vampire's mouth</Checkbox>
-                              <span className="filter-info">halloween wild</span>                              
-                              <Checkbox value="75">zombie’s mouth</Checkbox>
-                              <span className="filter-info">halloween wild</span>
-                              <Checkbox value="76">clown’s nose</Checkbox>
-                              <span className="filter-info">halloween wild</span>
-                              <Checkbox value="77">pink pirate’s beard</Checkbox>
-                              <span className="filter-info">halloween wild</span>
-                              <Checkbox value="78">pink beard and mustache</Checkbox>
-                              <span className="filter-info">halloween wild</span>
-                              <Checkbox value="79">pirate’s beard</Checkbox>
-                              <span className="filter-info">halloween wild</span>
-                              <Checkbox value="80">steampunk mouth</Checkbox>
-                              <span className="filter-info">cyber wild</span>
-                              <Checkbox value="81">robot’s mouth</Checkbox>
-                              <span className="filter-info">cyber wild</span>
-                              <Checkbox value="82">transmitter</Checkbox>
-                              <span className="filter-info">cyber wild</span>
-                              <Checkbox value="83">gold smoking pipe</Checkbox>
-                              <span className="filter-info">precious dope</span>
-                              <Checkbox value="84">rainbow grillz and black lipstick</Checkbox>
-                              <span className="filter-info">precious dope</span>
-                              <Checkbox value="85">gold grillz and red lipstick</Checkbox>
-                              <span className="filter-info">precious dope</span>
-                              <Checkbox value="86"> pink pirate's eye patch</Checkbox>
-                              <span className="filter-info">halloween wild</span>
-                              <Checkbox value="87"> pirate’s eye patch</Checkbox>
-                              <span className="filter-info">halloween wild</span>
-                              <Checkbox value="88"> zombie’s eyes</Checkbox>
-                              <span className="filter-info">halloween wild</span>
-                              <Checkbox value="89"> lazer glasses</Checkbox>
-                              <span className="filter-info">cyber wild</span>
-                              <Checkbox value="90"> cyber glasses</Checkbox>
-                              <span className="filter-info">cyber wild</span>
-                              <Checkbox value="91"> steel steampunk glasses</Checkbox>
-                              <span className="filter-info">cyber wild</span>
-                              <Checkbox value="92"> robot’s eye</Checkbox>
-                              <span className="filter-info">cyber wild</span>
-                              <Checkbox value="93"> sight</Checkbox>
-                              <span className="filter-info">cyber wild</span>
-                              <Checkbox value="94"> diamond eyes</Checkbox>
-                              <span className="filter-info">precious dope</span>
-                              <Checkbox value="95"> gold steampunk glasses</Checkbox>
-                              <span className="filter-info">precious dope</span>
-                              <Checkbox value="96"> ruby glasses</Checkbox>
-                              <span className="filter-info">precious dope</span>
-                              <Checkbox value="97"> gold monocle</Checkbox>
-                              <span className="filter-info">precious dope</span>
+                              {eyesArr}
                           </Stack>
                         </CheckboxGroup>
                     </AccordionPanel>
@@ -387,72 +371,7 @@ const Gallery = () => {
                     <AccordionPanel className="filters-list" pb={4}>
                       <CheckboxGroup defaultValue="2">
                         <Stack spacing={1} marginLeft={5} direction="column">
-                            <Checkbox value="98"> open cap</Checkbox>
-                            <span className="filter-info">common basic</span>
-                            <Checkbox value="99"> phallus cap</Checkbox>
-                            <span className="filter-info">common basic</span>
-                            <Checkbox value="100"> bandana</Checkbox>
-                            <span className="filter-info">common basic</span>
-                            <Checkbox value="101"> panama hat</Checkbox>
-                            <span className="filter-info">common basic</span>
-                            <Checkbox value="102"> winter hat</Checkbox>
-                            <span className="filter-info">common basic</span>
-                            <Checkbox value="103"> sombrero</Checkbox>
-                            <span className="filter-info">common basic</span>
-                            <Checkbox value="104"> pink head</Checkbox>
-                            <span className="filter-info">common basic</span>
-                            <Checkbox value="105"> condom</Checkbox>
-                            <span className="filter-info">protection basic</span>
-                            <Checkbox value="106"> camouflage bandana</Checkbox>
-                            <span className="filter-info">protection basic</span>
-                            <Checkbox value="107"> camouflage cap</Checkbox>
-                            <span className="filter-info">protection basic</span>
-                            <Checkbox value="108"> viking helmet</Checkbox>
-                            <span className="filter-info">protection basic</span>
-                            <Checkbox value="109"> sheriff’s hat</Checkbox>
-                            <span className="filter-info">protection basic</span>
-                            <Checkbox value="110"> rasta hat with locks</Checkbox>
-                            <span className="filter-info">stoned basic</span>
-                            <Checkbox value="111"> zebra’s ears</Checkbox>
-                            <span className="filter-info">animal wild</span>
-                            <Checkbox value="112"> brown cheetah’s ears</Checkbox>
-                            <span className="filter-info">animal wild</span>
-                            <Checkbox value="113"> reptile’s head</Checkbox>
-                            <span className="filter-info">animal wild</span>
-                            <Checkbox value="114"> white cheetah’s ears</Checkbox>
-                            <span className="filter-info">animal wild</span>
-                            <Checkbox value="115"> dog’s ears</Checkbox>
-                            <span className="filter-info">animal wild</span>
-                            <Checkbox value="116"> halo</Checkbox>
-                            <span className="filter-info">halloween wild</span>
-                            <Checkbox value="117"> witch hat</Checkbox>
-                            <span className="filter-info">halloween wild</span>
-                            <Checkbox value="118"> brain</Checkbox>
-                            <span className="filter-info">halloween wild</span>
-                            <Checkbox value="119"> devil’s horns</Checkbox>
-                            <span className="filter-info">halloween wild</span>
-                            <Checkbox value="120"> pirate’s hat</Checkbox>
-                            <span className="filter-info">halloween wild</span>
-                            <Checkbox value="121"> clown’s head</Checkbox>
-                            <span className="filter-info">halloween wild</span>
-                            <Checkbox value="122"> pink sheriff’s hat</Checkbox>
-                            <span className="filter-info">halloween wild</span>
-                            <Checkbox value="123"> buffoon’s hat</Checkbox>
-                            <span className="filter-info">halloween wild</span>
-                            <Checkbox value="124"> pink pirate’s hat</Checkbox>
-                            <span className="filter-info">halloween wild</span>
-                            <Checkbox value="125"> cyborg’s head</Checkbox>
-                            <span className="filter-info">cyber wild</span>
-                            <Checkbox value="126"> Spyglass</Checkbox>
-                            <span className="filter-info">cyber wild</span>
-                            <Checkbox value="127"> gold crown</Checkbox>
-                            <span className="filter-info">precious dope</span>
-                            <Checkbox value="128"> diamond head</Checkbox>
-                            <span className="filter-info">precious dope</span>
-                            <Checkbox value="129"> solid gold head</Checkbox>
-                            <span className="filter-info">precious dope</span>
-                            <Checkbox value="130"> gold piercing</Checkbox>
-                            <span className="filter-info">precious dope</span>
+                            {headArr}
                         </Stack>
                       </CheckboxGroup>
                     </AccordionPanel>
@@ -475,74 +394,7 @@ const Gallery = () => {
                     <AccordionPanel className="filters-list" pb={4}>
                     <CheckboxGroup defaultValue="2">
                         <Stack spacing={1} marginLeft={5} direction="column">
-                            <Checkbox value="121">marshmallow</Checkbox>
-                            <span className="filter-info">common basic</span>
-                            <Checkbox value="122">maraca</Checkbox>
-                            <span className="filter-info">common basic</span>
-                            <Checkbox value="123">empty</Checkbox>
-                            <span className="filter-info">common basic</span>
-                            <Checkbox value="124">lgbt flag</Checkbox>
-                            <span className="filter-info">common basic</span>
-                            <Checkbox value="125">flower</Checkbox>
-                            <span className="filter-info">common basic</span>
-                            <Checkbox value="126">lgbt flower</Checkbox>
-                            <span className="filter-info">common basic</span>
-                            <Checkbox value="127">bong</Checkbox>
-                            <span className="filter-info">stoned basic</span>
-                            <Checkbox value="128">superphallus cape</Checkbox>
-                            <span className="filter-info">superhero basic</span>
-                            <Checkbox value="129">grenade</Checkbox>
-                            <span className="filter-info">protection basic</span>
-                            <Checkbox value="130">revolver</Checkbox>
-                            <span className="filter-info">protection basic</span>
-                            <Checkbox value="131">uzi</Checkbox>
-                            <span className="filter-info">protection basic</span>
-                            <Checkbox value="132">mace</Checkbox>
-                            <span className="filter-info">protection basic</span>
-                            <Checkbox value="133">sword</Checkbox>
-                            <span className="filter-info">protection basic</span>
-                            <Checkbox value="134">brown cheetah’s tail</Checkbox>
-                            <span className="filter-info">animal wild</span>
-                            <Checkbox value="135">reptile’s tail</Checkbox>
-                            <span className="filter-info">animal wild</span>
-                            <Checkbox value="136">white cheetah’s tail</Checkbox>
-                            <span className="filter-info">animal wild</span>
-                            <Checkbox value="137">zebra’s tail</Checkbox>
-                            <span className="filter-info">animal wild</span>
-                            <Checkbox value="138">bat’s wings</Checkbox>
-                            <span className="filter-info">animal wild</span>
-                            <Checkbox value="139">dog’s tail</Checkbox>
-                            <span className="filter-info">animal wild</span>
-                            <Checkbox value="140">angel’s wings</Checkbox>
-                            <span className="filter-info">halloween wild</span>
-                            <Checkbox value="141">devil’s tail</Checkbox>
-                            <span className="filter-info">halloween wild</span>
-                            <Checkbox value="142">devil’s wings</Checkbox>
-                            <span className="filter-info">halloween wild</span>
-                            <Checkbox value="143">magic wand</Checkbox>
-                            <span className="filter-info">halloween wild</span>
-                            <Checkbox value="144">pink sword</Checkbox>
-                            <span className="filter-info">halloween wild</span>
-                            <Checkbox value="145">pink revolver</Checkbox>
-                            <span className="filter-info">halloween wild</span>
-                            <Checkbox value="146">jetpack</Checkbox>
-                            <span className="filter-info">cyber wild</span>
-                            <Checkbox value="147">clamp</Checkbox>
-                            <span className="filter-info">cyber wild</span>
-                            <Checkbox value="148">diamond stick</Checkbox>
-                            <span className="filter-info">precious dope</span>
-                            <Checkbox value="149">gold cuban chain with pendant</Checkbox>
-                            <span className="filter-info">precious dope</span>
-                            <Checkbox value="150">gold cuban chain</Checkbox>
-                            <span className="filter-info">precious dope</span>
-                            <Checkbox value="151">gold revolver</Checkbox>
-                            <span className="filter-info">precious dope</span>
-                            <Checkbox value="152">gold mace</Checkbox>
-                            <span className="filter-info">precious dope</span>
-                            <Checkbox value="153">gold uzi</Checkbox>
-                            <span className="filter-info">precious dope</span>
-                            <Checkbox value="154">gold grenade</Checkbox>
-                            <span className="filter-info">precious dope</span>
+                            {accessoryArr}
                         </Stack>
                       </CheckboxGroup>
                     </AccordionPanel>
