@@ -18,30 +18,9 @@ const Mint = () => {
   }
 
   function onConnect() {
-    let ethereum = window.ethereum;
-    ethereum
-        .request({ method: 'eth_requestAccounts' })
-        .then((handleAccountsChanged) =>
-            {
-              provider = new ethers.providers.Web3Provider(ethereum);
-              signer = provider.getSigner();
-              if (current_network === 1) {
-                //connect();
-              }
-            }
-        )
-        .catch((error) => {
-          if (error.code === 4001) {
-            // EIP-1193 userRejectedRequest error
-            console.log('Please connect to MetaMask.');
-          } else {
-            console.error(error);
-            alert("Please refresh the page");
-          }
-        });
-
+    alert('Hello');
   }
-
+  
   return (
     <Layout>
       <Seo title="Mint" />

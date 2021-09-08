@@ -13,7 +13,7 @@ const Character = ({ location }) => {
         <Seo title="Connect" />
         <div className="gen-wrap char">
           <h1 className="name">{name}</h1>
-          <img className="avatar" src={src} />
+          <img className="avatar" alt="character image" src={src} />
           <a href="#" className="OpenSea-link">View on OpenSea</a>
           <h2 className="detail-header">Details</h2>
           <div className="text">

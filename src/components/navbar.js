@@ -63,7 +63,7 @@ const Navbar = () => {
   return (
     <nav className="navbar-wrap">
       <Link className="logo" to="/">
-        <img src={logo} />
+        <img src={logo} alt="logo" />
       </Link>
       <div className="navbar-btns">
         {screenWidth > 1200 &&

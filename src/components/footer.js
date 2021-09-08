@@ -17,9 +17,9 @@ const Footer = () => (
         <Box
           className="logo"
           as="img"
+          alt="logo"
           src={logo}
-        >
-        </Box>
+        ></Box>
         <hr />
         <span>SUBJECT OF COPYRIGHT © 2021</span>
       </div>
