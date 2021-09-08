@@ -20,27 +20,7 @@ const Mint = () => {
   function onConnect() {
     alert('Hello');
   }
-  // const inputAmount = useRef(null);
-  // inputAmount.current.addEventListener("change", () => {
-
-  // });
-  // console.log('inputAmount :>> ', inputAmount);
-
-  // function checkValidity() {
-  //   const amountInput = document.querySelector(".amount-input");
-  //   amountInput.addEventListener('keypress', function (evt) {
-  //     if (Number.isInteger(+evt.key) || (evt.key === '.') || (evt.key === ',') || (evt.key === 'e')) {
-  //       evt.preventDefault();
-  //       if (Number.isInteger(+evt.key) && amountInput.value.length === 0 && (+evt.key !== 0)) {
-  //         amountInput.value = evt.key;
-  //       }
-  //       else if (Number.isInteger(+evt.key) && amountInput.value.length === 1 && ((+amountInput.value * 10 + +evt.key) <= 15)) {
-  //         amountInput.value += evt.key;
-  //       }
-  //     }
-  //   })
-  // }
-
+  
   return (
     <Layout>
       <Seo title="Mint" />
