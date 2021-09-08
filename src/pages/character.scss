@@ -39,8 +39,8 @@
 
   .avatar {
     align-self: center;
-    max-width : 500px;
-    max-height: 500px;
+    width     : 100%;
+    height    : min-content;
     overflow  : hidden;
   }
 
@@ -71,14 +71,6 @@
 @media screen and (max-width: 1100px) {
   .gen-wrap.char {
     max-width: 98vw !important;
-
-    .avatar {
-      margin    : 0;
-      width     : 100%;
-      height    : min-content;
-      max-width : initial;
-      max-height: initial;
-    }
 
     .text {
       width: 100%;
