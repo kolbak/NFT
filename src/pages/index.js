@@ -44,18 +44,20 @@ import opensea from "../images/opensea.svg"
 const IndexPage = () => {
   const isBrowser = typeof window !== "undefined"
 
-  let [screenWidth, setScreenWidth] = useState(isBrowser && window.innerWidth);
-  isBrowser && window.addEventListener("resize", resizeInIndex);
-  function resizeInIndex() {
-    setScreenWidth(isBrowser && window.innerWidth);
-  }
-
+  let [screenWidth, setScreenWidth] = useState(null);
+  
   const pointsMap = useRef(null);
   const line = useRef(null);
   useEffect(() => {
     if (isBrowser) {
+    setScreenWidth(window.innerWidth);
+    window.addEventListener("resize", resizeInIndex);
+    function resizeInIndex() {
+      setScreenWidth(window.innerWidth);
+    }
+
       //? scrolling roadmap
-      window.addEventListener('scroll', lineScroll)
+      window.addEventListener('scroll', lineScroll);
       function lineScroll() {
         if (pointsMap.current && line.current) {
           let pointsPosTop = pointsMap.current?.getBoundingClientRect().top - window.screen.height / 2;
@@ -312,12 +314,67 @@ const IndexPage = () => {
               <h2>ROADMAP</h2>
               <h4>Short-term</h4>
             </Fade>
-            {screenWidth > 1300 &&
-              <div className="points" ref={pointsMap}>
-                <div className="line-wrap">
-                  <div className="line" ref={line}></div>
-                </div>
-                <Fade left>
+            <div className="points" ref={screenWidth > 1300 ? pointsMap : null}>
+              {screenWidth > 1300 &&
+                <>
+                  <div className="line-wrap">
+                    <div className="line" ref={line}></div>
+                  </div>
+                  <Fade left>
+                    <div className="point">
+                      <h3><span>20%</span> FAPP is everywhere!</h3>
+                      <img src={roadmap1} alt="roadmap first image" />
+                      <p>
+                        We will invest our funds in marketing. Everybody should know that we are great!
+                      </p>
+                    </div>
+                  </Fade>
+                  <Fade right>
+                    <div className="point right">
+                      <h3><span>40%</span> Charity time!</h3>
+                      <img src={roadmap2} alt="roadmap second image" />
+                      <p>
+                        FAPP will make a donation to the AIDS Foundation.
+                      </p>
+                    </div>
+                  </Fade>
+                  <Fade left>
+                    <div className="point">
+                      <h3><span>60%</span> How rare is your Phallus?</h3>
+                      <img src={roadmap3} alt="roadmap third image" />
+                      <p>
+                        FAPP will be added to «<a href="https://rarity.tools/">rarity.tools</a>».
+                      </p>
+                    </div>
+                  </Fade>
+                  <Fade right>
+                    <div className="point right">
+                      <h3><span>80%</span> #FAPP merch store!</h3>
+                      <img src={roadmap4} alt="roadmap fourth image" />
+                      <p>
+                        Our official FAPP nft merch store will be unlocked for collectors.
+                      </p>
+                    </div>
+                  </Fade>
+                  <Fade left>
+                    <div className="point">
+                      <h3><span>90%</span> Phalluses need friends!</h3>
+                      <img src={roadmap5} alt="roadmap fifth image" />
+                      <p>We will drop new NFT collectible.</p>
+                      <p>Every collector will be able to mint one free companion for a Phallus. Just pay GAS fee.</p>
+                    </div>
+                  </Fade>
+                  <Fade right>
+                    <div className="point right">
+                      <h3><span>100%</span> Elections on FAPP</h3>
+                      <img src={roadmap6} alt="roadmap sixth image" />
+                      <p>Video game? Web series? Or maybe something new and crazy? All phalluses will vote for the future of FAPP!</p>
+                    </div>
+                  </Fade>
+                </>
+              }
+              {screenWidth <= 1300 &&
+                <>
                   <div className="point">
                     <h3><span>20%</span> FAPP is everywhere!</h3>
                     <img src={roadmap1} alt="roadmap first image" />
@@ -325,17 +382,13 @@ const IndexPage = () => {
                       We will invest our funds in marketing. Everybody should know that we are great!
                     </p>
                   </div>
-                </Fade>
-                <Fade right>
-                  <div className="point right">
+                  <div className="point">
                     <h3><span>40%</span> Charity time!</h3>
                     <img src={roadmap2} alt="roadmap second image" />
                     <p>
                       FAPP will make a donation to the AIDS Foundation.
                     </p>
                   </div>
-                </Fade>
-                <Fade left>
                   <div className="point">
                     <h3><span>60%</span> How rare is your Phallus?</h3>
                     <img src={roadmap3} alt="roadmap third image" />
@@ -343,75 +396,27 @@ const IndexPage = () => {
                       FAPP will be added to «<a href="https://rarity.tools/">rarity.tools</a>».
                     </p>
                   </div>
-                </Fade>
-                <Fade right>
-                  <div className="point right">
+                  <div className="point">
                     <h3><span>80%</span> #FAPP merch store!</h3>
                     <img src={roadmap4} alt="roadmap fourth image" />
                     <p>
                       Our official FAPP nft merch store will be unlocked for collectors.
                     </p>
                   </div>
-                </Fade>
-                <Fade left>
                   <div className="point">
                     <h3><span>90%</span> Phalluses need friends!</h3>
                     <img src={roadmap5} alt="roadmap fifth image" />
                     <p>We will drop new NFT collectible.</p>
                     <p>Every collector will be able to mint one free companion for a Phallus. Just pay GAS fee.</p>
                   </div>
-                </Fade>
-                <Fade right>
-                  <div className="point right">
+                  <div className="point">
                     <h3><span>100%</span> Elections on FAPP</h3>
                     <img src={roadmap6} alt="roadmap sixth image" />
                     <p>Video game? Web series? Or maybe something new and crazy? All phalluses will vote for the future of FAPP!</p>
                   </div>
-                </Fade>
-              </div>
-            }
-            {screenWidth <= 1300 &&
-              <div className="points">
-                <div className="point">
-                  <h3><span>20%</span> FAPP is everywhere!</h3>
-                  <img src={roadmap1} alt="roadmap first image" />
-                  <p>
-                    We will invest our funds in marketing. Everybody should know that we are great!
-                  </p>
-                </div>
-                <div className="point">
-                  <h3><span>40%</span> Charity time!</h3>
-                  <img src={roadmap2} alt="roadmap second image" />
-                  <p>
-                    FAPP will make a donation to the AIDS Foundation.
-                  </p>
-                </div>
-                <div className="point">
-                  <h3><span>60%</span> How rare is your Phallus?</h3>
-                  <img src={roadmap3} alt="roadmap third image" />
-                  <p>
-                    FAPP will be added to «<a href="https://rarity.tools/">rarity.tools</a>».
-                  </p>
-                </div>
-                <div className="point">
-                  <h3><span>80%</span> #FAPP merch store!</h3>
-                  <img src={roadmap4} alt="roadmap fourth image" />
-                  <p>
-                    Our official FAPP nft merch store will be unlocked for collectors.
-                  </p>
-                </div>
-                <div className="point">
-                  <h3><span>90%</span> Phalluses need friends!</h3>
-                  <img src={roadmap5} alt="roadmap fifth image" />
-                  <p>We will drop new NFT collectible.</p>
-                  <p>Every collector will be able to mint one free companion for a Phallus. Just pay GAS fee.</p>
-                </div>
-                <div className="point">
-                  <h3><span>100%</span> Elections on FAPP</h3>
-                  <img src={roadmap6} alt="roadmap sixth image" />
-                  <p>Video game? Web series? Or maybe something new and crazy? All phalluses will vote for the future of FAPP!</p>
-                </div>
-              </div>}
+                </>
+              }
+            </div>
             <div>
               <h4>Long-term</h4>
               <p>We don’t think that anybody can predict the future of FAPP.
