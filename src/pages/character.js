@@ -38,7 +38,7 @@ const Character = ({ location }) => {
           <ul>
             <li className="detail">Birthday
               <span className="points"></span>
-              <span className="value">{filters.bday}</span>
+              <span className="value">{filters?.bday}</span>
             </li>
             <li className="detail">Traits
               <span className="points"></span>
