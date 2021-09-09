@@ -1,4 +1,4 @@
-import * as React from "react"
+import React, { useState, useRef } from "react"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -7,23 +7,25 @@ import './character.scss'
 
 const Character = ({ location }) => {
   const isBrowser = typeof window !== "undefined"
-  let name, id, src, filters;
+
+  let name, id, filters;
+  let src = location.state ? location.state.src :
+    (window.localStorage.getItem("details") && JSON.parse(window.localStorage.getItem("details")).src);
   if (isBrowser) {
     if (location.state) {
       name = location.state.name;
       id = location.state.id;
-      src = location.state.src;
       filters = location.state.filters;
-
+      
       window.localStorage.setItem("details", JSON.stringify({ name, id, src, filters }));
     }
     else if (window.localStorage.getItem("details")) {
       let detObj = JSON.parse(window.localStorage.getItem("details"));
+      
       name = detObj.name;
       id = detObj.id;
-      src = detObj.src;
       filters = detObj.filters;
-    } 
+    }
   }
 
   return (
