@@ -56,7 +56,7 @@ h2.filterH2 {
         background-color: #706f6f;
         border-radius   : 50px;
       }
-
+      
       span.__filter-title {
         display        : flex;
         align-items    : center;
@@ -150,7 +150,7 @@ h2.filterH2 {
 
     .filters-wrap {
       max-height: 0;
-      overflow-y  : scroll;
+      overflow-y  : hidden;
       background: #0a0e16;
       transition: .5s linear;
 
@@ -159,8 +159,7 @@ h2.filterH2 {
         margin          : 20px 3% 0 3%;
         background-color: transparent;
         .filters-list {
-          max-height    : inherit;
-          overflow-y    : auto;
+          
           padding-bottom: 20px;
           margin-right  : 10px;
         }
@@ -178,7 +177,7 @@ h2.filterH2 {
     }
 
     .opened {
-      max-height: 1000px;
+      max-height: 3500px;
     }
   }
 }
