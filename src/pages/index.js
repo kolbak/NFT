@@ -45,16 +45,16 @@ const IndexPage = () => {
   const isBrowser = typeof window !== "undefined"
 
   let [screenWidth, setScreenWidth] = useState(null);
-  
+
   const pointsMap = useRef(null);
   const line = useRef(null);
   useEffect(() => {
     if (isBrowser) {
-    setScreenWidth(window.innerWidth);
-    window.addEventListener("resize", resizeInIndex);
-    function resizeInIndex() {
       setScreenWidth(window.innerWidth);
-    }
+      window.addEventListener("resize", resizeInIndex);
+      function resizeInIndex() {
+        setScreenWidth(window.innerWidth);
+      }
 
       //? scrolling roadmap
       window.addEventListener('scroll', lineScroll);
@@ -97,6 +97,16 @@ const IndexPage = () => {
       };
     }
   }, []);
+
+  //? скрол по more
+  const blockFaq = useRef(null);
+  function scrollTo() {
+    let shift = blockFaq.current.getBoundingClientRect().y;
+    window.scrollTo({
+      top: shift - 20,
+      behavior: 'smooth',
+    });
+  }
 
   //? фальшивые данные
   let dummyDataArray = []
@@ -161,16 +171,6 @@ const IndexPage = () => {
       </AccordionItem>
     )
   }
-  function ButtonCustom({ children, className }) {
-    return (
-      <Box
-        className={className}
-        as="button"
-      >
-        {children}
-      </Box>
-    )
-  }
 
   return (
     <Layout>
@@ -182,9 +182,9 @@ const IndexPage = () => {
             <h1>FAMILY PHALLUS PLANET<br />FAPP</h1>
             <p>The NFT planet where every Phallus is unique and free!</p>
           </div>
-          <ButtonCustom className="nav-btn">
+          <button onClick={scrollTo} className="nav-btn">
             <span>MORE</span>
-          </ButtonCustom>
+          </button>
           <div className="links">
             <a href="https://www.youtube.com/channel/UCch3zZDZ9ubRlhSFbknDUog"><img src={yt} alt="youtube" /></a>
             <a href="https://opensea.io/collection/fapp"><img src={opensea} alt="opensea" /></a>
@@ -425,7 +425,7 @@ const IndexPage = () => {
               </p>
             </div>
           </div>
-          <div id="content-block-faq" className="content-block faq">
+          <div id="content-block-faq" className="content-block faq" ref={blockFaq}>
             <Fade bottom>
               <h2>FAQ</h2>
               <Accordion className="accordion" allowMultiple allowToggle>
