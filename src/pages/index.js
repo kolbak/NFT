@@ -99,9 +99,9 @@ const IndexPage = () => {
   }, []);
 
   //? скрол по more
-  const blockFaq = useRef(null);
+  const blockCarousel = useRef(null);
   function scrollTo() {
-    let shift = blockFaq.current.getBoundingClientRect().y;
+    let shift = blockCarousel.current.getBoundingClientRect().y;
     window.scrollTo({
       top: shift - 20,
       behavior: 'smooth',
@@ -195,7 +195,7 @@ const IndexPage = () => {
         </div>
       </div>
       <div className="index-wrap-content">
-        <div className="carousel-wrap">
+        <div className="carousel-wrap" ref={blockCarousel}>
           <Carousel data={data} className="carousel" />
           <Link className="toGallery" to="/gallery">
             <ButtonCustomGallery className="_btn">
@@ -425,7 +425,7 @@ const IndexPage = () => {
               </p>
             </div>
           </div>
-          <div id="content-block-faq" className="content-block faq" ref={blockFaq}>
+          <div id="content-block-faq" className="content-block faq">
             <Fade bottom>
               <h2>FAQ</h2>
               <Accordion className="accordion" allowMultiple allowToggle>
