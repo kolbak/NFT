@@ -555,8 +555,8 @@ const IndexPage = () => {
                   <a href="https://opensea.io/collection/fapp">OpenSea</a><br />
                   <a href="https://familyphallusplanet.com/">Website</a><br />
                   <a href="https://bubbleron.com/familyphallusplanet">Bubbleron</a><br />
-                  <a href="https://www.youtube.com/channel/UCch3zZDZ9ubRlhSFbknDUog">Youtube</a>
-                  <a href="https://discord.gg/zFjWr4wUwH">Discord</a>
+                  <a href="https://www.youtube.com/channel/UCch3zZDZ9ubRlhSFbknDUog">Youtube</a><br />
+                  <a href="https://discord.gg/zFjWr4wUwH">Discord</a><br />
                 </AccordionItemCustom>
               </Accordion>
             </Fade>
