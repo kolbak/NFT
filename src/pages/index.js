@@ -16,7 +16,23 @@ import Carousel from "../components/carousel"
 
 import "./index.scss"
 
-import characterEx from "../images/character-ex.png"
+import characterEx1 from "../images/1.png"
+import characterEx2 from "../images/2.png"
+import characterEx3 from "../images/3.png"
+import characterEx4 from "../images/4.png"
+import characterEx5 from "../images/5.png"
+import characterEx6 from "../images/6.png"
+import characterEx7 from "../images/7.png"
+import characterEx8 from "../images/8.png"
+import characterEx9 from "../images/9.png"
+import characterEx10 from "../images/10.png"
+import characterEx11 from "../images/11.png"
+import characterEx12 from "../images/12.png"
+import characterEx13 from "../images/13.png"
+import characterEx14 from "../images/14.png"
+import characterEx15 from "../images/15.png"
+import characterEx16 from "../images/16.png"
+
 import storyline from "../images/storyline.jpeg"
 import roadmap1 from '../images/roadmap1.jpeg';
 import roadmap2 from '../images/roadmap2.jpg';
@@ -109,10 +125,13 @@ const IndexPage = () => {
   }
 
   //? фальшивые данные
-  let dummyDataArray = []
-  for (let i = 0, l = 10; i < l; i++) {
+  let dummyDataArray = [];
+  let imgs = [characterEx1, characterEx2, characterEx3, characterEx4, characterEx5, characterEx6, characterEx7, characterEx8, characterEx9, characterEx10,
+    characterEx11, characterEx12, characterEx13, characterEx14, characterEx15, characterEx16];
+  for (let i = 0, l = 16; i < l; i++) {
     dummyDataArray.push({
-      avatarSRC: characterEx,
+      name: 'chracter' + i,
+      avatarSRC: imgs[i]
     })
   }
   const [data, setData] = useState(dummyDataArray)

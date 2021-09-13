@@ -1,4 +1,4 @@
-$animationSpeed: 20s;
+$animationSpeed: 30s;
 
 // Animation
 @keyframes scroll {
@@ -7,7 +7,7 @@ $animationSpeed: 20s;
 	}
 
 	100% {
-		transform: translateX(calc(-300px * 10))
+		transform: translateX(calc(-300px * 16))
 	}
 }
 
