@@ -23,6 +23,7 @@ const Mint = () => {
     //? проверка на макисмальное кол-во символов
     if (e.target.value.length > +e.target.dataset.maxl) e.target.value = e.target.value.slice(0, e.target.dataset.maxl);
   }
+  // console.log('new ethers :>> ', new ethers.providers.JsonRpcProvider());
 
   function onConnect() {
 

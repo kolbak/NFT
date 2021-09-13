@@ -12,7 +12,7 @@ const GalleryGrid = ({ data }) => {
       <div className="char-card" key={i}>
         <div className="char-body">
           <figure className="front">
-            <Link to={`/character`} state={{
+            <Link to={`/character/?id=${data[i].id}`} state={{
               name: data[i].name,
               id: data[i].id,
               filters: data[i].filters,
