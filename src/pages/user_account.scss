@@ -3,43 +3,49 @@
   gap    : 15px;
 
   h1 {
-    font-weight: bold;
-    font-size  : 2.5rem;
-    line-height: 2.7rem;
+    font-weight  : bold;
+    font-size    : 2.5rem;
+    line-height  : 2.7rem;
     margin-bottom: 5px;
   }
 
-  .tab-container{
+  .tab-container {
     margin-top: 25px;
-    border: 0;
-    & > *{
+    border    : 0;
+
+    &>* {
       border: 0;
     }
-  .market-container{
-    p{
-      text-align: center;
+
+    .market-container {
+      p {
+        text-align: center;
+      }
     }
   }
-  }
-  .buttons-container{
-    display: flex;
+
+  .buttons-container {
+    display        : flex;
     justify-content: space-around;
-    margin-bottom: 10px;
-    button{
-      justify-self: center;
+    margin-bottom  : 10px;
+
+    button {
+      justify-self    : center;
       height          : 50px;
       width           : max-content;
       word-wrap       : normal;
       padding         : 0 15px;
       border-radius   : 30px;
       background-color: #ff009d;
-      font-family: 'Amatic SC', cursive;
-      font-size: 30px;
+      font-family     : 'Amatic SC', cursive;
+      font-size       : 30px;
     }
-    .merch-store-button{
+
+    .merch-store-button {
       background-color: #00c4c4;
     }
   }
+
   .bought {
     display              : grid;
     grid-template-columns: repeat(3, 1fr);
@@ -47,26 +53,30 @@
     gap                  : 20px;
 
     .item {
-      margin: 0 15px;
+      margin    : 0 15px;
       box-shadow: 6px 6px 6px 5px rgba(105, 131, 153, 0.52);
     }
   }
+
   @media screen and (max-width: 1450px) {
     .bought {
       grid-template-columns: repeat(2, 1fr);
     }
   }
-  @media screen  and (max-width: 850px){
-    .buttons-container{
+
+  @media screen and (max-width: 850px) {
+    .buttons-container {
       flex-direction: column;
-      align-items: center;
-      .phalluses-button{
+      align-items   : center;
+
+      .phalluses-button {
         margin-bottom: 20px;
       }
     }
   }
+
   @media screen and (max-width: 650px) {
-    .bought{
+    .bought {
       grid-template-columns: 1fr;
     }
   }
