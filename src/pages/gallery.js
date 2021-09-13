@@ -40,7 +40,8 @@ const Gallery = () => {
       },
     })
   }
-  const [data, setData] = useState(arrData)
+  const [data, setData] = useState(arrData);
+
   const btnShowMore = useRef(null)
   function addCharacter() {
     btnShowMore.current.setAttribute("disabled", true)
