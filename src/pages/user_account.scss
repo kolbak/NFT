@@ -1,12 +1,45 @@
 .gen-wrap.user-acc {
   display: grid;
-  gap    : 30px;
+  gap    : 15px;
 
   h1 {
     font-weight: bold;
     font-size  : 2.5rem;
+    line-height: 2.7rem;
+    margin-bottom: 5px;
   }
 
+  .tab-container{
+    margin-top: 25px;
+    border: 0;
+    & > *{
+      border: 0;
+    }
+  .market-container{
+    p{
+      text-align: center;
+    }
+  }
+  }
+  .buttons-container{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+    button{
+      justify-self: center;
+      height          : 50px;
+      width           : max-content;
+      word-wrap       : normal;
+      padding         : 0 15px;
+      border-radius   : 30px;
+      background-color: #ff009d;
+      font-family: 'Amatic SC', cursive;
+      font-size: 30px;
+    }
+    .merch-store-button{
+      background-color: #00c4c4;
+    }
+  }
   .bought {
     display              : grid;
     grid-template-columns: repeat(3, 1fr);
@@ -21,6 +54,15 @@
   @media screen and (max-width: 1450px) {
     .bought {
       grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media screen  and (max-width: 850px){
+    .buttons-container{
+      flex-direction: column;
+      align-items: center;
+      .phalluses-button{
+        margin-bottom: 20px;
+      }
     }
   }
   @media screen and (max-width: 650px) {
