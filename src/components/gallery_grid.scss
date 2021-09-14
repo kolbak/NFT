@@ -1,24 +1,17 @@
 .char-card {
-  height: 300px;
-
   .char-body {
-    height  : 100%;
     position: relative;
 
     .front {
-      height    : 100%;
-
       a.char-link {
         span {
           pointer-events: none;
-          position      : absolute;
-          z-index       : 1;
-          top           : 15px;
-          left          : 15px;
+
+          font-family: 'Amatic SC', cursive;
+          font-size  : 30px;
         }
 
         img {
-          height    : 100%;
           margin    : 0;
         }
       }

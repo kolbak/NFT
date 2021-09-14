@@ -55,10 +55,24 @@
         margin-bottom: 30px;
         font-size    : 55px;
         font-weight  : bold;
-        color        : #181c25;
+        color        : white;
       }
     }
 
+  }
+
+  .contacts {
+    .icons {
+      display              : grid;
+      grid-template-columns: repeat(5, 20px);
+      align-self           : center;
+      gap                  : 12px;
+
+      img {
+        width : 20px;
+        height: 20px;
+      }
+    }
   }
 
   @media screen and (max-width: 1400px) {
@@ -82,9 +96,11 @@
 
       .footer-column {
         width: 350px;
-        img{
+
+        img {
           width: 200px !important;
         }
+
         h3 {
           font-size: 75px;
         }

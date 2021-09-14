@@ -1,96 +1,87 @@
-.character-container {
-    display       : flex;
-    flex-direction: row-reverse;
-    padding       : 20px 20px 0 20px;
-}
+.gen-wrap.char {
+  max-width: 40vw !important;
 
-.character-text {
-    width: 50%;
-}
+  display       : flex;
+  flex-direction: column;
 
-.character-image {
-    width     : 46%;
-    margin    : 187px 2% 0 2%;
-    object-fit: fill;
-    height    : 46vw;
-    max-height: 574px;
-    overflow  : hidden;
-}
+  * {
+    font-family: 'Amatic SC', cursive;
+  }
 
-.character-header {
-    font-size    : 45px;
-    font-weight  : bold;
-    margin-bottom: 10px;
-}
+  &>* {
+    margin: 15px 0;
+  }
 
-.OpenSea-link {
+  .name {
+    font-size  : 45px;
+    font-weight: bold;
+  }
+
+  .OpenSea-link,
+  .detail-header {
+    align-self: flex-start;
+  }
+
+  .OpenSea-link {
     border-radius   : 29px;
     background-color: #00bfff;
     white-space     : nowrap;
-    width           : 200px;
+    width           : min-content;
+    padding         : 5px 25px;
     display         : block;
     text-align      : center;
-    margin-bottom   : 10px;
+    font-size       : 30px;
+  }
+
+  .detail-header {
+    font-size: 40px;
+  }
+
+  .avatar {
+    align-self: center;
+    width     : 100%;
+    object-fit: contain;
+    overflow  : hidden;
+  }
+
+  .text {
+    .detail {
+      white-space          : nowrap;
+      display              : grid;
+      grid-template-columns: min-content 1fr min-content;
+      font-size            : 25px;
+      margin-bottom        : 15px;
+
+      .level,
+      .occurs {
+        font-size        : 15px;
+        grid-column-start: 1;
+        grid-column-end  : 3;
+      }
+
+      .level {
+        font-size: 20px;
+      }
+
+      .points {
+        border-bottom: solid 1px white;
+      }
+    }
+
+  }
+
 }
 
-.character-details-header {
-    margin-bottom: 20px;
-    font-size    : 35px;
-    font-size    : 35px;
-    font-weight  : 600;
-}
+@media screen and (max-width: 1100px) {
+  .gen-wrap.char {
+    max-width: 98vw !important;
 
-.character-detail {
-    white-space          : nowrap;
-    display              : grid;
-    grid-template-columns: min-content 1fr min-content;
-    font-size            : 12px;
-    margin-bottom        : 15px;
-}
-
-.character-detail-points {
-    border-bottom: solid 1px white;
-}
-
-.character-detail-occurs {
-    margin-top       : 3px;
-    grid-column-start: 1;
-    grid-column-end  : 3;
-}
-
-@media screen and (max-width: 1000px) {
-    .character-header {
-        font-size: 35px;
+    .text {
+      width: 100%;
     }
 
-    .character-detail {
-        font-size    : 7px;
-        margin-bottom: 13px;
+    .detail {
+      font-size: 10px;
     }
-
-    .character-image {
-        margin-top: 170px;
-        max-height: 395px;
-    }
-}
-
-@media screen and (max-width: 650px) {
-    .character-container {
-        flex-direction: column;
-    }
-
-    .character-image {
-        margin    : 0 0 20px 0;
-        width     : 95%;
-        height    : 95vw;
-        max-height: 95vw;
-    }
-
-    .character-text {
-        width: 95%;
-    }
-
-    .character-detail {
-        font-size: 10px;
-    }
+  }
 }

@@ -1,23 +1,52 @@
-.gen-wrap {
-  h2 {
-    display: inline-block;
+.gen-wrap.mint-wrap {
+  min-height     : 90vh;
+  display        : flex;
+  flex-direction : column;
+  justify-content: center;
+
+  a {
+    color          : rgb(59, 130, 246, );
+    text-decoration: none;
   }
+
   .mint-cnct-wallet {
     justify-self: center;
-    
-    height       : 50px;
-    padding      : 0 15px;
-    border-radius: 30px;
-    background   : rgb(66, 112, 128);
+
+    height          : 50px;
+    width           : max-content;
+    word-wrap       : normal;
+    padding         : 0 15px;
+    border-radius   : 30px;
+    background-color: #ff009d;
+
+    font-family: 'Amatic SC', cursive;
+    font-size: 30px;
   }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 30px;
+
+    p {
+      font-size: 18px;
+    }
+  }
+
   .connect,
   .mint {
-    display              : flex;
+    display        : flex;
     justify-content: space-between;
 
-      padding: 0;
+    padding: 0;
+    margin-top: 80px;
 
-    
+    h2 {
+      font-size: 30px;
+    }
+
   }
 
   .mint {
@@ -34,31 +63,88 @@
         }
       }
 
-      input{
+      input {
         width: 210px;
       }
 
-      label{
+      label {
         margin-bottom: 5px;
       }
     }
   }
+
   .terms-container {
-    display: flex;
+    display       : flex;
     flex-direction: column;
-    button{
-      margin: 0 auto 20px auto;
-      width: 210px;
+
+    button {
+      margin          : 0 auto 20px auto;
+      width           : 210px;
+      background-color: #00c4c4;
     }
   }
 
   .agreement {
-    opacity: .7;
+    opacity   : .7;
     text-align: center;
-    font-size: 12px;
-    a{
-      color: rgb(59,130,246,);
-      text-decoration: underline;
+    font-size : 12px;
+  }
+
+  @media screen and (max-width: 850px) {
+    h1 {
+      text-align: center;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    .mint,
+    .connect {
+      flex-direction: column;
+
+      h2 {
+        margin-bottom: 7px;
+      }
+
+      p {
+        text-align: center;
+      }
+
+      button {
+        margin-top: 20px;
+        width     : 260px;
+        align-self: center;
+      }
+
+      .form {
+        width: 260px;
+
+        .chakra-form__label {
+          text-align: center;
+        }
+
+        .chakra-input {
+          width: 260px;
+        }
+      }
+
+      form {
+        div {
+          margin-top: 20px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          label{
+            margin-right: 0;
+          }
+        }
+
+      }
+
+      .form {
+        align-self: center;
+      }
     }
   }
 }

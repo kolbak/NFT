@@ -4,19 +4,25 @@
   height      : 100%;
   width       : 100%;
 
-  display              : grid;
-  grid-template-columns: 1fr 1.5fr;
+  display        : flex;
+  justify-content: space-between;
 
   .logo {
-    align-self: center;
-    display   : inline-block;
-    width     : 150px;
-    height    : 70px;
+    align-self : center;
+    width      : 150px;
+    flex-shrink: 0;
+
+    @media (max-width: 500px){
+      width: 100px;
+    }
+
+    img {
+      width: 150px;
+    }
   }
 
   .navbar-btns {
     height       : 100%;
-    width        : 100%;
     border-radius: 5px;
 
     display: flex;
@@ -54,45 +60,39 @@
   }
 }
 
-@media (max-width: 1140px) {
-  .navbar-wrap {
-    display              : flex;
-    grid-template-columns: none;
-    justify-content      : space-between;
+.menu-wrap {
+  align-self: center;
 
-    .menu-wrap {
-      align-self: center;
+  .menu-list {
+    display       : flex;
+    flex-direction: column;
+    align-items   : start;
+    padding       : 0 7vw 0 0;
+    position      : absolute;
+    top           : 10vh;
+    left          : 0px;
+    z-index       : 2;
 
-      .menu-list {
-        display       : flex;
-        flex-direction: column;
-        align-items   : start;
-        padding: 0 7vw 0 0;
-        position      : absolute;
-        top           : 10vh;
-        left          : 0px;
-        z-index       : 2;
-        
-        width         : 100vw;
-        max-height        : 1px;
-        transition: .5s;
-        overflow-y: hidden;
-        background    : rgba(19, 24, 38) 80%;
+    width     : 100vw;
+    max-height: 1px;
+    transition: .5s;
+    overflow-y: hidden;
+    background: rgba(19, 24, 38) 80%;
 
-        button {
-          width: 100%;
-          
-          a {
-            display      : block;
-            width        : 100%;
-            height       : 100%;
-            text-align: end;
-          }
-        }
-      }
-      .menu-list.expanded{
-        max-height: 600px;
+    button {
+      width: 100%;
+
+      a {
+        display    : block;
+        width      : 100%;
+        height     : 100%;
+        text-align : end;
+        font-weight: 400;
       }
     }
+  }
+
+  .menu-list.expanded {
+    max-height: 600px;
   }
 }

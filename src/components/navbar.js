@@ -1,42 +1,22 @@
-import React, { useState, useRef } from "react"
+import React, { useState, useRef, useEffect } from "react"
 import { Link } from "gatsby"
 import {
   Box,
   Button,
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  MenuItemOption,
-  MenuGroup,
-  MenuOptionGroup,
-  MenuIcon,
-  MenuCommand,
-  MenuDivider,
-
-  Fade,
-  ScaleFade,
-  Slide,
-  SlideFade,
-  Collapse,
-
-  useDisclosure,
 } from "@chakra-ui/react"
 import { HamburgerIcon } from '@chakra-ui/icons'
 
 import './navbar.scss'
 
 import logo from '../images/logo.svg'
-import summerHolidays from '../images/summer-holidays.svg'
 
 const Navbar = () => {
   const isBrowser = typeof window !== "undefined"
 
-  let [screenWidth, setScreenWidth] = useState(isBrowser && window.screen.width);
-  if (isBrowser) {
-    window.addEventListener('resize', () => {
-      setScreenWidth(window.screen.width)
-    })
+  let [screenWidth, setScreenWidth] = useState(isBrowser && window.innerWidth);
+  isBrowser && window.addEventListener("resize", resizeInNavbar);
+  function resizeInNavbar() {
+    setScreenWidth(isBrowser && window.innerWidth);
   }
 
   function ButtonCustom({ children, className }) {
@@ -83,88 +63,42 @@ const Navbar = () => {
   return (
     <nav className="navbar-wrap">
       <Link className="logo" to="/">
-        <img className="navbar-logo" src={logo} />
+        <img src={logo} alt="logo" />
       </Link>
-      {screenWidth > 1140 &&
-        <div className="navbar-btns">
-          <ButtonCustom><Link onClick={scroll} to="/?id=content-block-storyline">Storyline</Link></ButtonCustom>
-          <ButtonCustom><Link onClick={scroll} to="/?id=content-block-nft">NFT</Link></ButtonCustom>
-          <ButtonCustom><Link to="/gallery">Gallery</Link></ButtonCustom>
-          <ButtonCustom><Link onClick={scroll} to="/?id=content-block-roadmap">Roadmap</Link></ButtonCustom>
-          <ButtonCustom><Link to="/FAQ">FAQs</Link></ButtonCustom>
-          <ButtonCustom><Link onClick={scroll} to="/?id=contacts">Contacts</Link></ButtonCustom>
-          <ButtonCustom className="withBg"><Link to="/mint">Mint</Link></ButtonCustom>
-          <ButtonCustom className="withBg user"><Link to="/user_account">#FAPP</Link></ButtonCustom>
-        </div>
-      }
-      {screenWidth <= 1140 &&
-        <>
+      <div className="navbar-btns">
+        {screenWidth > 1200 &&
+          <>
+            <ButtonCustom><Link onClick={scroll} to="/?id=content-block-storyline">Storyline</Link></ButtonCustom>
+            <ButtonCustom><Link onClick={scroll} to="/?id=content-block-nft">NFT</Link></ButtonCustom>
+            <ButtonCustom><Link to="/gallery">Gallery</Link></ButtonCustom>
+            <ButtonCustom><Link onClick={scroll} to="/?id=content-block-roadmap">Roadmap</Link></ButtonCustom>
+            <ButtonCustom><Link onClick={scroll} to="/?id=content-block-faq">FAQs</Link></ButtonCustom>
+            <ButtonCustom><Link onClick={scroll} to="/?id=contacts">Contacts</Link></ButtonCustom>
+            <ButtonCustom className="withBg"><Link to="/mint">Mint</Link></ButtonCustom>
+            <ButtonCustom className="withBg"><Link to="/user_account">#FAPP</Link></ButtonCustom>
+          </>
+        }
+        {screenWidth <= 1200 &&
           <div className="menu-wrap">
             <Button className="menu-btn" onClick={onToggle}
-              bg="rgb(0, 196, 196)"
-              _focus={{ bg: "rgb(0, 196, 196)", }}
-              _active={{ bg: "rgb(0, 196, 196)", }}
-              _hover={{ bg: "rgb(0, 196, 196)", }}
-            ><HamburgerIcon /></Button>
+              bg="transparent"
+              _focus={{ bg: "transparent", }}
+              _active={{ bg: "transparent", }}
+              _hover={{ bg: "transparent", }}
+            ><HamburgerIcon color="white" /></Button>
             <Box ref={menuList} className="menu-list">
               <ButtonCustom><Link onClick={scroll} to="/?id=content-block-storyline">Storyline</Link></ButtonCustom>
               <ButtonCustom><Link onClick={scroll} to="/?id=content-block-nft">NFT</Link></ButtonCustom>
               <ButtonCustom><Link to="/gallery">Gallery</Link></ButtonCustom>
               <ButtonCustom><Link onClick={scroll} to="/?id=content-block-roadmap">Roadmap</Link></ButtonCustom>
-              <ButtonCustom><Link to="/FAQ">FAQs</Link></ButtonCustom>
+              <ButtonCustom><Link onClick={scroll} to="/?id=content-block-faq">FAQs</Link></ButtonCustom>
               <ButtonCustom><Link onClick={scroll} to="/?id=contacts">Contacts</Link></ButtonCustom>
-              <ButtonCustom className="withBg"><Link to="/mint">Mint</Link></ButtonCustom>
-              <ButtonCustom className="withBg user"><Link to="/user_account">#FAPP</Link></ButtonCustom>
+              <ButtonCustom><Link to="/mint">Mint</Link></ButtonCustom>
+              <ButtonCustom><Link to="/user_account">#FAPP</Link></ButtonCustom>
             </Box>
-            {/* <Collapse className="collapse" in={isOpen} animateOpacity>
-              <Box className="menu-list">
-                <ButtonCustom><Link onClick={scroll} to="/?id=content-block-storyline">Storyline</Link></ButtonCustom>
-                <ButtonCustom><Link onClick={scroll} to="/?id=content-block-nft">NFT</Link></ButtonCustom>
-                <ButtonCustom><Link to="/gallery">Gallery</Link></ButtonCustom>
-                <ButtonCustom><Link onClick={scroll} to="/?id=content-block-roadmap">Roadmap</Link></ButtonCustom>
-                <ButtonCustom><Link to="/FAQ">FAQs</Link></ButtonCustom>
-                <ButtonCustom><Link onClick={scroll} to="/?id=contacts">Contacts</Link></ButtonCustom>
-                <ButtonCustom className="withBg"><Link to="/mint">Mint</Link></ButtonCustom>
-                <ButtonCustom className="withBg user"><Link to="/user_account">#FAPP</Link></ButtonCustom>
-              </Box>
-            </Collapse> */}
           </div>
-          {/* <Menu> */}
-          {/* <MenuButton className="menu" as={Button}
-              bg="rgb(0, 196, 196)"
-              _focus={{ bg: "rgb(0, 196, 196)", }}
-              _active={{ bg: "rgb(0, 196, 196)", }}
-              _hover={{ bg: "rgb(0, 196, 196)", }}
-            ><HamburgerIcon /></MenuButton> */}
-          {/* <MenuList className="menu-list">
-              <MenuItem className="menu-item">
-                <ButtonCustom><Link onClick={scroll} to="/?id=content-block-storyline">Storyline</Link></ButtonCustom>
-              </MenuItem>
-              <MenuItem className="menu-item">
-                <ButtonCustom><Link onClick={scroll} to="/?id=content-block-nft">NFT</Link></ButtonCustom>
-              </MenuItem>
-              <MenuItem className="menu-item">
-                <ButtonCustom><Link to="/gallery">Gallery</Link></ButtonCustom>
-              </MenuItem>
-              <MenuItem className="menu-item">
-                <ButtonCustom><Link onClick={scroll} to="/?id=content-block-roadmap">Roadmap</Link></ButtonCustom>
-              </MenuItem>
-              <MenuItem className="menu-item">
-                <ButtonCustom><Link to="/FAQ">FAQs</Link></ButtonCustom>
-              </MenuItem>
-              <MenuItem className="menu-item">
-                <ButtonCustom><Link onClick={scroll} to="/?id=contacts">Contacts</Link></ButtonCustom>
-              </MenuItem>
-              <MenuItem className="menu-item">
-                <ButtonCustom className="withBg"><Link to="/mint">Mint</Link></ButtonCustom>
-              </MenuItem>
-              <MenuItem className="menu-item">
-                <ButtonCustom className="withBg user"><Link to="/user_account">#FAPP</Link></ButtonCustom>
-              </MenuItem>
-            </MenuList> */}
-          {/* </Menu> */}
-        </>
-      }
+        }
+      </div>
     </nav>
   )
 }
