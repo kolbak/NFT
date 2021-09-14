@@ -28,9 +28,9 @@ const UserAccount = () => {
   const [data, setData] = useState(arrData);
 
   function onConnect() {
-    alert('Hello');
+
   }
-  
+
   return (
     <Layout>
       <Seo title="Account" />
@@ -39,30 +39,26 @@ const UserAccount = () => {
         <h2>An exclusive member-only area where you can buy #FAPP merch and view your NFTs</h2>
         {connectedWallet === true ? (
           <>
-              {tokentAmount !== 0 ? (
+            {tokentAmount !== 0 ? (
               <>
-               
-                  {/* <button className="phalluses-button">Your Phalluses</button>
-                  <button className="merch-store-button">FAPP Merch Store</button> */}
-                  <Tabs className="tab-container">
-                    <TabList className="buttons-container">
-                      <Tab _selected={{ color: "white", boxShadow: "0px 0px 0px 2px #ed55b3"}} className="phalluses-button">Your Phalluses</Tab>
-                      <Tab _selected={{ color: "white", boxShadow: "0px 0px 0px 2px #34bdbd"}} className="merch-store-button">FAPP Merch Store</Tab>
-                    </TabList>
-                    <TabPanels>
-                      <TabPanel>
+                <Tabs className="tab-container">
+                  <TabList className="buttons-container">
+                    <Tab _selected={{ color: "white", boxShadow: "0px 0px 0px 2px #ed55b3" }} className="phalluses-button">Your Phalluses</Tab>
+                    <Tab _selected={{ color: "white", boxShadow: "0px 0px 0px 2px #34bdbd" }} className="merch-store-button">FAPP Merch Store</Tab>
+                  </TabList>
+                  <TabPanels>
+                    <TabPanel>
                       <div className="bought">
                         <GalleryGrid data={data} />
                       </div>
-                      </TabPanel>
-                      <TabPanel className="market-container">
-                        <p>FAPP Merch store will be available ASAP.<br />
-                          We are working on this project!<br />
-                          Join our discord server or check our twitter for updates!</p>
-                      </TabPanel>
-                    </TabPanels>
-                  </Tabs> 
-               
+                    </TabPanel>
+                    <TabPanel className="market-container">
+                      <p>FAPP Merch store will be available ASAP.<br />
+                        We are working on this project!<br />
+                        Join our discord server or check our twitter for updates!</p>
+                    </TabPanel>
+                  </TabPanels>
+                </Tabs>
               </>
             ) : (
               <>
