@@ -32,7 +32,7 @@ const Footer = () => (
             <a href="https://twitter.com/FAP_Planet"><img src={twitter} alt="twitter" /></a>
             <a href="https://discord.gg/zFjWr4wUwH"><img src={discord} alt="discord" /></a>
         </div>
-        <span className="mail">SUPPORT@DOMIN.COM</span>
+        <span className="mail">familyphallusplanet@gmail.com</span>
       </div>
     </div>
   </footer>

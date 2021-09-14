@@ -1,17 +1,13 @@
-import React, { useRef } from "react"
-import Web3 from 'web3';
+import React from "react"
+// import Web3 from 'web3';
 
 import { Link } from "gatsby"
 import {
   Box,
   FormControl,
   FormLabel,
-  Input,
   NumberInput,
   NumberInputField,
-  NumberInputStepper,
-  NumberIncrementStepper,
-  NumberDecrementStepper,
 } from "@chakra-ui/react"
 
 import Layout from "../components/layout"
