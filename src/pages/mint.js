@@ -1,5 +1,6 @@
 import React, { useRef } from "react"
-// import { ethers } from "ethers";
+import Web3 from 'web3';
+
 import { Link } from "gatsby"
 import {
   Box,
@@ -19,14 +20,15 @@ import Seo from "../components/seo"
 import './mint.scss'
 
 const Mint = () => {
+  const isBrowser = typeof window !== "undefined"
+
   function onInput(e) {
     //? проверка на макисмальное кол-во символов
     if (e.target.value.length > +e.target.dataset.maxl) e.target.value = e.target.value.slice(0, e.target.dataset.maxl);
   }
-  // console.log('new ethers :>> ', new ethers.providers.JsonRpcProvider());
 
   function onConnect() {
-
+    
   }
 
   return (
