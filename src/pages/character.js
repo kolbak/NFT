@@ -12,32 +12,37 @@ const Character = ({ location }) => {
   let name, id, filters;
   let src;
   if (isBrowser) {
-    console.log('location :>> ', new URL(location.href).searchParams.get('id'));
-    if(new URL(location.href).searchParams.get('id')) {
+    if (new URL(location.href).searchParams.get('id')) {
       //? запрос
       // .......
-      
+      src = char;
+      name = `Character ${new URL(location.href).searchParams.get('id')}`;
+      id = new URL(location.href).searchParams.get('id');
+      filters = {
+        bday: new Intl.DateTimeFormat("en-US").format(new Date()),
+      };
       // .......      
 
-    } else {
+    } 
+    // else {
       src = location.state ? location.state.src :
         (window.localStorage.getItem("details") && JSON.parse(window.localStorage.getItem("details")).src);
-        
+
       if (location.state) {
         name = location.state.name;
         id = location.state.id;
         filters = location.state.filters;
-  
+
         window.localStorage.setItem("details", JSON.stringify({ name, id, src, filters }));
       }
       else if (window.localStorage.getItem("details")) {
         let detObj = JSON.parse(window.localStorage.getItem("details"));
-  
+
         name = detObj.name;
         id = detObj.id;
         filters = detObj.filters;
       }
-    }
+    // }
   }
 
   return (
