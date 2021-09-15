@@ -11,8 +11,8 @@ import './user_account.scss'
 
 const UserAccount = () => {
   // backend dummy data
-  const tokentAmount = 2;
-  const connectedWallet = true;
+  const [tokenAmount, setTokenAmount] = useState(0)
+  const [connectedWallet, setConnectedWallet] = useState(false)
   //? data bought
   let arrData = [];
   for (let i = 0; i < 4; i++) {
@@ -28,9 +28,8 @@ const UserAccount = () => {
   const [data, setData] = useState(arrData);
 
   function onConnect() {
-
+    setConnectedWallet(true);
   }
-
   return (
     <Layout>
       <Seo title="Account" />
@@ -39,7 +38,7 @@ const UserAccount = () => {
         <h2>An exclusive member-only area where you can buy #FAPP merch and view your NFTs</h2>
         {connectedWallet === true ? (
           <>
-            {tokentAmount !== 0 ? (
+            {tokenAmount !== 0 ? (
               <>
                 <Tabs className="tab-container">
                   <TabList className="buttons-container">
@@ -62,7 +61,7 @@ const UserAccount = () => {
               </>
             ) : (
               <>
-                <p>No #FAPP Phalluses are found in this wallet 🙁<b />
+                <p className="zero-token-msg">No #FAPP Phalluses are found in this wallet 🙁<br />
                   You need at least one Phallus to view this page!</p>
               </>
             )}

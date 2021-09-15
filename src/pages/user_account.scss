@@ -86,10 +86,13 @@
   }
 
   .user-account.cnct-wallet {
-    justify-self: center;
-
+    justify-self : center;
+    margin-top   : 20px;
     padding      : 15px;
     border-radius: 30px;
-    background   : rgb(66, 112, 128);
+    background   : #ff009d;
+  }
+  .zero-token-msg{
+    margin-top: 10px;
   }
 }
