@@ -11,11 +11,11 @@ import './user_account.scss'
 
 const UserAccount = () => {
   // backend dummy data
-  const [tokenAmount, setTokenAmount] = useState(0)
+  const [tokenAmount, setTokenAmount] = useState(2)
   const [connectedWallet, setConnectedWallet] = useState(false)
   //? data bought
   let arrData = [];
-  for (let i = 0; i < 4; i++) {
+  for (let i = 0; i < 1; i++) {
     arrData.push({
       name: `Character ${i + 1}`,
       id: i + 1,
