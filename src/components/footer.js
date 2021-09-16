@@ -21,7 +21,7 @@ const Footer = () => (
           src={logo}
         ></Box>
         <hr />
-        <span>SUBJECT OF COPYRIGHT © 2021</span>
+        <span>Copyright © 2021 Family Phallus Planet - FAPP.<br /> All rights reserved.</span>
       </div>
       <div className="contacts footer-column">
         <h3>CONTACTS</h3>
@@ -32,7 +32,7 @@ const Footer = () => (
             <a href="https://twitter.com/FAP_Planet"><img src={twitter} alt="twitter" /></a>
             <a href="https://discord.gg/zFjWr4wUwH"><img src={discord} alt="discord" /></a>
         </div>
-        <span className="mail">familyphallusplanet@gmail.com</span>
+        <span><a className="mail" href="mailto:familyphallusplanet@gmail.com">familyphallusplanet@gmail.com</a></span>
       </div>
     </div>
   </footer>
