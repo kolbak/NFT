@@ -1,16 +1,29 @@
-$animationSpeed: 30s;
+$animationSpeed: 10s;
 
 // Animation
-@keyframes scroll {
-	0% {
-		transform: translateX(0);
+@-webkit-keyframes scroll {
+	from {
+		-webkit-transform: translateX(0);
+		        transform: translateX(0);
 	}
 
-	100% {
-		transform: translateX(calc(-300px * 16))
+	to {
+		-webkit-transform: translateX(calc(-300px * 16));
+		        transform: translateX(calc(-300px * 16))
 	}
 }
 
+@keyframes scroll {
+	from {
+		-webkit-transform: translateX(0);
+		        transform: translateX(0);
+	}
+
+	to {
+		-webkit-transform: translateX(calc(-300px * 16));
+		        transform: translateX(calc(-300px * 16))
+	}
+}
 // Styling
 .slider {
 	background      : transparent;
@@ -20,7 +33,17 @@ $animationSpeed: 30s;
 	width           : 100%;
 
 	.slide-track {
-		animation   : scroll $animationSpeed linear infinite;
+		// animation   : scroll $animationSpeed linear infinite;
+		-webkit-animation-name: scroll;
+		-webkit-animation-duration: $animationSpeed;
+		-webkit-animation-timing-function: linear;
+		-webkit-animation-iteration-count: infinite;
+		animation-name: scroll;
+		animation-duration: $animationSpeed;
+		animation-timing-function: linear;
+		animation-iteration-count: infinite;
+		
+
 		display     : flex;
 		// width    : calc(300px * 20);
 		width       : calc(100vw);
