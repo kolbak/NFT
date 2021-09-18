@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -29,23 +30,25 @@ const MintPass = () => {
           {screenWidth > 1300 &&
             <>
               <div className="text">
-                <p>#FAPP mint-pass gives you pre-sale access that lets you buy up to 7 #FAPP loot-boxes before the public sale.</p>
-                <p>Pre-sale access allows you to reduce the cost of ETH GAS fee and gives you the guaranteed right to buy #FAPP nft.</p>
+                <p>#FAPP Comic Book | FAPP-CB is a collection of 500 tradable mint-pass NFT comic books.</p>
+                <p>FAPP-CB gives you pre-sale access that lets you get access to exclusive raffles, buy up to 7 #FAPP loot-boxes before the public sale and avoid GAS war (very expensive ETH GAS fees).</p>
                 <div className="btns">
                   <button onClick={onConnect} className="cnct-wallet">Connect your wallet</button>
                   <button onClick={onConnect} className="mint">Mint</button>
                 </div>
+                <p className="agreement">By minting a Phallus you agree to our <Link to="/terms">Terms of Service.</Link></p>
               </div>
               <img src={presale} alt="presale image" />
             </>
           }
           {screenWidth <= 1300 &&
             <>
-              <p>#FAPP mint-pass gives you pre-sale access that lets you buy up to 7 #FAPP loot-boxes before the public sale.</p>
-              <p>Pre-sale access allows you to reduce the cost of ETH GAS fee and gives you the guaranteed right to buy #FAPP nft.</p>
+              <p>#FAPP Comic Book | FAPP-CB is a collection of 500 tradable mint-pass NFT comic books.</p>
+              <p>FAPP-CB gives you pre-sale access that lets you get access to exclusive raffles, buy up to 7 #FAPP loot-boxes before the public sale and avoid GAS war (very expensive ETH GAS fees).</p>
               <img src={presale} alt="presale image" />
               <button onClick={onConnect} className="cnct-wallet">Connect your wallet</button>
               <button onClick={onConnect} className="mint">Mint</button>
+              <p className="agreement">By minting a Phallus you agree to our <Link to="/terms">Terms of Service.</Link></p>
             </>
           }
         </div>
