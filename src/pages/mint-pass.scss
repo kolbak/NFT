@@ -76,6 +76,10 @@
     @media (max-width: 1300px) {
       grid-template-columns: 1fr;
 
+      img {
+        width: 100%;
+      }
+
       p {
         text-align: center;
       }
