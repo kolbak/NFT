@@ -65,6 +65,7 @@
       box-shadow: 6px 6px 6px 5px rgba(105, 131, 153, 0.52);
     }
   }
+  
 
   @media screen and (max-width: 1450px) {
     .bought {
@@ -92,7 +93,7 @@
   .user-account.cnct-wallet {
     justify-self : center;
     margin-top   : 20px;
-    padding      : 15px;
+    padding      : 0 15px;
     border-radius: 30px;
     background   : #ff009d;
   }

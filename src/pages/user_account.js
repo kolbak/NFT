@@ -1,6 +1,14 @@
 import React, { useState } from "react"
 import {
-  Box, Tabs, TabList, TabPanels, Tab, TabPanel
+  Box, Tabs, TabList, TabPanels, Tab, TabPanel, 
+   Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  ModalBody,
+  ModalCloseButton,
+  useDisclosure
 } from "@chakra-ui/react"
 
 import Layout from "../components/layout"
@@ -10,6 +18,13 @@ import characterEx from "../images/character-ex.png"
 import './user_account.scss'
 
 const UserAccount = () => {
+  const isBrowser = typeof window !== "undefined"
+
+  const [width, setWidth] = useState(isBrowser && window.innerWidth)
+  isBrowser && window.addEventListener("resize", resizeInGallery)
+  function resizeInGallery() {
+    setWidth(isBrowser && window.innerWidth)
+  }
   // backend dummy data
   const [tokenAmount, setTokenAmount] = useState(2)
   const [connectedWallet, setConnectedWallet] = useState(false)
@@ -30,6 +45,7 @@ const UserAccount = () => {
   function onConnect() {
     setConnectedWallet(true);
   }
+  const { isOpen, onOpen, onClose } = useDisclosure()
   return (
     <Layout>
       <Seo title="Account" />
@@ -68,9 +84,36 @@ const UserAccount = () => {
           </>
         ) : (
           <>
-            <button onClick={onConnect} className="user-account cnct-wallet">
+            <button onClick={onOpen} className="user-account cnct-wallet">
               Connect your wallet
             </button>
+          {width > 850 ? (
+              <>
+                <Modal isCentered isOpen={isOpen} onClose={onClose} >
+                  <ModalOverlay />
+                  <ModalContent style={{display: 'flex', fontFamily: '"Amatic SC", cursive', color: 'white', backgroundColor: 'rgba(51, 61, 88, 0.8)'}}>
+                    <ModalHeader>Modal Title<ModalCloseButton style={{transform: 'scale(.5)', opacity: '.7', display: 'inline-block', position: 'initial', float: 'right'}}/></ModalHeader>
+                    
+                    <ModalBody>
+                      <p>Lorem ipsum</p>
+                    </ModalBody>
+                  </ModalContent>
+                </Modal>
+              </>
+            ) : (
+              <>
+            <Modal isOpen={isOpen} onClose={onClose} >
+              <ModalOverlay />
+              <ModalContent style={{display: 'flex', fontFamily: '"Amatic SC", cursive', color: 'white', backgroundColor: 'rgba(51, 61, 88, 0.8)'}}>
+                <ModalHeader>Modal Title<ModalCloseButton style={{transform: 'scale(.5)', opacity: '.7', display: 'inline-block', position: 'initial', float: 'right'}}/></ModalHeader>
+                
+                <ModalBody>
+                  <p>Lorem ipsum</p>
+                </ModalBody>
+              </ModalContent>
+            </Modal>
+              </>
+            )}
           </>
         )}
       </div>
