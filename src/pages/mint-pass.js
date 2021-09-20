@@ -44,15 +44,18 @@ const MintPass = () => {
                 <p>FAPP-CB gives you pre-sale access that lets you get access to exclusive raffles, buy up to 7 #FAPP loot-boxes before the public sale and avoid GAS war (very expensive ETH GAS fees).</p>
                 <div className="btns">
                   <button onClick={onOpen} className="cnct-wallet">Connect your wallet</button>
-                  <button onClick={onConnect} className="mint">Mint</button>
+                  <button onClick={() => {
+                    onOpen();
+                    onConnect();
+                  }} className="mint">Mint</button>
                 </div>
                 <p className="agreement">By minting a FAPP-CB you agree to our <Link to="/terms">Terms of Service.</Link></p>
               </div>
               <img src={presale} alt="presale image" />
 
-              <Modal isCentered={screenWidth > 850 ? true : false} isOpen={isOpen} onClose={onClose} >
+              <Modal isCentered isOpen={isOpen} onClose={onClose} >
                 <ModalOverlay />
-                <ModalContent style={{ display: 'flex', fontFamily: '"Amatic SC", cursive', color: 'white', backgroundColor: 'rgba(51, 61, 88, 0.8)' }}>
+                <ModalContent style={{ display: 'flex', fontFamily: '"Amatic SC", cursive', color: 'white', backgroundColor: 'rgba(19, 24, 38, 1)' }}>
                   <ModalHeader>Mint is unavailable<ModalCloseButton style={{ transform: 'scale(.5)', opacity: '.7', display: 'inline-block', position: 'initial', float: 'right' }} /></ModalHeader>
 
                   <ModalBody>
@@ -68,16 +71,19 @@ const MintPass = () => {
               <p>FAPP-CB gives you pre-sale access that lets you get access to exclusive raffles, buy up to 7 #FAPP loot-boxes before the public sale and avoid GAS war (very expensive ETH GAS fees).</p>
               <img src={presale} alt="presale image" />
               <button onClick={onOpen} className="cnct-wallet">Connect your wallet</button>
-              <button onClick={onConnect} className="mint">Mint</button>
+              <button onClick={() => {
+                onOpen();
+                onConnect();
+              }} className="mint">Mint</button>
               <p className="agreement">By minting a FAPP-CB you agree to our <Link to="/terms">Terms of Service.</Link></p>
 
-              <Modal isOpen={isOpen} onClose={onClose} >
+              <Modal isCentered isOpen={isOpen} onClose={onClose} >
                 <ModalOverlay />
-                <ModalContent style={{ display: 'flex', fontFamily: '"Amatic SC", cursive', color: 'white', backgroundColor: 'rgba(51, 61, 88, 0.8)' }}>
-                  <ModalHeader>Modal Title<ModalCloseButton style={{ transform: 'scale(.5)', opacity: '.7', display: 'inline-block', position: 'initial', float: 'right' }} /></ModalHeader>
+                <ModalContent style={{ display: 'flex', fontFamily: '"Amatic SC", cursive', color: 'white', backgroundColor: 'rgba(19, 24, 38, 1)' }}>
+                  <ModalHeader>Mint is unavailable<ModalCloseButton style={{ transform: 'scale(.5)', opacity: '.7', display: 'inline-block', position: 'initial', float: 'right' }} /></ModalHeader>
 
                   <ModalBody>
-                    <p>Lorem ipsum</p>
+                    <p>Join our <a style={{ color: 'rgb(59, 130, 246)' }} className="link-discord" href="https://discord.gg/zFjWr4wUwH"><span>Discord</span></a> server and <a style={{ color: 'rgb(59, 130, 246)' }} className="link-discord" href="https://twitter.com/FAP_Planet"><span>Twitter</span></a> to get the latest news!</p>
                   </ModalBody>
                 </ModalContent>
               </Modal>
