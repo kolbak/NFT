@@ -29,7 +29,9 @@ function Seo({ lang, meta, title }) {
           content: `website`,
         },
       ].concat(meta)}
-    />
+    >
+      <meta name="description" content="website with NFT tokens, NFT collection, FAPP" />
+    </Helmet>
   )
 }
 
