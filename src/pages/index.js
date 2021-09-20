@@ -245,8 +245,8 @@ const IndexPage = () => {
                   </p>
                 </div>
                 <ButtonCustomMint className="toMint">
-                  <Link to="/mint">
-                    <span>MINT</span>
+                  <Link to="https://discord.gg/zFjWr4wUwH">
+                    <span>Join our Discord</span>
                   </Link>
                 </ButtonCustomMint>
               </div>
@@ -331,7 +331,14 @@ const IndexPage = () => {
           <div id="content-block-roadmap" className="content-block roadmap">
             <Fade left>
               <h2>ROADMAP</h2>
-              <h4>Short-term</h4>
+              <h4>Sales Plan</h4>
+              <ul>
+                <li>We will sell 500 tradable #FAPP Comic Book - FAPP-CB NFTs that give you pre-sale access and let you buy up to 7 loot boxes before the public sale.</li>
+                <li>After one week all FAPP-CB holders will get pre-sale access.</li>
+                <li>After pre-sale is completed we will start the public sale. Everyone will be able to buy tradable #FAPP loot boxes.</li>
+                <li>After the sold-out we will open all 8888 loot boxes and you will see your Phalluses.</li>
+              </ul>
+              <h3>Short-term</h3>
             </Fade>
             <div className="points" ref={screenWidth > 1300 ? pointsMap : null}>
               {screenWidth > 1300 &&
@@ -546,10 +553,10 @@ const IndexPage = () => {
                     <li>We give ownership and commercial usage rights to the collectors over their NFTs</li>
                   </ul>
                 </AccordionItemCustom>
-                <AccordionItemCustom title="HOW CAN I GET A PHALLUS?">
+                {/* <AccordionItemCustom title="HOW CAN I GET A PHALLUS?">
                   Click <a href="https://nft-cockiz.com/mint">here</a>, connect your MetaMask wallet and mint (buy) your NFT Phallus.<br />
                   1 Phallus costs 0.08 ETH + GAS.
-                </AccordionItemCustom>
+                </AccordionItemCustom> */}
                 <AccordionItemCustom title="CAN I SEE WHAT PHALLUS I WILL GET?">
                   No, you can buy tradable loot boxes. They will be replaced by Phalluses after the sold-out.
                 </AccordionItemCustom>
