@@ -50,16 +50,16 @@ const MintPass = () => {
               </div>
               <img src={presale} alt="presale image" />
 
-              <Modal isCentered isOpen={isOpen} onClose={onClose} >
-                  <ModalOverlay />
-                  <ModalContent style={{display: 'flex', fontFamily: '"Amatic SC", cursive', color: 'white', backgroundColor: 'rgba(51, 61, 88, 0.8)'}}>
-                    <ModalHeader>Modal Title<ModalCloseButton style={{transform: 'scale(.5)', opacity: '.7', display: 'inline-block', position: 'initial', float: 'right'}}/></ModalHeader>
-                    
-                    <ModalBody>
-                      <p>Lorem ipsum</p>
-                    </ModalBody>
-                  </ModalContent>
-                </Modal>
+              <Modal isCentered={screenWidth > 850 ? true : false} isOpen={isOpen} onClose={onClose} >
+                <ModalOverlay />
+                <ModalContent style={{ display: 'flex', fontFamily: '"Amatic SC", cursive', color: 'white', backgroundColor: 'rgba(51, 61, 88, 0.8)' }}>
+                  <ModalHeader>Mint is unavailable<ModalCloseButton style={{ transform: 'scale(.5)', opacity: '.7', display: 'inline-block', position: 'initial', float: 'right' }} /></ModalHeader>
+
+                  <ModalBody>
+                    <p>Join our <a style={{ color: 'rgb(59, 130, 246)' }} className="link-discord" href="https://discord.gg/zFjWr4wUwH"><span>Discord</span></a> server and <a style={{ color: 'rgb(59, 130, 246)' }} className="link-discord" href="https://twitter.com/FAP_Planet"><span>Twitter</span></a> to get the latest news!</p>
+                  </ModalBody>
+                </ModalContent>
+              </Modal>
             </>
           }
           {screenWidth <= 1300 &&
@@ -72,18 +72,18 @@ const MintPass = () => {
               <p className="agreement">By minting a FAPP-CB you agree to our <Link to="/terms">Terms of Service.</Link></p>
 
               <Modal isOpen={isOpen} onClose={onClose} >
-              <ModalOverlay />
-              <ModalContent style={{display: 'flex', fontFamily: '"Amatic SC", cursive', color: 'white', backgroundColor: 'rgba(51, 61, 88, 0.8)'}}>
-                <ModalHeader>Modal Title<ModalCloseButton style={{transform: 'scale(.5)', opacity: '.7', display: 'inline-block', position: 'initial', float: 'right'}}/></ModalHeader>
-                
-                <ModalBody>
-                  <p>Lorem ipsum</p>
-                </ModalBody>
-              </ModalContent>
-            </Modal>
+                <ModalOverlay />
+                <ModalContent style={{ display: 'flex', fontFamily: '"Amatic SC", cursive', color: 'white', backgroundColor: 'rgba(51, 61, 88, 0.8)' }}>
+                  <ModalHeader>Modal Title<ModalCloseButton style={{ transform: 'scale(.5)', opacity: '.7', display: 'inline-block', position: 'initial', float: 'right' }} /></ModalHeader>
+
+                  <ModalBody>
+                    <p>Lorem ipsum</p>
+                  </ModalBody>
+                </ModalContent>
+              </Modal>
             </>
           }
-         
+
         </div>
       </div>
     </Layout>)

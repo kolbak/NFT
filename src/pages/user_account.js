@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import {
-  Box, Tabs, TabList, TabPanels, Tab, TabPanel, 
-   Modal,
+  Box, Tabs, TabList, TabPanels, Tab, TabPanel,
+  Modal,
   ModalOverlay,
   ModalContent,
   ModalHeader,
@@ -44,7 +44,8 @@ const UserAccount = () => {
   function onConnect() {
     setConnectedWallet(true);
   }
-  const { isOpen, onOpen, onClose } = useDisclosure()
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
   return (
     <Layout>
       <Seo title="Account" />
@@ -86,32 +87,16 @@ const UserAccount = () => {
             <button onClick={onOpen} className="user-account cnct-wallet">
               Connect your wallet
             </button>
-          {width > 850 ? (
-              <>
-                <Modal isCentered isOpen={isOpen} onClose={onClose} >
-                  <ModalOverlay />
-                  <ModalContent style={{display: 'flex', fontFamily: '"Amatic SC", cursive', color: 'white', backgroundColor: 'rgba(51, 61, 88, 0.8)'}}>
-                    <ModalHeader><ModalCloseButton style={{transform: 'scale(.5)', opacity: '.7', display: 'inline-block', position: 'initial', float: 'right'}}/></ModalHeader>
-                    <ModalBody>
-                      <p>Lorem ipsum</p>
-                    </ModalBody>
-                  </ModalContent>
-                </Modal>
-              </>
-            ) : (
-              <>
-            <Modal isOpen={isOpen} onClose={onClose} >
+            <Modal isCentered={width > 850 ? true : false} isOpen={isOpen} onClose={onClose} >
               <ModalOverlay />
-              <ModalContent style={{display: 'flex', fontFamily: '"Amatic SC", cursive', color: 'white', backgroundColor: 'rgba(51, 61, 88, 0.8)'}}>
-                <ModalHeader>Modal Title<ModalCloseButton style={{transform: 'scale(.5)', opacity: '.7', display: 'inline-block', position: 'initial', float: 'right'}}/></ModalHeader>
-                
+              <ModalContent style={{ display: 'flex', fontFamily: '"Amatic SC", cursive', color: 'white', backgroundColor: 'rgba(51, 61, 88, 0.8)' }}>
+                <ModalHeader>#FAPP is unavailable<ModalCloseButton style={{ transform: 'scale(.5)', opacity: '.7', display: 'inline-block', position: 'initial', float: 'right' }} /></ModalHeader>
                 <ModalBody>
-                  <p>Lorem ipsum</p>
+                  <p>This page will be available after the first minted #FAPP NFT.</p>
+                  <p>Join our <a style={{ color: 'rgb(59, 130, 246)' }} className="link-discord" href="https://discord.gg/zFjWr4wUwH"><span>Discord</span></a> server and <a style={{ color: 'rgb(59, 130, 246)' }} className="link-discord" href="https://twitter.com/FAP_Planet"><span>Twitter</span></a> to get the latest news!</p>
                 </ModalBody>
               </ModalContent>
             </Modal>
-              </>
-            )}
           </>
         )}
       </div>

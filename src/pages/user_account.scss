@@ -13,10 +13,16 @@
     font-size: 30px;
   }
 
-  button{
-    font-family     : 'Amatic SC', cursive;
-    font-size: 30px;
+  a.link-discord {
+      color          : rgb(59, 130, 246 ) !important;
+      text-decoration: none;
   }
+
+  button {
+    font-family: 'Amatic SC', cursive;
+    font-size  : 30px;
+  }
+
   .tab-container {
     margin-top: 25px;
     border    : 0;
@@ -65,7 +71,7 @@
       box-shadow: 6px 6px 6px 5px rgba(105, 131, 153, 0.52);
     }
   }
-  
+
 
   @media screen and (max-width: 1450px) {
     .bought {
@@ -97,7 +103,8 @@
     border-radius: 30px;
     background   : #ff009d;
   }
-  .zero-token-msg{
+
+  .zero-token-msg {
     margin-top: 10px;
   }
 }
