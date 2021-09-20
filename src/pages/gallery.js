@@ -16,7 +16,6 @@ import { ChevronDownIcon } from "@chakra-ui/icons"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import GalleryGrid from "../components/gallery_grid"
-import characterEx from "../images/character-ex.png"
 import "./gallery.scss"
 
 const Gallery = () => {
@@ -30,27 +29,27 @@ const Gallery = () => {
 
   //? dummy data
   let arrData = []
-  for (let i = arrData.length; i < 6; i++) {
-    arrData.push({
-      name: `Character ${i + 1}`,
-      id: i + 1,
-      src: characterEx,
-      filters: {
-        bday: new Intl.DateTimeFormat("en-US").format(new Date()),
-      },
-    })
-  }
+  // for (let i = arrData.length; i < 6; i++) {
+  //   arrData.push({
+  //     name: `Character ${i + 1}`,
+  //     id: i + 1,
+  //     src: characterEx,
+  //     filters: {
+  //       bday: new Intl.DateTimeFormat("en-US").format(new Date()),
+  //     },
+  //   })
+  // }
   const [data, setData] = useState(arrData);
 
   const btnShowMore = useRef(null)
   function addCharacter() {
-    btnShowMore.current.setAttribute("disabled", true)
+    btnShowMore.current.setAttribute("disabled", true);
     let arrNewData = []
     for (let i = data.length; i < data.length + 6; i++) {
       arrNewData.push({
         name: `Character ${i + 1}`,
         id: i + 1,
-        src: characterEx,
+        src: "",
         filters: {
           bday: new Intl.DateTimeFormat("en-US").format(new Date()),
         },
@@ -494,7 +493,7 @@ const Gallery = () => {
 
           <div className="grid-wrap">
             <div className="grid">
-              <GalleryGrid data={data} />
+              <GalleryGrid data={[]} />
             </div>
             <button
               onClick={addCharacter}

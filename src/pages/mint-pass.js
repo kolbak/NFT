@@ -36,7 +36,7 @@ const MintPass = () => {
                   <button onClick={onConnect} className="cnct-wallet">Connect your wallet</button>
                   <button onClick={onConnect} className="mint">Mint</button>
                 </div>
-                <p className="agreement">By minting a Phallus you agree to our <Link to="/terms">Terms of Service.</Link></p>
+                <p className="agreement">By minting a FAPP-CB you agree to our <Link to="/terms">Terms of Service.</Link></p>
               </div>
               <img src={presale} alt="presale image" />
             </>
@@ -48,7 +48,7 @@ const MintPass = () => {
               <img src={presale} alt="presale image" />
               <button onClick={onConnect} className="cnct-wallet">Connect your wallet</button>
               <button onClick={onConnect} className="mint">Mint</button>
-              <p className="agreement">By minting a Phallus you agree to our <Link to="/terms">Terms of Service.</Link></p>
+              <p className="agreement">By minting a FAPP-CB you agree to our <Link to="/terms">Terms of Service.</Link></p>
             </>
           }
         </div>
