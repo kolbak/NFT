@@ -4,6 +4,16 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
+import {
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalBody,
+  ModalCloseButton,
+  useDisclosure
+} from "@chakra-ui/react"
+
 import presale from "../images/presale.jpg"
 
 import './mint-pass.scss'
@@ -20,7 +30,7 @@ const MintPass = () => {
   function onConnect() {
 
   }
-
+  const { isOpen, onOpen, onClose } = useDisclosure()
   return (
     <Layout>
       <Seo title="Mint-pass" />
@@ -33,12 +43,23 @@ const MintPass = () => {
                 <p>#FAPP Comic Book | FAPP-CB is a collection of 500 tradable mint-pass NFT comic books.</p>
                 <p>FAPP-CB gives you pre-sale access that lets you get access to exclusive raffles, buy up to 7 #FAPP loot-boxes before the public sale and avoid GAS war (very expensive ETH GAS fees).</p>
                 <div className="btns">
-                  <button onClick={onConnect} className="cnct-wallet">Connect your wallet</button>
+                  <button onClick={onOpen} className="cnct-wallet">Connect your wallet</button>
                   <button onClick={onConnect} className="mint">Mint</button>
                 </div>
                 <p className="agreement">By minting a FAPP-CB you agree to our <Link to="/terms">Terms of Service.</Link></p>
               </div>
               <img src={presale} alt="presale image" />
+
+              <Modal isCentered isOpen={isOpen} onClose={onClose} >
+                  <ModalOverlay />
+                  <ModalContent style={{display: 'flex', fontFamily: '"Amatic SC", cursive', color: 'white', backgroundColor: 'rgba(51, 61, 88, 0.8)'}}>
+                    <ModalHeader>Modal Title<ModalCloseButton style={{transform: 'scale(.5)', opacity: '.7', display: 'inline-block', position: 'initial', float: 'right'}}/></ModalHeader>
+                    
+                    <ModalBody>
+                      <p>Lorem ipsum</p>
+                    </ModalBody>
+                  </ModalContent>
+                </Modal>
             </>
           }
           {screenWidth <= 1300 &&
@@ -46,11 +67,23 @@ const MintPass = () => {
               <p>#FAPP Comic Book | FAPP-CB is a collection of 500 tradable mint-pass NFT comic books.</p>
               <p>FAPP-CB gives you pre-sale access that lets you get access to exclusive raffles, buy up to 7 #FAPP loot-boxes before the public sale and avoid GAS war (very expensive ETH GAS fees).</p>
               <img src={presale} alt="presale image" />
-              <button onClick={onConnect} className="cnct-wallet">Connect your wallet</button>
+              <button onClick={onOpen} className="cnct-wallet">Connect your wallet</button>
               <button onClick={onConnect} className="mint">Mint</button>
               <p className="agreement">By minting a FAPP-CB you agree to our <Link to="/terms">Terms of Service.</Link></p>
+
+              <Modal isOpen={isOpen} onClose={onClose} >
+              <ModalOverlay />
+              <ModalContent style={{display: 'flex', fontFamily: '"Amatic SC", cursive', color: 'white', backgroundColor: 'rgba(51, 61, 88, 0.8)'}}>
+                <ModalHeader>Modal Title<ModalCloseButton style={{transform: 'scale(.5)', opacity: '.7', display: 'inline-block', position: 'initial', float: 'right'}}/></ModalHeader>
+                
+                <ModalBody>
+                  <p>Lorem ipsum</p>
+                </ModalBody>
+              </ModalContent>
+            </Modal>
             </>
           }
+         
         </div>
       </div>
     </Layout>)
