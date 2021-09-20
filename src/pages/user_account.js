@@ -92,8 +92,7 @@ const UserAccount = () => {
                 <Modal isCentered isOpen={isOpen} onClose={onClose} >
                   <ModalOverlay />
                   <ModalContent style={{display: 'flex', fontFamily: '"Amatic SC", cursive', color: 'white', backgroundColor: 'rgba(51, 61, 88, 0.8)'}}>
-                    <ModalHeader>Modal Title<ModalCloseButton style={{transform: 'scale(.5)', opacity: '.7', display: 'inline-block', position: 'initial', float: 'right'}}/></ModalHeader>
-                    
+                    <ModalHeader><ModalCloseButton style={{transform: 'scale(.5)', opacity: '.7', display: 'inline-block', position: 'initial', float: 'right'}}/></ModalHeader>
                     <ModalBody>
                       <p>Lorem ipsum</p>
                     </ModalBody>
