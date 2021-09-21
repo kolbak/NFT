@@ -1,17 +1,10 @@
-/**
- * SEO component that queries for data with
- *  Gatsby's useStaticQuery React hook
- *
- * See: https://www.gatsbyjs.com/docs/use-static-query/
- */
-
 import * as React from "react"
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
-// import { useStaticQuery, graphql } from "gatsby"
 
-function Seo({ lang, meta, title }) {
+import preview from "../images/storyline.jpeg"
 
+function Seo({ lang, meta, title, refresh }) {
   return (
     <Helmet
       htmlAttributes={{
@@ -31,6 +24,13 @@ function Seo({ lang, meta, title }) {
       ].concat(meta)}
     >
       <meta name="description" content="website with NFT tokens, NFT collection, FAPP" />
+
+      <meta name="og:description" content="8888 Generative 2.5 inch NFT Phalluses on Family Phallus Planet #FAPP" />
+      <meta name="og:image" content={preview} />
+      {/* <meta property="vk:image" content={preview} /> */}
+      {refresh &&
+        <meta httpEquiv="refresh" content="0.5; url=/" />
+      }
     </Helmet>
   )
 }
