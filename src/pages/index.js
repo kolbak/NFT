@@ -335,8 +335,8 @@ const IndexPage = () => {
               <ul>
                 <li>We will sell 500 tradable #FAPP Comic Book - FAPP-CB NFTs that give you pre-sale access and let you buy up to 7 loot boxes before the public sale.</li>
                 <li>After one week all FAPP-CB holders will get pre-sale access.</li>
-                <li>After pre-sale is completed we will start the public sale. Everyone will be able to buy tradable #FAPP loot boxes.</li>
-                <li>After the sold-out we will open all 8888 loot boxes and you will see your Phalluses.</li>
+                <li>After the pre-sale is completed we will start the public sale. Everyone will be able to buy tradable #FAPP loot boxes.</li>
+                <li>After the sold-out we will reveal all 8888 loot boxes and you will see your Phalluses.</li>
               </ul>
               <h3>Short-term</h3>
             </Fade>
@@ -580,7 +580,6 @@ const IndexPage = () => {
                   <a href="https://instagram.com/familyphallusplanet">Instagram</a><br />
                   <a href="https://opensea.io/collection/fapp">OpenSea</a><br />
                   <a href="https://familyphallusplanet.com/">Website</a><br />
-                  <a href="https://bubbleron.com/familyphallusplanet">Bubbleron</a><br />
                   <a href="https://www.youtube.com/channel/UCch3zZDZ9ubRlhSFbknDUog">Youtube</a><br />
                   <a href="https://discord.gg/zFjWr4wUwH">Discord</a><br />
                 </AccordionItemCustom>
