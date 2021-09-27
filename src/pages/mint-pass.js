@@ -23,6 +23,7 @@ let connect;
 let mint;
 
 if (isBrowser) {
+  var mainError = "Something went wrong. Contact support";
   // var mainChainId = '0x1';
   // var mainRpcUrls = 'https://mainnet.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161';
   // var mainBlockExplorerUrls = 'https://etherscan.io';
@@ -54,10 +55,10 @@ if (isBrowser) {
 
   mint = function mint() {
     var writeController = contractController.connect(signer);
-    writeController.mintPresaleMember({ value: price }).then((err, data) => {
+    writeController.mintPublic(1, { value: price }).then((err, data) => {
 
     }).catch(function (error) {
-      alert(error.message);
+      alert(mainError);
     });
   }
 
