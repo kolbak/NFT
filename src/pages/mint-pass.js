@@ -43,7 +43,7 @@ if (isBrowser) {
   var isConnect = false;
   var signer = undefined;
   var current_network = undefined;
-  var price = ethers.utils.parseUnits("0.008", 18);
+  var price = ethers.utils.parseUnits("1.00", 18);
 
 
   connect = function connect() {
