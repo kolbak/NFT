@@ -22,8 +22,8 @@ const isBrowser = typeof window !== "undefined"
 let connect;
 let mint;
 
+var mainError = "Something went wrong. Contact support";
 if (isBrowser) {
-  var mainError = "Something went wrong. Contact support";
   // var mainChainId = '0x1';
   // var mainRpcUrls = 'https://mainnet.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161';
   // var mainBlockExplorerUrls = 'https://etherscan.io';
@@ -45,6 +45,7 @@ if (isBrowser) {
   var current_network = undefined;
   var price = ethers.utils.parseUnits("0.008", 18);
 
+
   connect = function connect() {
     if (isConnect === false) {
       doConnect();
@@ -53,12 +54,16 @@ if (isBrowser) {
     initControllers();
   }
 
+  // let openModal = false;
+  window.onOpenModalMint && window.onOpenModalMint();
   mint = function mint() {
     var writeController = contractController.connect(signer);
     writeController.mintPublic(1, { value: price }).then((err, data) => {
 
     }).catch(function (error) {
-      alert(mainError);
+      // alert(mainError);
+      // openModal = true;
+      window.onOpenModalMint && window.onOpenModalMint();
     });
   }
 
@@ -185,10 +190,14 @@ const MintPass = () => {
     setScreenWidth(isBrowser && window.innerWidth);
   }
 
-  // function onConnect() {
-
-  // }
-  // const { isOpen, onOpen, onClose } = useDisclosure()
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  if (isBrowser) {
+    window.onOpenModalMint = onOpen;
+  }
+  function useForceUpdate() {
+    const [value, setValue] = useState(0); // integer state
+    return () => setValue(value => value + 1); // update the state to force render
+  }
   return (
     <Layout>
       <Seo title="Mint-pass" />
@@ -202,22 +211,25 @@ const MintPass = () => {
                 <p>FAPP-CB gives you pre-sale access that lets you get access to exclusive raffles, buy up to 7 #FAPP loot-boxes before the public sale and avoid GAS war (very expensive ETH GAS fees).</p>
                 <div className="btns">
                   <button onClick={connect} className="cnct-wallet">Connect your wallet</button>
-                  <button onClick={mint} className="mint">Mint</button>
+                  <button onClick={mint} className="mint">Mint 0.06 ETH</button>
                 </div>
                 <p className="agreement">By minting a FAPP-CB you agree to our <Link to="/terms">Terms of Service.</Link></p>
               </div>
               <img src={presale} alt="presale image" />
 
-              {/* <Modal isCentered isOpen={isOpen} onClose={onClose} >
+              <Modal isCentered
+                isOpen={isOpen}
+                onClose={onClose}>
                 <ModalOverlay />
                 <ModalContent style={{ display: 'flex', fontFamily: '"Amatic SC", cursive', color: 'white', backgroundColor: 'rgba(19, 24, 38, 1)' }}>
-                  <ModalHeader>Mint is unavailable<ModalCloseButton style={{ transform: 'scale(.5)', opacity: '.7', display: 'inline-block', position: 'initial', float: 'right' }} /></ModalHeader>
+                  <ModalHeader><ModalCloseButton style={{ transform: 'scale(.5)', opacity: '.7', display: 'inline-block', position: 'initial', float: 'right' }} /></ModalHeader>
 
                   <ModalBody>
-                    <p>Join our <a style={{ color: 'rgb(59, 130, 246)' }} className="link-discord" href="https://discord.gg/zFjWr4wUwH"><span>Discord</span></a> server and <a style={{ color: 'rgb(59, 130, 246)' }} className="link-discord" href="https://twitter.com/FAP_Planet"><span>Twitter</span></a> to get the latest news!</p>
+                    <p style={{ textAlign: 'center', margin: '50px' }}>{mainError}</p>
+                    {/* <p>Join our <a style={{ color: 'rgb(59, 130, 246)' }} className="link-discord" href="https://discord.gg/zFjWr4wUwH"><span>Discord</span></a> server and <a style={{ color: 'rgb(59, 130, 246)' }} className="link-discord" href="https://twitter.com/FAP_Planet"><span>Twitter</span></a> to get the latest news!</p> */}
                   </ModalBody>
                 </ModalContent>
-              </Modal> */}
+              </Modal>
             </>
           }
           {screenWidth <= 1300 &&
@@ -226,19 +238,20 @@ const MintPass = () => {
               <p>FAPP-CB gives you pre-sale access that lets you get access to exclusive raffles, buy up to 7 #FAPP loot-boxes before the public sale and avoid GAS war (very expensive ETH GAS fees).</p>
               <img src={presale} alt="presale image" />
               <button onClick={connect} className="cnct-wallet">Connect your wallet</button>
-              <button onClick={mint} className="mint">Mint</button>
+              <button onClick={mint} className="mint">Mint 0.06 ETH</button>
               <p className="agreement">By minting a FAPP-CB you agree to our <Link to="/terms">Terms of Service.</Link></p>
 
-              {/* <Modal isCentered isOpen={isOpen} onClose={onClose} >
+              <Modal isCentered isOpen={isOpen} onClose={onClose} >
                 <ModalOverlay />
                 <ModalContent style={{ display: 'flex', fontFamily: '"Amatic SC", cursive', color: 'white', backgroundColor: 'rgba(19, 24, 38, 1)' }}>
-                  <ModalHeader>Mint is unavailable<ModalCloseButton style={{ transform: 'scale(.5)', opacity: '.7', display: 'inline-block', position: 'initial', float: 'right' }} /></ModalHeader>
+                  <ModalHeader><ModalCloseButton style={{ transform: 'scale(.5)', opacity: '.7', display: 'inline-block', position: 'initial', float: 'right' }} /></ModalHeader>
 
                   <ModalBody>
-                    <p>Join our <a style={{ color: 'rgb(59, 130, 246)' }} className="link-discord" href="https://discord.gg/zFjWr4wUwH"><span>Discord</span></a> server and <a style={{ color: 'rgb(59, 130, 246)' }} className="link-discord" href="https://twitter.com/FAP_Planet"><span>Twitter</span></a> to get the latest news!</p>
+                    <p style={{ textAlign: 'center', margin: '50px' }}>{mainError}</p>
+                    {/* <p>Join our <a style={{ color: 'rgb(59, 130, 246)' }} className="link-discord" href="https://discord.gg/zFjWr4wUwH"><span>Discord</span></a> server and <a style={{ color: 'rgb(59, 130, 246)' }} className="link-discord" href="https://twitter.com/FAP_Planet"><span>Twitter</span></a> to get the latest news!</p> */}
                   </ModalBody>
                 </ModalContent>
-              </Modal> */}
+              </Modal>
             </>
           }
 
