@@ -55,7 +55,6 @@ if (isBrowser) {
   }
 
   // let openModal = false;
-  window.onOpenModalMint && window.onOpenModalMint();
   mint = function mint() {
     var writeController = contractController.connect(signer);
     writeController.mintPublic(1, { value: price }).then((err, data) => {
