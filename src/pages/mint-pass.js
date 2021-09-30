@@ -229,7 +229,7 @@ const MintPass = () => {
                   <ModalHeader><ModalCloseButton style={{ transform: 'scale(.5)', opacity: '.7', display: 'inline-block', position: 'initial', float: 'right' }} /></ModalHeader>
 
                   <ModalBody>
-                    <p style={{ textAlign: 'center', margin: '50px' }}>{mainError}</p>
+                    <p style={{ textAlign: 'center', margin: '10px 50px 50px 50px' }}>{mainError}</p>
                     {/* <p>Join our <a style={{ color: 'rgb(59, 130, 246)' }} className="link-discord" href="https://discord.gg/zFjWr4wUwH"><span>Discord</span></a> server and <a style={{ color: 'rgb(59, 130, 246)' }} className="link-discord" href="https://twitter.com/FAP_Planet"><span>Twitter</span></a> to get the latest news!</p> */}
                   </ModalBody>
                 </ModalContent>
@@ -251,7 +251,7 @@ const MintPass = () => {
                   <ModalHeader><ModalCloseButton style={{ transform: 'scale(.5)', opacity: '.7', display: 'inline-block', position: 'initial', float: 'right' }} /></ModalHeader>
 
                   <ModalBody>
-                    <p style={{ textAlign: 'center', margin: '50px' }}>{mainError}</p>
+                    <p style={{ textAlign: 'center', margin: '10px 50px 50px 50px' }}>{mainError}</p>
                     {/* <p>Join our <a style={{ color: 'rgb(59, 130, 246)' }} className="link-discord" href="https://discord.gg/zFjWr4wUwH"><span>Discord</span></a> server and <a style={{ color: 'rgb(59, 130, 246)' }} className="link-discord" href="https://twitter.com/FAP_Planet"><span>Twitter</span></a> to get the latest news!</p> */}
                   </ModalBody>
                 </ModalContent>
