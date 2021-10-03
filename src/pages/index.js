@@ -229,20 +229,18 @@ const IndexPage = () => {
                 <div className="text">
                   <h2>Storyline</h2>
                   <p>
-                    We are a team of artists, developers and financial analysts that discovered Family Phallus Planet - FAPP.
+                    We are a team of artists, developers and financial analysts. Together we discovered Family Phallus Planet - FAPP.
                   </p>
                   <br />
                   <p>
-                    Whether you are a male or a female, gay or lesbian, feminist or masculist, transsexual or pansexual - we don't care who you are! We want to show the whole world that Phalluses are not "disgusting", it’s also something that can be cute and beautiful!
-                    Our mission is to help fight AIDS, stop body shaming and prove that art should be provocative.
+                    Whether you are a male or a female, gay or lesbian, feminist or masculist, transsexual or pansexual - we don't care. We want to show the whole world that Phalluses are not disgusting, but cute and beautiful! Our mission is to help fight AIDS, stop body shaming and prove that art should be provocative.
                   </p>
                   <br />
                   <p>
-                    Family Phallus Planet - FAPP is an Ethereum Blockchain planet with 8888 generative 2.5 inch NFT Phalluses.
-                    FAPP is not boring, every Phallus here knows how to deal with boredom!
-                    Look at Phalluses! They know that they're small, but they DGAF about it. They support each other and think about their strengths while humans pay too much attention to their "problems".
-                    Mint your Phallus and join the community where everyone can find friends and forget about stupid stereotypes!
+                    Family Phallus Planet (FAPP) is a collection of 8888 unique generative 2.5-inch NFT Phalluses living on the Ethereum blockchain. FAPP is far from boring, every Phallus here knows exactly how to deal with boredom. Just look at them! They know they're small, but they DGAF about it. Phalluses support each other and focus on their strengths, while humans pay too much attention to their problems.
                   </p>
+                  <br />
+                  <p>On Family Phallus Planet everyone can find friends and forget about stupid stereotypes. Mint your own unique Phallus and join our exclusive community!</p>
                 </div>
                 <ButtonCustomMint className="toMint">
                   <Link to="https://discord.gg/zFjWr4wUwH">
@@ -266,7 +264,7 @@ const IndexPage = () => {
                   <h3>3 groups</h3>
                 </div>
                 <p>
-                  Every Phallus has unique combination of background color, skin type, eyes, mouth, head and accessory
+                  Every Phallus has a unique combination of background color, skin type, eyes, mouth, head and accessories.
                 </p>
               </div>
             </Fade>
@@ -335,8 +333,8 @@ const IndexPage = () => {
               <ul>
                 <li>We will sell 500 tradable #FAPP Comic Book - FAPP-CB NFTs that give you pre-sale access and let you buy up to 7 loot boxes before the public sale.</li>
                 <li>After one week all FAPP-CB holders will get pre-sale access.</li>
-                <li>After the pre-sale is completed we will start the public sale. Everyone will be able to buy tradable #FAPP loot boxes.</li>
-                <li>After the sold-out we will reveal all 8888 loot boxes and you will see your Phalluses.</li>
+                <li>After the pre-sale is completed we will start the public sale. During the public sale everyone will be able to buy tradable #FAPP loot boxes.</li>
+                <li>After everything is sold out, we will reveal all 8888 loot boxes and you will see your Phalluses.</li>
               </ul>
               <h3>Short-term</h3>
             </Fade>
@@ -351,7 +349,7 @@ const IndexPage = () => {
                       <h3><span>20%</span> FAPP is everywhere!</h3>
                       <img src={roadmap1} alt="roadmap first image" />
                       <p>
-                        We will invest our funds in marketing. Everybody should know that we are great!
+                        We’ll invest our funds in marketing. We’re great and everyone should hear about us!
                       </p>
                     </div>
                   </Fade>
@@ -386,15 +384,15 @@ const IndexPage = () => {
                     <div className="point">
                       <h3><span>90%</span> Phalluses need friends!</h3>
                       <img src={roadmap5} alt="roadmap fifth image" />
-                      <p>We will drop new NFT collectible.</p>
-                      <p>Every collector will be able to mint one free companion for a Phallus. Just pay GAS fee.</p>
+                      <p>We’ll drop a new NFT collectible.</p>
+                      <p>Every collector will be able to mint one free companion for a Phallus. Just pay the gas fee.</p>
                     </div>
                   </Fade>
                   <Fade right>
                     <div className="point right">
                       <h3><span>100%</span> Elections on FAPP</h3>
                       <img src={roadmap6} alt="roadmap sixth image" />
-                      <p>Video game? Web series? Or maybe something new and crazy? All phalluses will vote for the future of FAPP!</p>
+                      <p>A video game? A web series? Or maybe something new and crazy? All Phalluses will vote for the future of FAPP!</p>
                     </div>
                   </Fade>
                 </>
@@ -405,7 +403,7 @@ const IndexPage = () => {
                     <h3><span>20%</span> FAPP is everywhere!</h3>
                     <img src={roadmap1} alt="roadmap first image" />
                     <p>
-                      We will invest our funds in marketing. Everybody should know that we are great!
+                      We’ll invest our funds in marketing. We’re great and everyone should hear about us!
                     </p>
                   </div>
                   <div className="point">
@@ -432,13 +430,13 @@ const IndexPage = () => {
                   <div className="point">
                     <h3><span>90%</span> Phalluses need friends!</h3>
                     <img src={roadmap5} alt="roadmap fifth image" />
-                    <p>We will drop new NFT collectible.</p>
-                    <p>Every collector will be able to mint one free companion for a Phallus. Just pay GAS fee.</p>
+                    <p>We’ll drop a new NFT collectible.</p>
+                    <p>Every collector will be able to mint one free companion for a Phallus. Just pay the gas fee.</p>
                   </div>
                   <div className="point">
                     <h3><span>100%</span> Elections on FAPP</h3>
                     <img src={roadmap6} alt="roadmap sixth image" />
-                    <p>Video game? Web series? Or maybe something new and crazy? All phalluses will vote for the future of FAPP!</p>
+                    <p>A video game? A web series? Or maybe something new and crazy? All Phalluses will vote for the future of FAPP!</p>
                   </div>
                 </>
               }
@@ -456,7 +454,7 @@ const IndexPage = () => {
               <h2>FAQ</h2>
               <Accordion className="accordion" allowMultiple allowToggle>
                 <AccordionItemCustom title="WHO ARE YOU?">
-                  We are a team of artists, developers and financial analysts that discovered Family Phallus Planet - FAPP.
+                  We are a team of artists, developers and financial analysts. Together we discovered Family Phallus Planet - FAPP.
                 </AccordionItemCustom>
                 <AccordionItemCustom title="WHAT IS FAPP?">
                   Family Phallus Planet - FAPP is an Ethereum Blockchain planet with 8888 generative 2.5 inch NFT Phalluses.
@@ -544,8 +542,8 @@ const IndexPage = () => {
                   <ul>
                     <li>Fair distribution</li>
                     <li>Good arts</li>
-                    <li>Fresh and provocative idea</li>
-                    <li>Great roadmap</li>
+                    <li>A fresh and provocative idea</li>
+                    <li>A great roadmap</li>
                     <li>Long-term ambitions</li>
                     <li>175 traits</li>
                     <li>Voting rights</li>
@@ -558,7 +556,7 @@ const IndexPage = () => {
                   1 Phallus costs 0.08 ETH + GAS.
                 </AccordionItemCustom> */}
                 <AccordionItemCustom title="CAN I SEE WHAT PHALLUS I WILL GET?">
-                  No, you can buy tradable loot boxes. They will be replaced by Phalluses after the sold-out.
+                  No, you can buy tradable loot boxes. They will be replaced by Phalluses after everything is sold out.
                 </AccordionItemCustom>
                 <AccordionItemCustom title="TELL ME ABOUT ROYALTY FEES AND LIQUIDITY POOL!">
                   We will take 7% from every resold Phallus. FAPP will send up to 10% to Family Phallus Planet’s liquidity pool. Our collectors will vote how this liquidity pool should be used.
