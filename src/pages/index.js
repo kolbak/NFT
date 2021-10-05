@@ -115,14 +115,14 @@ const IndexPage = () => {
   }, []);
 
   //? скрол по more
-  const blockCarousel = useRef(null);
-  function scrollTo() {
-    let shift = blockCarousel.current.getBoundingClientRect().y;
-    window.scrollTo({
-      top: shift - 20,
-      behavior: 'smooth',
-    });
-  }
+  // const blockCarousel = useRef(null);
+  // function scrollTo() {
+  //   let shift = blockCarousel.current.getBoundingClientRect().y;
+  //   window.scrollTo({
+  //     top: shift - 20,
+  //     behavior: 'smooth',
+  //   });
+  // }
 
   //? фальшивые данные
   let dummyDataArray = [];
@@ -201,8 +201,10 @@ const IndexPage = () => {
             <h1>FAMILY PHALLUS PLANET<br />FAPP</h1>
             <p>The NFT planet where every Phallus is unique and free!</p>
           </div>
-          <button onClick={scrollTo} className="nav-btn">
-            <span>MORE</span>
+          <button className="nav-btn">
+            <a href="https://discord.gg/zFjWr4wUwH">
+              <span>MORE</span>
+            </a>
           </button>
           <div className="links">
             <a href="https://www.youtube.com/channel/UCch3zZDZ9ubRlhSFbknDUog"><img src={yt} alt="youtube" /></a>
@@ -214,7 +216,7 @@ const IndexPage = () => {
         </div>
       </div>
       <div className="index-wrap-content">
-        <div className="carousel-wrap" ref={blockCarousel}>
+        <div className="carousel-wrap">
           <Carousel data={data} className="carousel" />
           <Link className="toGallery" to="/gallery">
             <ButtonCustomGallery className="_btn">
