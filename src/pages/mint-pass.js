@@ -269,10 +269,10 @@ const MintPass = () => {
 
         </div>
       </div>
-      <script charset="utf-8"
+      {/* <script charset="utf-8"
         src="https://cdn.ethers.io/lib/ethers-5.1.umd.min.js"
         type="text/javascript">
-      </script>
+      </script> */}
       {/* <script src='../scripts/web3_script.js' type='text/javascript'></script> */}
     </Layout>)
 }
