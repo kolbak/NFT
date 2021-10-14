@@ -33,15 +33,12 @@ function Seo({ lang, meta, title, refresh, isMintPassPage }) {
       }
 
       //? MintPass скрипт
-      {isMintPassPage &&
-        <script charset="utf-8"
-          src="https://cdn.ethers.io/lib/ethers-5.1.umd.min.js"
-          type="text/javascript">
-        </script>
-      }
-      {isMintPassPage &&
-        <script>
-          {`
+      <script charset="utf-8"
+        src="https://cdn.ethers.io/lib/ethers-5.1.umd.min.js"
+        type="text/javascript">
+      </script>
+      <script>
+        {`
             const isBrowser = typeof window !== "undefined"
             // let connect;
             // let mint;
@@ -210,8 +207,7 @@ function Seo({ lang, meta, title, refresh, isMintPassPage }) {
               }
             }
           `}
-        </script>
-      }
+      </script>
       //? Yandex.Metrika counter
       <script>
         {`(function (m, e, t, r, i, k, a) {
