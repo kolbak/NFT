@@ -47,12 +47,16 @@ const MintPass = () => {
                 <p>#FAPP Comic Book | FAPP-CB is a collection of 500 tradable mint-pass NFT comic books.</p>
                 <p>FAPP-CB gives you pre-sale access that lets you get access to exclusive raffles, buy up to 7 #FAPP loot-boxes before the public sale and avoid GAS war (very expensive ETH GAS fees).</p>
                 <div className="btns">
-                  <button onClick={() => {
-                    window.__connect && window.__connect();
-                  }} className="cnct-wallet">Connect your wallet</button>
-                  <button onClick={() => {
-                    window.__mint && window.__mint();
-                  }} className="mint">Mint 0.06 ETH</button>
+                  {isBrowser && !window._isConnect &&
+                    <button onClick={() => {
+                      window.__connect && window.__connect();
+                    }} className="cnct-wallet">Connect your wallet</button>
+                  }
+                  {isBrowser && window._isConnect &&
+                    <button onClick={() => {
+                      window.__mint && window.__mint();
+                    }} className="mint">Mint 0.06 ETH</button>
+                  }
                 </div>
                 <p className="agreement">By minting a FAPP-CB you agree to our <Link to="/terms">Terms of Service.</Link></p>
               </div>
@@ -78,12 +82,16 @@ const MintPass = () => {
               <p>#FAPP Comic Book | FAPP-CB is a collection of 500 tradable mint-pass NFT comic books.</p>
               <p>FAPP-CB gives you pre-sale access that lets you get access to exclusive raffles, buy up to 7 #FAPP loot-boxes before the public sale and avoid GAS war (very expensive ETH GAS fees).</p>
               <img src={presale} alt="presale image" />
-              <button onClick={() => {
-                window.__connect && window.__connect();
-              }} className="cnct-wallet">Connect your wallet</button>
-              <button onClick={() => {
-                window.__mint && window.__mint();
-              }} className="mint">Mint 0.06 ETH</button>
+              {isBrowser && !window._isConnect &&
+                <button onClick={() => {
+                  window.__connect && window.__connect();
+                }} className="cnct-wallet">Connect your wallet</button>
+              }
+              {isBrowser && window._isConnect &&
+                <button onClick={() => {
+                  window.__mint && window.__mint();
+                }} className="mint">Mint 0.06 ETH</button>
+              }
               <p className="agreement">By minting a FAPP-CB you agree to our <Link to="/terms">Terms of Service.</Link></p>
 
               <Modal isCentered isOpen={isOpen} onClose={onClose} >
