@@ -62,15 +62,16 @@ function Seo({ lang, meta, title, refresh, isMintPassPage }) {
 
               var wallet;
               var contractController;
-              window._isConnect = false;
+              var isConnect = false;
               var signer = undefined;
               var current_network = undefined;
               var price = ethers.utils.parseUnits("1.00", 18);
 
 
               window.__connect = function connect() {
-                if (window._isConnect === false) {
+                if (isConnect === false) {
                   doConnect();
+                  isConnect = true;
                   window._isConnect = true;
                 }
                 initControllers();
@@ -118,8 +119,8 @@ function Seo({ lang, meta, title, refresh, isMintPassPage }) {
                 current_network = ethereum.networkVersion;
                 if (current_network === mainChainId) {
                   initControllers();
-                } else if (window._isConnect) {
-                  window._isConnect = false;
+                } else if (isConnect) {
+                  isConnect = false;
                   //location.reload();
                 }
                 console.log("current_network", current_network);
@@ -130,7 +131,7 @@ function Seo({ lang, meta, title, refresh, isMintPassPage }) {
               }
 
               async function checkErrEthAccounts(error) {
-                if (window._isConnect && current_network != mainChainId) {
+                if (isConnect && current_network != mainChainId) {
                 }
               }
 
@@ -146,7 +147,7 @@ function Seo({ lang, meta, title, refresh, isMintPassPage }) {
                 } catch (switchError) {
                   signer = undefined;
                   // This error code indicates that the chain has not been added to MetaMask.
-                  window._isConnect = false;
+                  isConnect = false;
                   checkShowConnect();
                   if (switchError.code === 4902) {
                     try {
@@ -181,7 +182,7 @@ function Seo({ lang, meta, title, refresh, isMintPassPage }) {
 
               function initContracts() {
                 if (signer === undefined) {
-                  window._isConnect = false;
+                  isConnect = false;
                   return;
                 }
               }
@@ -189,7 +190,7 @@ function Seo({ lang, meta, title, refresh, isMintPassPage }) {
               function initControllers() {
                 contractController = new ethers.Contract(contractAddress, abi, signer);
                 console.log('initControllers ...');
-                window._isConnect = true;
+                isConnect = true;
                 checkShowConnect();
               }
 
@@ -197,7 +198,7 @@ function Seo({ lang, meta, title, refresh, isMintPassPage }) {
                 console.log('isConnect = ', isConnect);
                 console.log('signer = ', signer);
                 if (isConnect) {
-                  //     if (isConnect && signer != undefined) {
+                  window._isConnect = isConnect
                   $('#connectButton').hide();
                   $('#mintButton').show();
                 } else {
