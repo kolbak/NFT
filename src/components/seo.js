@@ -194,16 +194,16 @@ function Seo({ lang, meta, title, refresh, isMintPassPage }) {
               }
 
               function checkShowConnect() {
-                console.log('isConnect = ', isConnect);
+                console.log('_isConnect = ', window._isConnect);
                 console.log('signer = ', signer);
-                if (isConnect) {
-                  //     if (isConnect && signer != undefined) {
-                  $('#connectButton').hide();
-                  $('#mintButton').show();
-                } else {
-                  $('#connectButton').show();
-                  $('#mintButton').hide();
-                }
+                // if (window._isConnect) {
+                //   //     if (window._isConnect && signer != undefined) {
+                //   $('#connectButton').hide();
+                //   $('#mintButton').show();
+                // } else {
+                //   $('#connectButton').show();
+                //   $('#mintButton').hide();
+                // }
               }
             }
           `}
