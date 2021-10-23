@@ -21,21 +21,16 @@ import './mint-pass.scss'
 
 const MintPass = () => {
   const isBrowser = typeof window !== "undefined"
-  
+
   let [screenWidth, setScreenWidth] = useState(isBrowser && window.innerWidth);
   isBrowser && window.addEventListener("resize", resizeInMintPass);
   function resizeInMintPass() {
     setScreenWidth(isBrowser && window.innerWidth);
   }
-  
+
   const { isOpen, onOpen, onClose } = useDisclosure();
   if (isBrowser) {
     window.onOpenModalMint = onOpen;
-  }
-  
-  const [value, setValue] = useState(0); // integer state
-  function useForceUpdate(){
-    return () => setValue(value => value + 1); // update the state to force render
   }
 
   return (
@@ -50,18 +45,12 @@ const MintPass = () => {
                 <p>#FAPP Comic Book | FAPP-CB is a collection of 500 tradable mint-pass NFT comic books.</p>
                 <p>FAPP-CB gives you pre-sale access that lets you get access to exclusive raffles, buy up to 7 #FAPP loot-boxes before the public sale and avoid GAS war (very expensive ETH GAS fees).</p>
                 <div className="btns">
-                  {isBrowser && !window._isConnect &&
-                    <button onClick={() => {
-                      window.__connect && window.__connect();
-                      useForceUpdate();
-                    }} className="cnct-wallet">Connect your wallet</button>
-                  }
-                  {isBrowser && window._isConnect &&
-                    <button onClick={() => {
-                      window.__mint && window.__mint();
-                      useForceUpdate();
-                    }} className="mint">Mint 0.06 ETH</button>
-                  }
+                  <button onClick={() => {
+                    window.__connect && window.__connect();
+                  }} className="cnct-wallet">Connect your wallet</button>
+                  <button onClick={() => {
+                    window.__mint && window.__mint();
+                  }} className="mint">Mint 0.06 ETH</button>
                 </div>
                 <p className="agreement">By minting a FAPP-CB you agree to our <Link to="/terms">Terms of Service.</Link></p>
               </div>
@@ -87,18 +76,12 @@ const MintPass = () => {
               <p>#FAPP Comic Book | FAPP-CB is a collection of 500 tradable mint-pass NFT comic books.</p>
               <p>FAPP-CB gives you pre-sale access that lets you get access to exclusive raffles, buy up to 7 #FAPP loot-boxes before the public sale and avoid GAS war (very expensive ETH GAS fees).</p>
               <img src={presale} alt="presale image" />
-              {isBrowser && !window._isConnect &&
-                <button onClick={() => {
-                  window.__connect && window.__connect();
-                  useForceUpdate();
-                }} className="cnct-wallet">Connect your wallet</button>
-              }
-              {isBrowser && window._isConnect &&
-                <button onClick={() => {
-                  window.__mint && window.__mint();
-                  useForceUpdate();
-                }} className="mint">Mint 0.06 ETH</button>
-              }
+              <button onClick={() => {
+                window.__connect && window.__connect();
+              }} className="cnct-wallet">Connect your wallet</button>
+              <button onClick={() => {
+                window.__mint && window.__mint();
+              }} className="mint">Mint 0.06 ETH</button>
               <p className="agreement">By minting a FAPP-CB you agree to our <Link to="/terms">Terms of Service.</Link></p>
 
               <Modal isCentered isOpen={isOpen} onClose={onClose} >

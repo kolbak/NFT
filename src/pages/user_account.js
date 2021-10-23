@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useRef } from "react"
 import {
   Box, Tabs, TabList, TabPanels, Tab, TabPanel,
   Modal,
@@ -7,7 +7,12 @@ import {
   ModalHeader,
   ModalBody,
   ModalCloseButton,
-  useDisclosure
+  useDisclosure,
+  FormControl,
+  FormLabel,
+  FormErrorMessage,
+  FormHelperText,
+  Input,
 } from "@chakra-ui/react"
 
 import Layout from "../components/layout"
@@ -46,59 +51,87 @@ const UserAccount = () => {
   }
   const { isOpen, onOpen, onClose } = useDisclosure();
 
+  const refInput = useRef(null);
+  function request(e){
+    console.group();
+    // console.log('value :>> ', refInput.current.value);
+    // console.log('e :>> ', e);
+
+    fetch(`https://www.nft-cockiz.com/api/tokens/wallet=${refInput.current.value}`, {
+      method: 'GET'
+    }).then((res) => {
+      return res.json();
+    }).then((res) => {
+      console.log('res :>> ', res);
+    }).catch((_err) => {
+      console.log('ERORR in request > ', _err)
+    });
+
+    console.groupEnd();
+  }
+
   return (
     <Layout>
       <Seo title="Account" />
       <div className="gen-wrap user-acc">
         <h1>The #FAPP Community</h1>
         <h2>An exclusive member-only area where you can buy #FAPP merch and view your NFTs</h2>
-        {connectedWallet === true ? (
-          <>
-            {tokenAmount !== 0 ? (
-              <>
-                <Tabs className="tab-container">
-                  <TabList className="buttons-container">
-                    <Tab _selected={{ color: "white", boxShadow: "0px 0px 0px 2px #ed55b3" }} className="phalluses-button">Your Phalluses</Tab>
-                    <Tab _selected={{ color: "white", boxShadow: "0px 0px 0px 2px #34bdbd" }} className="merch-store-button">FAPP Merch Store</Tab>
-                  </TabList>
-                  <TabPanels>
-                    <TabPanel>
-                      <div className="bought">
-                        <GalleryGrid data={data} />
-                      </div>
-                    </TabPanel>
-                    <TabPanel className="market-container">
-                      <p>FAPP Merch store will be available ASAP.<br />
-                        We are working on this project!<br />
-                        Join our discord server or check our twitter for updates!</p>
-                    </TabPanel>
-                  </TabPanels>
-                </Tabs>
-              </>
-            ) : (
-              <>
-                <p className="zero-token-msg">No #FAPP Phalluses are found in this wallet 🙁<br />
-                  You need at least one Phallus to view this page!</p>
-              </>
-            )}
-          </>
-        ) : (
-          <>
-            <button onClick={onOpen} className="user-account cnct-wallet">
-              Connect your wallet
-            </button>
-            <Modal isCentered isOpen={isOpen} onClose={onClose} >
-              <ModalOverlay />
-              <ModalContent style={{ display: 'flex', fontFamily: '"Amatic SC", cursive', color: 'white', backgroundColor: 'rgba(19, 24, 38, 1)' }}>
-                <ModalHeader>#FAPP page is unavailable<ModalCloseButton style={{ transform: 'scale(.5)', opacity: '.7', display: 'inline-block', position: 'initial', float: 'right' }} /></ModalHeader>
-                <ModalBody>
-                  <p>This page will be available after the first minted #FAPP NFT.</p>
-                  <p>Join our <a style={{ color: 'rgb(59, 130, 246)' }} className="link-discord" href="https://discord.gg/zFjWr4wUwH"><span>Discord</span></a> server and <a style={{ color: 'rgb(59, 130, 246)' }} className="link-discord" href="https://twitter.com/FAP_Planet"><span>Twitter</span></a> to get the latest news!</p>
-                </ModalBody>
-              </ModalContent>
-            </Modal>
-          </>
-        )}
+        <form>
+          <FormControl>
+            <Input ref={refInput} placeholder="Your wallet here" />
+          </FormControl>
+          {connectedWallet === true ? (
+            <>
+              {tokenAmount !== 0 ? (
+                <>
+                  <Tabs className="tab-container">
+                    <TabList className="buttons-container">
+                      <Tab _selected={{ color: "white", boxShadow: "0px 0px 0px 2px #ed55b3" }} className="phalluses-button">Your Phalluses</Tab>
+                      <Tab _selected={{ color: "white", boxShadow: "0px 0px 0px 2px #34bdbd" }} className="merch-store-button">FAPP Merch Store</Tab>
+                    </TabList>
+                    <TabPanels>
+                      <TabPanel>
+                        <div className="bought">
+                          <GalleryGrid data={data} />
+                        </div>
+                      </TabPanel>
+                      <TabPanel className="market-container">
+                        <p>FAPP Merch store will be available ASAP.<br />
+                          We are working on this project!<br />
+                          Join our discord server or check our twitter for updates!</p>
+                      </TabPanel>
+                    </TabPanels>
+                  </Tabs>
+                </>
+              ) : (
+                <>
+                  <p className="zero-token-msg">No #FAPP Phalluses are found in this wallet 🙁<br />
+                    You need at least one Phallus to view this page!</p>
+                </>
+              )}
+            </>
+          ) : (
+            <>
+              <button onClick={(e) => {
+                e.preventDefault();
+                onOpen();
+                request(e);
+              }} className="user-account cnct-wallet">
+                Connect your wallet
+              </button>
+              <Modal isCentered isOpen={isOpen} onClose={onClose} >
+                <ModalOverlay />
+                <ModalContent style={{ display: 'flex', fontFamily: '"Amatic SC", cursive', color: 'white', backgroundColor: 'rgba(19, 24, 38, 1)' }}>
+                  <ModalHeader>#FAPP page is unavailable<ModalCloseButton style={{ transform: 'scale(.5)', opacity: '.7', display: 'inline-block', position: 'initial', float: 'right' }} /></ModalHeader>
+                  <ModalBody>
+                    <p>This page will be available after the first minted #FAPP NFT.</p>
+                    <p>Join our <a style={{ color: 'rgb(59, 130, 246)' }} className="link-discord" href="https://discord.gg/zFjWr4wUwH"><span>Discord</span></a> server and <a style={{ color: 'rgb(59, 130, 246)' }} className="link-discord" href="https://twitter.com/FAP_Planet"><span>Twitter</span></a> to get the latest news!</p>
+                  </ModalBody>
+                </ModalContent>
+              </Modal>
+            </>
+          )}
+        </form>
       </div>
     </Layout>
   )

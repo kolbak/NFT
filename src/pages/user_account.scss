@@ -14,8 +14,8 @@
   }
 
   a.link-discord {
-      color          : rgb(59, 130, 246 ) !important;
-      text-decoration: none;
+    color          : rgb(59, 130, 246) !important;
+    text-decoration: none;
   }
 
   button {
@@ -96,12 +96,16 @@
     }
   }
 
-  .user-account.cnct-wallet {
-    justify-self : center;
-    margin-top   : 20px;
-    padding      : 0 15px;
-    border-radius: 30px;
-    background   : #ff009d;
+  form {
+    display: grid;
+
+    .user-account.cnct-wallet {
+      justify-self : center;
+      margin-top   : 20px;
+      padding      : 0 15px;
+      border-radius: 30px;
+      background   : #ff009d;
+    }
   }
 
   .zero-token-msg {
