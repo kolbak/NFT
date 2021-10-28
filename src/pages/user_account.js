@@ -21,6 +21,7 @@ import GalleryGrid from "../components/gallery_grid"
 import characterEx from "../images/character-ex.png"
 import './user_account.scss'
 
+
 const UserAccount = () => {
   const isBrowser = typeof window !== "undefined"
 
@@ -32,19 +33,7 @@ const UserAccount = () => {
   // backend dummy data
   const [tokenAmount, setTokenAmount] = useState(2)
   const [connectedWallet, setConnectedWallet] = useState(false)
-  //? data bought
-  let arrData = [];
-  for (let i = 0; i < 1; i++) {
-    arrData.push({
-      name: `Character ${i + 1}`,
-      id: i + 1,
-      src: characterEx,
-      filters: {
-        bday: new Intl.DateTimeFormat('en-US').format(new Date()),
-      }
-    })
-  }
-  const [data, setData] = useState(arrData);
+
 
   function onConnect() {
     setConnectedWallet(true);
@@ -52,10 +41,9 @@ const UserAccount = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   const refInput = useRef(null);
-  function request(e){
+  const [data, setData] = useState(null);
+  function request(e) {
     console.group();
-    // console.log('value :>> ', refInput.current.value);
-    // console.log('e :>> ', e);
 
     fetch(`https://www.nft-cockiz.com/api/tokens/wallet=${refInput.current.value}`, {
       method: 'GET'
@@ -63,6 +51,7 @@ const UserAccount = () => {
       return res.json();
     }).then((res) => {
       console.log('res :>> ', res);
+      setData(res);
     }).catch((_err) => {
       console.log('ERORR in request > ', _err)
     });
@@ -114,21 +103,19 @@ const UserAccount = () => {
             <>
               <button onClick={(e) => {
                 e.preventDefault();
-                onOpen();
                 request(e);
               }} className="user-account cnct-wallet">
                 Connect your wallet
               </button>
-              <Modal isCentered isOpen={isOpen} onClose={onClose} >
-                <ModalOverlay />
-                <ModalContent style={{ display: 'flex', fontFamily: '"Amatic SC", cursive', color: 'white', backgroundColor: 'rgba(19, 24, 38, 1)' }}>
-                  <ModalHeader>#FAPP page is unavailable<ModalCloseButton style={{ transform: 'scale(.5)', opacity: '.7', display: 'inline-block', position: 'initial', float: 'right' }} /></ModalHeader>
-                  <ModalBody>
-                    <p>This page will be available after the first minted #FAPP NFT.</p>
-                    <p>Join our <a style={{ color: 'rgb(59, 130, 246)' }} className="link-discord" href="https://discord.gg/zFjWr4wUwH"><span>Discord</span></a> server and <a style={{ color: 'rgb(59, 130, 246)' }} className="link-discord" href="https://twitter.com/FAP_Planet"><span>Twitter</span></a> to get the latest news!</p>
-                  </ModalBody>
-                </ModalContent>
-              </Modal>
+
+              {
+                data &&
+                <div className="grid-wrap">
+                  <div className="grid">
+                    <GalleryGrid data={data} />
+                  </div>
+                </div>
+              }
             </>
           )}
         </form>

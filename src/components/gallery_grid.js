@@ -7,7 +7,10 @@ import './gallery_grid.scss'
 const GalleryGrid = ({ data }) => {
 
   let grid = [];
+  console.groupCollapsed();
   for (let i = 0, l = data.length; i < l; i++) {
+    console.log('object :>> ', i, data[i].image);
+
     grid.push(
       <div className="char-card" key={i}>
         <div className="char-body">
@@ -15,10 +18,10 @@ const GalleryGrid = ({ data }) => {
             <Link to={`/character/?id=${data[i].id}`} state={{
               name: data[i].name || "",
               id: data[i].id || "",
-              filters: data[i].filters || "",
-              src: data[i].src || "",
+              attributes: data[i].attributes || "",
+              image: data[i].image || "",
             }} className="char-link">
-              <StaticImage className="char-img" id={'char-' + data[i].id} src="../images/character-ex.png" alt={'Character number' + data[i]} />
+              <img className="char-img" id={'char-' + data[i].id} src={data[i].image} alt={'Character number' + data[i].id} />
               <span className="char-id" id={'label-char-' + data[i].id}>{data[i].name}</span>
             </Link>
           </figure>
@@ -26,6 +29,7 @@ const GalleryGrid = ({ data }) => {
       </div>
     )
   }
+  console.groupEnd();
 
   return (
     <>
