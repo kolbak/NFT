@@ -66,7 +66,7 @@ const Navbar = () => {
         <img src={logo} alt="logo" />
       </Link>
       <div className="navbar-btns">
-        {screenWidth > 1250 &&
+        {screenWidth > 1350 &&
           <>
             <ButtonCustom><Link onClick={scroll} to="/?id=content-block-storyline">Storyline</Link></ButtonCustom>
             <ButtonCustom><Link onClick={scroll} to="/?id=content-block-nft">NFT</Link></ButtonCustom>
@@ -74,11 +74,12 @@ const Navbar = () => {
             <ButtonCustom><Link onClick={scroll} to="/?id=content-block-roadmap">Roadmap</Link></ButtonCustom>
             <ButtonCustom><Link onClick={scroll} to="/?id=content-block-faq">FAQs</Link></ButtonCustom>
             <ButtonCustom><Link onClick={scroll} to="/?id=contacts">Contacts</Link></ButtonCustom>
+            <ButtonCustom><Link to="https://linktr.ee/FAPP_BLOG">Blog</Link></ButtonCustom>
             <ButtonCustom className="withBg"><Link to="/mint-pass">Mint-pass</Link></ButtonCustom>
             <ButtonCustom className="withBg"><Link to="/user_account">#FAPP</Link></ButtonCustom>
           </>
         }
-        {screenWidth <= 1250 &&
+        {screenWidth <= 1350 &&
           <div className="menu-wrap">
             <Button className="menu-btn" onClick={onToggle}
               bg="transparent"
@@ -93,6 +94,7 @@ const Navbar = () => {
               <ButtonCustom><Link onClick={scroll} to="/?id=content-block-roadmap">Roadmap</Link></ButtonCustom>
               <ButtonCustom><Link onClick={scroll} to="/?id=content-block-faq">FAQs</Link></ButtonCustom>
               <ButtonCustom><Link onClick={scroll} to="/?id=contacts">Contacts</Link></ButtonCustom>
+              <ButtonCustom><Link to="https://linktr.ee/FAPP_BLOG">Blog</Link></ButtonCustom>
               <ButtonCustom><Link to="/mint-pass">Mint-pass</Link></ButtonCustom>
               <ButtonCustom><Link to="/user_account">#FAPP</Link></ButtonCustom>
             </Box>

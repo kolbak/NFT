@@ -26,9 +26,7 @@ const Footer = () => (
       <div className="contacts footer-column">
         <h3>CONTACTS</h3>
         <div className="icons">
-            <a href="https://www.youtube.com/channel/UCch3zZDZ9ubRlhSFbknDUog"><img src={yt} alt="youtube" /></a>
             <a href="https://opensea.io/collection/fapp"><img src={opensea} alt="opensea" /></a>
-            <a href="https://instagram.com/familyphallusplanet"><img src={ig} alt="instagram" /></a>
             <a href="https://twitter.com/FAP_Planet"><img src={twitter} alt="twitter" /></a>
             <a href="https://discord.gg/zFjWr4wUwH"><img src={discord} alt="discord" /></a>
         </div>
