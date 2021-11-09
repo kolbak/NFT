@@ -544,6 +544,18 @@
       }
     }
 
+    .benefits {
+      ul {
+        margin-left        : 20px;
+        list-style-position: inside;
+
+        h3 {
+          display: inline;
+          font-size: 30px;
+        }
+      }
+    }
+
     .faq {
       .accordion {
         a {

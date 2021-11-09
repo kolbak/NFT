@@ -449,6 +449,27 @@ const IndexPage = () => {
               </p>
             </div>
           </div>
+          <div id="content-block-benefits" className="content-block benefits">
+            <h2>BENEFITS AND ROYALTIES</h2>
+            <p>We will take 7% from the secondary market as royalties. That's what we're going to do with all this money! </p>
+            <ul>
+              <li><h3>Free NFT</h3>
+                <p>We'll develop new collections for our metaverse, we have many ideas.</p>
+                <p>Every holder will be able to mint 1 free NFT companion for their Phalluses.</p>
+              </li>
+              <li><h3>Floor price</h3>
+                <p>15% from royalties will be used for buying the floor price tokens.
+                  We're going to burn these tokens to increase the rarity of the collection. These actions will raise the price.</p>
+              </li>
+              <li><h3>Bounties</h3>
+                <p>We think that we must encourage our collectors.
+                  Every month we'll send up to 10% from our royalties to five random holders.</p>
+              </li>
+              <li><h3>Fire</h3>
+                <p>If we don't sell everything we'll just burn all unsold NFTs, it means that our collectors will benefit anyway.</p>
+              </li>
+            </ul>
+          </div>
           <div id="content-block-faq" className="content-block faq">
             <Fade bottom>
               <h2>FAQ</h2>
