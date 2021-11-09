@@ -450,7 +450,7 @@ const IndexPage = () => {
             </div>
           </div>
           <div id="content-block-benefits" className="content-block benefits">
-            <h2>BENEFITS AND ROYALTIES</h2>
+            <h2>BENEFITS</h2>
             <p>We will take 7% from the secondary market as royalties. That's what we're going to do with all this money! </p>
             <ul>
               <li><h3>Free NFT</h3>

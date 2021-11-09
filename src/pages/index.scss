@@ -548,10 +548,20 @@
       ul {
         margin-left        : 20px;
         list-style-position: inside;
+        list-style-type    : none;
 
+        li {
+          margin-bottom: 25px;
+        }
+        
         h3 {
-          display: inline;
-          font-size: 30px;
+          margin-bottom: 15px;
+          display  : inline;
+          font-size: 40px;
+        }
+
+        p {
+          margin-left: 20px;
         }
       }
     }

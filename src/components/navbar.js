@@ -66,7 +66,7 @@ const Navbar = () => {
         <img src={logo} alt="logo" />
       </Link>
       <div className="navbar-btns">
-        {screenWidth > 1350 &&
+        {screenWidth > 1560 &&
           <>
             <ButtonCustom><Link onClick={scroll} to="/?id=content-block-storyline">Storyline</Link></ButtonCustom>
             <ButtonCustom><Link onClick={scroll} to="/?id=content-block-nft">NFT</Link></ButtonCustom>
@@ -80,7 +80,7 @@ const Navbar = () => {
             <ButtonCustom className="withBg"><Link to="/user_account">#FAPP</Link></ButtonCustom>
           </>
         }
-        {screenWidth <= 1350 &&
+        {screenWidth <= 1560 &&
           <div className="menu-wrap">
             <Button className="menu-btn" onClick={onToggle}
               bg="transparent"
