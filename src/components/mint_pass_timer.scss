@@ -1,0 +1,45 @@
+.mint-pass-timer {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+
+    &-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        p {
+            text-align: center;
+            font-size: 21px;
+            margin-bottom: 0.5rem;
+        }
+    }
+
+    &-item {
+        margin-right: 0.7rem;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: end;
+        align-items: flex-end;
+        
+
+        b {
+            font-size: 80px;
+            font-family: "Amatic SC", cursive;
+            text-align: right;
+            min-width: 52px;
+            letter-spacing: 0px;
+        }
+
+        span {
+            font-family: "Amatic SC", cursive;
+            font-size: 32px;
+            margin-left: 0.5rem;
+            padding-bottom: 20px;
+        }
+    }
+
+
+}
