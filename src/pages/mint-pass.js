@@ -144,7 +144,7 @@ const MintPass = () => {
               <p style={{ height: "30px", fontSize: "24px" }}>
                 Already minted:
                 {alreadyMinded ? (
-                  <span style={{ marginLeft: "15px" }}>
+                  <span style={{ marginLeft: "15px" }} className="mint-counter">
                     {alreadyMinded}/500
                   </span>
                 ) : (
