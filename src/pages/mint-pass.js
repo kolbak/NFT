@@ -1,8 +1,9 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { Link } from "gatsby"
 import MintPassTimer from "../components/mint_pass_timer"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import { connectToContract, mint } from "../etc/contract.js"
 
 import {
   Modal,
@@ -17,6 +18,7 @@ import {
 import presale from "../images/presale.jpg"
 
 import "./mint-pass.scss"
+import DotLoader from "../components/loader"
 
 const MintPass = () => {
   const isBrowser = typeof window !== "undefined"
@@ -32,6 +34,16 @@ const MintPass = () => {
     window.onOpenModalMint = onOpen
   }
 
+  const [alreadyMinded, setAlreadyMinded] = useState(false)
+  useEffect(() => {
+    ;(async function getTotalSupply() {
+      const res = await fetch("https://www.nft-cockiz.com/api/total-supply", {
+        method: "GET",
+      })
+      setAlreadyMinded(await res.json())
+    })()
+  }, [])
+
   return (
     <Layout>
       <Seo title="Mint-pass" isMintPassPage={true} />
@@ -42,6 +54,18 @@ const MintPass = () => {
             <>
               <div className="text">
                 <MintPassTimer />
+
+                <p style={{ height: "30px", fontSize: "24px" }}>
+                  Already minted:
+                  {alreadyMinded ? (
+                    <span style={{ marginLeft: "15px" }}>
+                      {alreadyMinded}/500
+                    </span>
+                  ) : (
+                    <DotLoader active scale="0.3" />
+                  )}
+                </p>
+
                 <p>
                   #FAPP Comic Book | FAPP-CB is a collection of 500 tradable
                   mint-pass NFT comic books.
@@ -54,7 +78,7 @@ const MintPass = () => {
                 <div className="btns">
                   <button
                     onClick={() => {
-                      window.__connect && window.__connect()
+                      connectToContract(window.ethereum)
                     }}
                     className="cnct-wallet"
                   >
@@ -62,7 +86,7 @@ const MintPass = () => {
                   </button>
                   <button
                     onClick={() => {
-                      window.__mint && window.__mint()
+                      mint()
                     }}
                     className="mint"
                   >
@@ -128,7 +152,7 @@ const MintPass = () => {
               <img src={presale} alt="presale image" />
               <button
                 onClick={() => {
-                  window.__connect && window.__connect()
+                  connectToContract(window.ethereum)
                 }}
                 className="cnct-wallet"
               >
@@ -136,7 +160,7 @@ const MintPass = () => {
               </button>
               <button
                 onClick={() => {
-                  window.__mint && window.__mint()
+                  mint()
                 }}
                 className="mint"
               >

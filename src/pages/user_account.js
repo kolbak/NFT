@@ -1,6 +1,11 @@
 import React, { useState, useRef } from "react"
 import {
-  Box, Tabs, TabList, TabPanels, Tab, TabPanel,
+  Box,
+  Tabs,
+  TabList,
+  TabPanels,
+  Tab,
+  TabPanel,
   Modal,
   ModalOverlay,
   ModalContent,
@@ -19,8 +24,7 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import GalleryGrid from "../components/gallery_grid"
 import characterEx from "../images/character-ex.png"
-import './user_account.scss'
-
+import "./user_account.scss"
 
 const UserAccount = () => {
   const isBrowser = typeof window !== "undefined"
@@ -34,29 +38,34 @@ const UserAccount = () => {
   const [tokenAmount, setTokenAmount] = useState(2)
   const [connectedWallet, setConnectedWallet] = useState(false)
 
-
   function onConnect() {
-    setConnectedWallet(true);
+    setConnectedWallet(true)
   }
-  const { isOpen, onOpen, onClose } = useDisclosure();
+  const { isOpen, onOpen, onClose } = useDisclosure()
 
-  const refInput = useRef(null);
-  const [data, setData] = useState(null);
+  const refInput = useRef(null)
+  const [data, setData] = useState(null)
   function request(e) {
-    console.group();
+    console.group()
 
-    fetch(`https://www.nft-cockiz.com/api/tokens/wallet=${refInput.current.value}`, {
-      method: 'GET'
-    }).then((res) => {
-      return res.json();
-    }).then((res) => {
-      console.log('res :>> ', res);
-      setData(res);
-    }).catch((_err) => {
-      console.log('ERORR in request > ', _err)
-    });
+    fetch(
+      `https://www.nft-cockiz.com/api/tokens/wallet=${refInput.current.value}`,
+      {
+        method: "GET",
+      }
+    )
+      .then(res => {
+        return res.json()
+      })
+      .then(res => {
+        console.log("res :>> ", res)
+        setData(res)
+      })
+      .catch(_err => {
+        console.log("ERORR in request > ", _err)
+      })
 
-    console.groupEnd();
+    console.groupEnd()
   }
 
   return (
@@ -64,7 +73,10 @@ const UserAccount = () => {
       <Seo title="Account" />
       <div className="gen-wrap user-acc">
         <h1>The #FAPP Community</h1>
-        <h2>An exclusive member-only area where you can buy #FAPP merch and view your NFTs</h2>
+        <h2>
+          An exclusive member-only area where you can buy #FAPP merch and view
+          your NFTs
+        </h2>
         <form>
           <FormControl>
             <Input ref={refInput} placeholder="Your wallet here" />
@@ -75,8 +87,24 @@ const UserAccount = () => {
                 <>
                   <Tabs className="tab-container">
                     <TabList className="buttons-container">
-                      <Tab _selected={{ color: "white", boxShadow: "0px 0px 0px 2px #ed55b3" }} className="phalluses-button">Your Phalluses</Tab>
-                      <Tab _selected={{ color: "white", boxShadow: "0px 0px 0px 2px #34bdbd" }} className="merch-store-button">FAPP Merch Store</Tab>
+                      <Tab
+                        _selected={{
+                          color: "white",
+                          boxShadow: "0px 0px 0px 2px #ed55b3",
+                        }}
+                        className="phalluses-button"
+                      >
+                        Your Phalluses
+                      </Tab>
+                      <Tab
+                        _selected={{
+                          color: "white",
+                          boxShadow: "0px 0px 0px 2px #34bdbd",
+                        }}
+                        className="merch-store-button"
+                      >
+                        FAPP Merch Store
+                      </Tab>
                     </TabList>
                     <TabPanels>
                       <TabPanel>
@@ -85,37 +113,47 @@ const UserAccount = () => {
                         </div>
                       </TabPanel>
                       <TabPanel className="market-container">
-                        <p>FAPP Merch store will be available ASAP.<br />
-                          We are working on this project!<br />
-                          Join our discord server or check our twitter for updates!</p>
+                        <p>
+                          FAPP Merch store will be available ASAP.
+                          <br />
+                          We are working on this project!
+                          <br />
+                          Join our discord server or check our twitter for
+                          updates!
+                        </p>
                       </TabPanel>
                     </TabPanels>
                   </Tabs>
                 </>
               ) : (
                 <>
-                  <p className="zero-token-msg">No #FAPP Phalluses are found in this wallet 🙁<br />
-                    You need at least one Phallus to view this page!</p>
+                  <p className="zero-token-msg">
+                    No #FAPP Phalluses are found in this wallet 🙁
+                    <br />
+                    You need at least one Phallus to view this page!
+                  </p>
                 </>
               )}
             </>
           ) : (
             <>
-              <button onClick={(e) => {
-                e.preventDefault();
-                request(e);
-              }} className="user-account cnct-wallet">
+              <button
+                onClick={e => {
+                  e.preventDefault()
+                  request(e)
+                }}
+                className="user-account cnct-wallet"
+              >
                 Connect your wallet
               </button>
 
-              {
-                data &&
+              {data && (
                 <div className="grid-wrap">
                   <div className="grid">
                     <GalleryGrid data={data} />
                   </div>
                 </div>
-              }
+              )}
             </>
           )}
         </form>
