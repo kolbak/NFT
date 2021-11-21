@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react"
 import { Link } from "gatsby"
-import MintPassTimer from "../components/mint_pass_timer"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import { connectToContract, mint } from "../etc/contract.js"
+import MintPassTimer from "../components/mint_pass_timer"
+import DotLoader from "../components/loader"
 
 import {
   Modal,
@@ -15,15 +16,13 @@ import {
   useDisclosure,
 } from "@chakra-ui/react"
 
-import presale from "../images/presale.jpg"
-
 import "./mint-pass.scss"
-import DotLoader from "../components/loader"
+import presale from "../images/presale.jpg"
 
 const MintPass = () => {
   const isBrowser = typeof window !== "undefined"
 
-  let [screenWidth, setScreenWidth] = useState(isBrowser && window.innerWidth)
+  let [screenWidth, setScreenWidth] = useState(999999999)
   isBrowser && window.addEventListener("resize", resizeInMintPass)
   function resizeInMintPass() {
     setScreenWidth(isBrowser && window.innerWidth)
@@ -98,6 +97,7 @@ const MintPass = () => {
                   <Link to="/terms">Terms of Service.</Link>
                 </p>
               </div>
+
               <img src={presale} alt="presale image" />
 
               <Modal isCentered isOpen={isOpen} onClose={onClose}>
@@ -131,7 +131,6 @@ const MintPass = () => {
                     >
                       Something went wrong. Contact support
                     </p>
-                    {/* <p>Join our <a style={{ color: 'rgb(59, 130, 246)' }} className="link-discord" href="https://discord.gg/zFjWr4wUwH"><span>Discord</span></a> server and <a style={{ color: 'rgb(59, 130, 246)' }} className="link-discord" href="https://twitter.com/FAP_Planet"><span>Twitter</span></a> to get the latest news!</p> */}
                   </ModalBody>
                 </ModalContent>
               </Modal>
@@ -139,19 +138,17 @@ const MintPass = () => {
           )}
           {screenWidth <= 1300 && (
             <>
-              <MintPassTimer mobile={true} />
-
+              <MintPassTimer />
               <p style={{ height: "30px", fontSize: "24px" }}>
                 Already minted:
                 {alreadyMinded ? (
-                  <span style={{ marginLeft: "15px" }} className="mint-counter">
+                  <span style={{ marginLeft: "15px" }}>
                     {alreadyMinded}/500
                   </span>
                 ) : (
                   <DotLoader active scale="0.3" />
                 )}
               </p>
-
               <p>
                 #FAPP Comic Book | FAPP-CB is a collection of 500 tradable
                 mint-pass NFT comic books.
@@ -214,7 +211,6 @@ const MintPass = () => {
                     >
                       Something went wrong. Contact support
                     </p>
-                    {/* <p>Join our <a style={{ color: 'rgb(59, 130, 246)' }} className="link-discord" href="https://discord.gg/zFjWr4wUwH"><span>Discord</span></a> server and <a style={{ color: 'rgb(59, 130, 246)' }} className="link-discord" href="https://twitter.com/FAP_Planet"><span>Twitter</span></a> to get the latest news!</p> */}
                   </ModalBody>
                 </ModalContent>
               </Modal>
@@ -222,11 +218,6 @@ const MintPass = () => {
           )}
         </div>
       </div>
-      {/* <script charset="utf-8"
-        src="https://cdn.ethers.io/lib/ethers-5.1.umd.min.js"
-        type="text/javascript">
-      </script> */}
-      {/* <script src='../scripts/web3_script.js' type='text/javascript'></script> */}
     </Layout>
   )
 }
