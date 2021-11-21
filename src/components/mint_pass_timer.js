@@ -22,7 +22,7 @@ function calcDate(date) {
   }
 }
 
-export default function MintPassTimer() {
+export default function MintPassTimer({ mobile }) {
   const dateDiifference = MintDate - Date.now()
   const [timer, setTimer] = useState(calcDate(dateDiifference))
 
@@ -32,7 +32,29 @@ export default function MintPassTimer() {
     }, 1000)
   }, [timer])
 
-  return (
+  return mobile ? (
+    <div className="mint-pass-timer-container">
+      <p>Until the mint-pass is left:</p>
+      <div className="mint-pass-timer">
+        <div className="mint-pass-timer-item">
+          <b> {timer.days}</b>
+          <span>days</span>
+        </div>
+        <div className="mint-pass-timer-item">
+          <b> {timer.hours}</b>
+          <span>hours</span>
+        </div>
+        <div className="mint-pass-timer-item">
+          <b> {timer.minutes}</b>
+          <span>mins</span>
+        </div>
+        <div className="mint-pass-timer-item">
+          <b> {timer.seconds}</b>
+          <span>secs</span>
+        </div>
+      </div>
+    </div>
+  ) : (
     <div className="mint-pass-timer-container">
       <p>Until the mint-pass is left:</p>
       <div className="mint-pass-timer">
