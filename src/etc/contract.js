@@ -1,6 +1,6 @@
 import ABI from "./abi.json"
 const ethers = require("ethers")
-const contractAddress = "0x4cb7670a8bd08489315d4ea7f9097cd7983c4e81" // you can change this
+const contractAddress = "0xf6fc97a2aA00Af68A1c9c6eE1f9645115f52Ba04" // you can change this
 const mainChainId = "4"
 
 let ethereum
