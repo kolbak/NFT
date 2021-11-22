@@ -54,16 +54,16 @@ const MintPass = () => {
               <div className="text">
                 <MintPassTimer />
 
-                <p style={{ height: "30px", fontSize: "24px" }}>
-                  Already minted:
-                  {alreadyMinded ? (
-                    <span style={{ marginLeft: "15px" }}>
-                      {alreadyMinded}/500
-                    </span>
-                  ) : (
-                    <DotLoader active scale="0.3" />
-                  )}
-                </p>
+                <p className="alreadyMinted">
+                Already minted:
+                {alreadyMinded ? (
+                  <span style={{ marginLeft: "15px" }}>
+                    {alreadyMinded}/500
+                  </span>
+                ) : (
+                  <DotLoader active scale="0.3" />
+                )}
+              </p>
 
                 <p>
                   #FAPP Comic Book | FAPP-CB is a collection of 500 tradable
