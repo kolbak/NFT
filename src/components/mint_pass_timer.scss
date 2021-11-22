@@ -30,33 +30,32 @@
 
 
         b {
-            font-size: 80px;
-            font-family: "Amatic SC", cursive;
+            font-size: 65px;
             text-align: right;
-            min-width: 52px;
+            min-width: 85px;
             letter-spacing: 0px;
 
             @media (max-width: 860px) {
                 font-size: 50px;
-                min-width: 35px;
+                min-width: 63px;
             }
 
             @media (max-width: 768px) {
                 font-size: 40px;
-                min-width: 28px;
+                min-width: 50px;
             }
 
             @media (max-width: 500px) {
-                font-size: 32px;
-                min-width: 21px;
+                font-size: 36px;
+                min-width: 49px;
             }
         }
 
         span {
             font-family: "Amatic SC", cursive;
-            font-size: 32px;
+            font-size: 24px;
             margin-left: 0.5rem;
-            padding-bottom: 20px;
+            padding-bottom: 15px;
 
             @media (max-width: 860px) {
                 font-size: 24px;

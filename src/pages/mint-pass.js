@@ -138,7 +138,7 @@ const MintPass = () => {
           )}
           {screenWidth <= 1300 && (
             <>
-              <MintPassTimer />
+              <MintPassTimer mobile={true}/>
               <p style={{ height: "30px", fontSize: "24px" }}>
                 Already minted:
                 {alreadyMinded ? (

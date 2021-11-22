@@ -202,9 +202,11 @@ const IndexPage = () => {
             <p>The NFT planet where every Phallus is unique and free!</p>
           </div>
           <button className="nav-btn">
-            <a href="https://discord.gg/zFjWr4wUwH">
-              <span>MORE</span>
+            <Link to="/mint-pass">
+            <a>
+              <span>MINT-PASS</span>
             </a>
+            </Link>
           </button>
           <div className="links">
             <a href="https://opensea.io/collection/fapp"><img src={opensea} alt="opensea" /></a>
