@@ -1,3 +1,7 @@
+html, body {
+    overflow-x:hidden;
+}
+
 .mint-pass-timer {
     display: flex;
     flex-wrap: nowrap;
@@ -11,6 +15,7 @@
         align-items: center;
 
         p {
+            white-space: nowrap;
             text-align: center;
             font-size: 21px;
             margin-bottom: 0.5rem;
@@ -46,7 +51,7 @@
             }
 
             @media (max-width: 500px) {
-                font-size: 36px;
+                font-size: 32px;
                 min-width: 49px;
             }
         }
@@ -69,10 +74,21 @@
 
             @media (max-width: 500px) {
                 font-size: 16px;
-                padding-bottom: 3px;
+                padding-bottom: 5px;
             }
         }
+
+         @media (max-width: 500px) {
+               margin-right: 5px;
+            }
     }
 
+    
+    @media (max-width: 500px) {
+        position: absolute;
+        top: 2rem;
+        left: 50%;
+        transform: translateX(-50%);
+    }
 
 }

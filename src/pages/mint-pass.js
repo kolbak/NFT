@@ -139,7 +139,7 @@ const MintPass = () => {
           {screenWidth <= 1300 && (
             <>
               <MintPassTimer mobile={true}/>
-              <p style={{ height: "30px", fontSize: "24px" }}>
+              <p className="alreadyMinted">
                 Already minted:
                 {alreadyMinded ? (
                   <span style={{ marginLeft: "15px" }}>
