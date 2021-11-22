@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
 import "./mint_pass_timer.scss"
 
-const MintDate = new Date("2021-11-27T00:00:00")
+const MintDate = new Date("2021-11-24T01:00:00")
 
 function calcDate(date) {
   const day = 86400000
@@ -24,7 +24,7 @@ function calcDate(date) {
 
 export default function MintPassTimer({ mobile }) {
   const dateDiifference = MintDate - Date.now()
-  const [timer, setTimer] = useState(calcDate(dateDiifference))
+  const [timer, setTimer] = useState(calcDate(dateDiifference)) 
 
   useEffect(() => {
     setTimeout(() => {

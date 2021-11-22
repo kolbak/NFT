@@ -33,15 +33,15 @@ const MintPass = () => {
     window.onOpenModalMint = onOpen
   }
 
-  const [alreadyMinded, setAlreadyMinded] = useState(false)
-  useEffect(() => {
-    ;(async function getTotalSupply() {
-      const res = await fetch("https://www.nft-cockiz.com/api/total-supply", {
-        method: "GET",
-      })
-      setAlreadyMinded(await res.json())
-    })()
-  }, [])
+  const [alreadyMinded, setAlreadyMinded] = useState("0") // useState(false) когда задеплоим маиннет контракт
+//   useEffect(() => {
+//     ;(async function getTotalSupply() {
+//       const res = await fetch("https://www.nft-cockiz.com/api/total-supply", {
+//         method: "GET",
+//       })
+//       setAlreadyMinded(await res.json())
+//     })()
+//   }, [])
 
   return (
     <Layout>
