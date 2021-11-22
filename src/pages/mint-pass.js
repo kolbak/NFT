@@ -22,7 +22,7 @@ import presale from "../images/presale.jpg"
 const MintPass = () => {
   const isBrowser = typeof window !== "undefined"
 
-  let [screenWidth, setScreenWidth] = useState(999999999)
+  let [screenWidth, setScreenWidth] = useState(9999999)
   isBrowser && window.addEventListener("resize", resizeInMintPass)
   function resizeInMintPass() {
     setScreenWidth(isBrowser && window.innerWidth)
@@ -49,7 +49,7 @@ const MintPass = () => {
       <div className="gen-wrap presale-wrap">
         <h1>#FAPP MINT-PASS</h1>
         <div className="content">
-          {screenWidth > 1300 && (
+          {screenWidth > 1500 ? (
             <>
               <div className="text">
                 <MintPassTimer windowWidth={isBrowser && window.innerWidth}/>
@@ -135,8 +135,7 @@ const MintPass = () => {
                 </ModalContent>
               </Modal>
             </>
-          )}
-          {screenWidth <= 1300 && (
+          ): (
             <>
               <MintPassTimer windowWidth={isBrowser && window.innerWidth}/>
               <p className="alreadyMinted">

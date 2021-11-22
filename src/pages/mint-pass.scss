@@ -74,7 +74,7 @@
       width       : 80%;
     }
     
-    @media (max-width: 1300px) {
+    @media (max-width: 1500px) {
       grid-template-columns: 1fr;
 
       img {
@@ -117,9 +117,13 @@
     }
 
     .alreadyMinted {
-        margin-top: 2rem;
         height: 30px;
         font-size: 23px;
+         margin-top: .3rem;
+
+         @media (max-width: 500px ) {
+              margin-top: 2rem;
+         }
     }
 
   }
