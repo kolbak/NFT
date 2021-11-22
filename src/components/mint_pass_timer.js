@@ -22,7 +22,7 @@ function calcDate(date) {
   }
 }
 
-export default function MintPassTimer({ mobile }) {
+export default function MintPassTimer({ windowWidth }) {
   const dateDiifference = MintDate - Date.now()
   const [timer, setTimer] = useState(calcDate(dateDiifference)) 
 
@@ -32,7 +32,7 @@ export default function MintPassTimer({ mobile }) {
     }, 1000)
   }, [timer])
 
-  return mobile ? (
+  return windowWidth < 500 ? (
     <div className="mint-pass-timer-container">
       <p>Until the mint-pass is left:</p>
       <div className="mint-pass-timer">
