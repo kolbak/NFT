@@ -33,15 +33,18 @@ const MintPass = () => {
     window.onOpenModalMint = onOpen
   }
 
-  const [alreadyMinded, setAlreadyMinded] = useState("0") // useState(false) когда задеплоим маиннет контракт
-//   useEffect(() => {
-//     ;(async function getTotalSupply() {
-//       const res = await fetch("https://www.nft-cockiz.com/api/total-supply", {
-//         method: "GET",
-//       })
-//       setAlreadyMinded(await res.json())
-//     })()
-//   }, [])
+  const [alreadyMinded, setAlreadyMinded] = useState(false) // useState(false) когда задеплоим маиннет контракт
+  useEffect(() => {
+    ;(async function getTotalSupply() {
+      const res = await fetch(
+        "https://familyphallusplanet.com/api/total-supply",
+        {
+          method: "GET",
+        }
+      )
+      setAlreadyMinded(await res.json())
+    })()
+  }, [])
 
   return (
     <Layout>
@@ -52,18 +55,18 @@ const MintPass = () => {
           {screenWidth > 1500 ? (
             <>
               <div className="text">
-                <MintPassTimer windowWidth={isBrowser && window.innerWidth}/>
+                <MintPassTimer windowWidth={isBrowser && window.innerWidth} />
 
                 <p className="alreadyMinted">
-                Already minted:
-                {alreadyMinded ? (
-                  <span style={{ marginLeft: "15px" }}>
-                    {alreadyMinded}/500
-                  </span>
-                ) : (
-                  <DotLoader active scale="0.3" />
-                )}
-              </p>
+                  Already minted:
+                  {alreadyMinded ? (
+                    <span style={{ marginLeft: "15px" }}>
+                      {alreadyMinded}/500
+                    </span>
+                  ) : (
+                    <DotLoader active scale="0.3" />
+                  )}
+                </p>
 
                 <p>
                   #FAPP Comic Book | FAPP-CB is a collection of 500 tradable
@@ -135,9 +138,9 @@ const MintPass = () => {
                 </ModalContent>
               </Modal>
             </>
-          ): (
+          ) : (
             <>
-              <MintPassTimer windowWidth={isBrowser && window.innerWidth}/>
+              <MintPassTimer windowWidth={isBrowser && window.innerWidth} />
               <p className="alreadyMinted">
                 Already minted:
                 {alreadyMinded ? (

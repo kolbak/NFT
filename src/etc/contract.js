@@ -1,7 +1,7 @@
 import ABI from "./abi.json"
 const ethers = require("ethers")
-const contractAddress = "0xf6fc97a2aA00Af68A1c9c6eE1f9645115f52Ba04" // you can change this
-const mainChainId = "4"
+const contractAddress = "0x5334F2a1d1C0D536E28452A5740D3290067844D7" // you can change this
+const mainChainId = "1"
 
 let ethereum
 let wallet
@@ -28,7 +28,7 @@ async function doConnect() {
     if (ethereum) {
       currentNetwork = ethereum.networkVersion
       if (currentNetwork !== mainChainId) {
-        await switchRinkebyNetwork()
+        await switchEthereumNetwork()
       }
       // connecting to Metamask
       const res = await ethereum.request({ method: "eth_requestAccounts" })
@@ -48,16 +48,16 @@ async function doConnect() {
 
 async function validateNetwork() {
   if (currentNetwork !== ethereum.networkVersion) {
-    await switchRinkebyNetwork()
+    await switchEthereumNetwork()
   }
   return true
 }
 
-async function switchRinkebyNetwork() {
+async function switchEthereumNetwork() {
   try {
     await ethereum.request({
       method: "wallet_switchEthereumChain",
-      params: [{ chainId: "0x4" }],
+      params: [{ chainId: "0x1" }],
     })
   } catch (err) {
     signer = undefined
@@ -73,7 +73,9 @@ export async function mint() {
       await validateNetwork()
       const trustedInstance = contractInstance.connect(signer)
       const price = await trustedInstance.FAPP_CB_PRICE()
-      const res = await trustedInstance.mintPublic(1, { value: price })
+      const res = await trustedInstance.mintPresaleMemberWithAmount(1, {
+        value: price,
+      })
       return true
     } else {
       alert("Connect your metamask wallet!")

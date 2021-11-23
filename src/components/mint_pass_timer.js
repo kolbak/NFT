@@ -1,34 +1,42 @@
 import React, { useState, useEffect } from "react"
 import "./mint_pass_timer.scss"
 
-const MintDate = new Date("2021-11-24T01:00:00")
+function makeDateDiffObj(dateDiff) {
+  if (dateDiff > 0) {
+    const day = 86400000
+    const hour = 3600000
+    const minute = 60000
+    const second = 1000
 
-function calcDate(date) {
-  const day = 86400000
-  const hour = 3600000
-  const minute = 60000
-  const second = 1000
+    const daysLeft = Math.floor(dateDiff / day)
+    const hoursLeft = Math.floor((dateDiff % day) / hour)
+    const minutesLeft = Math.floor((dateDiff % hour) / minute)
+    const secondsLeft = Math.floor((dateDiff % minute) / second)
 
-  const daysLeft = Math.floor(date / day)
-  const hoursLeft = Math.floor((date % day) / hour)
-  const minutesLeft = Math.floor((date % hour) / minute)
-  const secondsLeft = Math.floor((date % minute) / second)
-
+    return {
+      days: daysLeft,
+      hours: hoursLeft,
+      minutes: minutesLeft,
+      seconds: secondsLeft,
+    }
+  }
   return {
-    days: daysLeft,
-    hours: hoursLeft,
-    minutes: minutesLeft,
-    seconds: secondsLeft,
+    days: "0",
+    hours: "0",
+    minutes: "0",
+    seconds: "0",
   }
 }
 
+let mintDate = 28800000
+
 export default function MintPassTimer({ windowWidth }) {
-  const dateDiifference = MintDate - Date.now()
-  const [timer, setTimer] = useState(calcDate(dateDiifference)) 
+  const [timer, setTimer] = useState(makeDateDiffObj(mintDate))
 
   useEffect(() => {
     setTimeout(() => {
-      setTimer(calcDate(dateDiifference))
+      setTimer(makeDateDiffObj(mintDate))
+      mintDate -= 1000
     }, 1000)
   }, [timer])
 
