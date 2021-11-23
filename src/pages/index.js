@@ -591,7 +591,7 @@ const IndexPage = () => {
                   No we won't. We have only 8888 Phalluses.
                 </AccordionItemCustom>
                 <AccordionItemCustom title="DO YOU HAVE YOUR OWN SMART CONTRACT?">
-                  Yes, we developed our own Smart Contract smart contract - 0x5334F2a1d1C0D536E28452A5740D3290067844D7.
+                  Yes, we developed our own Smart Contract - <a href="https://etherscan.io/address/0x5334f2a1d1c0d536e28452a5740d3290067844d7">0x5334F2a1d1C0D536E28452A5740D3290067844D7</a>.
                 </AccordionItemCustom>
                 <AccordionItemCustom title="CAN I RESELL MY PHALLUS NFT?">
                   You can resell it on <a href="https://opensea.io/">https://opensea.io/</a>
