@@ -28,15 +28,18 @@ function makeDateDiffObj(dateDiff) {
   }
 }
 
-let mintDate = 28800000
-
 export default function MintPassTimer({ windowWidth }) {
-  const [timer, setTimer] = useState(makeDateDiffObj(mintDate))
+  const [timer, setTimer] = useState(makeDateDiffObj(0))
 
-  useEffect(() => {
-    setTimeout(() => {
-      setTimer(makeDateDiffObj(mintDate))
-      mintDate -= 1000
+  useEffect(async () => {
+    const res = await fetch(
+      "https://familyphallusplanet.com/api/time-to-mint",
+      {
+        method: "GET",
+      }
+    )
+    setTimeout(async () => {
+      setTimer(makeDateDiffObj(await res.json()))
     }, 1000)
   }, [timer])
 
