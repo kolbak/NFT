@@ -73,7 +73,7 @@ export async function mint() {
       await validateNetwork()
       const trustedInstance = contractInstance.connect(signer)
       const price = await trustedInstance.FAPP_CB_PRICE()
-      const res = await trustedInstance.mintPresaleMemberWithAmount(1, {
+      const res = await trustedInstance.mintPublic(1, {
         value: price,
       })
       return true
