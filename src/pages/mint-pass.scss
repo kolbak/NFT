@@ -1,130 +1,139 @@
 .gen-wrap.presale-wrap {
-  min-height: 90vh;
+    min-height: 90vh;
 
-  h1 {
-    font-size  : 2.5rem;
-    font-weight: bold;
+    h1 {
+        font-size: 2.5rem;
+        font-weight: bold;
 
-    margin-bottom: 25px;
-  }
-
-  .content {
-    position: relative;
-    display              : grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap                  : 30px;
-
-    width: 100%;
-
-    .text {
-      align-self    : center;
-      display       : flex;
-      flex-direction: column;
-      gap           : 20px;
-
-      p {
-        text-align: center;
-      }
-
-      .agreement {
-        opacity   : .7;
-        text-align: center;
-        font-size : 12px;
-
-        a {
-          color          : rgb(59, 130, 246, );
-          text-decoration: none;
-          font-weight    : bold;
-        }
-      }
-
-      .btns {
-        display       : flex;
-        flex-direction: column;
-        align-items   : center;
-
-        margin-bottom: 0;
-
-        &>* {
-          margin: 20px 0;
-        }
-
-        button {
-          height          : 50px;
-          padding         : 0 20px;
-          width           : 250px;
-          word-wrap       : normal;
-          border-radius   : 30px;
-          background-color: #ff009d;
-
-          font-family: 'Amatic SC', cursive;
-          font-size  : 30px;
-        }
-
-        .mint {
-          background-color: rgb(0, 196, 196);
-        }
-      }
+        margin-bottom: 25px;
     }
 
-    img {
-      display     : inline-block;
-      justify-self: center;
-      align-self  : center;
-      width       : 80%;
-    }
-    
-    @media (max-width: 1500px) {
-      grid-template-columns: 1fr;
+    .content {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
 
-      img {
         width: 100%;
-      }
 
-      p {
-        text-align: center;
-      }
+        .text {
+            align-self: center;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
 
-      .agreement {
-        opacity   : .7;
-        text-align: center;
-        font-size : 12px;
+            p {
+                text-align: center;
+            }
 
-        a {
-          color          : rgb(59, 130, 246, );
-          text-decoration: none;
-          font-weight    : bold;
+            .agreement {
+                opacity: .7;
+                text-align: center;
+                font-size: 12px;
+
+                a {
+                    color: rgb(59, 130, 246, );
+                    text-decoration: none;
+                    font-weight: bold;
+                }
+            }
+
+            .btns {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                margin-bottom: 0;
+
+                &>* {
+                    margin: 20px 0;
+                }
+
+                button {
+                    height: 50px;
+                    padding: 0 20px;
+                    width: 250px;
+                    word-wrap: normal;
+                    border-radius: 30px;
+                    background-color: #ff009d;
+
+                    font-family: 'Amatic SC', cursive;
+                    font-size: 30px;
+                }
+
+                .mint {
+                    background-color: rgb(0, 196, 196);
+                }
+            }
         }
-      }
 
-      button {
-        align-self      : center;
-        justify-self    : center;
-        height          : 50px;
-        padding         : 0 20px;
-        width           : 250px;
-        word-wrap       : normal;
-        border-radius   : 30px;
-        background-color: #ff009d;
+        img {
+            display: inline-block;
+            justify-self: center;
+            align-self: center;
+            width: 80%;
+        }
 
-        font-family: 'Amatic SC', cursive;
-        font-size  : 30px;
-      }
+        @media (max-width: 1500px) {
+            grid-template-columns: 1fr;
 
-      .mint {
-        background-color: rgb(0, 196, 196);
-      }
+            img {
+                width: 100%;
+            }
+
+            p {
+                text-align: center;
+            }
+
+            .agreement {
+                opacity: .7;
+                text-align: center;
+                font-size: 12px;
+
+                a {
+                    color: rgb(59, 130, 246, );
+                    text-decoration: none;
+                    font-weight: bold;
+                }
+            }
+
+            button {
+                align-self: center;
+                justify-self: center;
+                height: 50px;
+                padding: 0 20px;
+                width: 250px;
+                word-wrap: normal;
+                border-radius: 30px;
+                background-color: #ff009d;
+
+                font-family: 'Amatic SC', cursive;
+                font-size: 30px;
+            }
+
+            .mint {
+                background-color: rgb(0, 196, 196);
+            }
+        }
+
+        .alreadyMinted {
+            height: 30px;
+            font-size: 23px;
+
+            // aviable when the timer is active
+            //margin-top: .3rem;
+            //  @media (max-width: 500px ) {
+            //       margin-top: 2rem;
+            //  }
+        }
+
+        .mint-message {
+            font-size: 32px;
+            font-weight: bold;
+
+            @media (max-width: 500px) {
+                font-size: 26px;
+            }
+        }
     }
-
-    .alreadyMinted {
-        height: 30px;
-        font-size: 23px;
-         margin-top: .3rem;
-
-         @media (max-width: 500px ) {
-              margin-top: 2rem;
-         }
-    }
-
-  }
 }

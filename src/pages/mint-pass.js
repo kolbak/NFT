@@ -55,8 +55,8 @@ const MintPass = () => {
           {screenWidth > 1500 ? (
             <>
               <div className="text">
-                <MintPassTimer windowWidth={isBrowser && window.innerWidth} />
-
+                {/* <MintPassTimer windowWidth={isBrowser && window.innerWidth} /> */}
+                <p className="mint-message">Next mint tomorrow</p>
                 <p className="alreadyMinted">
                   Already minted:
                   {alreadyMinded ? (
@@ -140,7 +140,8 @@ const MintPass = () => {
             </>
           ) : (
             <>
-              <MintPassTimer windowWidth={isBrowser && window.innerWidth} />
+              {/* <MintPassTimer windowWidth={isBrowser && window.innerWidth} /> */}
+              <p className="mint-message">Next mint tomorrow</p>
               <p className="alreadyMinted">
                 Already minted:
                 {alreadyMinded ? (
