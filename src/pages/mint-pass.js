@@ -67,7 +67,9 @@ const MintPass = () => {
                     <DotLoader active scale="0.3" />
                   )}
                 </p>
-
+                <p className="attentionMsg">
+                  Yesterday we sold 92 mint-passes in 15 minutes!
+                </p>
                 <p>
                   #FAPP Comic Book | FAPP-CB is a collection of 500 tradable
                   mint-pass NFT comic books.
@@ -151,6 +153,9 @@ const MintPass = () => {
                 ) : (
                   <DotLoader active scale="0.3" />
                 )}
+              </p>
+              <p className="attentionMsg">
+                Yesterday we sold 92 mint-passes in 15 minutes!
               </p>
               <p>
                 #FAPP Comic Book | FAPP-CB is a collection of 500 tradable
