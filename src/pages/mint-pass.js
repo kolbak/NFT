@@ -56,7 +56,7 @@ const MintPass = () => {
             <>
               <div className="text">
                 {/* <MintPassTimer windowWidth={isBrowser && window.innerWidth} /> */}
-                <p className="mint-message">Next mint tomorrow</p>
+                <p className="mint-message">MINT IS LIVE</p>
                 <p className="alreadyMinted">
                   Already minted:
                   {alreadyMinded ? (
@@ -141,7 +141,7 @@ const MintPass = () => {
           ) : (
             <>
               {/* <MintPassTimer windowWidth={isBrowser && window.innerWidth} /> */}
-              <p className="mint-message">Next mint tomorrow</p>
+              <p className="mint-message">MINT IS LIVE</p>
               <p className="alreadyMinted">
                 Already minted:
                 {alreadyMinded ? (
