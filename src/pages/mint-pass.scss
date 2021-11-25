@@ -72,6 +72,11 @@
             justify-self: center;
             align-self: center;
             width: 80%;
+
+
+            @media (max-width: 600px) {
+                display: none;
+            }
         }
 
         @media (max-width: 1500px) {
@@ -128,17 +133,27 @@
         }
 
         .mint-message {
-            font-size: 32px;
+            font-size: 28px;
             font-weight: bold;
 
             @media (max-width: 500px) {
-                font-size: 26px;
+                font-size: 24px;
             }
         }
 
         .attentionMsg {
-            text-align: center; 
+            text-align: center;
             font-size: 18px;
+        }
+
+        .benefits {
+            margin: 10px 0;
+
+            p {
+                text-align: left;
+                font-weight: bold;
+                margin-bottom: 0.5rem;
+            }
         }
     }
 }

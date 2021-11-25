@@ -5,6 +5,7 @@ import Seo from "../components/seo"
 import { connectToContract, mint } from "../etc/contract.js"
 import MintPassTimer from "../components/mint_pass_timer"
 import DotLoader from "../components/loader"
+import { List, ListItem, UnorderedList } from "@chakra-ui/react"
 
 import {
   Modal,
@@ -56,9 +57,11 @@ const MintPass = () => {
             <>
               <div className="text">
                 {/* <MintPassTimer windowWidth={isBrowser && window.innerWidth} /> */}
-                <p className="mint-message">MINT IS LIVE</p>
+                <p className="mint-message">
+                  MINT-PASS SALE ENDS ON NOVEMBER 30th
+                </p>
                 <p className="alreadyMinted">
-                  Already minted:
+                  AVAILABLE:
                   {alreadyMinded ? (
                     <span style={{ marginLeft: "15px" }}>
                       {alreadyMinded}/200
@@ -67,6 +70,7 @@ const MintPass = () => {
                     <DotLoader active scale="0.3" />
                   )}
                 </p>
+
                 {/* <p className="attentionMsg">
                   Yesterday we sold 92 mint-passes in 15 minutes!
                 </p> */}
@@ -80,6 +84,20 @@ const MintPass = () => {
                   it lets you buy up to 7 Phalluses during the pre-sale and
                   avoid GAS war (very expensive ETH GAS fees)
                 </p>
+
+                <div className="benefits">
+                  <p>MINT-PASS BENEFITS:</p>
+                  <UnorderedList>
+                    <ListItem>One free Phallus NFT</ListItem>
+                    <ListItem>
+                      Chance to win $2000 and 1/5 ultra-rare Phalluses
+                    </ListItem>
+                    <ListItem>25% discount for the main drop</ListItem>
+                    <ListItem>An exclusive comic-book and more</ListItem>
+                    <ListItem>Early-access</ListItem>
+                  </UnorderedList>
+                </div>
+
                 <div className="btns">
                   <button
                     onClick={() => {
@@ -144,7 +162,9 @@ const MintPass = () => {
           ) : (
             <>
               {/* <MintPassTimer windowWidth={isBrowser && window.innerWidth} /> */}
-              <p className="mint-message">MINT IS LIVE</p>
+              <p className="mint-message">
+                MINT-PASS SALE ENDS ON NOVEMBER 30th
+              </p>
               <p className="alreadyMinted">
                 Already minted:
                 {alreadyMinded ? (
@@ -168,6 +188,19 @@ const MintPass = () => {
                 lets you buy up to 7 Phalluses during the pre-sale and avoid GAS
                 war (very expensive ETH GAS fees)
               </p>
+
+              <div className="benefits">
+                <p>MINT-PASS BENEFITS:</p>
+                <UnorderedList>
+                  <ListItem>One free Phallus NFT</ListItem>
+                  <ListItem>
+                    Chance to win $2000 and 1/5 ultra-rare Phalluses
+                  </ListItem>
+                  <ListItem>25% discount for the main drop</ListItem>
+                  <ListItem>An exclusive comic-book and more</ListItem>
+                  <ListItem>Early-access</ListItem>
+                </UnorderedList>
+              </div>
               <img src={presale} alt="presale image" />
               <button
                 onClick={() => {
