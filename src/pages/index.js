@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react"
 import { Link } from "gatsby"
-import Fade from 'react-reveal/Fade';
+import Fade from "react-reveal/Fade"
 import {
   Box,
   Accordion,
@@ -34,12 +34,12 @@ import characterEx15 from "../images/15.png"
 import characterEx16 from "../images/16.png"
 
 import storyline from "../images/storyline.jpeg"
-import roadmap1 from '../images/roadmap1.jpeg';
-import roadmap2 from '../images/roadmap2.jpg';
-import roadmap3 from '../images/roadmap3.jpeg';
-import roadmap4 from '../images/roadmap4.jpg';
-import roadmap5 from '../images/roadmap5.jpg';
-import roadmap6 from '../images/roadmap6.jpg';
+import roadmap1 from "../images/roadmap1.jpeg"
+import roadmap2 from "../images/roadmap2.jpg"
+import roadmap3 from "../images/roadmap3.jpeg"
+import roadmap4 from "../images/roadmap4.jpg"
+import roadmap5 from "../images/roadmap5.jpg"
+import roadmap6 from "../images/roadmap6.jpg"
 
 //? icons
 import rasta from "../images/icons/rasta.png"
@@ -60,59 +60,66 @@ import opensea from "../images/opensea.svg"
 const IndexPage = () => {
   const isBrowser = typeof window !== "undefined"
 
-  let [screenWidth, setScreenWidth] = useState(null);
+  let [screenWidth, setScreenWidth] = useState(null)
 
-  const pointsMap = useRef(null);
-  const line = useRef(null);
+  const pointsMap = useRef(null)
+  const line = useRef(null)
   useEffect(() => {
     if (isBrowser) {
-      setScreenWidth(window.innerWidth);
-      window.addEventListener("resize", resizeInIndex);
+      setScreenWidth(window.innerWidth)
+      window.addEventListener("resize", resizeInIndex)
       function resizeInIndex() {
-        setScreenWidth(window.innerWidth);
+        setScreenWidth(window.innerWidth)
       }
 
       //? scrolling roadmap
-      window.addEventListener('scroll', lineScroll);
+      window.addEventListener("scroll", lineScroll)
       function lineScroll() {
         if (pointsMap.current && line.current) {
-          let pointsPosTop = pointsMap.current?.getBoundingClientRect().top - window.screen.height / 2;
-          let pointsPosBottom = pointsMap.current?.getBoundingClientRect().bottom - window.screen.height / 2;
+          let pointsPosTop =
+            pointsMap.current?.getBoundingClientRect().top -
+            window.screen.height / 2
+          let pointsPosBottom =
+            pointsMap.current?.getBoundingClientRect().bottom -
+            window.screen.height / 2
 
-          let scrolled = false;
+          let scrolled = false
           if (pointsPosBottom < 0) {
-            line.current.style.bottom = "20px";
-            scrolled = true;
+            line.current.style.bottom = "20px"
+            scrolled = true
           }
           if (pointsPosTop < 0 && !scrolled) {
-            line.current.classList.add("visible");
-            line.current.style.top = "20px";
+            line.current.classList.add("visible")
+            line.current.style.top = "20px"
 
             line.current.style.height =
-              Math.floor((window.scrollY + window.screen.height / 2) - (window.scrollY + line.current.getBoundingClientRect().top)) + "px";
+              Math.floor(
+                window.scrollY +
+                  window.screen.height / 2 -
+                  (window.scrollY + line.current.getBoundingClientRect().top)
+              ) + "px"
           }
           if (pointsPosTop > -150) {
-            line.current.style.height = "50px";
-            line.current.classList.remove("visible");
+            line.current.style.height = "50px"
+            line.current.classList.remove("visible")
           }
-
         }
       }
 
       //? scroll from nav
-      let searchStr = window.location.search;
-      let id = new URLSearchParams(searchStr).get('id');
+      let searchStr = window.location.search
+      let id = new URLSearchParams(searchStr).get("id")
 
       if (id) {
-        let shift = document.getElementById(id).getBoundingClientRect().y;
+        let shift = document.getElementById(id).getBoundingClientRect().y
 
         window.scrollTo({
           top: shift - 50,
-          behavior: 'smooth',
-        });
-      };
+          behavior: "smooth",
+        })
+      }
     }
-  }, []);
+  }, [])
 
   //? скрол по more
   // const blockCarousel = useRef(null);
@@ -125,13 +132,29 @@ const IndexPage = () => {
   // }
 
   //? фальшивые данные
-  let dummyDataArray = [];
-  let imgs = [characterEx1, characterEx2, characterEx3, characterEx4, characterEx5, characterEx6, characterEx7, characterEx8, characterEx9, characterEx10,
-    characterEx11, characterEx12, characterEx13, characterEx14, characterEx15, characterEx16];
+  let dummyDataArray = []
+  let imgs = [
+    characterEx1,
+    characterEx2,
+    characterEx3,
+    characterEx4,
+    characterEx5,
+    characterEx6,
+    characterEx7,
+    characterEx8,
+    characterEx9,
+    characterEx10,
+    characterEx11,
+    characterEx12,
+    characterEx13,
+    characterEx14,
+    characterEx15,
+    characterEx16,
+  ]
   for (let i = 0, l = 16; i < l; i++) {
     dummyDataArray.push({
-      name: 'chracter' + i,
-      avatarSRC: imgs[i]
+      name: "chracter" + i,
+      avatarSRC: imgs[i],
     })
   }
   const [data, setData] = useState(dummyDataArray)
@@ -165,7 +188,13 @@ const IndexPage = () => {
   }
   function AccordionItemCustom({ className, children, title }) {
     return (
-      <AccordionItem border="none" bg="#555555" outline="none" mb={4} className={className}>
+      <AccordionItem
+        border="none"
+        bg="#555555"
+        outline="none"
+        mb={4}
+        className={className}
+      >
         <h2>
           <AccordionButton
             _focus={{
@@ -198,20 +227,30 @@ const IndexPage = () => {
         <div className="video-wrap"></div>
         <div className="content">
           <div className="welcome">
-            <h1>FAMILY PHALLUS PLANET<br />FAPP</h1>
+            <h1>
+              FAMILY PHALLUS PLANET
+              <br />
+              FAPP
+            </h1>
             <p>The NFT planet where every Phallus is unique and free!</p>
           </div>
           <button className="nav-btn">
             <Link to="/mint-pass">
-            <a>
-              <span>MINT-PASS</span>
-            </a>
+              <a>
+                <span>MINT-PASS</span>
+              </a>
             </Link>
           </button>
           <div className="links">
-            <a href="https://opensea.io/collection/fapp"><img src={opensea} alt="opensea" /></a>
-            <a href="https://twitter.com/FAP_Planet"><img src={twitter} alt="twitter" /></a>
-            <a href="https://discord.gg/zFjWr4wUwH"><img src={discord} alt="discord" /></a>
+            <a href="https://opensea.io/collection/fapp">
+              <img src={opensea} alt="opensea" />
+            </a>
+            <a href="https://twitter.com/FAP_Planet">
+              <img src={twitter} alt="twitter" />
+            </a>
+            <a href="https://discord.gg/zFjWr4wUwH">
+              <img src={discord} alt="discord" />
+            </a>
           </div>
         </div>
       </div>
@@ -231,18 +270,34 @@ const IndexPage = () => {
                 <div className="text">
                   <h2>Storyline</h2>
                   <p>
-                    We are a team of artists, developers and financial analysts. Together we discovered Family Phallus Planet - FAPP.
+                    We are a team of artists, developers and financial analysts.
+                    Together we discovered Family Phallus Planet - FAPP.
                   </p>
                   <br />
                   <p>
-                    Whether you are a male or a female, gay or lesbian, feminist or masculist, transsexual or pansexual - we don't care. We want to show the whole world that Phalluses are not disgusting, but cute and beautiful! Our mission is to help fight AIDS, stop body shaming and prove that art should be provocative.
+                    Whether you are a male or a female, gay or lesbian, feminist
+                    or masculist, transsexual or pansexual - we don't care. We
+                    want to show the whole world that Phalluses are not
+                    disgusting, but cute and beautiful! Our mission is to help
+                    fight AIDS, stop body shaming and prove that art should be
+                    provocative.
                   </p>
                   <br />
                   <p>
-                    Family Phallus Planet (FAPP) is a collection of 8888 unique generative 2.5-inch NFT Phalluses living on the Ethereum blockchain. FAPP is far from boring, every Phallus here knows exactly how to deal with boredom. Just look at them! They know they're small, but they DGAF about it. Phalluses support each other and focus on their strengths, while humans pay too much attention to their problems.
+                    Family Phallus Planet (FAPP) is a collection of 8888 unique
+                    generative 2.5-inch NFT Phalluses living on the Ethereum
+                    blockchain. FAPP is far from boring, every Phallus here
+                    knows exactly how to deal with boredom. Just look at them!
+                    They know they're small, but they DGAF about it. Phalluses
+                    support each other and focus on their strengths, while
+                    humans pay too much attention to their problems.
                   </p>
                   <br />
-                  <p>On Family Phallus Planet everyone can find friends and forget about stupid stereotypes. Mint your own unique Phallus and join our exclusive community!</p>
+                  <p>
+                    On Family Phallus Planet everyone can find friends and
+                    forget about stupid stereotypes. Mint your own unique
+                    Phallus and join our exclusive community!
+                  </p>
                 </div>
                 <ButtonCustomMint className="toMint">
                   <Link to="https://discord.gg/zFjWr4wUwH">
@@ -266,7 +321,8 @@ const IndexPage = () => {
                   <h3>3 groups</h3>
                 </div>
                 <p>
-                  Every Phallus has a unique combination of background color, skin type, eyes, mouth, head and accessories.
+                  Every Phallus has a unique combination of background color,
+                  skin type, eyes, mouth, head and accessories.
                 </p>
               </div>
             </Fade>
@@ -333,142 +389,222 @@ const IndexPage = () => {
               <h2>ROADMAP</h2>
               <h4>Sales Plan</h4>
               <ul>
-                <li>We will sell 500 tradable #FAPP Comic Book - FAPP-CB NFTs that give you pre-sale access and let you buy up to 7 loot boxes before the public sale.</li>
-                <li>After one week all FAPP-CB holders will get pre-sale access.</li>
-                <li>After the pre-sale is completed we will start the public sale. During the public sale everyone will be able to buy tradable #FAPP loot boxes.</li>
-                <li>After everything is sold out, we will reveal all 8888 loot boxes and you will see your Phalluses.</li>
+                <li>
+                  We will sell 200 tradable #FAPP Comic Book - FAPP-CB NFTs that
+                  give you pre-sale access and let you buy up to 7 Phalluses
+                  before the public sale, gives you 1 Free Phallus NFT, 25%
+                  discount for the main drop and a chance to win $2000 and a
+                  Rare Phallus!
+                </li>
+                <li>
+                  After one week all FAPP-CB holders will get pre-sale access.
+                </li>
+                <li>
+                  After the pre-sale is completed we will start the public sale.
+                  During the public sale everyone will be able to buy tradable
+                  #FAPP loot boxes.
+                </li>
+                <li>
+                  After everything is sold out, we will reveal all 8888 loot
+                  boxes and you will see your Phalluses.
+                </li>
               </ul>
               <h3>Short-term</h3>
             </Fade>
             <div className="points" ref={screenWidth > 1300 ? pointsMap : null}>
-              {screenWidth > 1300 &&
+              {screenWidth > 1300 && (
                 <>
                   <div className="line-wrap">
                     <div className="line" ref={line}></div>
                   </div>
                   <Fade left>
                     <div className="point">
-                      <h3><span>20%</span> FAPP is everywhere!</h3>
+                      <h3>
+                        <span>20%</span> FAPP is everywhere!
+                      </h3>
                       <img src={roadmap1} alt="roadmap first image" />
                       <p>
-                        We’ll invest our funds in marketing. We’re great and everyone should hear about us!
+                        We’ll invest our funds in marketing. We’re great and
+                        everyone should hear about us!
                       </p>
                     </div>
                   </Fade>
                   <Fade right>
                     <div className="point right">
-                      <h3><span>40%</span> Charity time!</h3>
+                      <h3>
+                        <span>40%</span> Charity time!
+                      </h3>
                       <img src={roadmap2} alt="roadmap second image" />
-                      <p>
-                        FAPP will make a donation to the AIDS Foundation.
-                      </p>
+                      <p>FAPP will make a donation to the AIDS Foundation.</p>
                     </div>
                   </Fade>
                   <Fade left>
                     <div className="point">
-                      <h3><span>60%</span> How rare is your Phallus?</h3>
+                      <h3>
+                        <span>60%</span> How rare is your Phallus?
+                      </h3>
                       <img src={roadmap3} alt="roadmap third image" />
                       <p>
-                        FAPP will be added to «<a href="https://rarity.tools/">rarity.tools</a>».
+                        FAPP will be added to «
+                        <a href="https://rarity.tools/">rarity.tools</a>».
                       </p>
                     </div>
                   </Fade>
                   <Fade right>
                     <div className="point right">
-                      <h3><span>80%</span> #FAPP merch store!</h3>
+                      <h3>
+                        <span>80%</span> #FAPP merch store!
+                      </h3>
                       <img src={roadmap4} alt="roadmap fourth image" />
                       <p>
-                        Our official FAPP nft merch store will be unlocked for collectors.
+                        Our official FAPP nft merch store will be unlocked for
+                        collectors.
                       </p>
                     </div>
                   </Fade>
                   <Fade left>
                     <div className="point">
-                      <h3><span>90%</span> Phalluses need friends!</h3>
+                      <h3>
+                        <span>90%</span> Phalluses need friends!
+                      </h3>
                       <img src={roadmap5} alt="roadmap fifth image" />
                       <p>We’ll drop a new NFT collectible.</p>
-                      <p>Every collector will be able to mint one free companion for a Phallus. Just pay the gas fee.</p>
+                      <p>
+                        Every collector will be able to mint one free companion
+                        for a Phallus. Just pay the gas fee.
+                      </p>
                     </div>
                   </Fade>
                   <Fade right>
                     <div className="point right">
-                      <h3><span>100%</span> Elections on FAPP</h3>
+                      <h3>
+                        <span>100%</span> Elections on FAPP
+                      </h3>
                       <img src={roadmap6} alt="roadmap sixth image" />
-                      <p>A video game? A web series? Or maybe something new and crazy? All Phalluses will vote for the future of FAPP!</p>
+                      <p>
+                        A video game? A web series? Or maybe something new and
+                        crazy? All Phalluses will vote for the future of FAPP!
+                      </p>
                     </div>
                   </Fade>
                 </>
-              }
-              {screenWidth <= 1300 &&
+              )}
+              {screenWidth <= 1300 && (
                 <>
                   <div className="point">
-                    <h3><span>20%</span> FAPP is everywhere!</h3>
+                    <h3>
+                      <span>20%</span> FAPP is everywhere!
+                    </h3>
                     <img src={roadmap1} alt="roadmap first image" />
                     <p>
-                      We’ll invest our funds in marketing. We’re great and everyone should hear about us!
+                      We’ll invest our funds in marketing. We’re great and
+                      everyone should hear about us!
                     </p>
                   </div>
                   <div className="point">
-                    <h3><span>40%</span> Charity time!</h3>
+                    <h3>
+                      <span>40%</span> Charity time!
+                    </h3>
                     <img src={roadmap2} alt="roadmap second image" />
-                    <p>
-                      FAPP will make a donation to the AIDS Foundation.
-                    </p>
+                    <p>FAPP will make a donation to the AIDS Foundation.</p>
                   </div>
                   <div className="point">
-                    <h3><span>60%</span> How rare is your Phallus?</h3>
+                    <h3>
+                      <span>60%</span> How rare is your Phallus?
+                    </h3>
                     <img src={roadmap3} alt="roadmap third image" />
                     <p>
-                      FAPP will be added to «<a href="https://rarity.tools/">rarity.tools</a>».
+                      FAPP will be added to «
+                      <a href="https://rarity.tools/">rarity.tools</a>».
                     </p>
                   </div>
                   <div className="point">
-                    <h3><span>80%</span> #FAPP merch store!</h3>
+                    <h3>
+                      <span>80%</span> #FAPP merch store!
+                    </h3>
                     <img src={roadmap4} alt="roadmap fourth image" />
                     <p>
-                      Our official FAPP nft merch store will be unlocked for collectors.
+                      Our official FAPP nft merch store will be unlocked for
+                      collectors.
                     </p>
                   </div>
                   <div className="point">
-                    <h3><span>90%</span> Phalluses need friends!</h3>
+                    <h3>
+                      <span>90%</span> Phalluses need friends!
+                    </h3>
                     <img src={roadmap5} alt="roadmap fifth image" />
                     <p>We’ll drop a new NFT collectible.</p>
-                    <p>Every collector will be able to mint one free companion for a Phallus. Just pay the gas fee.</p>
+                    <p>
+                      Every collector will be able to mint one free companion
+                      for a Phallus. Just pay the gas fee.
+                    </p>
                   </div>
                   <div className="point">
-                    <h3><span>100%</span> Elections on FAPP</h3>
+                    <h3>
+                      <span>100%</span> Elections on FAPP
+                    </h3>
                     <img src={roadmap6} alt="roadmap sixth image" />
-                    <p>A video game? A web series? Or maybe something new and crazy? All Phalluses will vote for the future of FAPP!</p>
+                    <p>
+                      A video game? A web series? Or maybe something new and
+                      crazy? All Phalluses will vote for the future of FAPP!
+                    </p>
                   </div>
                 </>
-              }
+              )}
             </div>
             <div>
               <h4>Long-term</h4>
-              <p>We don’t think that anybody can predict the future of FAPP.
-                Family Phallus Planet is a democratic planet where every Phallus can vote and decide what FAPP should do to become the most interesting NFT project.<br />
-                We want to create a community where everyone can be useful. Together we are strong!
+              <p>
+                We don’t think that anybody can predict the future of FAPP.
+                Family Phallus Planet is a democratic planet where every Phallus
+                can vote and decide what FAPP should do to become the most
+                interesting NFT project.
+                <br />
+                We want to create a community where everyone can be useful.
+                Together we are strong!
               </p>
             </div>
           </div>
           <div id="content-block-benefits" className="content-block benefits">
             <h2>BENEFITS</h2>
-            <p>We will take 7% from the secondary market as royalties. That's what we're going to do with all this money! </p>
+            <p>
+              We will take 9% from the secondary market as royalties. That's
+              what we're going to do with all this money!
+            </p>
             <ul>
-              <li><h3>Free NFT</h3>
-                <p>We'll develop new collections for our metaverse, we have many ideas.</p>
-                <p>Every holder will be able to mint 1 free NFT companion for their Phalluses.</p>
+              <li>
+                <h3>Free NFT</h3>
+                <p>
+                  We'll develop new collections for our metaverse, we have many
+                  ideas.
+                </p>
+                <p>
+                  Every holder will be able to mint 1 free NFT companion for
+                  their Phalluses.
+                </p>
               </li>
-              <li><h3>Floor price</h3>
-                <p>15% from royalties will be used for buying the floor price tokens.
-                  We're going to burn these tokens to increase the rarity of the collection. These actions will raise the price.</p>
+              <li>
+                <h3>Floor price</h3>
+                <p>
+                  15% from royalties will be used for buying the floor price
+                  tokens. We're going to burn these tokens to increase the
+                  rarity of the collection. These actions will raise the price.
+                </p>
               </li>
-              <li><h3>Bounties</h3>
-                <p>We think that we must encourage our collectors.
-                  Every month we'll send up to 10% from our royalties to five random holders.</p>
+              <li>
+                <h3>Bounties</h3>
+                <p>
+                  We think that we must encourage our collectors. Every month
+                  we'll send up to 10% from our royalties to five random
+                  holders.
+                </p>
               </li>
-              <li><h3>Fire</h3>
-                <p>If we don't sell everything we'll just burn all unsold NFTs, it means that our collectors will benefit anyway.</p>
+              <li>
+                <h3>Fire</h3>
+                <p>
+                  If we don't sell everything we'll just burn all unsold NFTs,
+                  it means that our collectors will benefit anyway.
+                </p>
               </li>
             </ul>
           </div>
@@ -477,10 +613,12 @@ const IndexPage = () => {
               <h2>FAQ</h2>
               <Accordion className="accordion" allowMultiple allowToggle>
                 <AccordionItemCustom title="WHO ARE YOU?">
-                  We are a team of artists, developers and financial analysts. Together we discovered Family Phallus Planet - FAPP.
+                  We are a team of artists, developers and financial analysts.
+                  Together we discovered Family Phallus Planet - FAPP.
                 </AccordionItemCustom>
                 <AccordionItemCustom title="WHAT IS FAPP?">
-                  Family Phallus Planet - FAPP is an Ethereum Blockchain planet with 8888 generative 2.5 inch NFT Phalluses.
+                  Family Phallus Planet - FAPP is an Ethereum Blockchain planet
+                  with 8888 generative 2.5 inch NFT Phalluses.
                 </AccordionItemCustom>
                 <AccordionItemCustom title="TELL ME MORE ABOUT YOUR NFT COLLECTION!">
                   #FAPP nft collection has 175 hand-drawn traits.
@@ -510,7 +648,8 @@ const IndexPage = () => {
                   <br />
                   Every attribute belongs to its own group:
                   <ul>
-                    <li>Basic group
+                    <li>
+                      Basic group
                       <ul className="faq-list-with-padding">
                         <li>Common attributes</li>
                         <li>Protection attributes</li>
@@ -519,7 +658,8 @@ const IndexPage = () => {
                       </ul>
                     </li>
                     <br />
-                    <li>Wild group
+                    <li>
+                      Wild group
                       <ul className="faq-list-with-padding">
                         <li>Animal attributes</li>
                         <li>Cyber attributes</li>
@@ -527,7 +667,8 @@ const IndexPage = () => {
                       </ul>
                     </li>
                     <br />
-                    <li>Dope group
+                    <li>
+                      Dope group
                       <ul className="faq-list-with-padding">
                         <li>Precious attributes</li>
                       </ul>
@@ -536,27 +677,45 @@ const IndexPage = () => {
                 </AccordionItemCustom>
                 <AccordionItemCustom title="WHAT ARE YOU PLANNING TO DO?">
                   <ul>
-                    <li>We want to help fight AIDS.
+                    <li>
+                      We want to help fight AIDS.
                       <p>
-                        <em>We will donate money to charities that will be chosen by Phalluses in our #FAPP community.</em>
+                        <em>
+                          We will donate money to charities that will be chosen
+                          by Phalluses in our #FAPP community.
+                        </em>
                       </p>
                     </li>
                     <br />
-                    <li>We want to stop body shaming.
+                    <li>
+                      We want to stop body shaming.
                       <p>
-                        <em>Look at Phalluses! They know that they're small, but they DGAF about it. They support each other and think about their strengths while humans pay too much attention to their "problems". Let's create a community where everyone can find friends and forget about stupid stereotypes! </em>
+                        <em>
+                          Look at Phalluses! They know that they're small, but
+                          they DGAF about it. They support each other and think
+                          about their strengths while humans pay too much
+                          attention to their "problems". Let's create a
+                          community where everyone can find friends and forget
+                          about stupid stereotypes!{" "}
+                        </em>
                       </p>
                     </li>
                     <br />
-                    <li>Our team will provide giveaways and prizes.
+                    <li>
+                      Our team will provide giveaways and prizes.
                       <p>
                         <em>ETH coins, free NFTs and more cool stuff!</em>
                       </p>
                     </li>
                     <br />
-                    <li>We want to create a big universe with different characters.
+                    <li>
+                      We want to create a big universe with different
+                      characters.
                       <p>
-                        <em>We will create new NFT collectibles. Our collectors will be able to mint new NFTs for free!</em>
+                        <em>
+                          We will create new NFT collectibles. Our collectors
+                          will be able to mint new NFTs for free!
+                        </em>
                       </p>
                     </li>
                   </ul>
@@ -571,7 +730,10 @@ const IndexPage = () => {
                     <li>175 traits</li>
                     <li>Voting rights</li>
                     <li>We are unique</li>
-                    <li>We give ownership and commercial usage rights to the collectors over their NFTs</li>
+                    <li>
+                      We give ownership and commercial usage rights to the
+                      collectors over their NFTs
+                    </li>
                   </ul>
                 </AccordionItemCustom>
                 {/* <AccordionItemCustom title="HOW CAN I GET A PHALLUS?">
@@ -579,28 +741,43 @@ const IndexPage = () => {
                   1 Phallus costs 0.08 ETH + GAS.
                 </AccordionItemCustom> */}
                 <AccordionItemCustom title="CAN I SEE WHAT PHALLUS I WILL GET?">
-                  No, you can buy tradable loot boxes. They will be replaced by Phalluses after everything is sold out.
+                  No, you can buy tradable loot boxes. They will be replaced by
+                  Phalluses after everything is sold out.
                 </AccordionItemCustom>
                 <AccordionItemCustom title="TELL ME ABOUT ROYALTY FEES AND LIQUIDITY POOL!">
-                  We will take 7% from every resold Phallus. FAPP will send up to 10% to Family Phallus Planet’s liquidity pool. Our collectors will vote how this liquidity pool should be used.
+                  We will take 9% from every resold Phallus. FAPP will send up
+                  to 10% to Family Phallus Planet’s liquidity pool. Our
+                  collectors will vote how this liquidity pool should be used.
                 </AccordionItemCustom>
                 <AccordionItemCustom title="WHERE DO YOU STORE YOUR NFTs?">
-                  We use <a href="http://ifps.io/">ifps.io</a>! It’s the best way to store our NFT collectible. IPFS is a decentralised file hosting system. It means that your NFTs won’t disappear and you will be able to see them anytime you want!
+                  We use <a href="http://ifps.io/">ifps.io</a>! It’s the best
+                  way to store our NFT collectible. IPFS is a decentralised file
+                  hosting system. It means that your NFTs won’t disappear and
+                  you will be able to see them anytime you want!
                 </AccordionItemCustom>
                 <AccordionItemCustom title="WILL YOU MAKE MORE PHALLUSES?">
                   No we won't. We have only 8888 Phalluses.
                 </AccordionItemCustom>
                 <AccordionItemCustom title="DO YOU HAVE YOUR OWN SMART CONTRACT?">
-                  Yes, we developed our own Smart Contract - <a href="https://etherscan.io/address/0x5334f2a1d1c0d536e28452a5740d3290067844d7">0x5334F2a1d1C0D536E28452A5740D3290067844D7</a>.
+                  Yes, we developed our own Smart Contract -{" "}
+                  <a href="https://etherscan.io/address/0x5334f2a1d1c0d536e28452a5740d3290067844d7">
+                    0x5334F2a1d1C0D536E28452A5740D3290067844D7
+                  </a>
+                  .
                 </AccordionItemCustom>
                 <AccordionItemCustom title="CAN I RESELL MY PHALLUS NFT?">
-                  You can resell it on <a href="https://opensea.io/">https://opensea.io/</a>
+                  You can resell it on{" "}
+                  <a href="https://opensea.io/">https://opensea.io/</a>
                 </AccordionItemCustom>
                 <AccordionItemCustom title="WHERE CAN I FIND YOU?">
-                  <a href="https://twitter.com/FAP_Planet">Twitter</a><br />
-                  <a href="https://opensea.io/collection/fapp">OpenSea</a><br />
-                  <a href="https://familyphallusplanet.com/">Website</a><br />
-                  <a href="https://discord.gg/zFjWr4wUwH">Discord</a><br />
+                  <a href="https://twitter.com/FAP_Planet">Twitter</a>
+                  <br />
+                  <a href="https://opensea.io/collection/fapp">OpenSea</a>
+                  <br />
+                  <a href="https://familyphallusplanet.com/">Website</a>
+                  <br />
+                  <a href="https://discord.gg/zFjWr4wUwH">Discord</a>
+                  <br />
                 </AccordionItemCustom>
               </Accordion>
             </Fade>

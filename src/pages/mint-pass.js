@@ -61,23 +61,24 @@ const MintPass = () => {
                   Already minted:
                   {alreadyMinded ? (
                     <span style={{ marginLeft: "15px" }}>
-                      {alreadyMinded}/500
+                      {alreadyMinded}/200
                     </span>
                   ) : (
                     <DotLoader active scale="0.3" />
                   )}
                 </p>
-                <p className="attentionMsg">
+                {/* <p className="attentionMsg">
                   Yesterday we sold 92 mint-passes in 15 minutes!
-                </p>
+                </p> */}
                 <p>
-                  #FAPP Comic Book | FAPP-CB is a collection of 500 tradable
+                  #FAPP Comic Book | FAPP-CB is a collection of 200 tradable
                   mint-pass NFT comic books.
                 </p>
                 <p>
-                  FAPP-CB gives you pre-sale access that lets you get access to
-                  exclusive raffles, buy up to 7 #FAPP loot-boxes before the
-                  public sale and avoid GAS war (very expensive ETH GAS fees).
+                  FAPP-CB gives you pre-sale access, 1 FREE Phallus NFT, 25%
+                  discount, a chance to win 1 Rare Phallus NFT and $2000, Also
+                  it lets you buy up to 7 Phalluses during the pre-sale and
+                  avoid GAS war (very expensive ETH GAS fees)
                 </p>
                 <div className="btns">
                   <button
@@ -148,23 +149,24 @@ const MintPass = () => {
                 Already minted:
                 {alreadyMinded ? (
                   <span style={{ marginLeft: "15px" }}>
-                    {alreadyMinded}/500
+                    {alreadyMinded}/200
                   </span>
                 ) : (
                   <DotLoader active scale="0.3" />
                 )}
               </p>
-              <p className="attentionMsg">
+              {/* <p className="attentionMsg">
                 Yesterday we sold 92 mint-passes in 15 minutes!
-              </p>
+              </p> */}
               <p>
-                #FAPP Comic Book | FAPP-CB is a collection of 500 tradable
+                #FAPP Comic Book | FAPP-CB is a collection of 200 tradable
                 mint-pass NFT comic books.
               </p>
               <p>
-                FAPP-CB gives you pre-sale access that lets you get access to
-                exclusive raffles, buy up to 7 #FAPP loot-boxes before the
-                public sale and avoid GAS war (very expensive ETH GAS fees).
+                FAPP-CB gives you pre-sale access, 1 FREE Phallus NFT, 25%
+                discount, a chance to win 1 Rare Phallus NFT and $2000, Also it
+                lets you buy up to 7 Phalluses during the pre-sale and avoid GAS
+                war (very expensive ETH GAS fees)
               </p>
               <img src={presale} alt="presale image" />
               <button
