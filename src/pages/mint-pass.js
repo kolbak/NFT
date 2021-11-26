@@ -89,13 +89,18 @@ const MintPass = () => {
                 <div className="info">
                   <p>
                     Read more about&nbsp;
-                    <a href="https://medium.com/@FamilyPhallusPlanet/fapp-nft-mint-pass-is-something-you-should-not-miss-sale-ends-november-30-9e0c9a96e209">
+                    <a
+                      href="https://medium.com/@FamilyPhallusPlanet/fapp-nft-mint-pass-is-something-you-should-not-miss-sale-ends-november-30-9e0c9a96e209"
+                      target="_blank"
+                    >
                       FAPP-CB
                     </a>
                   </p>
                   <p>
                     Stay tuned for FAPP in our&nbsp;
-                    <a href="https://discord.gg/zFjWr4wUwH">Discord</a>
+                    <a href="https://discord.gg/zFjWr4wUwH" target="_blank">
+                      Discord
+                    </a>
                   </p>
                 </div>
                 <div className="btns">
@@ -194,13 +199,18 @@ const MintPass = () => {
               <div className="info">
                 <p>
                   Read more about&nbsp;
-                  <a href="https://medium.com/@FamilyPhallusPlanet/fapp-nft-mint-pass-is-something-you-should-not-miss-sale-ends-november-30-9e0c9a96e209">
+                  <a
+                    href="https://medium.com/@FamilyPhallusPlanet/fapp-nft-mint-pass-is-something-you-should-not-miss-sale-ends-november-30-9e0c9a96e209"
+                    target="_blank"
+                  >
                     FAPP-CB
                   </a>
                 </p>
                 <p>
                   Stay tuned for FAPP in our&nbsp;
-                  <a href="https://discord.gg/zFjWr4wUwH">Discord</a>
+                  <a href="https://discord.gg/zFjWr4wUwH" target="_blank">
+                    Discord
+                  </a>
                 </p>
               </div>
               <img src={presale} alt="presale image" />
