@@ -70,21 +70,10 @@ const MintPass = () => {
                     <DotLoader active scale="0.3" />
                   )}
                 </p>
-
                 {/* <p className="attentionMsg">
                   Yesterday we sold 92 mint-passes in 15 minutes!
                 </p> */}
-                <p>
-                  #FAPP Comic Book | FAPP-CB is a collection of 200 tradable
-                  mint-pass NFT comic books.
-                </p>
-                <p>
-                  FAPP-CB gives you pre-sale access, 1 FREE Phallus NFT, 25%
-                  discount, a chance to win 1 Rare Phallus NFT and $2000, Also
-                  it lets you buy up to 7 Phalluses during the pre-sale and
-                  avoid GAS war (very expensive ETH GAS fees)
-                </p>
-
+                <p></p> {/*DON'T DELETE THIS !!!!!!*/}
                 <div className="benefits">
                   <p>MINT-PASS BENEFITS:</p>
                   <UnorderedList>
@@ -97,7 +86,18 @@ const MintPass = () => {
                     <ListItem>Early-access</ListItem>
                   </UnorderedList>
                 </div>
-
+                <div className="info">
+                  <p>
+                    Read more about&nbsp;
+                    <a href="https://medium.com/@FamilyPhallusPlanet/fapp-nft-mint-pass-is-something-you-should-not-miss-sale-ends-november-30-9e0c9a96e209">
+                      FAPP-CB
+                    </a>
+                  </p>
+                  <p>
+                    Stay tuned for FAPP in our&nbsp;
+                    <a href="https://discord.gg/zFjWr4wUwH">Discord</a>
+                  </p>
+                </div>
                 <div className="btns">
                   <button
                     onClick={() => {
@@ -166,7 +166,7 @@ const MintPass = () => {
                 MINT-PASS SALE ENDS ON NOVEMBER 30th
               </p>
               <p className="alreadyMinted">
-                Already minted:
+                AVAILABLE:
                 {alreadyMinded ? (
                   <span style={{ marginLeft: "15px" }}>
                     {alreadyMinded}/200
@@ -178,17 +178,7 @@ const MintPass = () => {
               {/* <p className="attentionMsg">
                 Yesterday we sold 92 mint-passes in 15 minutes!
               </p> */}
-              <p>
-                #FAPP Comic Book | FAPP-CB is a collection of 200 tradable
-                mint-pass NFT comic books.
-              </p>
-              <p>
-                FAPP-CB gives you pre-sale access, 1 FREE Phallus NFT, 25%
-                discount, a chance to win 1 Rare Phallus NFT and $2000, Also it
-                lets you buy up to 7 Phalluses during the pre-sale and avoid GAS
-                war (very expensive ETH GAS fees)
-              </p>
-
+              <p></p> {/*DON'T DELETE THIS !!!!!!*/}
               <div className="benefits">
                 <p>MINT-PASS BENEFITS:</p>
                 <UnorderedList>
@@ -200,6 +190,18 @@ const MintPass = () => {
                   <ListItem>An exclusive comic-book and more</ListItem>
                   <ListItem>Early-access</ListItem>
                 </UnorderedList>
+              </div>
+              <div className="info">
+                <p>
+                  Read more about&nbsp;
+                  <a href="https://medium.com/@FamilyPhallusPlanet/fapp-nft-mint-pass-is-something-you-should-not-miss-sale-ends-november-30-9e0c9a96e209">
+                    FAPP-CB
+                  </a>
+                </p>
+                <p>
+                  Stay tuned for FAPP in our&nbsp;
+                  <a href="https://discord.gg/zFjWr4wUwH">Discord</a>
+                </p>
               </div>
               <img src={presale} alt="presale image" />
               <button
@@ -222,7 +224,6 @@ const MintPass = () => {
                 By minting a FAPP-CB you agree to our{" "}
                 <Link to="/terms">Terms of Service.</Link>
               </p>
-
               <Modal isCentered isOpen={isOpen} onClose={onClose}>
                 <ModalOverlay />
                 <ModalContent
