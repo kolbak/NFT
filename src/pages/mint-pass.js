@@ -61,7 +61,7 @@ const MintPass = () => {
                   MINT-PASS SALE ENDS ON NOVEMBER 30th
                 </p>
                 <p className="alreadyMinted">
-                  AVAILABLE:
+                  SOLD:
                   {alreadyMinded ? (
                     <span style={{ marginLeft: "15px" }}>
                       {alreadyMinded}/200
@@ -171,7 +171,7 @@ const MintPass = () => {
                 MINT-PASS SALE ENDS ON NOVEMBER 30th
               </p>
               <p className="alreadyMinted">
-                AVAILABLE:
+                SOLD:
                 {alreadyMinded ? (
                   <span style={{ marginLeft: "15px" }}>
                     {alreadyMinded}/200
