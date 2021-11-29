@@ -8,7 +8,7 @@ const Terms = () => {
 
   return (
     <Layout>
-      <Seo />
+      <Seo title="FAPP"/>
       <div className="gen-wrap terms">
         <h1>Terms of Service</h1>
         <h2>Terms of Service</h2>

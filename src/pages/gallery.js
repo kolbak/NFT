@@ -29,7 +29,7 @@ const Gallery = () => {
 
   return (
     <Layout>
-      <Seo />
+      <Seo title="FAPP"/>
       <div className="gen-wrap gallery-wrap">
         <h1>This page will be available after the first minted #FAPP NFT</h1>
       </div>

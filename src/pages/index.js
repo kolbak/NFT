@@ -222,7 +222,7 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      <Seo />
+      <Seo title="FAPP"/>
       <div className="welcome-wrap">
         <div className="video-wrap"></div>
         <div className="content">

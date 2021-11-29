@@ -47,7 +47,7 @@ const Character = ({ location }) => {
 
   return (
     <Layout>
-      <Seo />
+      <Seo title="FAPP"/>
       <div className="gen-wrap char">
         <h1 className="name">{name}</h1>
         <img className="avatar" alt="character image" src={src} />
