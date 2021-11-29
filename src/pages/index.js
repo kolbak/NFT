@@ -95,8 +95,8 @@ const IndexPage = () => {
             line.current.style.height =
               Math.floor(
                 window.scrollY +
-                  window.screen.height / 2 -
-                  (window.scrollY + line.current.getBoundingClientRect().top)
+                window.screen.height / 2 -
+                (window.scrollY + line.current.getBoundingClientRect().top)
               ) + "px"
           }
           if (pointsPosTop > -150) {
@@ -232,7 +232,7 @@ const IndexPage = () => {
               <br />
               FAPP
             </h1>
-            <p>The NFT planet where every Phallus is unique and free!</p>
+            <p>The NFT planet where every Phallus is unique and free rewards holders with $260,000!</p>
           </div>
           <button className="nav-btn">
             <Link to="/mint-pass">
@@ -423,10 +423,9 @@ const IndexPage = () => {
                         <span>20%</span> FAPP is everywhere!
                       </h3>
                       <img src={roadmap1} alt="roadmap first image" />
-                      <p>
-                        We’ll invest our funds in marketing. We’re great and
-                        everyone should hear about us!
-                      </p>
+                      <p>We’ll invest our funds in marketing. We’re great and everyone should hear about us!
+                        Rolex Datejust 41 Iced-out piece or 22,000 USDT will be sent to 1 random holder!</p>
+                      <p>10,000 USD will be donated to help fight HIV/AIDS</p>
                     </div>
                   </Fade>
                   <Fade right>
@@ -436,6 +435,8 @@ const IndexPage = () => {
                       </h3>
                       <img src={roadmap2} alt="roadmap second image" />
                       <p>FAPP will make a donation to the AIDS Foundation.</p>
+                      <p>Total 3 ETH will be sent to 20 random holders.</p>
+                      <p>20,000 USD will be donated to help fight HIV/AIDS.</p>
                     </div>
                   </Fade>
                   <Fade left>
@@ -448,6 +449,9 @@ const IndexPage = () => {
                         FAPP will be added to «
                         <a href="https://rarity.tools/">rarity.tools</a>».
                       </p>
+                      <p>Ledger wallet with 50,000 USDT will be sent to 1 random holder!
+                        0.3 ETH will be sent to 10 random holders!</p>
+                      <p>20,000 USD will be donated to help fight HIV/AIDS</p>
                     </div>
                   </Fade>
                   <Fade right>
@@ -460,6 +464,8 @@ const IndexPage = () => {
                         Our official FAPP nft merch store will be unlocked for
                         collectors.
                       </p>
+                      <p>Total 9 ETH will be sent to 20 random holders.</p>
+                      <p>20,000 USD will be donated to help fight HIV/AIDS.</p>
                     </div>
                   </Fade>
                   <Fade left>
@@ -473,6 +479,8 @@ const IndexPage = () => {
                         Every collector will be able to mint one free companion
                         for a Phallus. Just pay the gas fee.
                       </p>
+                      <p>0.6 ETH will be sent to 10 random holders..</p>
+                      <p>20,000 USD will be donated to help fight HIV/AIDS.</p>
                     </div>
                   </Fade>
                   <Fade right>
@@ -483,8 +491,10 @@ const IndexPage = () => {
                       <img src={roadmap6} alt="roadmap sixth image" />
                       <p>
                         A video game? A web series? Or maybe something new and
-                        crazy? All Phalluses will vote for the future of FAPP!
+                        crazy? FAPP will be added to decentraland! All Phalluses will vote for the future of FAPP!
                       </p>
+                      <p>Mercedes-Benz c63s AMG or 105,000 USDT will be sent to 1 random holder!</p>
+                      <p>20,000 USD will be donated to help fight HIV/AIDS.</p>
                     </div>
                   </Fade>
                 </>
@@ -784,7 +794,7 @@ const IndexPage = () => {
           </div>
         </div>
       </div>
-    </Layout>
+    </Layout >
   )
 }
 

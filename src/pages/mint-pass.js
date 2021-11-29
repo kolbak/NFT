@@ -84,6 +84,7 @@ const MintPass = () => {
                     <ListItem>25% discount for the main drop</ListItem>
                     <ListItem>An exclusive comic-book and more</ListItem>
                     <ListItem>Early-access</ListItem>
+                    <ListItem>Participation in a $260,000 Giveaway for holders! </ListItem>
                   </UnorderedList>
                 </div>
                 <div className="info">
