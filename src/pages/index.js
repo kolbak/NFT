@@ -510,6 +510,8 @@ const IndexPage = () => {
                       We’ll invest our funds in marketing. We’re great and
                       everyone should hear about us!
                     </p>
+                    <p>Rolex Datejust 41 Iced-out piece or 22,000 USDT will be sent to 1 random holder!</p>
+                    <p>10,000 USD will be donated to help fight HIV/AIDS</p>
                   </div>
                   <div className="point">
                     <h3>
@@ -517,6 +519,8 @@ const IndexPage = () => {
                     </h3>
                     <img src={roadmap2} alt="roadmap second image" />
                     <p>FAPP will make a donation to the AIDS Foundation.</p>
+                    <p>Total 3 ETH will be sent to 20 random holders.</p>
+                    <p>20,000 USD will be donated to help fight HIV/AIDS.</p>
                   </div>
                   <div className="point">
                     <h3>
@@ -527,6 +531,9 @@ const IndexPage = () => {
                       FAPP will be added to «
                       <a href="https://rarity.tools/">rarity.tools</a>».
                     </p>
+                    <p>Ledger wallet with 50,000 USDT will be sent to 1 random holder!
+                      0.3 ETH will be sent to 10 random holders!</p>
+                    <p>20,000 USD will be donated to help fight HIV/AIDS</p>
                   </div>
                   <div className="point">
                     <h3>
@@ -537,6 +544,8 @@ const IndexPage = () => {
                       Our official FAPP nft merch store will be unlocked for
                       collectors.
                     </p>
+                    <p>Total 9 ETH will be sent to 20 random holders.</p>
+                    <p>20,000 USD will be donated to help fight HIV/AIDS.</p>
                   </div>
                   <div className="point">
                     <h3>
@@ -548,6 +557,8 @@ const IndexPage = () => {
                       Every collector will be able to mint one free companion
                       for a Phallus. Just pay the gas fee.
                     </p>
+                    <p>0.6 ETH will be sent to 10 random holders.</p>
+                    <p>20,000 USD will be donated to help fight HIV/AIDS.</p>
                   </div>
                   <div className="point">
                     <h3>
@@ -556,8 +567,10 @@ const IndexPage = () => {
                     <img src={roadmap6} alt="roadmap sixth image" />
                     <p>
                       A video game? A web series? Or maybe something new and
-                      crazy? All Phalluses will vote for the future of FAPP!
+                      crazy? FAPP will be added to decentraland! All Phalluses will vote for the future of FAPP!
                     </p>
+                    <p>Mercedes-Benz c63s AMG or 105,000 USDT will be sent to 1 random holder!</p>
+                    <p>20,000 USD will be donated to help fight HIV/AIDS.</p>
                   </div>
                 </>
               )}
