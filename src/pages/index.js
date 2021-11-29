@@ -423,8 +423,8 @@ const IndexPage = () => {
                         <span>20%</span> FAPP is everywhere!
                       </h3>
                       <img src={roadmap1} alt="roadmap first image" />
-                      <p>We’ll invest our funds in marketing. We’re great and everyone should hear about us!
-                        Rolex Datejust 41 Iced-out piece or 22,000 USDT will be sent to 1 random holder!</p>
+                      <p>We’ll invest our funds in marketing. We’re great and everyone should hear about us!</p>
+                      <p>Rolex Datejust 41 Iced-out piece or 22,000 USDT will be sent to 1 random holder!</p>
                       <p>10,000 USD will be donated to help fight HIV/AIDS</p>
                     </div>
                   </Fade>
