@@ -36,7 +36,7 @@ const MintPass = () => {
 
   const [alreadyMinded, setAlreadyMinded] = useState(false) // useState(false) когда задеплоим маиннет контракт
   useEffect(() => {
-    ;(async function getTotalSupply() {
+    ; (async function getTotalSupply() {
       const res = await fetch(
         "https://familyphallusplanet.com/api/total-supply",
         {
@@ -84,7 +84,11 @@ const MintPass = () => {
                     <ListItem>25% discount for the main drop</ListItem>
                     <ListItem>An exclusive comic-book and more</ListItem>
                     <ListItem>Early-access</ListItem>
-                    <ListItem>Participation in a $260,000 Giveaway for holders! </ListItem>
+                    <ListItem>
+                      <Link to="https://medium.com/@FamilyPhallusPlanet/big-giveaways-for-holders-2457a20ae987" target="_blank" onClick={(event) => { event.preventDefault(); window.open(this.makeHref("https://medium.com/@FamilyPhallusPlanet/big-giveaways-for-holders-2457a20ae987")); }} >
+                        Participation in a $260,000 Giveaway for holders!
+                      </Link>
+                    </ListItem>
                   </UnorderedList>
                 </div>
                 <div className="info">
