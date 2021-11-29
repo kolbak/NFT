@@ -70,7 +70,7 @@ const UserAccount = () => {
 
   return (
     <Layout>
-      <Seo title="Account" />
+      <Seo />
       <div className="gen-wrap user-acc">
         <h1>The #FAPP Community</h1>
         <h2>

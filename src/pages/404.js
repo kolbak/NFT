@@ -7,7 +7,7 @@ import './404.scss';
 
 const NotFound = () => (
   <Layout>
-    <Seo title="Home" refresh={true} />
+    <Seo refresh={true} />
     <div className="gen-wrap not-found-wrap">
       <h1>404</h1>
       <h2>Page Not Found</h2>

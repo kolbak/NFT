@@ -10,7 +10,7 @@ function Seo({ lang, meta, title, refresh, isMintPassPage }) {
       htmlAttributes={{
         lang,
       }}
-      title={title}
+      title={isMintPassPage ? title : "FAPP"}
       name="viewport" content="width=device-width, initial-scale=1.0"
       meta={[
         {
