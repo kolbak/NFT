@@ -36,7 +36,7 @@ const MintPass = () => {
 
   const [alreadyMinded, setAlreadyMinded] = useState(false) // useState(false) когда задеплоим маиннет контракт
   useEffect(() => {
-    ; (async function getTotalSupply() {
+    ;(async function getTotalSupply() {
       const res = await fetch(
         "https://familyphallusplanet.com/api/total-supply",
         {
@@ -85,8 +85,22 @@ const MintPass = () => {
                     <ListItem>An exclusive comic-book and more</ListItem>
                     <ListItem>Early-access</ListItem>
                     <ListItem>
-                      <Link to="https://medium.com/@FamilyPhallusPlanet/big-giveaways-for-holders-2457a20ae987" target="_blank" onClick={(event) => { event.preventDefault(); window.open(this.makeHref("https://medium.com/@FamilyPhallusPlanet/big-giveaways-for-holders-2457a20ae987")); }} >
-                        Participation in a $260,000 Giveaway for holders!
+                      <Link
+                        to="https://medium.com/@FamilyPhallusPlanet/big-giveaways-for-holders-2457a20ae987"
+                        target="_blank"
+                        onClick={event => {
+                          event.preventDefault()
+                          window.open(
+                            this.makeHref(
+                              "https://medium.com/@FamilyPhallusPlanet/big-giveaways-for-holders-2457a20ae987"
+                            )
+                          )
+                        }}
+                      >
+                        Participation in a&nbsp;
+                        <span className="link">
+                          $260,000 Giveaway for holders!
+                        </span>
                       </Link>
                     </ListItem>
                   </UnorderedList>
@@ -97,13 +111,18 @@ const MintPass = () => {
                     <a
                       href="https://medium.com/@FamilyPhallusPlanet/fapp-nft-mint-pass-is-something-you-should-not-miss-sale-ends-november-30-9e0c9a96e209"
                       target="_blank"
+                      className="link"
                     >
                       FAPP-CB
                     </a>
                   </p>
                   <p>
                     Stay tuned for FAPP in our&nbsp;
-                    <a href="https://discord.gg/zFjWr4wUwH" target="_blank">
+                    <a
+                      href="https://discord.gg/zFjWr4wUwH"
+                      className="link"
+                      target="_blank"
+                    >
                       Discord
                     </a>
                   </p>
@@ -200,8 +219,22 @@ const MintPass = () => {
                   <ListItem>An exclusive comic-book and more</ListItem>
                   <ListItem>Early-access</ListItem>
                   <ListItem>
-                    <Link to="https://medium.com/@FamilyPhallusPlanet/big-giveaways-for-holders-2457a20ae987" target="_blank" onClick={(event) => { event.preventDefault(); window.open(this.makeHref("https://medium.com/@FamilyPhallusPlanet/big-giveaways-for-holders-2457a20ae987")); }} >
-                      Participation in a $260,000 Giveaway for holders!
+                    <Link
+                      to="https://medium.com/@FamilyPhallusPlanet/big-giveaways-for-holders-2457a20ae987"
+                      target="_blank"
+                      onClick={event => {
+                        event.preventDefault()
+                        window.open(
+                          this.makeHref(
+                            "https://medium.com/@FamilyPhallusPlanet/big-giveaways-for-holders-2457a20ae987"
+                          )
+                        )
+                      }}
+                    >
+                      Participation in a&nbsp;
+                      <span className="link">
+                        $260,000 Giveaway for holders!
+                      </span>
                     </Link>
                   </ListItem>
                 </UnorderedList>
@@ -212,13 +245,18 @@ const MintPass = () => {
                   <a
                     href="https://medium.com/@FamilyPhallusPlanet/fapp-nft-mint-pass-is-something-you-should-not-miss-sale-ends-november-30-9e0c9a96e209"
                     target="_blank"
+                    className="link"
                   >
                     FAPP-CB
                   </a>
                 </p>
                 <p>
                   Stay tuned for FAPP in our&nbsp;
-                  <a href="https://discord.gg/zFjWr4wUwH" target="_blank">
+                  <a
+                    href="https://discord.gg/zFjWr4wUwH"
+                    className="link"
+                    target="_blank"
+                  >
                     Discord
                   </a>
                 </p>
