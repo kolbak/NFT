@@ -1,10 +1,9 @@
 import ABI from "./abi.json"
 const ethers = require("ethers")
 const contractAddress = "0x5334F2a1d1C0D536E28452A5740D3290067844D7" // you can change this
-const mainChainId = "1"
+const mainChainId = 4
 
 let ethereum
-let wallet
 let contractInstance
 let connected = false
 let signer
@@ -57,7 +56,7 @@ async function switchEthereumNetwork() {
   try {
     await ethereum.request({
       method: "wallet_switchEthereumChain",
-      params: [{ chainId: "0x1" }],
+      params: [{ chainId: `0x${mainChainId.toString(16)}` }],
     })
   } catch (err) {
     signer = undefined
@@ -67,15 +66,14 @@ async function switchEthereumNetwork() {
 
 // HANDLERS
 
-export async function mint() {
+export async function mint(amount) {
   try {
     if (contractInstance) {
       await validateNetwork()
       const trustedInstance = contractInstance.connect(signer)
-      const price = await trustedInstance.FAPP_CB_PRICE()
-      const res = await trustedInstance.mintPublic(1, {
-        value: price,
-      })
+      //   const price = await trustedInstance.FAPP_CB_PRICE()
+      //   const res = await trustedInstance.mintPublic(amount)
+      const res = await trustedInstance.mintPresaleMemberWithAmount(amount)
       return true
     } else {
       alert("Connect your metamask wallet!")

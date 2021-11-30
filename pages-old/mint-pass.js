@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react"
 import { Link } from "gatsby"
-import Layout from "../components/layout"
-import Seo from "../components/seo"
-import { connectToContract, mint } from "../etc/contract.js"
-import MintPassTimer from "../components/mint_pass_timer"
-import DotLoader from "../components/loader"
+import Layout from "../src/components/layout"
+import Seo from "../src/components/seo"
+import { connectToContract, mint } from "../src/etc/contract.js"
+import MintPassTimer from "../src/components/mint_pass_timer"
+import DotLoader from "../src/components/loader"
 import { List, ListItem, UnorderedList } from "@chakra-ui/react"
 
 import {

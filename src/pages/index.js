@@ -239,9 +239,9 @@ const IndexPage = () => {
             </p>
           </div>
           <button className="nav-btn">
-            <Link to="/mint-pass">
+            <Link to="/mint">
               <a>
-                <span>MINT-PASS</span>
+                <span>MINT</span>
               </a>
             </Link>
           </button>
