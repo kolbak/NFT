@@ -24,6 +24,7 @@
     "framer-motion": "^4.1.17",
     "gatsby": "^3.10.0",
     "gatsby-cli": "^4.0.0",
+    "gatsby-plugin-google-tagmanager": "^4.2.0",
     "loaders.css": "^0.1.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",

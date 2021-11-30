@@ -131,6 +131,7 @@ const MintPass = () => {
                   <button
                     onClick={() => {
                       connectToContract(window.ethereum)
+                      dataLayer.push({ event: "metamaskconnect" })
                     }}
                     className="cnct-wallet"
                   >
@@ -265,6 +266,7 @@ const MintPass = () => {
               <button
                 onClick={() => {
                   connectToContract(window.ethereum)
+                  dataLayer.push({ event: "metamaskconnect" })
                 }}
                 className="cnct-wallet"
               >

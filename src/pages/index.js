@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react"
+
 import { Link } from "gatsby"
 import Fade from "react-reveal/Fade"
 import {
@@ -95,8 +96,8 @@ const IndexPage = () => {
             line.current.style.height =
               Math.floor(
                 window.scrollY +
-                window.screen.height / 2 -
-                (window.scrollY + line.current.getBoundingClientRect().top)
+                  window.screen.height / 2 -
+                  (window.scrollY + line.current.getBoundingClientRect().top)
               ) + "px"
           }
           if (pointsPosTop > -150) {
@@ -222,7 +223,7 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      <Seo title="FAPP"/>
+      <Seo title="FAPP" />
       <div className="welcome-wrap">
         <div className="video-wrap"></div>
         <div className="content">
@@ -232,7 +233,10 @@ const IndexPage = () => {
               <br />
               FAPP
             </h1>
-            <p>The NFT planet where every Phallus is unique and free rewards holders with $260,000!</p>
+            <p>
+              The NFT planet where every Phallus is unique and free rewards
+              holders with $260,000!
+            </p>
           </div>
           <button className="nav-btn">
             <Link to="/mint-pass">
@@ -423,8 +427,14 @@ const IndexPage = () => {
                         <span>20%</span> FAPP is everywhere!
                       </h3>
                       <img src={roadmap1} alt="roadmap first image" />
-                      <p>We’ll invest our funds in marketing. We’re great and everyone should hear about us!</p>
-                      <p>Rolex Datejust 41 Iced-out piece or 22,000 USDT will be sent to 1 random holder!</p>
+                      <p>
+                        We’ll invest our funds in marketing. We’re great and
+                        everyone should hear about us!
+                      </p>
+                      <p>
+                        Rolex Datejust 41 Iced-out piece or 22,000 USDT will be
+                        sent to 1 random holder!
+                      </p>
                       <p>10,000 USD will be donated to help fight HIV/AIDS</p>
                     </div>
                   </Fade>
@@ -449,8 +459,10 @@ const IndexPage = () => {
                         FAPP will be added to «
                         <a href="https://rarity.tools/">rarity.tools</a>».
                       </p>
-                      <p>Ledger wallet with 50,000 USDT will be sent to 1 random holder!
-                        0.3 ETH will be sent to 10 random holders!</p>
+                      <p>
+                        Ledger wallet with 50,000 USDT will be sent to 1 random
+                        holder! 0.3 ETH will be sent to 10 random holders!
+                      </p>
                       <p>20,000 USD will be donated to help fight HIV/AIDS</p>
                     </div>
                   </Fade>
@@ -491,9 +503,13 @@ const IndexPage = () => {
                       <img src={roadmap6} alt="roadmap sixth image" />
                       <p>
                         A video game? A web series? Or maybe something new and
-                        crazy? FAPP will be added to decentraland! All Phalluses will vote for the future of FAPP!
+                        crazy? FAPP will be added to decentraland! All Phalluses
+                        will vote for the future of FAPP!
                       </p>
-                      <p>Mercedes-Benz c63s AMG or 105,000 USDT will be sent to 1 random holder!</p>
+                      <p>
+                        Mercedes-Benz c63s AMG or 105,000 USDT will be sent to 1
+                        random holder!
+                      </p>
                       <p>20,000 USD will be donated to help fight HIV/AIDS.</p>
                     </div>
                   </Fade>
@@ -510,7 +526,10 @@ const IndexPage = () => {
                       We’ll invest our funds in marketing. We’re great and
                       everyone should hear about us!
                     </p>
-                    <p>Rolex Datejust 41 Iced-out piece or 22,000 USDT will be sent to 1 random holder!</p>
+                    <p>
+                      Rolex Datejust 41 Iced-out piece or 22,000 USDT will be
+                      sent to 1 random holder!
+                    </p>
                     <p>10,000 USD will be donated to help fight HIV/AIDS</p>
                   </div>
                   <div className="point">
@@ -531,8 +550,10 @@ const IndexPage = () => {
                       FAPP will be added to «
                       <a href="https://rarity.tools/">rarity.tools</a>».
                     </p>
-                    <p>Ledger wallet with 50,000 USDT will be sent to 1 random holder!
-                      0.3 ETH will be sent to 10 random holders!</p>
+                    <p>
+                      Ledger wallet with 50,000 USDT will be sent to 1 random
+                      holder! 0.3 ETH will be sent to 10 random holders!
+                    </p>
                     <p>20,000 USD will be donated to help fight HIV/AIDS</p>
                   </div>
                   <div className="point">
@@ -567,9 +588,13 @@ const IndexPage = () => {
                     <img src={roadmap6} alt="roadmap sixth image" />
                     <p>
                       A video game? A web series? Or maybe something new and
-                      crazy? FAPP will be added to decentraland! All Phalluses will vote for the future of FAPP!
+                      crazy? FAPP will be added to decentraland! All Phalluses
+                      will vote for the future of FAPP!
                     </p>
-                    <p>Mercedes-Benz c63s AMG or 105,000 USDT will be sent to 1 random holder!</p>
+                    <p>
+                      Mercedes-Benz c63s AMG or 105,000 USDT will be sent to 1
+                      random holder!
+                    </p>
                     <p>20,000 USD will be donated to help fight HIV/AIDS.</p>
                   </div>
                 </>
@@ -807,7 +832,7 @@ const IndexPage = () => {
           </div>
         </div>
       </div>
-    </Layout >
+    </Layout>
   )
 }
 

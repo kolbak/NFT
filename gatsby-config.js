@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     siteUrl: `https://www.yourdomain.tld`,
-    title: 'NFT',
+    title: "NFT",
   },
   plugins: [
     "@chakra-ui/gatsby-plugin",
@@ -24,5 +24,12 @@ module.exports = {
         icon: `src/images/logo.svg`,
       },
     },
+    {
+      resolve: "gatsby-plugin-google-tagmanager",
+      options: {
+        id: "GTM-53B53DH",
+        includeInDevelopment: false,
+      },
+    },
   ],
-};
+}
