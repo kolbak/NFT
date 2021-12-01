@@ -70,9 +70,11 @@ export async function mint(amount) {
     if (contractInstance) {
       await validateNetwork()
       const trustedInstance = contractInstance.connect(signer)
-      //   const price = await trustedInstance.FAPP_CB_PRICE()
+      const price = await trustedInstance.PHALLUS_PRICE()
       //   const res = await trustedInstance.mintPublic(amount)
-      const res = await trustedInstance.mintPresaleMemberWithAmount(amount)
+      const res = await trustedInstance.mintPresaleMemberWithAmount(amount, {
+        value: price,
+      })
       return true
     } else {
       alert("Connect your metamask wallet!")
