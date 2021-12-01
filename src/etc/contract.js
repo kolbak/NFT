@@ -1,7 +1,6 @@
 import ABI from "./abi.json"
 const ethers = require("ethers")
-const contractAddress = "0x5334F2a1d1C0D536E28452A5740D3290067844D7" // you can change this
-const mainChainId = 4
+import config from "./config.json"
 
 let ethereum
 let contractInstance
@@ -26,7 +25,7 @@ async function doConnect() {
   try {
     if (ethereum) {
       currentNetwork = ethereum.networkVersion
-      if (currentNetwork !== mainChainId) {
+      if (currentNetwork !== config.mainChainId) {
         await switchEthereumNetwork()
       }
       // connecting to Metamask
@@ -38,7 +37,11 @@ async function doConnect() {
       signer = provider.getSigner()
 
       // getting instance of contract
-      contractInstance = new ethers.Contract(contractAddress, ABI, signer)
+      contractInstance = new ethers.Contract(
+        config.contractAddress,
+        ABI,
+        signer
+      )
     } else alert("Connect Metamask!")
   } catch (err) {
     console.error(err)
@@ -56,7 +59,7 @@ async function switchEthereumNetwork() {
   try {
     await ethereum.request({
       method: "wallet_switchEthereumChain",
-      params: [{ chainId: `0x${mainChainId.toString(16)}` }],
+      params: [{ chainId: `0x${config.mainChainId.toString(16)}` }],
     })
   } catch (err) {
     signer = undefined
