@@ -30,18 +30,14 @@ async function doConnect() {
       }
       // connecting to Metamask
       const res = await ethereum.request({ method: "eth_requestAccounts" })
-      wallet = res[0]
 
       // getting procider and signer
       provider = new ethers.providers.Web3Provider(ethereum)
       signer = provider.getSigner()
 
       // getting instance of contract
-      contractInstance = new ethers.Contract(
-        config.contractAddress,
-        ABI,
-        signer
-      )
+      console.log(config.contractArdess)
+      contractInstance = new ethers.Contract(config.contractArdess, ABI, signer)
     } else alert("Connect Metamask!")
   } catch (err) {
     console.error(err)
