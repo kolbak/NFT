@@ -7,7 +7,11 @@ export default function DotLoader({ active, scale }) {
     <Loader
       type="ball-pulse-sync"
       active={active}
-      style={{ transform: `scale(${scale})`, display: "inline-block" }}
+      style={{
+        transform: `scale(${scale})`,
+        display: "inline-block",
+        margin: "0 auto",
+      }}
     />
   )
 }
