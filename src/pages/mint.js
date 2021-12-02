@@ -8,6 +8,9 @@ import {
   FormLabel,
   NumberInput,
   NumberInputField,
+  NumberInputStepper,
+  NumberIncrementStepper,
+  NumberDecrementStepper,
 } from "@chakra-ui/react"
 
 import Layout from "../components/layout"
@@ -17,12 +20,6 @@ import "./mint.scss"
 
 const Mint = () => {
   const amountEl = useRef(null)
-
-  function onInput(e) {
-    //? проверка на макисмальное кол-во символов
-    if (e.target.value.length > +e.target.dataset.maxl)
-      e.target.value = e.target.value.slice(0, e.target.dataset.maxl)
-  }
 
   return (
     <Layout>
@@ -64,15 +61,14 @@ const Mint = () => {
           </div>
           <div className="form">
             <form action="">
-              <FormControl id="amount">
+              <FormControl id="amount" onSubmit={e => e.preventDefault()}>
                 <FormLabel>Amount</FormLabel>
-                <NumberInput min={1} max={15}>
-                  <NumberInputField
-                    data-maxl={2}
-                    onInput={onInput}
-                    ref={amountEl}
-                    required
-                  />
+                <NumberInput min={1} max={15} defaultValue={1}>
+                  <NumberInputField ref={amountEl} required />
+                  <NumberInputStepper>
+                    <NumberIncrementStepper />
+                    <NumberDecrementStepper />
+                  </NumberInputStepper>
                 </NumberInput>
               </FormControl>
             </form>
