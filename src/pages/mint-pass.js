@@ -60,16 +60,7 @@ const MintPass = () => {
                 <p className="mint-message">
                   MINT-PASS SALE ENDS ON NOVEMBER 30th
                 </p>
-                <p className="alreadyMinted">
-                  SOLD:
-                  {alreadyMinded ? (
-                    <span style={{ marginLeft: "15px" }}>
-                      {alreadyMinded}/200
-                    </span>
-                  ) : (
-                    <DotLoader active scale="0.3" />
-                  )}
-                </p>
+                <p className="alreadyMinted">SOLD OUT!</p>
                 {/* <p className="attentionMsg">
                   Yesterday we sold 92 mint-passes in 15 minutes!
                 </p> */}
@@ -142,6 +133,7 @@ const MintPass = () => {
                       mint()
                     }}
                     className="mint"
+                    disabled
                   >
                     Mint 0.06 ETH
                   </button>
@@ -195,16 +187,7 @@ const MintPass = () => {
               <p className="mint-message">
                 MINT-PASS SALE ENDS ON NOVEMBER 30th
               </p>
-              <p className="alreadyMinted">
-                SOLD:
-                {alreadyMinded ? (
-                  <span style={{ marginLeft: "15px" }}>
-                    {alreadyMinded}/200
-                  </span>
-                ) : (
-                  <DotLoader active scale="0.3" />
-                )}
-              </p>
+              <p className="alreadyMinted">SOLD OUT!</p>
               {/* <p className="attentionMsg">
                 Yesterday we sold 92 mint-passes in 15 minutes!
               </p> */}
@@ -277,6 +260,7 @@ const MintPass = () => {
                   mint()
                 }}
                 className="mint"
+                disabled
               >
                 Mint 0.06 ETH
               </button>
