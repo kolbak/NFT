@@ -28,7 +28,7 @@ function makeDateDiffObj(dateDiff) {
   }
 }
 
-export default function MintTimer({ windowWidth, scale }) {
+export default function MintTimer({ scale }) {
   const [timer, setTimer] = useState(makeDateDiffObj(0))
 
   useEffect(async () => {
@@ -43,9 +43,9 @@ export default function MintTimer({ windowWidth, scale }) {
     }, 1000)
   }, [timer])
 
-  return windowWidth < 500 ? (
+  return (
     <div className="mint-pass-timer-container">
-      <p>Until the mint-pass is left:</p>
+      <p>Until the mint is left:</p>
       <div className="mint-pass-timer" style={{ trancform: `scale(${scale})` }}>
         <div className="mint-pass-timer-item">
           <b> {timer.days}</b>
@@ -62,28 +62,6 @@ export default function MintTimer({ windowWidth, scale }) {
         <div className="mint-pass-timer-item">
           <b> {timer.seconds}</b>
           <span>secs</span>
-        </div>
-      </div>
-    </div>
-  ) : (
-    <div className="mint-pass-timer-container">
-      <p>Until the mint-pass is left:</p>
-      <div className="mint-pass-timer">
-        <div className="mint-pass-timer-item">
-          <b> {timer.days}</b>
-          <span>days</span>
-        </div>
-        <div className="mint-pass-timer-item">
-          <b> {timer.hours}</b>
-          <span>hours</span>
-        </div>
-        <div className="mint-pass-timer-item">
-          <b> {timer.minutes}</b>
-          <span>minutes</span>
-        </div>
-        <div className="mint-pass-timer-item">
-          <b> {timer.seconds}</b>
-          <span>seconds</span>
         </div>
       </div>
     </div>
