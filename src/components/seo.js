@@ -30,7 +30,7 @@ function Seo({ lang, meta, title, refresh, isMintPassPage }) {
       />
       <meta
         name="og:description"
-        content="8888 Generative 2.5 inch NFT Phalluses on Family Phallus Planet #FAPP"
+        content="3333 Generative 2.5 inch NFT Phalluses on Family Phallus Planet #FAPP"
       />
       <meta name="og:image" content={preview} />
       {/* <meta property="vk:image" content={preview} /> */}

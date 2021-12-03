@@ -288,7 +288,7 @@ const IndexPage = () => {
                   </p>
                   <br />
                   <p>
-                    Family Phallus Planet (FAPP) is a collection of 8888 unique
+                    Family Phallus Planet (FAPP) is a collection of 3333 unique
                     generative 2.5-inch NFT Phalluses living on the Ethereum
                     blockchain. FAPP is far from boring, every Phallus here
                     knows exactly how to deal with boredom. Just look at them!
@@ -319,7 +319,7 @@ const IndexPage = () => {
               <div className="info">
                 <h2>NFT</h2>
                 <div className="about">
-                  <h3>8888 generative NFTs.</h3>
+                  <h3>3333 generative NFTs.</h3>
                   <h3>175 Traits</h3>
                   <h3>7 kinds of attributes</h3>
                   <h3>3 groups</h3>
@@ -409,7 +409,7 @@ const IndexPage = () => {
                   #FAPP loot boxes.
                 </li>
                 <li>
-                  After everything is sold out, we will reveal all 8888 loot
+                  After everything is sold out, we will reveal all 3333 loot
                   boxes and you will see your Phalluses.
                 </li>
               </ul>
@@ -666,7 +666,7 @@ const IndexPage = () => {
                 </AccordionItemCustom>
                 <AccordionItemCustom title="WHAT IS FAPP?">
                   Family Phallus Planet - FAPP is an Ethereum Blockchain planet
-                  with 8888 generative 2.5 inch NFT Phalluses.
+                  with 3333 generative 2.5 inch NFT Phalluses.
                 </AccordionItemCustom>
                 <AccordionItemCustom title="TELL ME MORE ABOUT YOUR NFT COLLECTION!">
                   #FAPP nft collection has 175 hand-drawn traits.
@@ -804,7 +804,7 @@ const IndexPage = () => {
                   you will be able to see them anytime you want!
                 </AccordionItemCustom>
                 <AccordionItemCustom title="WILL YOU MAKE MORE PHALLUSES?">
-                  No we won't. We have only 8888 Phalluses.
+                  No we won't. We have only 3333 Phalluses.
                 </AccordionItemCustom>
                 <AccordionItemCustom title="DO YOU HAVE YOUR OWN SMART CONTRACT?">
                   Yes, we developed our own Smart Contract -{" "}
