@@ -3,17 +3,17 @@
 }
 
 h2.filterH2 {
-  display: flex;
-  align-items: center;
+  display        : flex;
+  align-items    : center;
   justify-content: space-between;
 
-  text-align: start;
-  background : #0a0e16;
-  font-weight: bold;
-  font-size  : 2.3rem;
-  padding    : 5px 20px;
+  text-align   : start;
+  background   : #0a0e16;
+  font-weight  : bold;
+  font-size    : 2.3rem;
+  padding      : 5px 20px;
   margin-bottom: 20px;
-  width      : 100%;
+  width        : 100%;
 }
 
 .gallery-content {
@@ -23,12 +23,14 @@ h2.filterH2 {
 
   .filters-wrap {
     .filters {
+      width: 80%;
+
       * {
         // overflow-x: hidden;
         color: #ababab;
       }
 
-      svg{
+      svg {
         display: none;
       }
 
@@ -56,70 +58,97 @@ h2.filterH2 {
         background-color: #706f6f;
         border-radius   : 50px;
       }
-      
+
       span.__filter-title {
-        display        : flex;
-        align-items    : center;
+        display    : flex;
+        align-items: center;
       }
-      .chakra-collapse{
+
+      .chakra-collapse {
         padding-bottom: 10px;
       }
-      .chakra-accordion__panel{
+
+      .chakra-accordion__panel {
         padding: 5px 10px;
       }
-      .filters-list:first-of-type{
-        .chakra-checkbox__label{
-          margin-bottom: 5px;
-        }
-      }
-      .chakra-stack{
+
+      // .filters-list:first-of-type{
+      //   .chakra-checkbox__label{
+      //     margin-bottom: 5px;
+      //   }
+      // }
+      .chakra-stack {
         margin-left: 10px;
-        .chakra-checkbox__control{
+
+        .chakra-checkbox__control {
           align-self: end;
         }
-        .chakra-checkbox__label{
+
+        .chakra-checkbox__label {
           line-height: 20px;
         }
-        .filter-info{
+
+        .filter-info {
           font-size: 10px;
-          margin: 0 0 9px 28px;
+          margin   : 0 0 9px 28px;
         }
       }
-      
-      width : 80%;
+
+      button.btn-show {
+        background   : rgb(255, 0, 157);
+        outline      : none;
+        border       : none;
+        border-radius: 25px;
+        width        : 60%;
+        font-family: 'Amatic SC', cursive;
+        font-size    : 25px;
+        margin       : 30px auto 0 auto;
+        display      : block;
+        color        : white;
+        transition: .5s;
+
+        pointer-events: none;
+        opacity       : 0;
+      }
+
+      button.btn-show.visible {
+        pointer-events: initial;
+        opacity       : 1;
+      }
     }
   }
 
-  .grid-wrap{
-    display: flex;
+  .grid-wrap {
+    display       : flex;
     flex-direction: column;
-    
-    .btn-showmore {
-      margin-top: 20px;
-      justify-self     : center;
-      align-self       : center;
-      grid-column-start: 2;
-      grid-column-end: 3;
 
-      background-color: rgb(255, 0, 157);
-      border-radius: 15px;
-      color           : #fff;
+    // .btn-showmore {
+    //   margin-top       : 20px;
+    //   justify-self     : center;
+    //   align-self       : center;
+    //   grid-column-start: 2;
+    //   grid-column-end  : 3;
 
-      font-family: 'Amatic SC', cursive;
-      font-size  : 30px;
+    //   background-color: rgb(255, 0, 157);
+    //   border-radius   : 15px;
+    //   color           : #fff;
 
-      height: 50px;
-      width: max-content;
-      padding: 0 30px;
-    }
+    //   font-family: 'Amatic SC', cursive;
+    //   font-size  : 30px;
+
+    //   height : 50px;
+    //   width  : max-content;
+    //   padding: 0 30px;
+    // }
 
     @media screen and (max-width: 1450px) {
       .grid {
         grid-template-columns: repeat(2, 1fr);
       }
     }
+
     @media screen and (max-width: 650px) {
-      .grid{
+      .grid {
         grid-template-columns: 1fr;
       }
     }
@@ -127,7 +156,7 @@ h2.filterH2 {
 }
 
 @media screen and (max-width: 850px) {
-  .gallery-wrap{    
+  .gallery-wrap {
     .toggle-button {
       width: 100%;
     }
@@ -143,7 +172,7 @@ h2.filterH2 {
 
     .filters-wrap {
       max-height: 0;
-      overflow-y  : hidden;
+      overflow-y: hidden;
       background: #0a0e16;
       transition: .5s linear;
 
@@ -151,14 +180,17 @@ h2.filterH2 {
         width           : 94%;
         margin          : 20px 3% 0 3%;
         background-color: transparent;
+
         .filters-list {
-          
+
           padding-bottom: 20px;
           margin-right  : 10px;
         }
-        svg{
+
+        svg {
           display: block;
         }
+
         .chakra-accordion__item {
           background-color: transparent;
         }

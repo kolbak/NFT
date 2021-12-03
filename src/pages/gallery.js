@@ -31,15 +31,40 @@ const Gallery = () => {
 
   //? запрос на данные страницы
   const [currPage, setCurrPage] = useState(0);
-  function fetchPageData(page, limit) {
-    fetch(`https://www.nft-cockiz.com/api/pages?page=${page}&limit=${limit}`, { method: "GET" })
-      .then((res) => {
+  async function fetchPageData(page, limit) {
+    // let _url = `https://www.nft-cockiz.com/api/pages?page=${page}&limit=${limit}`
+    let _obj = {
+      background: "",
+      skin: "",
+      mouth: "",
+      eyes: "",
+      head: "",
+      accessory: "",
+    };
+    selectedFields.forEach(i => {
+      if (!_obj[i.filter]) {
+        _obj[i.filter] = `${i.name}-${i.trait}`
+      } else {
+        _obj[i.filter] += `_${i.name}-${i.trait}`
+      }
+    })
+    let _url = `https://www.nft-cockiz.com/api/pages?page=${page}&limit=${limit}
+                  &background=${_obj.background || null}&skin=${_obj.skin || null}
+                  &mouth=${_obj.mouth || null}&eyes=${_obj.eyes || null}
+                  &head=${_obj.head || null}&accessory=${_obj.accessory || null}`
 
+    await fetch(_url, { method: "GET" })
+      .then((res) => {
+        console.log('res > ', res);
+        return res.json();
+      })
+      .then((res) => {
+        console.log('res.json > ', res);
       })
       .catch((error) => console.log("App =>", error));
   }
   useEffect(() => {
-    // fetchPageData(currPage, 9);
+    fetchPageData(1, 9);
   }, []);
 
   //? dummy data
@@ -80,6 +105,14 @@ const Gallery = () => {
   }
   const filtersList = [
     [
+      { name: "white", trait: "", filter: "background" },
+      { name: "green", trait: "", filter: "background" },
+      { name: "grey", trait: "", filter: "background" },
+      { name: "lilac", trait: "", filter: "background" },
+      { name: "pink", trait: "", filter: "background" },
+      { name: "rattan", trait: "", filter: "background" },
+    ],
+    [
       { name: "white", trait: "common-basic", filter: "skin" },
       { name: "brown", trait: "common-basic", filter: "skin" },
       { name: "black", trait: "common-basic", filter: "skin" },
@@ -100,7 +133,6 @@ const Gallery = () => {
       { name: "pirate-tattoo", trait: "halloween-wild", filter: "skin" },
       { name: "solid-gold", trait: "precious-dope", filter: "skin" },
     ],
-
     [
       { name: "smile", trait: "common-basic", filter: "mouth" },
       { name: "sad", trait: "common-basic", filter: "mouth" },
@@ -145,7 +177,6 @@ const Gallery = () => {
         filter: "mouth",
       },
     ],
-
     [
       { name: "yellow-eyes", trait: "common-basic", filter: "eyes" },
       { name: "cute-eyes", trait: "common-basic", filter: "eyes" },
@@ -183,7 +214,6 @@ const Gallery = () => {
       { name: "ruby-glasses", trait: "precious-dope", filter: "eyes" },
       { name: "gold-monocle", trait: "precious-dope", filter: "eyes" },
     ],
-
     [
       { name: "open-cap", trait: "common-basic", filter: "head" },
       { name: "phallus-cap", trait: "common-basic", filter: "head" },
@@ -219,7 +249,6 @@ const Gallery = () => {
       { name: "solid-gold-head", trait: "precious-dope", filter: "head" },
       { name: "gold-piercing", trait: "precious-dope", filter: "head" },
     ],
-
     [
       { name: "marshmallow", trait: "common-basic", filter: "accessory" },
       { name: "maraca", trait: "common-basic", filter: "accessory" },
@@ -273,11 +302,31 @@ const Gallery = () => {
       { name: "gold-grenade", trait: "precious-dope", filter: "accessory" },
     ],
   ]
+
+  let selectedFields = new Map();
   function filterMaker(filtersList, number) {
+
+    function _onChange(e) {
+      setBtnShowVisible(true);
+      let _numbers = JSON.parse(e.target.parentElement.dataset.filter);
+
+      // console.log('checked :>> ', e.target.checked);
+      // console.log('has :>> ', selectedFields.has(e.target.value));
+      if (e.target.checked) {
+        // console.log('set :>> ');
+        selectedFields.set(e.target.value, filtersList[_numbers[0]][_numbers[1]]);
+      } else {
+        // console.log('delete :>> ');
+        selectedFields.delete(e.target.value);
+      }
+
+      // console.log('selectedFields >> ', _numbers, e.target.value, selectedFields.size, selectedFields);
+    }
+
     return filtersList[number].map((item, i) => {
       return (
         <>
-          <Checkbox value={`${item.filter.replace(/-/g, " ")}-${i}`}>
+          <Checkbox value={`${item.name}-${item.trait}-${item.filter}-${i}`} onChange={_onChange} data-filter={`[${number}, ${i}]`}>
             {item.name.replace(/-/g, " ")}
           </Checkbox>
           <span className="filter-info">{item.trait.replace(/-/g, " ")}</span>
@@ -285,11 +334,36 @@ const Gallery = () => {
       )
     })
   }
-  let skinArr = filterMaker(filtersList, 0)
-  let mouthArr = filterMaker(filtersList, 1)
-  let eyesArr = filterMaker(filtersList, 2)
-  let headArr = filterMaker(filtersList, 3)
-  let accessoryArr = filterMaker(filtersList, 4)
+  let bgColor = filterMaker(filtersList, 0)
+  let skinArr = filterMaker(filtersList, 1)
+  let mouthArr = filterMaker(filtersList, 2)
+  let eyesArr = filterMaker(filtersList, 3)
+  let headArr = filterMaker(filtersList, 4)
+  let accessoryArr = filterMaker(filtersList, 5)
+
+  let formFilters = useRef(null);
+  // function sendFields(e) {
+  //   e.preventDefault();
+
+  //   // let formData = new FormData(formFilters.current);
+  //   // console.log('getFormFieldsValue >> ', formData, formFilters.current);
+
+  //   console.group();
+
+
+
+
+
+  //   console.groupEnd();
+
+  //   // console.log('formData >> ', formData.values());
+
+  //   // for (var value of formData.values()) {
+  //   //   console.log('values>> ', value);
+  //   // }
+  // };
+
+  const [btnShowVisible, setBtnShowVisible] = useState(true)
 
   return (
     <Layout>
@@ -311,7 +385,7 @@ const Gallery = () => {
         <div className="gallery-content">
           <div className="filters-wrap">
             <div className="filters">
-              <form>
+              <form ref={formFilters} id="filters-form" action="#" onSubmit={fetchPageData}>
                 <Accordion allowMultiple allowToggle>
                   <AccordionItem
                     className="filter-container"
@@ -338,12 +412,13 @@ const Gallery = () => {
                     <AccordionPanel className="filters-list" pb={4}>
                       <CheckboxGroup defaultValue="2">
                         <Stack spacing={1} marginLeft={5} direction="column">
-                          <Checkbox value="1">blue</Checkbox>
+                          {bgColor}
+                          {/* <Checkbox value="1">blue</Checkbox>
                           <Checkbox value="2">green</Checkbox>
                           <Checkbox value="3">grey</Checkbox>
                           <Checkbox value="4">lilac</Checkbox>
                           <Checkbox value="5">pink</Checkbox>
-                          <Checkbox value="6">rattan</Checkbox>
+                          <Checkbox value="6">rattan</Checkbox> */}
                         </Stack>
                       </CheckboxGroup>
                     </AccordionPanel>
@@ -484,6 +559,7 @@ const Gallery = () => {
                     </AccordionPanel>
                   </AccordionItem>
                 </Accordion>
+                <button type="submit" className={`btn-show ${btnShowVisible && 'visible'}`}>SHOW</button>
               </form>
             </div>
           </div>
