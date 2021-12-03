@@ -33,6 +33,18 @@
     }
   }
 
+  .timerWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .alreadyMinted {
+    height: 30px;
+    font-size: 25px;
+    margin-top: 70px;
+  }
+
   .connect,
   .mint {
     display: flex;
@@ -44,11 +56,6 @@
 
     h2 {
       font-size: 30px;
-    }
-
-    .alreadyMinted {
-      height: 30px;
-      font-size: 25px;
     }
   }
 
@@ -105,6 +112,7 @@
     .mint,
     .connect {
       flex-direction: column;
+      margin-top: 60px;
 
       h2 {
         margin-bottom: 7px;

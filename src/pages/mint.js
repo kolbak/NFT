@@ -48,7 +48,13 @@ const Mint = () => {
           </p>
         </h2>
 
-        <MintTimer scale="0.9" />
+        <div className="timerWrapper">
+          <MintTimer scale="0.9" />
+          <div className="alreadyMinted">
+            MINTED:{" "}
+            {mintedAmount ? `${mintedAmount}/3333` : <DotLoader scale="0.3" />}
+          </div>
+        </div>
 
         <div className="connect">
           <div className="text">
@@ -57,10 +63,6 @@ const Mint = () => {
               Join our <a href="https://discord.gg/zFjWr4wUwH">Discord</a>{" "}
               server if you need help.
             </p>
-          </div>
-          <div className="alreadyMinted">
-            MINTED:{" "}
-            {mintedAmount ? `${mintedAmount}/3333` : <DotLoader scale="0.3" />}
           </div>
           <button
             onClick={() => {
