@@ -34,6 +34,7 @@
     "sass": "^1.35.2"
   },
   "devDependencies": {
+    "gatsby-core-utils": "^3.3.0",
     "gatsby-plugin-google-tagmanager": "^4.2.0",
     "gatsby-plugin-image": "^1.10.1",
     "gatsby-plugin-manifest": "^3.14.0",

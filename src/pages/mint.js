@@ -1,5 +1,7 @@
-import React, { useRef } from "react"
+import React, { useRef, useState, useEffect } from "react"
 import { connectToContract, mint } from "../etc/contract.js"
+import MintTimer from "../components/mint_timer.js"
+import DotLoader from "../components/loader.js"
 
 import { Link } from "gatsby"
 import {
@@ -20,6 +22,18 @@ import "./mint.scss"
 
 const Mint = () => {
   const amountEl = useRef(null)
+  const [mintedAmount, setMintedAmount] = useState(null)
+
+  useEffect(async () => {
+    const res = await fetch(
+      "https://familyphallusplanet.com/api/total-supply",
+      {
+        method: "GET",
+      }
+    )
+    const amount = await res.json()
+    setMintedAmount(amount)
+  }, [])
 
   return (
     <Layout>
@@ -33,6 +47,9 @@ const Mint = () => {
             <em>You should add enough funds for NFTs + GAS fee.</em>
           </p>
         </h2>
+
+        <MintTimer scale="0.9" />
+
         <div className="connect">
           <div className="text">
             <h2>Connect</h2>
@@ -41,12 +58,16 @@ const Mint = () => {
               server if you need help.
             </p>
           </div>
+          <div className="alreadyMinted">
+            MINTED:{" "}
+            {mintedAmount ? `${mintedAmount}/3333` : <DotLoader scale="0.3" />}
+          </div>
           <button
             onClick={() => {
               connectToContract(window.ethereum)
               dataLayer.push({ event: "metamaskconnect" })
             }}
-            className="cnct-wallet"
+            className="mint-cnct-wallet"
           >
             Connect your wallet
           </button>
@@ -62,7 +83,7 @@ const Mint = () => {
           <div className="form">
             <form action="">
               <FormControl id="amount" onSubmit={e => e.preventDefault()}>
-                <FormLabel>Amount</FormLabel>
+                <FormLabel>Amount (max: 15)</FormLabel>
                 <NumberInput min={1} max={15} defaultValue={1}>
                   <NumberInputField ref={amountEl} required />
                   <NumberInputStepper>

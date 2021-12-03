@@ -1,25 +1,23 @@
 .gen-wrap.mint-wrap {
-  min-height     : 90vh;
-  display        : flex;
-  flex-direction : column;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
 
   a {
-    color          : rgb(59, 130, 246, );
+    color: rgb(59, 130, 246);
     text-decoration: none;
   }
 
   .mint-cnct-wallet {
     justify-self: center;
-
-    height          : 50px;
-    width           : max-content;
-    word-wrap       : normal;
-    padding         : 0 15px;
-    border-radius   : 30px;
+    height: 50px;
+    padding: 0 20px;
+    width: 250px;
+    word-wrap: normal;
+    border-radius: 30px;
     background-color: #ff009d;
-
-    font-family: 'Amatic SC', cursive;
+    font-family: "Amatic SC", cursive;
     font-size: 30px;
   }
 
@@ -37,8 +35,9 @@
 
   .connect,
   .mint {
-    display        : flex;
+    display: flex;
     justify-content: space-between;
+    align-items: center;
 
     padding: 0;
     margin-top: 80px;
@@ -47,6 +46,10 @@
       font-size: 30px;
     }
 
+    .alreadyMinted {
+      height: 30px;
+      font-size: 25px;
+    }
   }
 
   .mint {
@@ -54,9 +57,9 @@
       width: 210px;
 
       form {
-        display           : grid;
+        display: grid;
         grid-template-rows: 2fr 1fr;
-        gap               : 5px;
+        gap: 5px;
 
         .mint-cnct-wallet {
           height: 30px;
@@ -74,20 +77,20 @@
   }
 
   .terms-container {
-    display       : flex;
+    display: flex;
     flex-direction: column;
 
     button {
-      margin          : 0 auto 20px auto;
-      width           : 210px;
+      margin: 0 auto 20px auto;
+      width: 210px;
       background-color: #00c4c4;
     }
   }
 
   .agreement {
-    opacity   : .7;
+    opacity: 0.7;
     text-align: center;
-    font-size : 12px;
+    font-size: 12px;
   }
 
   @media screen and (max-width: 850px) {
@@ -113,7 +116,7 @@
 
       button {
         margin-top: 20px;
-        width     : 260px;
+        width: 260px;
         align-self: center;
       }
 
@@ -135,15 +138,19 @@
           display: flex;
           flex-direction: column;
           align-items: center;
-          label{
+          label {
             margin-right: 0;
           }
         }
-
       }
 
       .form {
         align-self: center;
+      }
+
+      .alreadyMinted {
+        margin-top: 20px;
+        font-size: 21px;
       }
     }
   }
