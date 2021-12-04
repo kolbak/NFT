@@ -35,31 +35,30 @@ const UserAccount = () => {
     setWidth(isBrowser && window.innerWidth)
   }
   // backend dummy data
-  const [tokenAmount, setTokenAmount] = useState(2)
+  const [tokenAmount, setTokenAmount] = useState(0)
   const [connectedWallet, setConnectedWallet] = useState(false)
+  const [data, setData] = useState(null)
 
-  function onConnect() {
-    setConnectedWallet(true)
-  }
   const { isOpen, onOpen, onClose } = useDisclosure()
 
   const refInput = useRef(null)
-  const [data, setData] = useState(null)
+
   function request(e) {
     console.group()
 
-    fetch(
-      `https://www.nft-cockiz.com/api/tokens/wallet=${refInput.current.value}`,
-      {
-        method: "GET",
-      }
-    )
+    fetch(`https://familyphallusplanet.com/api/tokens/${refInput.current.value}`, {
+      method: "GET",
+    })
       .then(res => {
         return res.json()
       })
       .then(res => {
         console.log("res :>> ", res)
-        setData(res)
+        if (res.length > 0) {
+          setTokenAmount(res.length)
+          setData(res)
+        }
+        setConnectedWallet(true)
       })
       .catch(_err => {
         console.log("ERORR in request > ", _err)
@@ -70,7 +69,7 @@ const UserAccount = () => {
 
   return (
     <Layout>
-      <Seo title="FAPP"/>
+      <Seo title="FAPP" />
       <div className="gen-wrap user-acc">
         <h1>The #FAPP Community</h1>
         <h2>
@@ -83,7 +82,7 @@ const UserAccount = () => {
           </FormControl>
           {connectedWallet === true ? (
             <>
-              {tokenAmount !== 0 ? (
+              {tokenAmount > 0 ? (
                 <>
                   <Tabs className="tab-container">
                     <TabList className="buttons-container">
@@ -144,16 +143,8 @@ const UserAccount = () => {
                 }}
                 className="user-account cnct-wallet"
               >
-                Connect your wallet
+                Check my tokens balance
               </button>
-
-              {data && (
-                <div className="grid-wrap">
-                  <div className="grid">
-                    <GalleryGrid data={data} />
-                  </div>
-                </div>
-              )}
             </>
           )}
         </form>

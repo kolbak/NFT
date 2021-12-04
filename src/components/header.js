@@ -1,15 +1,15 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 
-import Navbar from './navbar'
+import Navbar from "./navbar"
 
-import './header.scss'
+import "./header.scss"
 
 const Header = () => {
   return (
-    <header className="header" >
+    <header className="header">
       <div className="header-inner-wrap">
-        <Navbar/>
+        <Navbar />
       </div>
     </header>
   )

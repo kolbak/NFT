@@ -1,10 +1,8 @@
 import ABI from "./abi.json"
 const ethers = require("ethers")
-const contractAddress = "0x5334F2a1d1C0D536E28452A5740D3290067844D7" // you can change this
-const mainChainId = "1"
+import config from "./config.json"
 
 let ethereum
-let wallet
 let contractInstance
 let connected = false
 let signer
@@ -27,19 +25,19 @@ async function doConnect() {
   try {
     if (ethereum) {
       currentNetwork = ethereum.networkVersion
-      if (currentNetwork !== mainChainId) {
+      if (currentNetwork !== config.mainChainId) {
         await switchEthereumNetwork()
       }
       // connecting to Metamask
       const res = await ethereum.request({ method: "eth_requestAccounts" })
-      wallet = res[0]
 
       // getting procider and signer
       provider = new ethers.providers.Web3Provider(ethereum)
       signer = provider.getSigner()
 
       // getting instance of contract
-      contractInstance = new ethers.Contract(contractAddress, ABI, signer)
+      console.log(config.contractArdess)
+      contractInstance = new ethers.Contract(config.contractArdess, ABI, signer)
     } else alert("Connect Metamask!")
   } catch (err) {
     console.error(err)
@@ -57,7 +55,7 @@ async function switchEthereumNetwork() {
   try {
     await ethereum.request({
       method: "wallet_switchEthereumChain",
-      params: [{ chainId: "0x1" }],
+      params: [{ chainId: `0x${config.mainChainId.toString(16)}` }],
     })
   } catch (err) {
     signer = undefined
@@ -67,15 +65,23 @@ async function switchEthereumNetwork() {
 
 // HANDLERS
 
-export async function mint() {
+export async function mint(amount) {
   try {
-    if (contractInstance) {
+    if (contractInstance && amount>0) {
       await validateNetwork()
       const trustedInstance = contractInstance.connect(signer)
-      const price = await trustedInstance.FAPP_CB_PRICE()
-      const res = await trustedInstance.mintPublic(1, {
-        value: price,
+
+      const price = await trustedInstance.PHALLUS_PRICE()
+      const cost = Number(price)*Number(amount)
+
+      const res = await trustedInstance.mintPresaleMemberWithAmount(amount, {
+        value: ethers.BigNumber.from(cost.toString()),
       })
+
+      //   const res = await trustedInstance.mintPublic(amount, {
+      //     value: price,
+      //   })
+
       return true
     } else {
       alert("Connect your metamask wallet!")
