@@ -8,6 +8,8 @@ import {
   AccordionIcon,
   Checkbox,
   CheckboxGroup,
+  Radio,
+  RadioGroup,
   Stack,
   Icon,
 } from "@chakra-ui/react"
@@ -28,58 +30,6 @@ const Gallery = () => {
   function resizeInGallery() {
     setWidth(isBrowser && window.innerWidth)
   }
-
-  //? запрос на данные страницы
-  const [currPage, setCurrPage] = useState(0);
-  async function fetchPageData(page, limit) {
-    // let _url = `https://www.nft-cockiz.com/api/pages?page=${page}&limit=${limit}`
-    let _obj = {
-      background: "",
-      skin: "",
-      mouth: "",
-      eyes: "",
-      head: "",
-      accessory: "",
-    };
-    selectedFields.forEach(i => {
-      if (!_obj[i.filter]) {
-        _obj[i.filter] = `${i.name}-${i.trait}`
-      } else {
-        _obj[i.filter] += `_${i.name}-${i.trait}`
-      }
-    })
-    let _url = `https://www.nft-cockiz.com/api/pages?page=${page}&limit=${limit}
-                  &background=${_obj.background || null}&skin=${_obj.skin || null}
-                  &mouth=${_obj.mouth || null}&eyes=${_obj.eyes || null}
-                  &head=${_obj.head || null}&accessory=${_obj.accessory || null}`
-
-    await fetch(_url, { method: "GET" })
-      .then((res) => {
-        console.log('res > ', res);
-        return res.json();
-      })
-      .then((res) => {
-        console.log('res.json > ', res);
-      })
-      .catch((error) => console.log("App =>", error));
-  }
-  useEffect(() => {
-    fetchPageData(1, 9);
-  }, []);
-
-  //? dummy data
-  let arrData = []
-  for (let i = arrData.length; i < 9; i++) {
-    arrData.push({
-      name: `Character ${i + 1}`,
-      id: i + 1,
-      src: characterEx,
-      filters: {
-        bday: new Intl.DateTimeFormat("en-US").format(new Date()),
-      },
-    })
-  }
-  const [data, setData] = useState({ total: 90, dataArray: arrData });
 
   //? аккордион
   const accordionItemStyle = {
@@ -308,27 +258,22 @@ const Gallery = () => {
 
     function _onChange(e) {
       setBtnShowVisible(true);
-      let _numbers = JSON.parse(e.target.parentElement.dataset.filter);
+      let _numbers = JSON.parse(e.target.nextElementSibling.dataset.filter);
 
-      // console.log('checked :>> ', e.target.checked);
-      // console.log('has :>> ', selectedFields.has(e.target.value));
       if (e.target.checked) {
-        // console.log('set :>> ');
-        selectedFields.set(e.target.value, filtersList[_numbers[0]][_numbers[1]]);
+        selectedFields.set(filtersList[_numbers[0]][_numbers[1]].filter, filtersList[_numbers[0]][_numbers[1]]);
       } else {
-        // console.log('delete :>> ');
-        selectedFields.delete(e.target.value);
+        selectedFields.delete(filtersList[_numbers[0]][_numbers[1]].filter);
       }
-
-      // console.log('selectedFields >> ', _numbers, e.target.value, selectedFields.size, selectedFields);
+      localStorage.setItem('selectedFields', JSON.stringify(Array.from(selectedFields.entries())));
     }
 
     return filtersList[number].map((item, i) => {
       return (
         <>
-          <Checkbox value={`${item.name}-${item.trait}-${item.filter}-${i}`} onChange={_onChange} data-filter={`[${number}, ${i}]`}>
+          <Radio value={`${item.name}-${item.trait}-${item.filter}-${i}`} onChange={_onChange} data-filter={`[${number}, ${i}]`}>
             {item.name.replace(/-/g, " ")}
-          </Checkbox>
+          </Radio>
           <span className="filter-info">{item.trait.replace(/-/g, " ")}</span>
         </>
       )
@@ -342,26 +287,58 @@ const Gallery = () => {
   let accessoryArr = filterMaker(filtersList, 5)
 
   let formFilters = useRef(null);
-  // function sendFields(e) {
-  //   e.preventDefault();
-
-  //   // let formData = new FormData(formFilters.current);
-  //   // console.log('getFormFieldsValue >> ', formData, formFilters.current);
-
-  //   console.group();
 
 
+  //? запрос на данные страницы
+  isBrowser && window.addEventListener('load', () => {
+    if (localStorage.getItem('selectedFields')) {
+      localStorage.removeItem('selectedFields')
+    }
+  })
+  const [currPage, setCurrPage] = useState(1);
+  const [totalChars, setTotalChars] = useState(0);
+  const [data, setData] = useState([]);
+  async function fetchTotal() {
+    await fetch('https://familyphallusplanet.com/api/total-supply', { method: "GET" })
+      .then((res) => {
+        return res.json();
+      })
+      .then((res) => {
+        setTotalChars(+res);
+        return res;
+      })
+      .catch((error) => console.log("App =>", error));
+  }
+  async function fetchPageData(page, limit) {
+    let _obj = {
+      background: "",
+      skin: "",
+      mouth: "",
+      eyes: "",
+      head: "",
+      accessory: "",
+    };
+    if (localStorage.getItem('selectedFields')) {
+      new Map(JSON.parse(localStorage.getItem('selectedFields'))).forEach(i => {
+        _obj[i.filter] = `${i.name}`
+      })
+    }
 
-
-
-  //   console.groupEnd();
-
-  //   // console.log('formData >> ', formData.values());
-
-  //   // for (var value of formData.values()) {
-  //   //   console.log('values>> ', value);
-  //   // }
-  // };
+    let _url = `https://familyphallusplanet.com/api/pages?page=${page || currPage}&limit=${limit || 9}${_obj.background && `&background=${_obj.background}`}${_obj.skin && `&skin=${_obj.skin}`}${_obj.mouth && `&mouth=${_obj.mouth}`}${_obj.eyes && `&eyes=${_obj.eyes}`}${_obj.head && `&head=${_obj.head}`}${_obj.accessory && `&accessory=${_obj.accessory}`}`
+    await fetch(_url, { method: "GET" })
+      .then((res) => {
+        return res.json();
+      })
+      .then((res) => {
+        setData(res);
+        return res;
+      })
+      .catch((error) => console.log("App =>", error));
+  }
+  useEffect(async () => {
+    await fetchTotal();
+    await fetchPageData(currPage, 9);
+  }, [currPage]);
 
   const [btnShowVisible, setBtnShowVisible] = useState(true)
 
@@ -385,7 +362,11 @@ const Gallery = () => {
         <div className="gallery-content">
           <div className="filters-wrap">
             <div className="filters">
-              <form ref={formFilters} id="filters-form" action="#" onSubmit={fetchPageData}>
+              <form ref={formFilters} id="filters-form" action="#"
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  fetchPageData();
+                }}>
                 <Accordion allowMultiple allowToggle>
                   <AccordionItem
                     className="filter-container"
@@ -411,15 +392,17 @@ const Gallery = () => {
                     </h2>
                     <AccordionPanel className="filters-list" pb={4}>
                       <CheckboxGroup defaultValue="2">
-                        <Stack spacing={1} marginLeft={5} direction="column">
-                          {bgColor}
-                          {/* <Checkbox value="1">blue</Checkbox>
+                        <RadioGroup>
+                          <Stack spacing={1} marginLeft={5} direction="column">
+                            {bgColor}
+                            {/* <Checkbox value="1">blue</Checkbox>
                           <Checkbox value="2">green</Checkbox>
                           <Checkbox value="3">grey</Checkbox>
                           <Checkbox value="4">lilac</Checkbox>
                           <Checkbox value="5">pink</Checkbox>
                           <Checkbox value="6">rattan</Checkbox> */}
-                        </Stack>
+                          </Stack>
+                        </RadioGroup>
                       </CheckboxGroup>
                     </AccordionPanel>
                   </AccordionItem>
@@ -444,9 +427,11 @@ const Gallery = () => {
                     </h2>
                     <AccordionPanel className="filters-list" pb={4}>
                       <CheckboxGroup defaultValue="2">
-                        <Stack spacing={1} marginLeft={5} direction="column">
-                          {skinArr}
-                        </Stack>
+                        <RadioGroup>
+                          <Stack spacing={1} marginLeft={5} direction="column">
+                            {skinArr}
+                          </Stack>
+                        </RadioGroup>
                       </CheckboxGroup>
                     </AccordionPanel>
                   </AccordionItem>
@@ -471,9 +456,11 @@ const Gallery = () => {
                     </h2>
                     <AccordionPanel className="filters-list" pb={4}>
                       <CheckboxGroup defaultValue="2">
-                        <Stack spacing={1} marginLeft={5} direction="column">
-                          {mouthArr}
-                        </Stack>
+                        <RadioGroup>
+                          <Stack spacing={1} marginLeft={5} direction="column">
+                            {mouthArr}
+                          </Stack>
+                        </RadioGroup>
                       </CheckboxGroup>
                     </AccordionPanel>
                   </AccordionItem>
@@ -498,9 +485,11 @@ const Gallery = () => {
                     </h2>
                     <AccordionPanel className="filters-list" pb={4}>
                       <CheckboxGroup defaultValue="2">
-                        <Stack spacing={1} marginLeft={5} direction="column">
-                          {eyesArr}
-                        </Stack>
+                        <RadioGroup>
+                          <Stack spacing={1} marginLeft={5} direction="column">
+                            {eyesArr}
+                          </Stack>
+                        </RadioGroup>
                       </CheckboxGroup>
                     </AccordionPanel>
                   </AccordionItem>
@@ -525,9 +514,11 @@ const Gallery = () => {
                     </h2>
                     <AccordionPanel className="filters-list" pb={4}>
                       <CheckboxGroup defaultValue="2">
-                        <Stack spacing={1} marginLeft={5} direction="column">
-                          {headArr}
-                        </Stack>
+                        <RadioGroup>
+                          <Stack spacing={1} marginLeft={5} direction="column">
+                            {headArr}
+                          </Stack>
+                        </RadioGroup>
                       </CheckboxGroup>
                     </AccordionPanel>
                   </AccordionItem>
@@ -552,9 +543,11 @@ const Gallery = () => {
                     </h2>
                     <AccordionPanel className="filters-list" pb={4}>
                       <CheckboxGroup defaultValue="2">
-                        <Stack spacing={1} marginLeft={5} direction="column">
-                          {accessoryArr}
-                        </Stack>
+                        <RadioGroup>
+                          <Stack spacing={1} marginLeft={5} direction="column">
+                            {accessoryArr}
+                          </Stack>
+                        </RadioGroup>
                       </CheckboxGroup>
                     </AccordionPanel>
                   </AccordionItem>
@@ -566,7 +559,7 @@ const Gallery = () => {
 
           <div className="grid-wrap">
             <div className="grid">
-              <GalleryGrid data={data} setCurrPage={setCurrPage} />
+              <GalleryGrid data={data} setCurrPage={setCurrPage} total={totalChars} fetchPageData={fetchPageData} />
             </div>
           </div>
         </div>

@@ -20,8 +20,7 @@ import {
   PaginationSeparator
 } from "@ajna/pagination";
 
-const GalleryGrid = ({ data, setCurrPage }) => {
-  const [total, setTotal] = useState(data.total);
+const GalleryGrid = ({ data, setCurrPage, total, fetchPageData }) => {
 
   const outerLimit = 2;
   const innerLimit = 2;
@@ -43,16 +42,15 @@ const GalleryGrid = ({ data, setCurrPage }) => {
       inner: innerLimit
     },
     initialState: {
-      pageSize: 5,
+      pageSize: 9,
       isDisabled: false,
       currentPage: 1
     }
   });
   const handlePageChange = (nextPage) => {
     setCurrentPage(nextPage);
-    setCurrPage(nextPage);
+    // setCurrPage(nextPage);
   };
-
   return (
     <ChakraProvider>
       <Stack>
@@ -63,7 +61,7 @@ const GalleryGrid = ({ data, setCurrPage }) => {
           templateColumns="repeat(3, 1fr)"
           templateRows="repeat(3, 1fr)"
         >
-          {data.dataArray?.map((item) => (
+          {data?.map((item) => (
             <div className="char-card" key={item.name + "-" + item.id}>
               <div className="char-body">
                 <figure className="front">
@@ -73,7 +71,7 @@ const GalleryGrid = ({ data, setCurrPage }) => {
                     attributes: item.attributes || "",
                     image: item.image || "",
                   }} className="char-link">
-                    <img className="char-img" id={'char-' + item.id} src={item.src} alt={'Character number' + item.id} />
+                    <img className="char-img" id={'char-' + item.id} src={item.image} alt={'Character number' + item.id} />
                     <span className="char-id" id={'label-char-' + item.id}>{item.name}</span>
                   </Link>
                 </figure>
@@ -93,17 +91,11 @@ const GalleryGrid = ({ data, setCurrPage }) => {
             p={4}
             w="full"
           >
-            <PaginationPrevious
-              bg="rgb(255, 0, 157)"
-              color="white"
-              onClick={() => { }}
-            >
-              <Text>Previous</Text>
-            </PaginationPrevious>
-
             <PaginationPageGroup
               isInline
               align="center"
+              width="100%"
+              justifyContent="center"
               separator={
                 <PaginationSeparator
                   onClick={() => { }}
@@ -122,11 +114,10 @@ const GalleryGrid = ({ data, setCurrPage }) => {
                   key={`pagination_page_${page}`}
                   color="white"
                   page={page}
-                  onClick={() => { }}
+                  onClick={() => {
+                    setCurrPage(page);
+                  }}
                   fontSize="sm"
-                  // _hover={{
-                  //   bg: "green.300"
-                  // }}
                   _current={{
                     bg: "rgb(0, 196, 196)",
                     fontSize: "sm",
@@ -135,13 +126,6 @@ const GalleryGrid = ({ data, setCurrPage }) => {
                 />
               ))}
             </PaginationPageGroup>
-            <PaginationNext
-              bg="rgb(255, 0, 157)"
-              color="white"
-              onClick={() => { }}
-            >
-              <Text>Next</Text>
-            </PaginationNext>
           </PaginationContainer>
         </Pagination>
       </Stack>
