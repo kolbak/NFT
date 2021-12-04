@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunknft=self.webpackChunknft||[]).push([[822],{16182:function(e,l,a){a.r(l);var t=a(67294),n=a(83090),r=a(93751);l.default=function(){return t.createElement(n.Z,null,t.createElement(r.Z,{title:"Gallery"}),t.createElement("div",{className:"gen-wrap gallery-wrap"},t.createElement("h1",null,"This page will be available after the public sale")))}}}]);
+//# sourceMappingURL=component---src-pages-gallery-js-87f1e49f7c9ef8495000.js.map

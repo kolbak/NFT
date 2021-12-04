@@ -1,35 +1,11 @@
-import React, { useState, useEffect, useRef } from "react"
-import {
-  Box,
-  Accordion,
-  AccordionItem,
-  AccordionButton,
-  AccordionPanel,
-  AccordionIcon,
-  Checkbox,
-  CheckboxGroup,
-  Radio,
-  RadioGroup,
-  Stack,
-  Icon,
-} from "@chakra-ui/react"
-import { ChevronDownIcon } from "@chakra-ui/icons"
+import React, { useState, } from "react"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import GalleryGrid from "../components/gallery_grid"
 import "./gallery.scss"
-
-import characterEx from "../images/1.png"
 
 const Gallery = () => {
   const isBrowser = typeof window !== "undefined"
-
-  const [width, setWidth] = useState(isBrowser && window.innerWidth)
-  isBrowser && window.addEventListener("resize", resizeInGallery)
-  function resizeInGallery() {
-    setWidth(isBrowser && window.innerWidth)
-  }
 
   return (
     <Layout>

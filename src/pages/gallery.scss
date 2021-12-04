@@ -1,208 +1,214 @@
 .gen-wrap.gallery-wrap {
   gap: 10px;
+
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h1{font-size: 50px;}
 }
 
-h2.filterH2 {
-  display        : flex;
-  align-items    : center;
-  justify-content: space-between;
+// h2.filterH2 {
+//   display        : flex;
+//   align-items    : center;
+//   justify-content: space-between;
 
-  text-align   : start;
-  background   : #0a0e16;
-  font-weight  : bold;
-  font-size    : 2.3rem;
-  padding      : 5px 20px;
-  margin-bottom: 20px;
-  width        : 100%;
-}
+//   text-align   : start;
+//   background   : #0a0e16;
+//   font-weight  : bold;
+//   font-size    : 2.3rem;
+//   padding      : 5px 20px;
+//   margin-bottom: 20px;
+//   width        : 100%;
+// }
 
-.gallery-content {
-  display              : grid;
-  grid-template-columns: 300px 1fr;
-  gap                  : 20px;
+// .gallery-content {
+//   display              : grid;
+//   grid-template-columns: 300px 1fr;
+//   gap                  : 20px;
 
-  .filters-wrap {
-    .filters {
-      width: 80%;
+//   .filters-wrap {
+//     .filters {
+//       width: 80%;
 
-      * {
-        // overflow-x: hidden;
-        color: #ababab;
-      }
+//       * {
+//         // overflow-x: hidden;
+//         color: #ababab;
+//       }
 
-      svg {
-        display: none;
-      }
+//       svg {
+//         display: none;
+//       }
 
-      h2 {
-        width: 100%;
-      }
+//       h2 {
+//         width: 100%;
+//       }
 
-      .testclass {
-        background-color: red;
-      }
+//       .testclass {
+//         background-color: red;
+//       }
 
-      .filters-list {
-        max-height    : 500px;
-        overflow-y    : scroll;
-        padding-bottom: 20px;
-        margin-right  : 10px;
-      }
+//       .filters-list {
+//         max-height    : 500px;
+//         overflow-y    : scroll;
+//         padding-bottom: 20px;
+//         margin-right  : 10px;
+//       }
 
-      .filters-list::-webkit-scrollbar {
-        background-color: transparent;
-        width           : 4px;
-      }
+//       .filters-list::-webkit-scrollbar {
+//         background-color: transparent;
+//         width           : 4px;
+//       }
 
-      .filters-list::-webkit-scrollbar-thumb {
-        background-color: #706f6f;
-        border-radius   : 50px;
-      }
+//       .filters-list::-webkit-scrollbar-thumb {
+//         background-color: #706f6f;
+//         border-radius   : 50px;
+//       }
 
-      span.__filter-title {
-        display    : flex;
-        align-items: center;
-      }
+//       span.__filter-title {
+//         display    : flex;
+//         align-items: center;
+//       }
 
-      .chakra-collapse {
-        padding-bottom: 10px;
-      }
+//       .chakra-collapse {
+//         padding-bottom: 10px;
+//       }
 
-      .chakra-accordion__panel {
-        padding: 5px 10px;
-      }
+//       .chakra-accordion__panel {
+//         padding: 5px 10px;
+//       }
 
-      // .filters-list:first-of-type{
-      //   .chakra-checkbox__label{
-      //     margin-bottom: 5px;
-      //   }
-      // }
-      .chakra-stack {
-        margin-left: 10px;
+//       // .filters-list:first-of-type{
+//       //   .chakra-checkbox__label{
+//       //     margin-bottom: 5px;
+//       //   }
+//       // }
+//       .chakra-stack {
+//         margin-left: 10px;
 
-        .chakra-checkbox__control {
-          align-self: end;
-        }
+//         .chakra-checkbox__control {
+//           align-self: end;
+//         }
 
-        .chakra-checkbox__label {
-          line-height: 20px;
-        }
+//         .chakra-checkbox__label {
+//           line-height: 20px;
+//         }
 
-        .filter-info {
-          font-size: 10px;
-          margin   : 0 0 9px 28px;
-        }
-      }
+//         .filter-info {
+//           font-size: 10px;
+//           margin   : 0 0 9px 28px;
+//         }
+//       }
 
-      button.btn-show {
-        background   : rgb(255, 0, 157);
-        outline      : none;
-        border       : none;
-        border-radius: 25px;
-        width        : 60%;
-        font-family: 'Amatic SC', cursive;
-        font-size    : 25px;
-        margin       : 30px auto 0 auto;
-        display      : block;
-        color        : white;
-        transition: .5s;
+//       button.btn-show {
+//         background   : rgb(255, 0, 157);
+//         outline      : none;
+//         border       : none;
+//         border-radius: 25px;
+//         width        : 60%;
+//         font-family: 'Amatic SC', cursive;
+//         font-size    : 25px;
+//         margin       : 30px auto 0 auto;
+//         display      : block;
+//         color        : white;
+//         transition: .5s;
 
-        pointer-events: none;
-        opacity       : 0;
-      }
+//         pointer-events: none;
+//         opacity       : 0;
+//       }
 
-      button.btn-show.visible {
-        pointer-events: initial;
-        opacity       : 1;
-      }
-    }
-  }
+//       button.btn-show.visible {
+//         pointer-events: initial;
+//         opacity       : 1;
+//       }
+//     }
+//   }
 
-  .grid-wrap {
-    display       : flex;
-    flex-direction: column;
+//   .grid-wrap {
+//     display       : flex;
+//     flex-direction: column;
 
-    // .btn-showmore {
-    //   margin-top       : 20px;
-    //   justify-self     : center;
-    //   align-self       : center;
-    //   grid-column-start: 2;
-    //   grid-column-end  : 3;
+//     // .btn-showmore {
+//     //   margin-top       : 20px;
+//     //   justify-self     : center;
+//     //   align-self       : center;
+//     //   grid-column-start: 2;
+//     //   grid-column-end  : 3;
 
-    //   background-color: rgb(255, 0, 157);
-    //   border-radius   : 15px;
-    //   color           : #fff;
+//     //   background-color: rgb(255, 0, 157);
+//     //   border-radius   : 15px;
+//     //   color           : #fff;
 
-    //   font-family: 'Amatic SC', cursive;
-    //   font-size  : 30px;
+//     //   font-family: 'Amatic SC', cursive;
+//     //   font-size  : 30px;
 
-    //   height : 50px;
-    //   width  : max-content;
-    //   padding: 0 30px;
-    // }
+//     //   height : 50px;
+//     //   width  : max-content;
+//     //   padding: 0 30px;
+//     // }
 
-    @media screen and (max-width: 1450px) {
-      .grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
+//     @media screen and (max-width: 1450px) {
+//       .grid {
+//         grid-template-columns: repeat(2, 1fr);
+//       }
+//     }
 
-    @media screen and (max-width: 650px) {
-      .grid {
-        grid-template-columns: 1fr;
-      }
-    }
-  }
-}
+//     @media screen and (max-width: 650px) {
+//       .grid {
+//         grid-template-columns: 1fr;
+//       }
+//     }
+//   }
+// }
 
-@media screen and (max-width: 850px) {
-  .gallery-wrap {
-    .toggle-button {
-      width: 100%;
-    }
-  }
+// @media screen and (max-width: 850px) {
+//   .gallery-wrap {
+//     .toggle-button {
+//       width: 100%;
+//     }
+//   }
 
-  .gallery-content {
-    grid-template-columns: 1fr;
+//   .gallery-content {
+//     grid-template-columns: 1fr;
 
-    .grid {
-      margin-top           : 20px;
-      grid-template-columns: repeat(3, 1fr);
-    }
+//     .grid {
+//       margin-top           : 20px;
+//       grid-template-columns: repeat(3, 1fr);
+//     }
 
-    .filters-wrap {
-      max-height: 0;
-      overflow-y: hidden;
-      background: #0a0e16;
-      transition: .5s linear;
+//     .filters-wrap {
+//       max-height: 0;
+//       overflow-y: hidden;
+//       background: #0a0e16;
+//       transition: .5s linear;
 
-      .filters {
-        width           : 94%;
-        margin          : 20px 3% 0 3%;
-        background-color: transparent;
+//       .filters {
+//         width           : 94%;
+//         margin          : 20px 3% 0 3%;
+//         background-color: transparent;
 
-        .filters-list {
+//         .filters-list {
 
-          padding-bottom: 20px;
-          margin-right  : 10px;
-        }
+//           padding-bottom: 20px;
+//           margin-right  : 10px;
+//         }
 
-        svg {
-          display: block;
-        }
+//         svg {
+//           display: block;
+//         }
 
-        .chakra-accordion__item {
-          background-color: transparent;
-        }
+//         .chakra-accordion__item {
+//           background-color: transparent;
+//         }
 
-        span.__filter-title {
-          font-size: 30px;
-        }
-      }
-    }
+//         span.__filter-title {
+//           font-size: 30px;
+//         }
+//       }
+//     }
 
-    .opened {
-      max-height: 3500px;
-    }
-  }
-}
+//     .opened {
+//       max-height: 3500px;
+//     }
+//   }
+// }
