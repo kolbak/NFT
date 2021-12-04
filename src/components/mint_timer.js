@@ -33,7 +33,7 @@ export default function MintTimer({ scale }) {
 
   useEffect(async () => {
     const res = await fetch(
-      "https://familyphallusplanet.com/api/time-to-mint",
+      "https://familyphallusplanet.com/api/timer/time-to-mint",
       {
         method: "GET",
       }
