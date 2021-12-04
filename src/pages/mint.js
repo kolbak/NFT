@@ -50,9 +50,8 @@ const Mint = () => {
 
         <div className="timerWrapper">
           <MintTimer scale="0.9" />
-          <div className="alreadyMinted">
-            MINTED:{" "}
-            {mintedAmount ? `${mintedAmount}/3333` : <DotLoader scale="0.3" />}
+           <div className="alreadyMinted">
+            MINTED: 0/3333
           </div>
         </div>
 
