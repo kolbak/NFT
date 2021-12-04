@@ -808,8 +808,8 @@ const IndexPage = () => {
                 </AccordionItemCustom>
                 <AccordionItemCustom title="DO YOU HAVE YOUR OWN SMART CONTRACT?">
                   Yes, we developed our own Smart Contract -{" "}
-                  <a href="https://etherscan.io/address/0x5334f2a1d1c0d536e28452a5740d3290067844d7">
-                    0x5334F2a1d1C0D536E28452A5740D3290067844D7
+                  <a href="https://etherscan.io/address/0x6891CAD07E8CE06905CD0cDE20BB6bfe3Ec33167">
+                    0x6891CAD07E8CE06905CD0cDE20BB6bfe3Ec33167
                   </a>
                   .
                 </AccordionItemCustom>
