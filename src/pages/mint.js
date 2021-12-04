@@ -49,14 +49,14 @@ const Mint = () => {
         </h2>
 
         <div className="timerWrapper">
-          <MintTimer scale="0.9" />
-           {/* <div className="alreadyMinted">
+         <p className="mintTitle">PRE-SALE FOR FAPP-CB HOLDERS: LIVE</p>
+           <div className="alreadyMinted">
             MINTED:{" "}
             {mintedAmount ? `${mintedAmount}/3333` : <DotLoader scale="0.3" />}
-          </div> */}
-           <div className="alreadyMinted">
-            MINTED: 0/3333
           </div>
+           {/* <div className="alreadyMinted">
+            MINTED: 0/3333
+          </div> */}
         </div>
 
         <div className="connect">
@@ -107,8 +107,6 @@ const Mint = () => {
               mint(amountEl.current.value)
             }}
             className="mint-cnct-wallet"
-
-            disabled
           >
             Mint
           </button>
