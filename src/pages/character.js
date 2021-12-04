@@ -14,7 +14,7 @@ const Character = ({ location }) => {
   useEffect(async () => {
     try {
       const id = new URL(location.href).searchParams.get("id")
-      const res = await fetch(`https://cockiz-test.ru/api/nft/${id}`, {
+      const res = await fetch(`https://familyphallusplanet.com/api/nft/${id}`, {
         method: "GET",
       })
       const nft = await res.json()

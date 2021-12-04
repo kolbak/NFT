@@ -46,7 +46,7 @@ const UserAccount = () => {
   function request(e) {
     console.group()
 
-    fetch(`https://cockiz-test.ru/api/tokens/${refInput.current.value}`, {
+    fetch(`https://familyphallusplanet.com/api/tokens/${refInput.current.value}`, {
       method: "GET",
     })
       .then(res => {

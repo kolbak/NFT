@@ -785,7 +785,7 @@ const IndexPage = () => {
                   </ul>
                 </AccordionItemCustom>
                 {/* <AccordionItemCustom title="HOW CAN I GET A PHALLUS?">
-                  Click <a href="https://nft-cockiz.com/mint">here</a>, connect your MetaMask wallet and mint (buy) your NFT Phallus.<br />
+                  Click <a href="https://familyphallusplanet.com/mint">here</a>, connect your MetaMask wallet and mint (buy) your NFT Phallus.<br />
                   1 Phallus costs 0.08 ETH + GAS.
                 </AccordionItemCustom> */}
                 <AccordionItemCustom title="CAN I SEE WHAT PHALLUS I WILL GET?">
