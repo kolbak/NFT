@@ -67,20 +67,20 @@ async function switchEthereumNetwork() {
 
 export async function mint(amount) {
   try {
-    if (contractInstance && amount>0) {
+    if (contractInstance && amount > 0) {
       await validateNetwork()
       const trustedInstance = contractInstance.connect(signer)
 
       const price = await trustedInstance.PHALLUS_PRICE()
-      const cost = Number(price)*Number(amount)
+      const cost = Number(price) * Number(amount)
 
-      const res = await trustedInstance.mintPresaleMemberWithAmount(amount, {
+      //   const res = await trustedInstance.mintPresaleMemberWithAmount(amount, {
+      //     value: ethers.BigNumber.from(cost.toString()),
+      //   })
+
+      const res = await trustedInstance.mintPublic(amount, {
         value: ethers.BigNumber.from(cost.toString()),
       })
-
-      //   const res = await trustedInstance.mintPublic(amount, {
-      //     value: price,
-      //   })
 
       return true
     } else {
