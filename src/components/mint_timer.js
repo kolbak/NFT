@@ -28,7 +28,7 @@ function makeDateDiffObj(dateDiff) {
   }
 }
 
-export default function MintTimer({ scale }) {
+export default function MintTimer({ scale, title }) {
   const [timer, setTimer] = useState(makeDateDiffObj(0))
 
   useEffect(async () => {
@@ -45,7 +45,7 @@ export default function MintTimer({ scale }) {
 
   return (
     <div className="mint-pass-timer-container">
-      <p>Until the mint is left:</p>
+      <p>{title || ""}</p>
       <div className="mint-pass-timer" style={{ trancform: `scale(${scale})` }}>
         <div className="mint-pass-timer-item">
           <b> {timer.days}</b>

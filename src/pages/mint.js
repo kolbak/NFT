@@ -49,12 +49,13 @@ const Mint = () => {
         </h2>
 
         <div className="timerWrapper">
-         <p className="mintTitle">PRE-SALE FOR FAPP-CB HOLDERS: LIVE</p>
-           <div className="alreadyMinted">
+          {/* <p className="mintTitle">PRE-SALE FOR FAPP-CB HOLDERS: LIVE</p> */}
+          <MintTimer scale="0.9" title="PUBLIC SALE STARTS IN:" />
+          <div className="alreadyMinted">
             MINTED:{" "}
             {mintedAmount ? `${mintedAmount}/3333` : <DotLoader scale="0.3" />}
           </div>
-           {/* <div className="alreadyMinted">
+          {/* <div className="alreadyMinted">
             MINTED: 0/3333
           </div> */}
         </div>
