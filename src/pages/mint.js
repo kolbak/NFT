@@ -49,8 +49,8 @@ const Mint = () => {
         </h2>
 
         <div className="timerWrapper">
-          {/* <p className="mintTitle">PRE-SALE FOR FAPP-CB HOLDERS: LIVE</p> */}
-          <MintTimer scale="0.9" title="PUBLIC SALE STARTS IN:" />
+          <p className="mintTitle">PUBLIC SALE IS LIVE</p>
+          {/* <MintTimer scale="0.9" title="PUBLIC SALE STARTS IN:" /> */}
         </div>
 
         <div className="connect">
